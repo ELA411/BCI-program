@@ -1,8 +1,3 @@
-% redirect logger from stderr to file, can be called any time
-BoardShim.set_log_file('brainflow.log');
-% enable BrainFlow logger with LEVEL_TRACE
-BoardShim.enable_dev_board_logger();
-
 % BoardShim class to communicate with a board 
 % Create BoardShim object
 params = BrainFlowInputParams();
