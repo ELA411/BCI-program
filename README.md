@@ -21,8 +21,7 @@ cmake ../
 make -si
 ```
 
-Start matlab and include
+Start matlab and include in matlab path
 ```
 /home/{user}/brainflow/matlab_package/brainflow
 ```
-in matlab path
