@@ -4,11 +4,13 @@ BoardShim.enable_dev_board_logger();
 
 % Create BoardShim object
 params = BrainFlowInputParams();
+params.serial_port = '/dev/ttyACM0';
+params.mac_address = 'F8:89:D2:68:8D:54';
 % Change to this when using real hardware BoardIds.GANGLION_NATIVE_BOARD
-board_shim = BoardShim(int32(BoardIds.GANGLION_NATIVE_BOARD), params);
+board_shim = BoardShim(int32(BoardIds.GANGLION_BOARD), params);
 preset = int32(BrainFlowPresets.DEFAULT_PRESET);
 % Time stamp channel
-board_shim.get_timestamp_channel(int32(BoardIds.SYNTHETIC_BOARD), preset);
+board_shim.get_timestamp_channel(int32(BoardIds.GANGLION_BOARD), preset);
 % prepare BrainFlow’s streaming session, allocate required resources
 board_shim.prepare_session();
 
@@ -29,7 +31,7 @@ try
         %pause(0.01); 
 
         % Get the latest datapoints (4x10 matrix)
-        data = board_shim.get_current_board_data(1000, preset);
+        data = board_shim.get_current_board_data(100, preset);
 
         % Clear the current figure
         clf;
