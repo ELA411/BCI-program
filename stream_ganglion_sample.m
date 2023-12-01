@@ -1,9 +1,9 @@
-clc;clear;
+clc;clear, close all;
 % BoardShim class to communicate with a board
 BoardShim.set_log_file('brainflow.log');
 BoardShim.enable_dev_board_logger();
-s = serialport("/dev/ttyACM0", 115200);
-k = readline(s);
+s = serialport("/dev/ttyACM1", 115200);
+
 % Create BoardShim object
 params = BrainFlowInputParams();
 params.serial_port = '/dev/ttyACM0';
@@ -27,22 +27,41 @@ figure;
 hold on;
 
 % Continuously acquire and plot data
-figure; % Create a new figure for plotting
 try
     while true
         %pause(0.01);
 
         % Get the latest datapoints (4x10 matrix)
-        data = board_shim.get_current_board_data(100, preset);
+        eeg_data = board_shim.get_current_board_data(200, preset);
 
         % Clear the current figure
         clf;
 
+        for j = 1:100
+            emg_data = readline(s);
+            splitNew =split(emg_data,' ');   
+            emg_channel1 = str2double(splitNew(1,:));
+            emg_channel2 = str2double(splitNew(2,:));
+            timestamp = str2double(splitNew(3,:));
+            emg_data_print(1,j) = emg_channel1;
+            emg_data_print(2,j) = emg_channel2;
+            emg_data_print(3,j) = timestamp;            
+        end
+
+
         % Plot first 4 channels
-        for i = 1:4 % Iterate through each channel
-            subplot(4, 1, i); % Create a subplot for each channel
-            plot(data(i, :)); % Plot the data of the current channel
+        for i = 1:6 % Iterate through each channel
+    
+            subplot(6, 1, i); % Create a subplot for each channel
+            if i < 5
+                plot(eeg_data(i, :)); % Plot the data of the current channel
+            elseif i == 5
+                plot(emg_data_print(1,:));
+            elseif i == 6
+                plot(emg_data_print(2,:));
+            end
             title(['Channel ' num2str(i)]); % Add a title to each subplot
+
         end
 
         drawnow; % Update the plots
