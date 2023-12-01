@@ -1,14 +1,18 @@
+clc;clear;
 % BoardShim class to communicate with a board
 BoardShim.set_log_file('brainflow.log');
 BoardShim.enable_dev_board_logger();
-
+s = serialport("/dev/ttyACM0", 115200);
+k = readline(s);
 % Create BoardShim object
 params = BrainFlowInputParams();
+params.serial_port = '/dev/ttyACM1';
+params.mac_address = 'F8:89:D2:68:8D:54';
 % Change to this when using real hardware BoardIds.GANGLION_NATIVE_BOARD
 board_shim = BoardShim(int32(BoardIds.GANGLION_NATIVE_BOARD), params);
 preset = int32(BrainFlowPresets.DEFAULT_PRESET);
 % Time stamp channel
-board_shim.get_timestamp_channel(int32(BoardIds.SYNTHETIC_BOARD), preset);
+% board_shim.get_timestamp_channel(int32(BoardIds.SYNTHETIC_BOARD), preset);
 % prepare BrainFlow’s streaming session, allocate required resources
 board_shim.prepare_session();
 
@@ -33,7 +37,7 @@ try
 
         % Clear the current figure
         clf;
-
+        
         % Plot first 4 channels
         for i = 1:4 % Iterate through each channel
             subplot(4, 1, i); % Create a subplot for each channel
