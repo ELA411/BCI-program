@@ -84,7 +84,7 @@ lastQualityCheck = tic;
 sFE = signalTimeFeatureExtractor(SampleRate=1000, SNR = true, SINAD = true, THD = true);
 
 eegQualityBuffer = [];
-timeWindowInSeconds = 10;
+timeWindowInSeconds = 5;
 timeWindow = timeWindowInSeconds / (24 * 3600); % MATLAB serial date number is in days
 while true
     if demo == 1
@@ -92,7 +92,8 @@ while true
         timestamps_row = data(17, :); 
         pkgs = 200; % pkgs to detect wrap around
     else
-        data = board_shim.get_current_board_data(10, preset);
+        dataInBuffer = board_shim.get_board_data_count(preset);
+        data = board_shim.get_board_data(dataInBuffer, preset);
         timestamps_row = data(31, :);
         pkgs = 256;
     end
@@ -127,18 +128,17 @@ while true
             channel2 = eeg_quality(:,:,2);
             channel3 = eeg_quality(:,:,3);
             channel4 = eeg_quality(:,:,4);
+            fprintf('============================================================================');
             fprintf('\nChannel1:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel1(:,1),channel1(:,2), channel1(:,3));
             fprintf('\nChannel2:\nSNR: %f\nSINAD: %f\nTHD: %f\n',channel2(:,1),channel2(:,2), channel2(:,3));
             fprintf('\nChannel3:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel3(:,1),channel3(:,2), channel3(:,3));
             fprintf('\nChannel4:\nSNR: %f\nSINAD: %f\nTHD: %f\n',channel4(:,1),channel4(:,2), channel4(:,3));
+            fprintf('============================================================================\n');
+
             % Reset the buffer and timer
             eegQualityBuffer = [];
             lastQualityCheck = tic;
         end
-        % if packageid < lastPackageId  % Detect a wrap, the sampling wraps after pkgs samples
-        %   wraps = wraps + 1;
-        % end
-        % expectedSamples = wraps * sampling_rate + 1; % Calculate the expected number of samples
         lastPackageId = packageid;
     end
     pause(0.001);
@@ -166,10 +166,10 @@ function closeFigure(src, ~)
     avgTimeInterval = mean(timeDiffs); % Average time interval / Ganglion sample rate
     ganglionSampleRate = 1 / avgTimeInterval;
     
-    expectedSamples = totalElapsedTime * ganglionSampleRate;
+    expectedSamples = totalElapsedTime * ganglionSampleRate; % Expected number of samples 
     actualSamples = samples;
-    lostSamples = expectedSamples - actualSamples;
-    lossPercentage = (lostSamples / expectedSamples) * 100;
+    lostSamples = expectedSamples - actualSamples; % Missing samples
+    lossPercentage = (lostSamples / expectedSamples) * 100; % Percentage of lost samples
     % ---------------------------------------------------------------------
     % fprintf(fileID,['Runtime: ', num2str(totalElapsedTime),' seconds\n']);
     % fprintf(fileID,['Average Sample Rate: ', num2str(averageSampleRate), ' Hz\n']);
@@ -178,6 +178,7 @@ function closeFigure(src, ~)
     % fprintf(fileID,['Lost Samples: ', num2str(lostSamples)]);
     % fprintf(fileID,['\nData Loss Percentage: ', num2str(lossPercentage, '%.2f'), '%']);
     % ---------------------------------------------------------------------
+    fprintf('\n============================================================================\n');
     disp(['Runtime: ', num2str(totalElapsedTime),' seconds']);
     disp(['Average Sample Rate GANGLION: ', num2str(ganglionSampleRate), ' Hz']);
     disp(['Average Sample Rate MATLAB: ', num2str(averageSampleRate), ' Hz']);
@@ -185,6 +186,8 @@ function closeFigure(src, ~)
     disp(['Actual Samples: ', num2str(actualSamples)]);
     disp(['Lost Samples: ', num2str(lostSamples)]);
     disp(['Data Loss Percentage: ', num2str(lossPercentage, '%.2f'), '%']);
+    fprintf('============================================================================\n');
+
     %disp(['Recording saved in: ',fileName]);
     % ---------------------------------------------------------------------
     board_shim.stop_stream(); % Stop streaming
