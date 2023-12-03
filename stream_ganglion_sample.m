@@ -84,11 +84,12 @@ lastQualityCheck = tic;
 sFE = signalTimeFeatureExtractor(SampleRate=1000, SNR = true, SINAD = true, THD = true);
 
 eegQualityBuffer = [];
-timeWindowInSeconds = 5;
+timeWindowInSeconds = 10;
 timeWindow = timeWindowInSeconds / (24 * 3600); % MATLAB serial date number is in days
 while true
     if demo == 1
-        data = board_shim.get_current_board_data(200, preset); % The ganglion has a maximum of 200 Hz
+        dataInBuffer = board_shim.get_board_data_count(preset);
+        data = board_shim.get_board_data(dataInBuffer, preset); % The ganglion has a maximum of 200 Hz
         timestamps_row = data(17, :); 
         pkgs = 200; % pkgs to detect wrap around
     else
