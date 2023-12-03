@@ -5,6 +5,7 @@ global expectedSamples;
 global avgSampleTime;
 global board_shim;
 global fileName;
+global timestamps;
 % BoardShim class to communicate with a board
 BoardShim.set_log_file('brainflow.log');
 BoardShim.enable_dev_board_logger();
@@ -12,12 +13,12 @@ demo = 0;
 % ---------------------------------------------------------------------
 avgSampleTime = tic; % Variable to calculate average sample rate
 outoforder = 0; % Tracks the samples out of order
+timestamps = [];
 samples = 0; % Total number of samples
 lastPackageId = -1; % Used to check for packages wrap around
 packageid = -1; % Current sample
 wraps = 0; % Number of wrap arounds. Since having a infinite counter timestamp, the serial printer can't keep up
 % ---------------------------------------------------------------------
-
 params = BrainFlowInputParams();
 preset = int32(BrainFlowPresets.DEFAULT_PRESET);
 
@@ -63,7 +64,6 @@ xlabel('Time');
 ylabel('Value');
 ax2 = gca;
 % ---------------------------------------------------------------------
-
 subplot(4,1,3);
 h3 = animatedline('Color', 'b');
 h3_error = animatedline('Color', 'r', 'Marker', 'o'); % For out-of-order data
@@ -72,7 +72,6 @@ xlabel('Time');
 ylabel('Value');
 ax3 = gca;
 % ---------------------------------------------------------------------
-
 subplot(4,1,4);
 h4 = animatedline('Color', 'b');
 h4_error = animatedline('Color', 'r', 'Marker', 'o'); % For out-of-order data
@@ -81,29 +80,28 @@ xlabel('Time');
 ylabel('Value');
 ax4 = gca;
 
-timeWindow = 10 / (24 * 3600); % MATLAB serial date number is in days
+lastQualityCheck = tic;
+sFE = signalTimeFeatureExtractor(SampleRate=1000, SNR = true, SINAD = true, THD = true);
+
+eegQualityBuffer = [];
+timeWindowInSeconds = 10;
+timeWindow = timeWindowInSeconds / (24 * 3600); % MATLAB serial date number is in days
 while true
     if demo == 1
-        data = board_shim.get_current_board_data(200, preset);
-        timestamps = data(17, :);
-        pkgs = 200;
+        data = board_shim.get_current_board_data(200, preset); % The ganglion has a maximum of 200 Hz
+        timestamps_row = data(17, :); 
+        pkgs = 200; % pkgs to detect wrap around
     else
         data = board_shim.get_current_board_data(10, preset);
-        timestamps = data(31, :);
+        timestamps_row = data(31, :);
         pkgs = 256;
     end
 
-    % Calculate time differences and sampling frequency
-    % timeDiffs = diff(timestamps); % Time differences between consecutive samples
-    % avgTimeInterval = mean(timeDiffs); % Average time interval
-    % samplingFrequency = 1 / avgTimeInterval; % Frequency in Hz
-
-    % Plot first 4 channels
-    for col = 1:size(data, 2)
+    for col = 1:size(data, 2)  % Plot first 4 channels
         packageid = data(1,col);
         timeNow = datenum(datetime('now')); % Used to print the serial value in real time
-        %timeNow = timestamps(col); % Use BrainFlow timestamp
-        if lastPackageId ~= -1 && mod(packageid - lastPackageId - 1,pkgs) ~= 0
+        
+        if lastPackageId ~= -1 && mod(packageid - lastPackageId - 1, pkgs) ~= 0
             outoforder = outoforder + 1;
             addpoints(h1_error, timeNow, data(2,col));
             addpoints(h2_error, timeNow, data(3,col));
@@ -111,6 +109,8 @@ while true
             addpoints(h4_error, timeNow, data(5,col));
         else
             samples = samples + 1;
+            timestamps = [timestamps; timestamps_row(col)]; % Save the ganglion board timestamps to calculate the sampling frequency
+            eegQualityBuffer = [eegQualityBuffer; data(2, col), data(3, col), data(4, col), data(5,col)];
             addpoints(h1, timeNow, data(2,col));
             addpoints(h2, timeNow, data(3,col));
             addpoints(h3, timeNow, data(4,col));
@@ -120,10 +120,25 @@ while true
         xlim(ax2, [timeNow - timeWindow, timeNow]);
         xlim(ax3, [timeNow - timeWindow, timeNow]);
         xlim(ax4, [timeNow - timeWindow, timeNow]);
-        if packageid < lastPackageId  % Detect a wrap, the sampling wraps after pkgs samples
-          wraps = wraps + 1;
+        if toc(lastQualityCheck) >= 5
+            eeg_quality = extract(sFE, eegQualityBuffer);
+            % Log or display the results
+            channel1 = eeg_quality(:,:,1);
+            channel2 = eeg_quality(:,:,2);
+            channel3 = eeg_quality(:,:,3);
+            channel4 = eeg_quality(:,:,4);
+            fprintf('\nChannel1:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel1(:,1),channel1(:,2), channel1(:,3));
+            fprintf('\nChannel2:\nSNR: %f\nSINAD: %f\nTHD: %f\n',channel2(:,1),channel2(:,2), channel2(:,3));
+            fprintf('\nChannel3:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel3(:,1),channel3(:,2), channel3(:,3));
+            fprintf('\nChannel4:\nSNR: %f\nSINAD: %f\nTHD: %f\n',channel4(:,1),channel4(:,2), channel4(:,3));
+            % Reset the buffer and timer
+            eegQualityBuffer = [];
+            lastQualityCheck = tic;
         end
-        expectedSamples = wraps * sampling_rate + 1; % Calculate the expected number of samples
+        % if packageid < lastPackageId  % Detect a wrap, the sampling wraps after pkgs samples
+        %   wraps = wraps + 1;
+        % end
+        % expectedSamples = wraps * sampling_rate + 1; % Calculate the expected number of samples
         lastPackageId = packageid;
     end
     pause(0.001);
@@ -136,6 +151,7 @@ function closeFigure(src, ~)
     global avgSampleTime;
     global fileName;
     global board_shim;
+    global timestamps;
     % ---------------------------------------------------------------------
     if ~isempty(s) && isvalid(s) % I can't rerun the program without closing the serial port, just pressing stop does not close the port, which is the reason for this function
         delete(s);
@@ -143,7 +159,14 @@ function closeFigure(src, ~)
 
     % ---------------------------------------------------------------------
     totalElapsedTime = toc(avgSampleTime);
-    averageSampleRate = samples / totalElapsedTime;
+    averageSampleRate = samples / totalElapsedTime; % Matlab average sample rate
+
+    % Calculate time differences and sampling frequency
+    timeDiffs = diff(timestamps); % Time differences between consecutive samples
+    avgTimeInterval = mean(timeDiffs); % Average time interval / Ganglion sample rate
+    ganglionSampleRate = 1 / avgTimeInterval;
+    
+    expectedSamples = totalElapsedTime * ganglionSampleRate;
     actualSamples = samples;
     lostSamples = expectedSamples - actualSamples;
     lossPercentage = (lostSamples / expectedSamples) * 100;
@@ -156,7 +179,8 @@ function closeFigure(src, ~)
     % fprintf(fileID,['\nData Loss Percentage: ', num2str(lossPercentage, '%.2f'), '%']);
     % ---------------------------------------------------------------------
     disp(['Runtime: ', num2str(totalElapsedTime),' seconds']);
-    disp(['Average Sample Rate: ', num2str(averageSampleRate), ' Hz']);
+    disp(['Average Sample Rate GANGLION: ', num2str(ganglionSampleRate), ' Hz']);
+    disp(['Average Sample Rate MATLAB: ', num2str(averageSampleRate), ' Hz']);
     disp(['Expected Samples: ', num2str(expectedSamples)]);
     disp(['Actual Samples: ', num2str(actualSamples)]);
     disp(['Lost Samples: ', num2str(lostSamples)]);
