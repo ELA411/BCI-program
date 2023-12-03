@@ -1,7 +1,7 @@
 clc;clear;
 global samples;
 global s;
-global expectedSamples;  
+global expectedSamples;
 global avgSampleTime;
 global board_shim;
 global fileName;
@@ -9,14 +9,14 @@ global fileName;
 BoardShim.set_log_file('brainflow.log');
 BoardShim.enable_dev_board_logger();
 demo = 0;
-% --------------------------------------------------------------------- 
+% ---------------------------------------------------------------------
 avgSampleTime = tic; % Variable to calculate average sample rate
 outoforder = 0; % Tracks the samples out of order
 samples = 0; % Total number of samples
 lastPackageId = -1; % Used to check for packages wrap around
 packageid = -1; % Current sample
-wraps = 0; % Number of wrap arounds. Since having a infinite counter timestamp, the serial printer cant keep up
-% --------------------------------------------------------------------- 
+wraps = 0; % Number of wrap arounds. Since having a infinite counter timestamp, the serial printer can't keep up
+% ---------------------------------------------------------------------
 
 params = BrainFlowInputParams();
 preset = int32(BrainFlowPresets.DEFAULT_PRESET);
@@ -54,7 +54,7 @@ title('Channel 1');
 xlabel('Time');
 ylabel('Value');
 ax1 = gca;
-% --------------------------------------------------------------------- 
+% ---------------------------------------------------------------------
 subplot(4,1,2);
 h2 = animatedline('Color', 'b');
 h2_error = animatedline('Color', 'r', 'Marker', 'o'); % For out-of-order data
@@ -62,7 +62,7 @@ title('Channel 2');
 xlabel('Time');
 ylabel('Value');
 ax2 = gca;
-% --------------------------------------------------------------------- 
+% ---------------------------------------------------------------------
 
 subplot(4,1,3);
 h3 = animatedline('Color', 'b');
@@ -71,7 +71,7 @@ title('Channel 3');
 xlabel('Time');
 ylabel('Value');
 ax3 = gca;
-% --------------------------------------------------------------------- 
+% ---------------------------------------------------------------------
 
 subplot(4,1,4);
 h4 = animatedline('Color', 'b');
@@ -85,11 +85,11 @@ timeWindow = 10 / (24 * 3600); % MATLAB serial date number is in days
 while true
     if demo == 1
         data = board_shim.get_current_board_data(200, preset);
-        timestamps = data(17, :); 
+        timestamps = data(17, :);
         pkgs = 200;
     else
         data = board_shim.get_current_board_data(10, preset);
-        timestamps = data(31, :); 
+        timestamps = data(31, :);
         pkgs = 256;
     end
 
@@ -117,7 +117,7 @@ while true
             addpoints(h4, timeNow, data(5,col));
         end
         xlim(ax1, [timeNow - timeWindow, timeNow]); % Update the x-axis limits based on the latest time
-        xlim(ax2, [timeNow - timeWindow, timeNow]);   
+        xlim(ax2, [timeNow - timeWindow, timeNow]);
         xlim(ax3, [timeNow - timeWindow, timeNow]);
         xlim(ax4, [timeNow - timeWindow, timeNow]);
         if packageid < lastPackageId  % Detect a wrap, the sampling wraps after pkgs samples
@@ -132,12 +132,12 @@ end
 function closeFigure(src, ~)
     global samples;
     global s;
-    global expectedSamples;  
+    global expectedSamples;
     global avgSampleTime;
     global fileName;
     global board_shim;
     % ---------------------------------------------------------------------
-    if ~isempty(s) && isvalid(s) % I cant rerun the program without closing the serial port, just pressing stop does not close the port, which is the reason for this function
+    if ~isempty(s) && isvalid(s) % I can't rerun the program without closing the serial port, just pressing stop does not close the port, which is the reason for this function
         delete(s);
     end
 
