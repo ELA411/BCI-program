@@ -76,7 +76,8 @@ if demo == 1
     % Create the board_shim class
     % ---------------------------------------------------------------------
     board_shim = BoardShim(int32(BoardIds.GANGLION_BOARD), params);
-
+    board_desc = board_shim.get_board_descr(int32(BoardIds.GANGLION_BOARD), preset);
+    board_preset = board_shim.get_board_presets(int32(BoardIds.GANGLION_BOARD));
     % ---------------------------------------------------------------------
     % sampling_rate = board_shim.get_sampling_rate(int32(BoardIds.GANGLION_BOARD), preset);
 else
@@ -142,7 +143,7 @@ title('Channel 4');
 xlabel('Time');
 ylabel('Value');
 ax4 = gca;
-
+save_data = [];
 % ---------------------------------------------------------------------
 % Main loop
 % ---------------------------------------------------------------------
@@ -153,7 +154,7 @@ while true
 	% ---------------------------------------------------------------------
         dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
         if dataInBuffer ~= 0
-        data = board_shim.get_board_data(dataInBuffer, preset); % Take available packages and remove them from buffer
+            data = board_shim.get_board_data(dataInBuffer, preset); % Take available packages and remove them from buffer
         end
         timestamps_row = data(14, :); 
         pkgs = 200; % pkgs to detect wrap around
@@ -172,6 +173,9 @@ while true
     % ---------------------------------------------------------------------
     for col = 1:size(data, 2)  % Plot first 4 channels
         packageid = data(1,col);
+        if packageid == 0
+            save_data = [save_data, data(:,col)];
+        end
         timeNow = datenum(datetime('now')); % Used to print the serial value in real time
         
 	% ---------------------------------------------------------------------
