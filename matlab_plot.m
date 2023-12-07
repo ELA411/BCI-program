@@ -28,8 +28,14 @@ global timestamps;
 global wraps;
 global packageid;
 % ---------------------------------------------------------------------
-s = serialport("/dev/ttyACM0", 115200); % Serial port
-% ---------------------------------------------------------------------
+try
+    s = serialport("/dev/ttyACM0", 115200); % Serial port
+catch
+    fprintf("Port open alread\n");
+    delete(s)
+    s = serialport("/dev/ttyACM0", 115200); % Serial port
+end
+    % ---------------------------------------------------------------------
 currentDateTime = datestr(now, 'yyyy-mm-dd_HH:MM:SS'); % Add new name for each run automatically
 fileName = ['emg_rec_',currentDateTime,'.txt'];
 fileID = fopen(fileName, "w");
