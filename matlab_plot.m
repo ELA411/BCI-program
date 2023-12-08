@@ -127,7 +127,7 @@ while ishandle(fig)
                     addpoints(h3, timeNow, adc1); % Blue
                 end
                 % addpoints(h2, timeNow, adc2);
-                fprintf(fileID,'%d %d %d %d\n',int32(adc1), int32(label), int32(packageid), int32(timestamp));
+                fprintf(fileID,'%d %d %d %d\n',int32(adc1), int32(label), int32(packageid), int64(timestamp));
                 samples = samples + 1; % Regular sample
             end
             % ---------------------------------------------------------------------

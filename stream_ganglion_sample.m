@@ -146,11 +146,13 @@ label=0;
 % Main loop
 % ---------------------------------------------------------------------
 while true
-    if toc(label_timer) >= 1
+    if toc(label_timer) >= 3
         if label_check == false
             label = 0;
+            fprintf("LABEL: REST\n");
         else
             label = 1;
+            fprintf("LABEL: CLOSE\n")
         end
         label_check = ~label;
         label_timer = tic;
@@ -195,7 +197,7 @@ while true
             samples = samples + 1;
             % timestamps = [timestamps; timestamps_row(col)]; % Save the ganglion board timestamps to calculate the sampling frequency
             % eegQualityBuffer = [eegQualityBuffer; data(2, col), data(3, col), data(4, col), data(5,col)];
-            fprintf(fileID,"%d %d %d %d %d %d %d\n",int32(data(2,col)),int32(data(3,col)),int32(data(4,col)),int32(data(5,col)), int32(label), int32(packageid), int32(data(14,col)));
+            fprintf(fileID,"%d %d %d %d %d %d %d\n",int32(data(2,col)),int32(data(3,col)),int32(data(4,col)),int32(data(5,col)), int32(label), int32(packageid), int64(data(14,col)));
             % ---------------------------------------------------------------------
             % EEG plot of the four channels
             % ---------------------------------------------------------------------
