@@ -16,6 +16,7 @@ global board_shim;
 global fileName;
 global timestamps;
 global board_shim;
+global fileID;
 % ---------------------------------------------------------------------
 demo = 1;
 
@@ -65,7 +66,7 @@ if demo == 1
     % ---------------------------------------------------------------------
     % Specify the serialport and mac address for brainflow
     % ---------------------------------------------------------------------
-    params.serial_port = '/dev/ttyACM0';
+    params.serial_port = '/dev/ttyACM1';
     params.mac_address = 'F8:89:D2:68:8D:54';
 
     % ---------------------------------------------------------------------
@@ -89,9 +90,11 @@ board_shim.prepare_session();
 % ---------------------------------------------------------------------
 % add streamer
 % ---------------------------------------------------------------------
-currentDateTime = datestr(now, 'yyyy-mm-dd_HH:MM:SS'); % Format as 'YYYYMMDD_HHMMSS'
-fileName = ['file://eeg_rec_',currentDateTime,'.txt:w'];
+currentDateTime = datetime('now','Format', 'yyyy-mm-dd_HH:MM:SS'); % Format as 'YYYYMMDD_HHMMSS'
+fileName = ['file://eeg_rec_',char(currentDateTime),'.txt:w'];
+fileName2 = ['1eeg_rec_',char(currentDateTime),'.txt'];
 board_shim.add_streamer(fileName, preset);
+fileID = fopen(fileName2, "w");
 
 % ---------------------------------------------------------------------
 % start streaming thread, store data in internal ringbuffer
@@ -136,31 +139,32 @@ ylabel('Value');
 ax4 = gca;
 save_data = [];
 previousSample = -1;
+label_timer = tic;
+label_check = false;
+label=0;
 % ---------------------------------------------------------------------
 % Main loop
 % ---------------------------------------------------------------------
 while true
-    if demo == 1
-        % ---------------------------------------------------------------------
-        % Collect data
-        % ---------------------------------------------------------------------
-        dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
-        if dataInBuffer ~= 0
-            data = board_shim.get_board_data(dataInBuffer, preset); % Take available packages and remove them from buffer
+    if toc(label_timer) >= 1
+        if label_check == false
+            label = 0;
+        else
+            label = 1;
         end
-        timestamps_row = data(14, :);
-        pkgs = 200; % pkgs to detect wrap around
-    else
-        % ---------------------------------------------------------------------
-        % Collect data
-        % ---------------------------------------------------------------------
-        dataInBuffer = board_shim.get_board_data_count(preset); % Check available samples in buffer
-        if dataInBuffer ~=0
-          data = board_shim.get_board_data(dataInBuffer, preset);
-        end
-        timestamps_row = data(31, :);
-        pkgs = 256; % Synthetic board max pkgs
+        label_check = ~label;
+        label_timer = tic;
     end
+    % ---------------------------------------------------------------------
+    % Collect data
+    % ---------------------------------------------------------------------
+    dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
+    if dataInBuffer ~= 0
+        data = board_shim.get_board_data(dataInBuffer, preset); % Take available packages and remove them from buffer
+    end
+    timestamps_row = data(14,:);
+    pkgs = 200; % pkgs to detect wrap around
+
 
     % ---------------------------------------------------------------------
     % Iterate through all the packages received
@@ -189,9 +193,9 @@ while true
             % Increase samples, save the timestamp, and store values in temporary qualityBuffer
             % ---------------------------------------------------------------------
             samples = samples + 1;
-            timestamps = [timestamps; timestamps_row(col)]; % Save the ganglion board timestamps to calculate the sampling frequency
-            eegQualityBuffer = [eegQualityBuffer; data(2, col), data(3, col), data(4, col), data(5,col)];
-
+            % timestamps = [timestamps; timestamps_row(col)]; % Save the ganglion board timestamps to calculate the sampling frequency
+            % eegQualityBuffer = [eegQualityBuffer; data(2, col), data(3, col), data(4, col), data(5,col)];
+            fprintf(fileID,"%d %d %d %d %d %d %d\n",int32(data(2,col)),int32(data(3,col)),int32(data(4,col)),int32(data(5,col)), int32(label), int32(packageid), int32(data(14,col)));
             % ---------------------------------------------------------------------
             % EEG plot of the four channels
             % ---------------------------------------------------------------------
@@ -257,7 +261,7 @@ global fileName;
 global board_shim;
 global timestamps;
 global outoforder;
-
+global fileID;
 % ---------------------------------------------------------------------
 % Delete the serial port
 % ---------------------------------------------------------------------
@@ -267,55 +271,57 @@ end
 
 % ---------------------------------------------------------------------
 % Calculate the runtime for the program
-% ---------------------------------------------------------------------
-totalElapsedTime = toc(avgSampleTime);
-averageSampleRate = samples / totalElapsedTime; % Matlab average sample rate
-
-% ---------------------------------------------------------------------
-% Calculate time differences and sampling frequency
-% ---------------------------------------------------------------------
-timeDiffs = diff(timestamps); % Time differences between consecutive samples
-avgTimeInterval = mean(timeDiffs); % Average time interval / Ganglion sample rate
-ganglionSampleRate = 1 / avgTimeInterval;
-
-% ---------------------------------------------------------------------
-% Calculate, #LostSamples, #LostSamples percentage, and expectedSamples
-% ---------------------------------------------------------------------
-expectedSamples = totalElapsedTime * ganglionSampleRate; % Expected number of samples
-actualSamples = samples;
-lostSamples = outoforder; % Missing samples
-lossPercentage = (lostSamples / expectedSamples) * 100; % Percentage of lost samples
-
-% ---------------------------------------------------------------------
-% Add metrics to log file
-% ---------------------------------------------------------------------
-% fprintf(fileID,['Runtime: ', num2str(totalElapsedTime),' seconds\n']);
-% fprintf(fileID,['Average Sample Rate: ', num2str(averageSampleRate), ' Hz\n']);
-% fprintf(fileID,['Expected Samples: ', num2str(expectedSamples),'\n']);
-% fprintf(fileID,['Actual Samples: ', num2str(actualSamples),'\n']);
-% fprintf(fileID,['Lost Samples: ', num2str(lostSamples)]);
-% fprintf(fileID,['\nData Loss Percentage: ', num2str(lossPercentage, '%.2f'), '%']);
-
-% ---------------------------------------------------------------------
-% Print metrics to console
-% ---------------------------------------------------------------------
-fprintf('\n============================================================================\n');
-disp(['Runtime: ', num2str(totalElapsedTime),' seconds']);
-disp(['Average Sample Rate GANGLION: ', num2str(ganglionSampleRate), ' Hz']);
-disp(['Average Sample Rate MATLAB: ', num2str(averageSampleRate), ' Hz']);
-disp(['Expected Samples: ', num2str(expectedSamples)]);
-disp(['Actual Samples: ', num2str(actualSamples)]);
-disp(['Lost Samples: ', num2str(lostSamples)]);
-disp(['Data Loss Percentage: ', num2str(lossPercentage, '%.2f'), '%']);
-%disp(['Recording saved in: ',fileName]);
-fprintf('============================================================================\n');
+% % ---------------------------------------------------------------------
+% totalElapsedTime = toc(avgSampleTime);
+% averageSampleRate = samples / totalElapsedTime; % Matlab average sample rate
+% 
+% % ---------------------------------------------------------------------
+% % Calculate time differences and sampling frequency
+% % ---------------------------------------------------------------------
+% timeDiffs = diff(timestamps); % Time differences between consecutive samples
+% avgTimeInterval = mean(timeDiffs); % Average time interval / Ganglion sample rate
+% ganglionSampleRate = 1 / avgTimeInterval;
+% 
+% % ---------------------------------------------------------------------
+% % Calculate, #LostSamples, #LostSamples percentage, and expectedSamples
+% % ---------------------------------------------------------------------
+% expectedSamples = totalElapsedTime * ganglionSampleRate; % Expected number of samples
+% actualSamples = samples;
+% lostSamples = outoforder; % Missing samples
+% lossPercentage = (lostSamples / expectedSamples) * 100; % Percentage of lost samples
+% 
+% % ---------------------------------------------------------------------
+% % Add metrics to log file
+% % ---------------------------------------------------------------------
+% % fprintf(fileID,['Runtime: ', num2str(totalElapsedTime),' seconds\n']);
+% % fprintf(fileID,['Average Sample Rate: ', num2str(averageSampleRate), ' Hz\n']);
+% % fprintf(fileID,['Expected Samples: ', num2str(expectedSamples),'\n']);
+% % fprintf(fileID,['Actual Samples: ', num2str(actualSamples),'\n']);
+% % fprintf(fileID,['Lost Samples: ', num2str(lostSamples)]);
+% % fprintf(fileID,['\nData Loss Percentage: ', num2str(lossPercentage, '%.2f'), '%']);
+% 
+% % ---------------------------------------------------------------------
+% % Print metrics to console
+% % ---------------------------------------------------------------------
+% fprintf('\n============================================================================\n');
+% disp(['Runtime: ', num2str(totalElapsedTime),' seconds']);
+% disp(['Average Sample Rate GANGLION: ', num2str(ganglionSampleRate), ' Hz']);
+% disp(['Average Sample Rate MATLAB: ', num2str(averageSampleRate), ' Hz']);
+% disp(['Expected Samples: ', num2str(expectedSamples)]);
+% disp(['Actual Samples: ', num2str(actualSamples)]);
+% disp(['Lost Samples: ', num2str(lostSamples)]);
+% disp(['Data Loss Percentage: ', num2str(lossPercentage, '%.2f'), '%']);
+% %disp(['Recording saved in: ',fileName]);
+% fprintf('============================================================================\n');
 
 % ---------------------------------------------------------------------
 % Release the brainflow session
 % ---------------------------------------------------------------------
 board_shim.stop_stream(); % Stop streaming
 board_shim.release_session(); % Release session
-
+if ~isempty(fileID) && fileID ~= -1
+    fclose(fileID); % Close file
+end
 % ---------------------------------------------------------------------
 % Delete the figure handle and end the program
 % ---------------------------------------------------------------------
