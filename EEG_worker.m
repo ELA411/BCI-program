@@ -1,4 +1,4 @@
-function EEG_worker(eeg_queue)
+function EEG_worker(EEG_processing_queue)
 % Description:
 % ---------------------------------------------------------------------
 % ---------------------------------------------------------------------
@@ -93,7 +93,7 @@ while true
         % Increase samples, save the timestamp, and store values in temporary qualityBuffer
         % ---------------------------------------------------------------------
         if toc(slidingWindow)>=0.10
-            send(eeg_queue, eegBuffer);
+            send(EEG_processing_queue, eegBuffer);
             eegBuffer = [];
             slidingWindow = tic;
         end

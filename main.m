@@ -80,7 +80,7 @@ while qReceived4 ==false
 end
 
 % EEG_sampling dependencies: EEG_main_queue
-pEEG_worker = parfeval(poolobj, @EEG_worker, 0, EEG_main_queue); % Sampling, brainflow already saves data
+pEEG_worker = parfeval(poolobj, @EEG_worker, 0, EEG_processing_queue); % Sampling, brainflow already saves data
 while pEEG_worker.State ~= "running"
 end
 fprintf("All processes started\n");
