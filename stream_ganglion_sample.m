@@ -66,8 +66,8 @@ if demo == 1
     % ---------------------------------------------------------------------
     % Specify the serialport and mac address for brainflow
     % ---------------------------------------------------------------------
-    params.serial_port = '/dev/ttyACM1';
-    params.mac_address = 'F8:89:D2:68:8D:54';
+    params.serial_port = 'COM9';
+    %params.mac_address = 'F8:89:D2:68:8D:54';
 
     % ---------------------------------------------------------------------
     % Create the board_shim class
@@ -90,11 +90,11 @@ board_shim.prepare_session();
 % ---------------------------------------------------------------------
 % add streamer
 % ---------------------------------------------------------------------
-currentDateTime = datetime('now','Format', 'yyyy-mm-dd_HH:MM:SS'); % Format as 'YYYYMMDD_HHMMSS'
+currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HH_mm_ss'); % Format as 'YYYYMMDD_HHMMSS'
 fileName = ['file://eeg_rec_',char(currentDateTime),'.txt:w'];
-fileName2 = ['1eeg_rec_',char(currentDateTime),'.txt'];
+%fileName2 = ['1eeg_rec_',char(currentDateTime),'.txt'];
 board_shim.add_streamer(fileName, preset);
-fileID = fopen(fileName2, "w");
+%fileID = fopen(fileName2, "w");
 
 % ---------------------------------------------------------------------
 % start streaming thread, store data in internal ringbuffer
@@ -197,7 +197,7 @@ while true
             samples = samples + 1;
             % timestamps = [timestamps; timestamps_row(col)]; % Save the ganglion board timestamps to calculate the sampling frequency
             % eegQualityBuffer = [eegQualityBuffer; data(2, col), data(3, col), data(4, col), data(5,col)];
-            fprintf(fileID,"%d %d %d %d %d %d %d\n",int32(data(2,col)),int32(data(3,col)),int32(data(4,col)),int32(data(5,col)), int32(label), int32(packageid), int64(data(14,col)));
+            %fprintf(fileID,"%d %d %d %d %d %d %d\n",int32(data(2,col)),int32(data(3,col)),int32(data(4,col)),int32(data(5,col)), int32(label), int32(packageid), int64(data(14,col)));
             % ---------------------------------------------------------------------
             % EEG plot of the four channels
             % ---------------------------------------------------------------------
@@ -321,9 +321,9 @@ end
 % ---------------------------------------------------------------------
 board_shim.stop_stream(); % Stop streaming
 board_shim.release_session(); % Release session
-if ~isempty(fileID) && fileID ~= -1
-    fclose(fileID); % Close file
-end
+% if ~isempty(fileID) && fileID ~= -1
+%     fclose(fileID); % Close file
+% end
 % ---------------------------------------------------------------------
 % Delete the figure handle and end the program
 % ---------------------------------------------------------------------
