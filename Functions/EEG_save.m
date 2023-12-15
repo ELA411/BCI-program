@@ -8,7 +8,7 @@
 % ---------------------------------------------------------------------
 function EEG_save(EEG_main_queue)
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HH_mm_ss'); % Format as 'YYYYMMDD_HHMMSS'
-fileName = ['Datasets\EEG\eeg_rec_',char(currentDateTime),'.txt'];
+fileName = ['Datasets/EEG/eeg_rec_',char(currentDateTime),'.txt'];
 fileID = fopen(fileName, "w");
 EEG_save_queue = parallel.pool.PollableDataQueue; % Queue to save data
 send(EEG_main_queue, EEG_save_queue); % Send the EMG queue back to main

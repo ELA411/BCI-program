@@ -9,6 +9,8 @@
 % Check if a parallel pool already exists
 clc, clear;
 load ..\processing\trained_classifiers\emg_classifier.mat
+load ..\processing\trained_classifiers\eeg_classifier.mat
+
 delete(gcp('nocreate')); 
 
 % If no pool exists, create a new one
@@ -74,7 +76,7 @@ while qReceived5 == false
 end
 disp('pEEG_save started');
 % EEG_classifier dependencies: EEG_command_queue, EEG_main_queue
-pEEG_classifier = parfeval(poolobj, @EEG_classifier, 0, EEG_main_queue, EEG_command_queue); % Process for classification
+pEEG_classifier = parfeval(poolobj, @EEG_classifier, 0, EEG_main_queue, EEG_command_queue, eeg_classifier); % Process for classification
 while pEEG_classifier.State ~= "running"
 end
 while qReceived3 == false

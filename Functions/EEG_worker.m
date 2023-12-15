@@ -49,7 +49,7 @@ board_shim.prepare_session();
 % add streamer
 % ---------------------------------------------------------------------
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HH_mm_ss'); % Format as 'YYYYMMDD_HHMMSS'
-fileName = ['file://Datasets\Brainflow\brainflow_eeg_rec_',char(currentDateTime),'.txt:w'];
+fileName = ['file://Datasets/Brainflow/brainflow_eeg_rec_',char(currentDateTime),'.txt:w'];
 board_shim.add_streamer(fileName, preset);
 
 % ---------------------------------------------------------------------
