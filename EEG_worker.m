@@ -6,7 +6,7 @@
 %
 % Description:
 % ---------------------------------------------------------------------
-function EEG_worker(EEG_processing_queue)
+function EEG_worker(EEG_processing_queue, EEG_save_queue)
 % Description:
 % ---------------------------------------------------------------------
 % ---------------------------------------------------------------------
@@ -49,7 +49,7 @@ board_shim.prepare_session();
 % add streamer
 % ---------------------------------------------------------------------
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HH_mm_ss'); % Format as 'YYYYMMDD_HHMMSS'
-fileName = ['file://eeg_rec_',char(currentDateTime),'.txt:w'];
+fileName = ['file://brainflow_eeg_rec_',char(currentDateTime),'.txt:w'];
 board_shim.add_streamer(fileName, preset);
 
 % ---------------------------------------------------------------------
@@ -57,7 +57,6 @@ board_shim.add_streamer(fileName, preset);
 % ---------------------------------------------------------------------
 board_shim.start_stream(45000, '');
 eegBuffer = []; % Buffer to store temporary values for data quality calculation
-% eegBufferOffline = []; % Buffer to store temporary values for data quality calculation
 
 % ---------------------------------------------------------------------
 % Package integrity
@@ -77,39 +76,40 @@ while true
     dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
     if dataInBuffer ~= 0
         data = board_shim.get_board_data(dataInBuffer, preset); % Take available packages and remove them from buffer
-
-    % ---------------------------------------------------------------------
-    % Iterate through all the packages received
-    % ---------------------------------------------------------------------
-    for col = 1:size(data,2)
-        packageid = data(1,col);
-        channel1 = data(2,col);
-        channel2 = data(3,col);
-        channel3 = data(4,col);
-        channel4 = data(5,col);
-        timestamp = data(14,col);
-        samples = samples + 1;
-
-        eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, label, packageid, timestamp];
-        % eegBufferOffline = [eegBufferOffline; channel1, channel2, channel3, channel4, label, packageid, timestamp];
-
+        send(EEG_main_queue, 'Data read from ganglion');
         % ---------------------------------------------------------------------
-        % Check so that the packages are in order
+        % Iterate through all the packages received
         % ---------------------------------------------------------------------
-
-        % ---------------------------------------------------------------------
-        % Increase samples, save the timestamp, and store values in temporary qualityBuffer
-        % ---------------------------------------------------------------------
-        if toc(slidingWindow)>=0.10
-            send(EEG_processing_queue, eegBuffer);
-            eegBuffer = [];
-            slidingWindow = tic;
-        end
-    end
+        for col = 1:size(data,2)
+            packageid = data(1,col);
+            channel1 = data(2,col);
+            channel2 = data(3,col);
+            channel3 = data(4,col);
+            channel4 = data(5,col);
+            timestamp = data(14,col);
+            samples = samples + 1;
     
-    if samples ~= size(data,2)
-        outoforder = outoforder + 1;
-    end
+            eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, packageid, timestamp];
+    
+            % ---------------------------------------------------------------------
+            % Check so that the packages are in order
+            % ---------------------------------------------------------------------
+    
+            % ---------------------------------------------------------------------
+            % Increase samples, save the timestamp, and store values in temporary qualityBuffer
+            % ---------------------------------------------------------------------
+            if toc(slidingWindow)>=0.25
+                send(EEG_main_queue, 'Sending data for processing and saving');
+                send(EEG_processing_queue, eegBuffer);
+                send(EEG_save_queue, eegBuffer);
+                eegBuffer = [];
+                slidingWindow = tic;
+            end
+        end
+        
+        if samples ~= size(data,2)
+            outoforder = outoforder + 1;
+        end
     end
 end
 end
