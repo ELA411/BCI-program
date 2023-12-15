@@ -13,11 +13,12 @@ while true
     [eeg_data, dataReceived] = poll(EEG_classifier_queue, 0);
     if dataReceived
         tic;
+        send(EEG_main_queue, 'Starting prediction');
         %--------------------------------------------------------------------------------------------------------
         % EEG Classification
         eeg_label = predict(eeg_classifier.Trained{1}, eeg_data);
         %--------------------------------------------------------------------------------------------------------
-        send(EEG_command_queue, ['EMG Prediction: ', num2str(emg_label), ' Time: ', num2str(toc()*1000),' ms' ]);
+        send(EEG_command_queue, ['EMG Prediction: ', num2str(eeg_label), ' Time: ', num2str(toc()*1000),' ms' ]);
     end
 end
 end

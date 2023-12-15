@@ -36,6 +36,7 @@ while true
     [eeg_data, dataReceived] = poll(EEG_processing_queue, 0);
     if dataReceived
         send(EEG_main_queue, 'Starting Processing');
+        tic;
         % Processing...
         % EEG Preprocessing
         % Remove baseline wandering and DC offset
@@ -47,7 +48,7 @@ while true
         
         % Remove artifacts from EEG using wavelet enhanced ICA, W-ICA
         % add 'verbose', 'off' in fastica
-        send(EEG_main_queue, emg_data);
+        send(EEG_main_queue, eeg_data);
         [wIC,A,~,~] = wICA(transpose(eeg_data));
         % Artifacts
         artifacts = transpose(A*wIC);
@@ -63,6 +64,7 @@ while true
         %--------------------------------------------------------------------------------------------------------
 
         % Send to classifier
+        send(EEG_main_queue, ['Processing time: ', num2str(toc()*1000), ' ms']);
         send(EEG_classifier_queue, eeg_data);
     end
 end
