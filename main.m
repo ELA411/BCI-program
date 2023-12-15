@@ -1,6 +1,6 @@
-% Script Name: stream_ganglion_sample.m
+% Script Name: main.m
 % Author: Pontus Svensson
-% Date: 2023-12-03
+% Date: 2023-12-14
 % Version: 1.0.0
 % License:
 %
@@ -8,6 +8,7 @@
 % ---------------------------------------------------------------------
 % Check if a parallel pool already exists
 clc, clear;
+load ..\processing\trained_classifiers\emg_classifier.mat
 delete(gcp('nocreate')); 
 
 % If no pool exists, create a new one
@@ -27,7 +28,7 @@ qReceived1 = false;
 qReceived2 = false;
 
 % EMG_classifier dependencies: EMG_command_queue, EMG_main_queue
-pEMG_classifier = parfeval(poolobj, @EMG_classifier, 0, EMG_main_queue, EMG_command_queue); % Process for classification
+pEMG_classifier = parfeval(poolobj, @EMG_classifier, 0, EMG_main_queue, EMG_command_queue, emg_classifier); % Process for classification
 while pEMG_classifier.State ~= "running"
 end
 while qReceived2 == false
@@ -75,7 +76,7 @@ end
 pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_classifier_queue); % Process for EEG signal processing
 while pEEG_processing.State ~= "running"
 end
-while qReceived4 ==false
+while qReceived4 == false
     [EEG_processing_queue, qReceived4] = poll(EEG_main_queue, 0);
 end
 
@@ -91,16 +92,22 @@ while true    % Implement processing
     % Data supports vector, scalar, matrix, array, string, character vector
     [EMG_command, msg_received_emg] = poll(EMG_command_queue, 0);
     [EEG_command, msg_received_eeg] = poll(EEG_command_queue, 0);
-    [sampleRate, msg_received_emg2] = poll(EMG_main_queue, 0);
+    [message, msg_received_emg2] = poll(EMG_main_queue, 0);
+    [message2, msg_received_eeg2] = poll(EEG_main_queue, 0);
+
     
     if msg_received_emg2
-        fprintf("Sample Rate EMG: %f\n", sampleRate);
+        disp(message);
     end
     if msg_received_emg
-        % fprintf("EMG command received\n");
+        disp(EMG_command);
     end
 
+    if msg_received_eeg2
+        disp(message2);
+    end
+    
     if msg_received_eeg
-        fprintf("EEG command received %d\n",EEG_command);
+        % fprintf("EEG command received %d\n",EEG_command);
     end
 end

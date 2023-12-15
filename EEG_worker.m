@@ -1,3 +1,11 @@
+% Script Name: EEG_worker.m
+% Author: Pontus Svensson
+% Date: 2023-12-14
+% Version: 1.0.0
+% License:
+%
+% Description:
+% ---------------------------------------------------------------------
 function EEG_worker(EEG_processing_queue)
 % Description:
 % ---------------------------------------------------------------------
@@ -27,9 +35,9 @@ params.serial_port = 'COM9';
 % Create the board_shim class
 % ---------------------------------------------------------------------
 board_shim = BoardShim(int32(BoardIds.GANGLION_BOARD), params);
-board_desc = board_shim.get_board_descr(int32(BoardIds.GANGLION_BOARD), preset);
-board_preset = board_shim.get_board_presets(int32(BoardIds.GANGLION_BOARD));
-pkgs = 200; % pkgs to detect wrap around
+% board_desc = board_shim.get_board_descr(int32(BoardIds.GANGLION_BOARD), preset);
+% board_preset = board_shim.get_board_presets(int32(BoardIds.GANGLION_BOARD));
+% pkgs = 200; % pkgs to detect wrap around
 
 
 % ---------------------------------------------------------------------
@@ -49,7 +57,7 @@ board_shim.add_streamer(fileName, preset);
 % ---------------------------------------------------------------------
 board_shim.start_stream(45000, '');
 eegBuffer = []; % Buffer to store temporary values for data quality calculation
-eegBufferOffline = []; % Buffer to store temporary values for data quality calculation
+% eegBufferOffline = []; % Buffer to store temporary values for data quality calculation
 
 % ---------------------------------------------------------------------
 % Package integrity
