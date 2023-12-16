@@ -6,9 +6,9 @@
 %
 % Description:
 % ---------------------------------------------------------------------
-function EMG_save(EMG_main_queue)
-    currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HH_mm_ss');
-    fileName = ['Datasets/EMG/emg_rec_', char(currentDateTime), '.txt'];
+function EMG_save(EMG_main_queue, session)
+    currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
+    fileName = ['Datasets/EMG/EMG_', session, '_',char(currentDateTime), '.txt'];
     fileID = fopen(fileName, "w");
     EMG_save_queue = parallel.pool.PollableDataQueue;
     send(EMG_main_queue, EMG_save_queue);

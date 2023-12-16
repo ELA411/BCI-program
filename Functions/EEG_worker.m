@@ -6,7 +6,7 @@
 %
 % Description:
 % ---------------------------------------------------------------------
-function EEG_worker(EEG_processing_queue, EEG_save_queue, EEG_main_queue)
+function EEG_worker(EEG_processing_queue, EEG_save_queue, EEG_main_queue, session)
 % Description:
 % ---------------------------------------------------------------------
 % ---------------------------------------------------------------------
@@ -48,8 +48,8 @@ board_shim.prepare_session();
 % ---------------------------------------------------------------------
 % add streamer
 % ---------------------------------------------------------------------
-currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HH_mm_ss'); % Format as 'YYYYMMDD_HHMMSS'
-fileName = ['file://Datasets/Brainflow/brainflow_eeg_rec_',char(currentDateTime),'.txt:w'];
+currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss'); % Format as 'YYYYMMDD_HHMMSS'
+fileName = ['file://Datasets/Brainflow/Brainflow_',session,'_EEG_',char(currentDateTime),'.txt:w'];
 board_shim.add_streamer(fileName, preset);
 
 % ---------------------------------------------------------------------

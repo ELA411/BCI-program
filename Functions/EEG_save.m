@@ -6,13 +6,13 @@
 %
 % Description:
 % ---------------------------------------------------------------------
-function EEG_save(EEG_main_queue)
-    currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HH_mm_ss');
-    fileName = ['Datasets/EEG/eeg_rec_',char(currentDateTime),'.txt'];
+function EEG_save(EEG_main_queue, session)
+    currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
+    fileName = ['Datasets/EEG/EEG_',session,'_',char(currentDateTime),'.txt'];
     fileID = fopen(fileName, "w");
     EEG_save_queue = parallel.pool.PollableDataQueue;
     send(EEG_main_queue, EEG_save_queue);
-    labelCounter = 0; % Initialize counter for label assignment
+
     label = 0; % Initialize label
     labelTime = tic; % Start timer for label switching
 
