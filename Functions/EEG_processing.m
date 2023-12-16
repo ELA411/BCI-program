@@ -35,7 +35,7 @@ notchFilt_100_eeg = design(notchSpecs,'IIR','SystemObject',true);
 while true
     [eeg_data, dataReceived] = poll(EEG_processing_queue, 0);
     if dataReceived
-        send(EEG_main_queue, 'Starting Processing');
+        send(EEG_main_queue, 'Starting EEG Processing');
         tic;
         % Processing...
         % EEG Preprocessing
@@ -48,7 +48,7 @@ while true
         
         % Remove artifacts from EEG using wavelet enhanced ICA, W-ICA
         % add 'verbose', 'off' in fastica
-        send(EEG_main_queue, eeg_data);
+        % send(EEG_main_queue, eeg_data);
         [wIC,A,~,~] = wICA(transpose(eeg_data));
         % Artifacts
         artifacts = transpose(A*wIC);

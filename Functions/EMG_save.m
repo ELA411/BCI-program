@@ -14,28 +14,17 @@ function EMG_save(EMG_main_queue)
     send(EMG_main_queue, EMG_save_queue);
     pkdID = 0;
     label = 0; % Initialize label
-    labelCounter = 0; % Counter to manage label switching
+    labelTime = tic; % Start timer for label switching
 
     while true
         [rawData, msg_received] = poll(EMG_save_queue, 0);
         if msg_received
             send(EMG_main_queue, ['Saving ', num2str(size(rawData, 1)), ' samples']);
             for i = 1:size(rawData, 1)
-                labelCounter = labelCounter + 1;
-
-                % Switch label every N samples (adjust N as needed)
-                N = size(rawData, 1) / 3; % For equal distribution among 3 labels
-                if labelCounter <= N
-                    label = 0;
-                elseif labelCounter <= 2 * N
-                    label = 1;
-                else
-                    label = 2;
-                end
-
-                % Reset label counter if it reaches 3N
-                if labelCounter >= 3 * N
-                    labelCounter = 0;
+                
+                if toc(labelTime) >= 1
+                    label = mod(label + 1, 3); % Cycle through 0, 1, 2
+                    labelTime = tic; % Reset timer
                 end
 
                 fprintf(fileID, "%f %f %f %f %f\n", rawData(i, 1), rawData(i, 2), label, pkdID, rawData(i, 3));
@@ -45,4 +34,5 @@ function EMG_save(EMG_main_queue)
     end
     % fclose(fileID); % Uncomment if there's a condition to exit the loop
 end
+
 

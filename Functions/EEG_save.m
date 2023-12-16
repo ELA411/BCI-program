@@ -13,8 +13,10 @@ function EEG_save(EEG_main_queue)
     EEG_save_queue = parallel.pool.PollableDataQueue;
     send(EEG_main_queue, EEG_save_queue);
     labelCounter = 0; % Initialize counter for label assignment
+    label = 0; % Initialize label
+    labelTime = tic; % Start timer for label switching
 
-    while true
+    while true % Add a condition to break this loop if necessary
         [rawData, msg_received] = poll(EEG_save_queue, 0);
         if msg_received
             channel1 = rawData(:,1);
@@ -25,19 +27,9 @@ function EEG_save(EEG_main_queue)
             timestamp = rawData(:,6);
 
             for i = 1:size(rawData, 1)
-                labelCounter = labelCounter + 1;
-
-                % Adjust the label based on the labelCounter
-                N = size(rawData, 1) / 2; % Assuming two labels (0 and 1) evenly distributed
-                if labelCounter <= N
-                    label = 0;
-                else
-                    label = 1;
-                end
-
-                % Reset label counter if it reaches 2N
-                if labelCounter >= 2 * N
-                    labelCounter = 0;
+                if toc(labelTime) >= 1
+                    label = ~label; % Toggle label
+                    labelTime = tic; % Reset timer
                 end
 
                 fprintf(fileID, "%f %f %f %f %f %f %f\n", channel1(i), channel2(i), channel3(i), channel4(i), label, ID(i), timestamp(i));
@@ -46,3 +38,4 @@ function EEG_save(EEG_main_queue)
     end
     % fclose(fileID); % Uncomment if there's a condition to exit the loop
 end
+
