@@ -84,7 +84,7 @@ while true
         eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, packageid, timestamp];
         eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
 
-        if toc(slidingWindow)>=0.1
+        if toc(slidingWindow)>=0.25
             send(EEG_processing_queue, eegBufferProcessing);
             send(EEG_save_queue, eegBuffer);
             % send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: samples 250 ms ', num2str(size(eegBufferProcessing, 1))]);

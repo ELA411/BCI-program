@@ -1,0 +1,287 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 6 workers.
+2023-12-17_14:28:21:832 pEMG_processing started
+2023-12-17_14:28:21:937 pEMG_save started
+2023-12-17_14:28:26:787 pEMG_worker started
+2023-12-17_14:28:27:020 pEEG_save started
+2023-12-17_14:28:29:292 pEEG_processing started
+2023-12-17_14:28:31:696 pEEG_worker started
+All processes started
+2023-12-17_14:28:26:793 EMG Worker checking for start
+2023-12-17_14:28:31:709 EMG Worker start command receieved
+2023-12-17_14:28:31:707 EEG Save, receieved start command
+2023-12-17_14:28:31:709 EMG Save, receieved start command
+2023-12-17_14:28:31:707 EEG Worker, receieved start command
+2023-12-17_14:28:31:766 EMG Processing, receieved start command
+2023-12-17_14:28:31:753 EEG Processing, receieved start command
+2023-12-17_14:28:33:249 EEG Processing: LOOPS: 1
+2023-12-17_14:28:33:259 EEG Processing: 1138.5628 ms
+2023-12-17_14:28:33:264 EEG Prediction: 0
+Analyzing and transferring files to the workers ...done.
+2023-12-17_14:28:33:784 EMG Processing Time: 582.7953 ms
+2023-12-17_14:28:33:692 EEG Processing: LOOPS: 2
+2023-12-17_14:28:33:791 EMG Prediction: 2
+2023-12-17_14:28:33:702 EEG Processing: 437.137 ms
+2023-12-17_14:28:33:832 EMG Processing Time: 38.4631 ms
+2023-12-17_14:28:33:708 EEG Prediction: 0
+2023-12-17_14:28:33:846 EMG Prediction: 2
+2023-12-17_14:28:33:834 EEG Processing: LOOPS: 3
+2023-12-17_14:28:33:892 EMG Processing Time: 41.0448 ms
+2023-12-17_14:28:33:837 EEG Processing: 127.2353 ms
+2023-12-17_14:28:33:896 EMG Prediction: 2
+2023-12-17_14:28:33:839 EEG Prediction: 1
+2023-12-17_14:28:33:906 EMG Processing Time: 9.1122 ms
+2023-12-17_14:28:33:931 EEG Processing: LOOPS: 4
+2023-12-17_14:28:33:908 EMG Prediction: 2
+2023-12-17_14:28:33:932 EEG Processing: 92.4296 ms
+2023-12-17_14:28:33:963 EMG Processing Time: 53.2809 ms
+2023-12-17_14:28:33:934 EEG Prediction: 0
+2023-12-17_14:28:33:967 EMG Prediction: 2
+2023-12-17_14:28:34:080 EEG Processing: LOOPS: 5
+2023-12-17_14:28:34:050 EMG Processing Time: 4.0545 ms
+2023-12-17_14:28:34:082 EEG Processing: 146.9362 ms
+2023-12-17_14:28:34:051 EMG Prediction: 1
+2023-12-17_14:28:34:086 EEG Prediction: 1
+2023-12-17_14:28:34:341 EMG Processing Time: 2.9315 ms
+2023-12-17_14:28:34:204 EEG Processing: LOOPS: 6
+2023-12-17_14:28:34:343 EMG Prediction: 2
+2023-12-17_14:28:34:205 EEG Processing: 117.8013 ms
+2023-12-17_14:28:34:543 EMG Processing Time: 3.651 ms
+2023-12-17_14:28:34:207 EEG Prediction: 1
+2023-12-17_14:28:34:544 EMG Prediction: 1
+2023-12-17_14:28:34:258 EEG Processing: LOOPS: 7
+2023-12-17_14:28:34:848 EMG Processing Time: 3.884 ms
+2023-12-17_14:28:34:258 EEG Processing: 51.3242 ms
+2023-12-17_14:28:34:849 EMG Prediction: 1
+2023-12-17_14:28:34:259 EEG Prediction: 1
+2023-12-17_14:28:35:135 EMG Processing Time: 4.2163 ms
+2023-12-17_14:28:34:358 EEG Processing: LOOPS: 8
+2023-12-17_14:28:35:137 EMG Prediction: 2
+2023-12-17_14:28:34:360 EEG Processing: 100.4437 ms
+2023-12-17_14:28:35:342 EMG Processing Time: 3.6082 ms
+2023-12-17_14:28:34:361 EEG Prediction: 0
+2023-12-17_14:28:35:343 EMG Prediction: 1
+2023-12-17_14:28:34:402 EEG Processing: LOOPS: 9
+2023-12-17_14:28:35:540 EMG Processing Time: 2.7148 ms
+2023-12-17_14:28:34:403 EEG Processing: 41.3086 ms
+2023-12-17_14:28:35:541 EMG Prediction: 2
+2023-12-17_14:28:34:404 EEG Prediction: 0
+2023-12-17_14:28:35:842 EMG Processing Time: 4.2385 ms
+2023-12-17_14:28:34:626 EEG Processing: LOOPS: 10
+2023-12-17_14:28:35:842 EMG Prediction: 1
+2023-12-17_14:28:34:627 EEG Processing: 33.2156 ms
+2023-12-17_14:28:36:042 EMG Processing Time: 4.7009 ms
+2023-12-17_14:28:34:628 EEG Prediction: 1
+2023-12-17_14:28:36:043 EMG Prediction: 2
+2023-12-17_14:28:34:892 EEG Processing: LOOPS: 11
+2023-12-17_14:28:36:340 EMG Processing Time: 2.7013 ms
+2023-12-17_14:28:34:893 EEG Processing: 36.6301 ms
+2023-12-17_14:28:36:341 EMG Prediction: 1
+2023-12-17_14:28:34:894 EEG Prediction: 0
+2023-12-17_14:28:36:541 EMG Processing Time: 2.5718 ms
+2023-12-17_14:28:35:208 EEG Processing: LOOPS: 12
+2023-12-17_14:28:36:541 EMG Prediction: 2
+2023-12-17_14:28:35:209 EEG Processing: 101.7602 ms
+2023-12-17_14:28:36:842 EMG Processing Time: 3.5489 ms
+2023-12-17_14:28:35:210 EEG Prediction: 0
+2023-12-17_14:28:36:843 EMG Prediction: 1
+2023-12-17_14:28:37:041 EMG Processing Time: 2.9914 ms
+ready
+2023-12-17_14:28:37:041 EMG Prediction: 2
+2023-12-17_14:28:35:399 EEG Processing: LOOPS: 13
+2023-12-17_14:28:37:340 EMG Processing Time: 3.1443 ms
+2023-12-17_14:28:35:400 EEG Processing: 42.7465 ms
+2023-12-17_14:28:37:341 EMG Prediction: 1
+2023-12-17_14:28:35:401 EEG Prediction: 0
+2023-12-17_14:28:37:541 EMG Processing Time: 3.0587 ms
+2023-12-17_14:28:35:702 EEG Processing: LOOPS: 14
+2023-12-17_14:28:37:542 EMG Prediction: 2
+2023-12-17_14:28:35:703 EEG Processing: 82.4598 ms
+2023-12-17_14:28:35:705 EEG Prediction: 0
+2023-12-17_14:28:35:962 EEG Processing: LOOPS: 15
+2023-12-17_14:28:35:963 EEG Processing: 79.3107 ms
+2023-12-17_14:28:35:964 EEG Prediction: 1
+2023-12-17_14:28:37:840 EMG Processing Time: 3.0257 ms
+2023-12-17_14:28:36:172 EEG Processing: LOOPS: 16
+2023-12-17_14:28:37:841 EMG Prediction: 1
+2023-12-17_14:28:36:173 EEG Processing: 27.18 ms
+2023-12-17_14:28:36:173 EEG Prediction: 0
+2023-12-17_14:28:38:041 EMG Processing Time: 3.0996 ms
+2023-12-17_14:28:36:482 EEG Processing: LOOPS: 17
+2023-12-17_14:28:38:042 EMG Prediction: 2
+2023-12-17_14:28:36:482 EEG Processing: 70.8799 ms
+2023-12-17_14:28:36:483 EEG Prediction: 1
+2023-12-17_14:28:36:692 EEG Processing: LOOPS: 18
+2023-12-17_14:28:36:693 EEG Processing: 30.8499 ms
+2023-12-17_14:28:36:694 EEG Prediction: 1
+2023-12-17_14:28:38:341 EMG Processing Time: 3.9562 ms
+2023-12-17_14:28:37:002 EEG Processing: LOOPS: 19
+2023-12-17_14:28:38:343 EMG Prediction: 1
+2023-12-17_14:28:37:004 EEG Processing: 80.4904 ms
+2023-12-17_14:28:37:005 EEG Prediction: 0
+2023-12-17_14:28:38:539 EMG Processing Time: 2.4366 ms
+2023-12-17_14:28:37:254 EEG Processing: LOOPS: 20
+2023-12-17_14:28:38:540 EMG Prediction: 2
+2023-12-17_14:28:37:255 EEG Processing: 81.3196 ms
+2023-12-17_14:28:37:256 EEG Prediction: 0
+2023-12-17_14:28:37:475 EEG Processing: LOOPS: 21
+2023-12-17_14:28:37:477 EEG Processing: 52.4598 ms
+2023-12-17_14:28:38:839 EMG Processing Time: 2.9486 ms
+2023-12-17_14:28:37:478 EEG Prediction: 0
+2023-12-17_14:28:38:841 EMG Prediction: 1
+2023-12-17_14:28:37:765 EEG Processing: LOOPS: 22
+2023-12-17_14:28:37:766 EEG Processing: 78.6098 ms
+2023-12-17_14:28:37:767 EEG Prediction: 0
+2023-12-17_14:28:39:040 EMG Processing Time: 2.4156 ms
+2023-12-17_14:28:38:023 EEG Processing: LOOPS: 23
+2023-12-17_14:28:39:041 EMG Prediction: 2
+2023-12-17_14:28:38:024 EEG Processing: 84.0293 ms
+2023-12-17_14:28:38:025 EEG Prediction: 0
+2023-12-17_14:28:38:258 EEG Processing: LOOPS: 24
+2023-12-17_14:28:38:259 EEG Processing: 58.761 ms
+2023-12-17_14:28:39:339 EMG Processing Time: 2.4204 ms
+2023-12-17_14:28:38:260 EEG Prediction: 0
+2023-12-17_14:28:39:340 EMG Prediction: 1
+2023-12-17_14:28:38:530 EEG Processing: LOOPS: 25
+2023-12-17_14:28:38:530 EEG Processing: 78.9392 ms
+2023-12-17_14:28:39:540 EMG Processing Time: 2.3703 ms
+2023-12-17_14:28:38:531 EEG Prediction: 0
+2023-12-17_14:28:39:541 EMG Prediction: 2
+2023-12-17_14:28:38:754 EEG Processing: LOOPS: 26
+2023-12-17_14:28:38:754 EEG Processing: 36.6064 ms
+2023-12-17_14:28:38:755 EEG Prediction: 0
+2023-12-17_14:28:39:053 EEG Processing: LOOPS: 27
+2023-12-17_14:28:39:840 EMG Processing Time: 3.3509 ms
+2023-12-17_14:28:39:054 EEG Processing: 71.8387 ms
+2023-12-17_14:28:39:842 EMG Prediction: 1
+2023-12-17_14:28:39:055 EEG Prediction: 0
+2023-12-17_14:28:39:305 EEG Processing: LOOPS: 28
+2023-12-17_14:28:40:040 EMG Processing Time: 3.1124 ms
+2023-12-17_14:28:39:305 EEG Processing: 72.1093 ms
+2023-12-17_14:28:40:041 EMG Prediction: 2
+2023-12-17_14:28:39:306 EEG Prediction: 0
+2023-12-17_14:28:39:512 EEG Processing: LOOPS: 29
+2023-12-17_14:28:39:513 EEG Processing: 29.8015 ms
+2023-12-17_14:28:39:514 EEG Prediction: 0
+2023-12-17_14:28:40:342 EMG Processing Time: 3.2959 ms
+2023-12-17_14:28:39:772 EEG Processing: LOOPS: 30
+2023-12-17_14:28:40:343 EMG Prediction: 1
+2023-12-17_14:28:39:773 EEG Processing: 27.6627 ms
+2023-12-17_14:28:39:775 EEG Prediction: 0
+2023-12-17_14:28:40:541 EMG Processing Time: 4.0125 ms
+2023-12-17_14:28:40:543 EMG Prediction: 2
+Analyzing and transferring files to the workers ...done.
+2023-12-17_14:28:40:842 EMG Processing Time: 4.1321 ms
+2023-12-17_14:28:40:843 EMG Prediction: 1
+2023-12-17_14:28:41:043 EMG Processing Time: 2.896 ms
+2023-12-17_14:28:41:044 EMG Prediction: 2
+2023-12-17_14:28:41:340 EMG Processing Time: 3.0969 ms
+2023-12-17_14:28:41:341 EMG Prediction: 1
+2023-12-17_14:28:41:541 EMG Processing Time: 2.5196 ms
+ready
+2023-12-17_14:28:41:541 EMG Prediction: 2
+2023-12-17_14:28:41:840 EMG Processing Time: 2.4891 ms
+2023-12-17_14:28:41:841 EMG Prediction: 1
+2023-12-17_14:28:42:039 EMG Processing Time: 2.3167 ms
+2023-12-17_14:28:42:040 EMG Prediction: 2
+2023-12-17_14:28:42:340 EMG Processing Time: 2.624 ms
+2023-12-17_14:28:42:341 EMG Prediction: 1
+2023-12-17_14:28:42:539 EMG Processing Time: 2.3009 ms
+2023-12-17_14:28:42:540 EMG Prediction: 2
+2023-12-17_14:28:43:071 EMG Processing Time: 24.8707 ms
+2023-12-17_14:28:43:072 EMG Prediction: 2
+2023-12-17_14:28:44:272 EMG Processing Time: 3.88 ms
+2023-12-17_14:28:44:274 EMG Prediction: 2
+2023-12-17_14:28:44:277 EMG Processing Time: 3.1326 ms
+2023-12-17_14:28:44:279 EMG Prediction: 1
+2023-12-17_14:28:44:282 EMG Processing Time: 2.9854 ms
+2023-12-17_14:28:44:283 EMG Prediction: 1
+2023-12-17_14:28:44:286 EMG Processing Time: 2.7168 ms
+2023-12-17_14:28:44:287 EMG Prediction: 2
+2023-12-17_14:28:44:290 EMG Processing Time: 3.6067 ms
+2023-12-17_14:28:44:292 EMG Prediction: 1
+2023-12-17_14:28:44:294 EMG Processing Time: 2.5416 ms
+2023-12-17_14:28:44:296 EMG Prediction: 1
+2023-12-17_14:28:44:439 EMG Processing Time: 2.4138 ms
+2023-12-17_14:28:44:440 EMG Prediction: 1
+2023-12-17_14:28:44:640 EMG Processing Time: 2.4015 ms
+2023-12-17_14:28:44:641 EMG Prediction: 1
+2023-12-17_14:28:44:941 EMG Processing Time: 3.5501 ms
+2023-12-17_14:28:44:943 EMG Prediction: 2
+2023-12-17_14:28:45:142 EMG Processing Time: 2.3548 ms
+2023-12-17_14:28:45:142 EMG Prediction: 1
+2023-12-17_14:28:45:440 EMG Processing Time: 2.2923 ms
+2023-12-17_14:28:45:440 EMG Prediction: 2
+2023-12-17_14:28:45:640 EMG Processing Time: 2.2512 ms
+2023-12-17_14:28:45:641 EMG Prediction: 1
+2023-12-17_14:28:45:940 EMG Processing Time: 2.4105 ms
+2023-12-17_14:28:45:941 EMG Prediction: 2
+2023-12-17_14:28:46:139 EMG Processing Time: 2.201 ms
+2023-12-17_14:28:46:140 EMG Prediction: 1
+2023-12-17_14:28:46:441 EMG Processing Time: 3.606 ms
+2023-12-17_14:28:46:442 EMG Prediction: 2
+2023-12-17_14:28:46:640 EMG Processing Time: 2.9269 ms
+2023-12-17_14:28:46:641 EMG Prediction: 1
+2023-12-17_14:28:46:942 EMG Processing Time: 2.2472 ms
+2023-12-17_14:28:46:942 EMG Prediction: 2
+2023-12-17_14:28:47:141 EMG Processing Time: 2.3911 ms
+2023-12-17_14:28:47:141 EMG Prediction: 1
+2023-12-17_14:28:47:440 EMG Processing Time: 2.4362 ms
+2023-12-17_14:28:47:441 EMG Prediction: 2
+2023-12-17_14:28:47:640 EMG Processing Time: 2.2889 ms
+2023-12-17_14:28:47:641 EMG Prediction: 1
+2023-12-17_14:28:47:941 EMG Processing Time: 3.2265 ms
+2023-12-17_14:28:47:943 EMG Prediction: 2
+2023-12-17_14:28:48:141 EMG Processing Time: 2.5851 ms
+2023-12-17_14:28:48:142 EMG Prediction: 1
+2023-12-17_14:28:48:440 EMG Processing Time: 2.3977 ms
+2023-12-17_14:28:48:441 EMG Prediction: 2
+2023-12-17_14:28:48:640 EMG Processing Time: 2.294 ms
+2023-12-17_14:28:48:641 EMG Prediction: 1
+2023-12-17_14:28:48:941 EMG Processing Time: 3.2204 ms
+2023-12-17_14:28:48:941 EMG Prediction: 2
+2023-12-17_14:28:49:141 EMG Processing Time: 2.4634 ms
+2023-12-17_14:28:49:141 EMG Prediction: 2
+2023-12-17_14:28:49:441 EMG Processing Time: 3.5546 ms
+2023-12-17_14:28:49:442 EMG Prediction: 2
+2023-12-17_14:28:49:641 EMG Processing Time: 2.9313 ms
+2023-12-17_14:28:49:642 EMG Prediction: 2
+2023-12-17_14:28:49:941 EMG Processing Time: 2.7158 ms
+2023-12-17_14:28:49:942 EMG Prediction: 1
+2023-12-17_14:28:50:141 EMG Processing Time: 3.0071 ms
+2023-12-17_14:28:50:142 EMG Prediction: 2
+2023-12-17_14:28:50:443 EMG Processing Time: 2.3673 ms
+2023-12-17_14:28:50:444 EMG Prediction: 1
+2023-12-17_14:28:50:643 EMG Processing Time: 2.6822 ms
+2023-12-17_14:28:50:644 EMG Prediction: 2
+2023-12-17_14:28:50:940 EMG Processing Time: 2.1349 ms
+2023-12-17_14:28:50:941 EMG Prediction: 2
+2023-12-17_14:28:51:142 EMG Processing Time: 2.2352 ms
+2023-12-17_14:28:51:142 EMG Prediction: 2
+2023-12-17_14:28:51:441 EMG Processing Time: 2.3249 ms
+2023-12-17_14:28:51:442 EMG Prediction: 2
+2023-12-17_14:28:51:641 EMG Processing Time: 2.6658 ms
+2023-12-17_14:28:51:642 EMG Prediction: 2
+2023-12-17_14:28:51:940 EMG Processing Time: 3.0626 ms
+2023-12-17_14:28:51:942 EMG Prediction: 2
+2023-12-17_14:28:52:143 EMG Processing Time: 2.8023 ms
+2023-12-17_14:28:52:144 EMG Prediction: 2
+2023-12-17_14:28:52:440 EMG Processing Time: 2.629 ms
+2023-12-17_14:28:52:441 EMG Prediction: 1
+2023-12-17_14:28:52:641 EMG Processing Time: 2.8377 ms
+2023-12-17_14:28:52:641 EMG Prediction: 2
+2023-12-17_14:28:52:942 EMG Processing Time: 2.6466 ms
+2023-12-17_14:28:52:943 EMG Prediction: 1
+2023-12-17_14:28:53:142 EMG Processing Time: 4.412 ms
+2023-12-17_14:28:53:143 EMG Prediction: 2
+2023-12-17_14:28:53:442 EMG Processing Time: 4.3858 ms
+2023-12-17_14:28:53:443 EMG Prediction: 2
+2023-12-17_14:28:53:641 EMG Processing Time: 4.2089 ms
+Cleaning up resources...
+2023-12-17_14:28:53:643 EMG Prediction: 2
+2023-12-17_14:28:53:710 EMG Processing, receieved stop command
+2023-12-17_14:28:53:711 EMG save, stop command received. Closing file
+2023-12-17_14:28:53:947 EMG Worker, received stop command
+2023-12-17_14:28:53:711 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.
