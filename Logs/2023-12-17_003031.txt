@@ -1,0 +1,19 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 6 workers.
+2023-12-17_00:30:49:432 pEMG_processing started
+2023-12-17_00:30:49:526 pEMG_save started
+2023-12-17_00:30:54:478 pEMG_worker started
+2023-12-17_00:30:54:698 pEEG_save started
+2023-12-17_00:30:57:054 pEEG_processing started
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue/pollImpl')" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue/pollImpl</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.pool.PollableDataQueue/poll', 'C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m', 79)" style="font-weight:bold">parallel.pool.PollableDataQueue/poll</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m',79,0)">line 79</a>)
+            [data, OK] = obj.pollImpl(varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 142)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',142,0)">line 142</a>)
+    [trigger, flag] = poll(EEG_main_queue, 0.1);
+} 
+delete(gcp('nocreate'));
+Parallel pool using the 'Processes' profile is shutting down.
+main

@@ -6,19 +6,30 @@
 %
 % Description:
 % ---------------------------------------------------------------------
-% Check if a parallel pool already exists
-clc, clear;
-load ..\processing\trained_classifiers\emg_classifier.mat
-load ..\processing\trained_classifiers\eeg_classifier.mat
+
+% Create the GUI
+hFig = figure('Name', 'Control Panel', 'NumberTitle', 'off', 'CloseRequestFcn', @closeGUI);
+hButton = uicontrol('Style', 'pushbutton', 'String', 'Stop', ...
+    'Position', [20 20 100 40], 'Callback', @stopButtonCallback);
+
+% Global variable to control the loop
+global stopRequested;
+stopRequested = false;
+clc;
+currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
+fileName = ['Logs/',char(currentDateTime), '.txt'];
+diary(fileName);
+load('..\processing\trained_classifiers\emg_classifier.mat');
+load('..\processing\trained_classifiers\eeg_classifier.mat');
+load('..\processing\saved_variables\W_matrix.mat');
 % ---------------------------------------------------------------------
 name = 'Pontus';
 setting = 'Test_grove_connected_to_ch1_ch2_electrode_loose';
 session = [name,'-', setting];
-delete(gcp('nocreate')); 
 % ---------------------------------------------------------------------
 % If no pool exists, create a new one
 % DAQ toolbox and ganglion cannot run as a threads :)))) :DDDD
-poolobj = parpool('Processes', 8); 
+poolobj = parpool('Processes', 6);
 % ---------------------------------------------------------------------
 % EMG_processing_queue, sends data to processing process
 % EMG_save_queue sends data to writing process
@@ -26,117 +37,182 @@ poolobj = parpool('Processes', 8);
 % EMG_command_queue sends data from classifier to this script
 % ---------------------------------------------------------------------
 EMG_main_queue = parallel.pool.PollableDataQueue; % Initial queue
-EMG_command_queue = parallel.pool.PollableDataQueue; % Queue for command to ROS
-% ---------------------------------------------------------------------
-qReceived = false;
-qReceived1 = false;
-qReceived2 = false;
-% ---------------------------------------------------------------------
-% EMG_classifier dependencies: EMG_command_queue, EMG_main_queue
-pEMG_classifier = parfeval(poolobj, @EMG_classifier, 0, EMG_main_queue, EMG_command_queue, emg_classifier); % Process for classification
-while pEMG_classifier.State ~= "running"
-end
-while qReceived2 == false
-    [EMG_classifier_queue, qReceived2] = poll(EMG_main_queue, 0); % EMG_processing_queue handle
-end
-disp('pEMG_classifier started');
 % ---------------------------------------------------------------------
 % EMG_processing dependencies: EMG_classifier_queue, EMG_main_queue
-pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, EMG_classifier_queue); % Process for EMG signal processing
+pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, EMG_prediction_queue, emg_classifier); % Process for EMG signal processing
 while pEMG_processing.State ~= "running"
 end
-while qReceived1 == false
-    [EMG_processing_queue, qReceived1] = poll(EMG_main_queue, 0); % EMG_processing_queue handle
+while true
+    [trigger, flag] = poll(EMG_main_queue, 0.1);
+    if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
+        EMG_processing_queue = trigger;
+    elseif flag && isa(trigger, "char")
+        if strcmp(trigger, 'ready')
+            break;
+        end
+    end
 end
-disp('pEMG_processing started');
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' pEMG_processing started']);
 % ---------------------------------------------------------------------
 % EMG_save dependencies: EMG_main_queue
 pEMG_save = parfeval(poolobj, @EMG_save, 0, EMG_main_queue, session); % Process to save data
 while pEMG_save.State ~= "running"
 end
-while qReceived == false 
-    [EMG_save_queue, qReceived] = poll(EMG_main_queue,0 ); % EMG_save_queue handle
+while true
+    [trigger, flag] = poll(EMG_main_queue, 0.1);
+    if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
+        EMG_save_queue = trigger;
+    elseif flag && isa(trigger, "char")
+        if strcmp(trigger, 'ready')
+            break;
+        end
+    end
 end
-disp('pEMG_save started');
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' pEMG_save started']);
 % ---------------------------------------------------------------------
 % EMG worker dependencies: EMG_processing_queue, EMG_save_queue
 pEMG_worker = parfeval(poolobj, @EMG_worker, 0, EMG_processing_queue, EMG_save_queue, EMG_main_queue); % Process to read and send data for processing and saving
 while pEMG_worker.State ~= "running"
 end
-disp('pEMG_worker started');
+while true
+    [trigger, flag] = poll(EMG_main_queue, 0.1);
+    if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
+        EMG_worker_queue = trigger;
+    elseif flag && isa(trigger, "char")
+        if strcmp(trigger, 'ready')
+            break;
+        end
+    end
+end
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEMG_worker started']);
 % ---------------------------------------------------------------------
 % EEG_queue --> EEG_processing_queue --> EEG_command_queue
 % EEG
 EEG_main_queue = parallel.pool.PollableDataQueue;
-EEG_command_queue = parallel.pool.PollableDataQueue;
-% ---------------------------------------------------------------------
-qReceived3 = false;
-qReceived4 = false;
-qReceived5 = false;
 % ---------------------------------------------------------------------
 % EEG_save dependencies: EEG_save_queue
 pEEG_save = parfeval(poolobj, @EEG_save, 0, EEG_main_queue, session);
 while pEEG_save.State ~= "running"
 end
-while qReceived5 == false
-    [EEG_save_queue, qReceived5] = poll(EEG_main_queue, 0);
+while true
+    [trigger, flag] = poll(EEG_main_queue, 0.1);
+    if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
+        EEG_save_queue = trigger;
+    elseif flag && isa(trigger, "char")
+        if strcmp(trigger, 'ready')
+            break;
+        end
+    end
 end
-disp('pEEG_save started');
-% ---------------------------------------------------------------------
-% EEG_classifier dependencies: EEG_command_queue, EEG_main_queue
-pEEG_classifier = parfeval(poolobj, @EEG_classifier, 0, EEG_main_queue, EEG_command_queue, eeg_classifier); % Process for classification
-while pEEG_classifier.State ~= "running"
-end
-while qReceived3 == false
-    [EEG_classifier_queue, qReceived3] = poll(EEG_main_queue, 0);
-end
-disp('pEEG_classifier started');
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_save started']);
 % ---------------------------------------------------------------------
 % EEG_processing dependencies: EEG_main_queue, EEG_classifier_queue
-pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_classifier_queue); % Process for EEG signal processing
+pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_prediction_queue, W, eeg_classifier); % Process for EEG signal processing
 while pEEG_processing.State ~= "running"
 end
-while qReceived4 == false
-    [EEG_processing_queue, qReceived4] = poll(EEG_main_queue, 0);
+while true
+    [trigger, flag] = poll(EEG_main_queue, 0.1);
+    if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
+        EEG_processing_queue = trigger;
+    elseif flag && isa(trigger, "char")
+        if strcmp(trigger, 'ready')
+            break;
+        end
+    end
 end
-disp('pEEG_processing started');
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_processing started']);
 % ---------------------------------------------------------------------
 % EEG_sampling dependencies: EEG_main_queue, EEG_processing_queue,
 % EEG_save_queue
 pEEG_worker = parfeval(poolobj, @EEG_worker, 0, EEG_processing_queue, EEG_save_queue, EEG_main_queue, session); % Sampling, brainflow already saves data
 while pEEG_worker.State ~= "running"
 end
-disp('pEEG_worker started');
-fprintf("All processes started\n");
+while true
+    [trigger, flag] = poll(EEG_main_queue, 0.1);
+    if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
+        EEG_worker_queue = trigger;
+    elseif flag && isa(trigger, "char")
+        if strcmp(trigger, 'ready')
+            break;
+        end
+    end
+end
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_worker started']);
 % ---------------------------------------------------------------------
-% Receive input from the classifiers
-while true    % Implement processing
+disp("All processes started");
 
-    % Data supports vector, scalar, matrix, array, string, character vector
-    % [EMG_command, msg_received_emg] = poll(EMG_command_queue, 0);
-    [EEG_command, msg_received_eeg] = poll(EEG_command_queue, 0);
-    % [message, msg_received_emg2] = poll(EMG_main_queue, 0);
-    [message2, msg_received_eeg2] = poll(EEG_main_queue, 0);
+% ---------------------------------------------------------------------
+% Start all processes at the same time
+send(EEG_save_queue, 'start');
+send(EEG_processing_queue, 'start');
+send(EEG_worker_queue, 'start');
 
-    % General EMG debug
-    % if msg_received_emg2
-    %     disp(message);
-    % end
+send(EMG_worker_queue, "start");
+send(EMG_save_queue, "start");
+send(EMG_processing_queue, "start");
+% Main processing loop
+while ~stopRequested
 
-    % % Classifier debug
-    % if msg_received_emg
-    %     disp(EMG_command);
-    % end
-    
-    % General EEG Debug
-    if msg_received_eeg2
-        disp(message2);
+    [EMG_debug, msg_received_emg2] = poll(EMG_main_queue, 0);
+    [EEG_debug, msg_received_eeg2] = poll(EEG_main_queue, 0);
+
+    if msg_received_emg2 && isa(EMG_debug, "char")
+        disp(EMG_debug);
     end
-    
-    % Classifier EEG debug
-    if msg_received_eeg
-        disp(EEG_command);
+    if msg_received_eeg2 && isa(EEG_debug, "char")
+        disp(EEG_debug);
     end
-
+    pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
 end
 
+% Perform cleanup
+disp('Cleaning up resources...');
+send(EEG_save_queue, 'stop');
+send(EEG_processing_queue, 'stop');
+send(EEG_worker_queue, 'stop');
+
+send(EMG_save_queue, 'stop');
+send(EMG_processing_queue, 'stop');
+send(EMG_worker_queue, 'stop');
+pause(1);
+while EMG_main_queue.QueueLength ~= 0
+    [trigger, flag] = poll(EMG_main_queue, 0);
+    if flag
+        disp(trigger);
+    end
+end
+while EEG_main_queue.QueueLength ~= 0
+    [trigger, flag] = poll(EEG_main_queue, 0);
+    if flag
+        disp(trigger);
+    end
+end
+      
+pause(5);
+delete(gcp('nocreate'));
+
+disp('Cleanup done.');
+diary off;
+% Close the figure
+delete(hFig);
+
+
+function stopButtonCallback(hObject, eventdata)
+global stopRequested;
+stopRequested = true;
+end
+
+function closeGUI(hObject, eventdata)
+global stopRequested;
+if ~stopRequested
+    % If the process is still running, confirm before closing
+    choice = questdlg('The process is still running. Do you want to stop and exit?', ...
+        'Confirm Exit', 'Yes', 'No', 'No');
+    if strcmp(choice, 'Yes')
+        stopRequested = true;
+    end
+else
+    % If the process has already been stopped, close the GUI
+    delete(hObject);
+end
+end
