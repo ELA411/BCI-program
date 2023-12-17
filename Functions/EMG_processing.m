@@ -5,6 +5,8 @@
 % License:
 %
 % Description:
+% This script performs all signal processing for EMG
+% Courtesy: Carl Larsson
 % ---------------------------------------------------------------------
 function EMG_processing(EMG_main_queue, EMG_prediction_queue, emg_classifier)
 EMG_processing_queue = parallel.pool.PollableDataQueue; % Queue for processing

@@ -5,16 +5,10 @@
 % License:
 %
 % Description:
+% This script performs all signal acquisition from the ganglion board using
+% brainflow api
 % ---------------------------------------------------------------------
 function EEG_worker(EEG_processing_queue, EEG_save_queue, EEG_main_queue, session)
-% Description:
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
-% try
-%     board_shim.release_all_sessions();
-% catch
-%     fprintf("No session\n");
-% end
 EEG_worker_queue = parallel.pool.PollableDataQueue;
 send(EEG_main_queue, EEG_worker_queue);
 % ---------------------------------------------------------------------
@@ -90,7 +84,7 @@ while true
         eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, packageid, timestamp];
         eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
 
-        if toc(slidingWindow)>=0.5
+        if toc(slidingWindow)>=0.1
             send(EEG_processing_queue, eegBufferProcessing);
             send(EEG_save_queue, eegBuffer);
             % send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: samples 250 ms ', num2str(size(eegBufferProcessing, 1))]);

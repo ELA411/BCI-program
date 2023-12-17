@@ -5,6 +5,8 @@
 % License:
 %
 % Description:
+% This script receieves the data read from the NI myDAQ and writes it to
+% file
 % ---------------------------------------------------------------------
 function EMG_save(EMG_main_queue, session)
 

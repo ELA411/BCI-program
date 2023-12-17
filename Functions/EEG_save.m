@@ -5,6 +5,7 @@
 % License:
 %
 % Description:
+% This script saves the data received from the ganglion
 % ---------------------------------------------------------------------
 function EEG_save(EEG_main_queue, session)
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
@@ -12,9 +13,6 @@ fileName = ['Datasets/EEG/EEG_',session,'_',char(currentDateTime),'.txt'];
 fileID = fopen(fileName, "w");
 EEG_save_queue = parallel.pool.PollableDataQueue;
 send(EEG_main_queue, EEG_save_queue);
-% Wait for command to start
-start = false;
-label = 0; % Initialize label
 
 send(EEG_main_queue, 'ready')
 while true

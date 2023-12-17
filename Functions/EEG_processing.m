@@ -5,6 +5,7 @@
 % License:
 %
 % Description:
+% This script performs all signal processing for EEG signal
 % ---------------------------------------------------------------------
 function EEG_processing(EEG_main_queue, EEG_prediciton_queue, W, eeg_classifier)
 % Create a pollable queue for processing
@@ -12,7 +13,7 @@ EEG_processing_queue = parallel.pool.PollableDataQueue;
 
 % Send the handle to the other processes
 send(EEG_main_queue, EEG_processing_queue);
-start = false;
+
 eeg_fs = 200;
 [n_eeg, d_eeg, notchFilt_50_eeg, notchFilt_100_eeg] = eeg_real_time_processing_init(eeg_fs);
 counter = 0;
@@ -28,7 +29,7 @@ while true
 end
 
 while true
-    [eeg_data, dataReceived] = poll(EEG_processing_queue, 0.01);
+    [eeg_data, dataReceived] = poll(EEG_processing_queue, 0);
     if dataReceived
         if strcmp(eeg_data, 'stop')
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')), ' EEG Processing, receieved stop command']);

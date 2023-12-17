@@ -5,6 +5,8 @@
 % License:
 %
 % Description:
+% This script samples the analog input of the NI myDAQ and saves the data
+% for real-time processing and offline analysis
 % ---------------------------------------------------------------------
 function EMG_worker(EMG_processing_queue, EMG_save_queue, EMG_main_queue)
 % ---------------------------------------------------------------------
