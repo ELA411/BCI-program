@@ -1,6 +1,6 @@
 
-name = 'Pontus';
-setting = 'Test';
+name = 'Carl';
+setting = 'MI';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % Init brainflow
@@ -59,8 +59,8 @@ while true
         timestamp = data(14,col);
         
         if toc(labelTime) >= 4
-            if reps == 30
-                disp(['REP: ', num2str(reps + 1), ' Dataset completed']);
+            if reps == 10
+                disp(['REP: ', num2str(reps), ' Dataset completed']);
                 break;
             end
             
