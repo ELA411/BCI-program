@@ -1,6 +1,6 @@
 
 name = 'Viktor';
-setting = 'Hand_close_real';
+setting = 'Hand_close_real_new_electrode_placement';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % Init brainflow
