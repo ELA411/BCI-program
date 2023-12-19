@@ -29,7 +29,7 @@ session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % If no pool exists, create a new one
 % DAQ toolbox and ganglion cannot run as a threads :)))) :DDDD
-poolobj = parpool('Processes', 6);
+poolobj = parpool('Processes', 8);
 % ---------------------------------------------------------------------
 % EMG_processing_queue, sends data to processing process
 % EMG_save_queue sends data to writing process
@@ -37,9 +37,11 @@ poolobj = parpool('Processes', 6);
 % EMG_command_queue sends data from classifier to this script
 % ---------------------------------------------------------------------
 EMG_main_queue = parallel.pool.PollableDataQueue; % Initial queue
+EEG_debug_queue = parallel.pool.PollableDataQueue; % Initial queue
+
 % ---------------------------------------------------------------------
 % EMG_processing dependencies: EMG_classifier_queue, EMG_main_queue
-pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, EMG_prediction_queue, emg_classifier); % Process for EMG signal processing
+pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, emg_classifier); % Process for EMG signal processing
 while pEMG_processing.State ~= "running"
 end
 while true
@@ -107,7 +109,7 @@ end
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_save started']);
 % ---------------------------------------------------------------------
 % EEG_processing dependencies: EEG_main_queue, EEG_classifier_queue
-pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_prediction_queue, W, eeg_classifier); % Process for EEG signal processing
+pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_debug_queue, W, eeg_classifier); % Process for EEG signal processing
 while pEEG_processing.State ~= "running"
 end
 while true
@@ -155,7 +157,10 @@ while ~stopRequested
 
     [EMG_debug, msg_received_emg2] = poll(EMG_main_queue, 0);
     [EEG_debug, msg_received_eeg2] = poll(EEG_main_queue, 0);
-
+    [EEG_debug2, flag] = poll(EEG_debug_queue, 0);
+    if flag 
+        IC = EEG_debug2;
+    end
     if msg_received_emg2 && isa(EMG_debug, "char")
         disp(EMG_debug);
     end

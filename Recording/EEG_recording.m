@@ -1,6 +1,6 @@
 
-name = 'Carl';
-setting = 'MI';
+name = 'Viktor';
+setting = 'Hand_close_real';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % Init brainflow
@@ -60,14 +60,14 @@ while true
         
         if toc(labelTime) >= 4
             if reps == 10
-                disp(['REP: ', num2str(reps), ' Dataset completed']);
+                disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps), ' Dataset completed']);
                 break;
             end
             
             if label
-                disp(['REP: ', num2str(reps + 1),' CLOSE', ' Label: ', num2str(label)]);
+                disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' CLOSE']);
             else
-                disp(['REP: ', num2str(reps + 1),' REST',' Label: ', num2str(label)]);
+                disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' REST']);
                 reps = reps + 1;
             end
             label = ~label; % Toggle label

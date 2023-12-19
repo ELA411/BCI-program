@@ -59,6 +59,7 @@ end
 % Main loop
 % ---------------------------------------------------------------------
 slidingWindow = tic;
+samples = 0;
 while true
     % ---------------------------------------------------------------------
     % Collect data
@@ -73,7 +74,7 @@ while true
     dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
     if dataInBuffer > 0
         data = board_shim.get_board_data(1, preset); % Take available packages and remove them from buffer
-
+        samples = samples + 1;
         packageid = data(1,col);
         channel1 = data(2,col);
         channel2 = data(3,col);
@@ -84,13 +85,15 @@ while true
         eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, packageid, timestamp];
         eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
 
-        if toc(slidingWindow)>=0.25
+        % if toc(slidingWindow)>=0.1
+        if samples >= 50
             send(EEG_processing_queue, eegBufferProcessing);
             send(EEG_save_queue, eegBuffer);
             % send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: samples 250 ms ', num2str(size(eegBufferProcessing, 1))]);
             eegBuffer = [];
             eegBufferProcessing = [];
             slidingWindow = tic;
+            samples = 0;
         end
     end
 end
