@@ -8,7 +8,7 @@
 % This script performs all signal processing for EMG
 % Courtesy: Carl Larsson
 % ---------------------------------------------------------------------
-function EMG_processing(EMG_main_queue, emg_classifier, debug)
+function EMG_processing(EMG_main_queue, EMG_prediction_queue, emg_classifier, debug)
 EMG_processing_queue = parallel.pool.PollableDataQueue; % Queue for processing
 send(EMG_main_queue, EMG_processing_queue);
 emg_fs = 1000;
@@ -38,10 +38,9 @@ while true
         prediction = emg_real_time_processing(emg_data, emg_classifier, n_emg, d_emg, notchFilt_50_emg, notchFilt_100_emg, notchFilt_150_emg);
         if debug
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing Time: ', num2str(toc()*1000),' ms']);
-            send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Prediction: ', num2str(prediction)]);
-        else
-            send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Prediction: ', num2str(prediction)]);
         end
+        send(EMG_prediction_queue, prediction);
+        send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Prediction: ', num2str(prediction)]);
     end
 end
 end

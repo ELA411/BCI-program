@@ -1,0 +1,154 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 6 workers.
+2023-12-18_17:20:27:810 pEMG_processing started
+2023-12-18_17:20:27:896 pEMG_save started
+2023-12-18_17:20:31:172 pEMG_worker started
+2023-12-18_17:20:31:356 pEEG_save started
+2023-12-18_17:20:33:261 pEEG_processing started
+2023-12-18_17:20:36:734 pEEG_worker started
+All processes started
+2023-12-18_17:20:31:181 EMG Worker checking for start
+2023-12-18_17:20:36:740 EEG Save, receieved start command
+2023-12-18_17:20:36:741 EEG Worker, receieved start command
+2023-12-18_17:20:36:766 EEG Processing, receieved start command
+2023-12-18_17:20:37:682 EEG Processing: LOOPS: 1
+Analyzing and transferring files to the workers ...done.
+2023-12-18_17:20:37:690 EEG Processing: 608.7344 ms
+2023-12-18_17:20:37:694 EEG Prediction: 0
+2023-12-18_17:20:37:890 EEG Processing: LOOPS: 2
+2023-12-18_17:20:37:895 EEG Processing: 199.287 ms
+2023-12-18_17:20:37:898 EEG Prediction: 0
+2023-12-18_17:20:37:990 EEG Processing: LOOPS: 3
+2023-12-18_17:20:37:992 EEG Processing: 94.2529 ms
+2023-12-18_17:20:37:994 EEG Prediction: 0
+2023-12-18_17:20:38:036 EEG Processing: LOOPS: 4
+2023-12-18_17:20:38:038 EEG Processing: 43.3107 ms
+2023-12-18_17:20:38:039 EEG Prediction: 0
+2023-12-18_17:20:38:260 EEG Processing: LOOPS: 5
+2023-12-18_17:20:38:262 EEG Processing: 80.737 ms
+2023-12-18_17:20:38:265 EEG Prediction: 1
+2023-12-18_17:20:38:519 EEG Processing: LOOPS: 6
+2023-12-18_17:20:38:520 EEG Processing: 77.9732 ms
+2023-12-18_17:20:38:520 EEG Prediction: 0
+2023-12-18_17:20:38:785 EEG Processing: LOOPS: 7
+2023-12-18_17:20:38:786 EEG Processing: 80.7078 ms
+2023-12-18_17:20:38:787 EEG Prediction: 0
+2023-12-18_17:20:38:981 EEG Processing: LOOPS: 8
+2023-12-18_17:20:38:982 EEG Processing: 26.454 ms
+2023-12-18_17:20:38:983 EEG Prediction: 0
+ready
+2023-12-18_17:20:39:243 EEG Processing: LOOPS: 9
+2023-12-18_17:20:39:244 EEG Processing: 26.2476 ms
+2023-12-18_17:20:39:245 EEG Prediction: 0
+2023-12-18_17:20:39:543 EEG Processing: LOOPS: 10
+2023-12-18_17:20:39:544 EEG Processing: 64.5104 ms
+2023-12-18_17:20:39:544 EEG Prediction: 0
+2023-12-18_17:20:39:778 EEG Processing: LOOPS: 11
+2023-12-18_17:20:39:779 EEG Processing: 38.0263 ms
+2023-12-18_17:20:39:780 EEG Prediction: 0
+2023-12-18_17:20:40:075 EEG Processing: LOOPS: 12
+2023-12-18_17:20:40:075 EEG Processing: 70.2006 ms
+2023-12-18_17:20:40:076 EEG Prediction: 1
+2023-12-18_17:20:40:290 EEG Processing: LOOPS: 13
+2023-12-18_17:20:40:291 EEG Processing: 23.2883 ms
+2023-12-18_17:20:40:291 EEG Prediction: 1
+2023-12-18_17:20:40:587 EEG Processing: LOOPS: 14
+2023-12-18_17:20:40:588 EEG Processing: 61.1069 ms
+2023-12-18_17:20:40:589 EEG Prediction: 0
+2023-12-18_17:20:40:851 EEG Processing: LOOPS: 15
+2023-12-18_17:20:40:851 EEG Processing: 61.1338 ms
+2023-12-18_17:20:40:852 EEG Prediction: 0
+2023-12-18_17:20:41:115 EEG Processing: LOOPS: 16
+2023-12-18_17:20:41:115 EEG Processing: 61.2996 ms
+2023-12-18_17:20:41:116 EEG Prediction: 0
+2023-12-18_17:20:41:382 EEG Processing: LOOPS: 17
+2023-12-18_17:20:41:382 EEG Processing: 63.9433 ms
+2023-12-18_17:20:41:383 EEG Prediction: 0
+2023-12-18_17:20:41:603 EEG Processing: LOOPS: 18
+2023-12-18_17:20:41:604 EEG Processing: 23.4147 ms
+2023-12-18_17:20:41:605 EEG Prediction: 1
+2023-12-18_17:20:41:877 EEG Processing: LOOPS: 19
+2023-12-18_17:20:41:878 EEG Processing: 34.8688 ms
+2023-12-18_17:20:41:879 EEG Prediction: 0
+2023-12-18_17:20:42:147 EEG Processing: LOOPS: 20
+2023-12-18_17:20:42:148 EEG Processing: 43.0751 ms
+2023-12-18_17:20:42:149 EEG Prediction: 1
+2023-12-18_17:20:42:395 EEG Processing: LOOPS: 21
+2023-12-18_17:20:42:395 EEG Processing: 27.3017 ms
+2023-12-18_17:20:42:396 EEG Prediction: 1
+2023-12-18_17:20:42:700 EEG Processing: LOOPS: 22
+2023-12-18_17:20:42:701 EEG Processing: 69.5163 ms
+2023-12-18_17:20:42:701 EEG Prediction: 0
+2023-12-18_17:20:42:918 EEG Processing: LOOPS: 23
+2023-12-18_17:20:42:918 EEG Processing: 23.5532 ms
+2023-12-18_17:20:42:919 EEG Prediction: 0
+2023-12-18_17:20:43:221 EEG Processing: LOOPS: 24
+2023-12-18_17:20:43:222 EEG Processing: 64.4397 ms
+2023-12-18_17:20:43:223 EEG Prediction: 0
+2023-12-18_17:20:43:444 EEG Processing: LOOPS: 25
+2023-12-18_17:20:43:444 EEG Processing: 23.6238 ms
+2023-12-18_17:20:43:445 EEG Prediction: 0
+2023-12-18_17:20:43:747 EEG Processing: LOOPS: 26
+2023-12-18_17:20:43:748 EEG Processing: 63.0478 ms
+2023-12-18_17:20:43:749 EEG Prediction: 0
+2023-12-18_17:20:43:972 EEG Processing: LOOPS: 27
+2023-12-18_17:20:43:972 EEG Processing: 24.2758 ms
+2023-12-18_17:20:43:973 EEG Prediction: 1
+2023-12-18_17:20:44:264 EEG Processing: LOOPS: 28
+2023-12-18_17:20:44:264 EEG Processing: 62.0819 ms
+2023-12-18_17:20:44:265 EEG Prediction: 1
+2023-12-18_17:20:44:528 EEG Processing: LOOPS: 29
+2023-12-18_17:20:44:529 EEG Processing: 75.6383 ms
+2023-12-18_17:20:44:530 EEG Prediction: 1
+2023-12-18_17:20:44:779 EEG Processing: LOOPS: 30
+2023-12-18_17:20:44:780 EEG Processing: 62.12 ms
+2023-12-18_17:20:44:780 EEG Prediction: 1
+2023-12-18_17:20:45:046 EEG Processing: LOOPS: 31
+2023-12-18_17:20:45:046 EEG Processing: 64.7418 ms
+2023-12-18_17:20:45:047 EEG Prediction: 1
+2023-12-18_17:20:45:357 EEG Processing: LOOPS: 32
+2023-12-18_17:20:45:358 EEG Processing: 112.6345 ms
+2023-12-18_17:20:45:358 EEG Prediction: 1
+2023-12-18_17:20:45:521 EEG Processing: LOOPS: 33
+2023-12-18_17:20:45:522 EEG Processing: 26.1186 ms
+2023-12-18_17:20:45:522 EEG Prediction: 0
+2023-12-18_17:20:45:784 EEG Processing: LOOPS: 34
+2023-12-18_17:20:45:785 EEG Processing: 25.4456 ms
+2023-12-18_17:20:45:785 EEG Prediction: 1
+2023-12-18_17:20:46:046 EEG Processing: LOOPS: 35
+2023-12-18_17:20:46:047 EEG Processing: 24.8654 ms
+2023-12-18_17:20:46:047 EEG Prediction: 0
+2023-12-18_17:20:46:345 EEG Processing: LOOPS: 36
+2023-12-18_17:20:46:346 EEG Processing: 61.2855 ms
+2023-12-18_17:20:46:346 EEG Prediction: 0
+2023-12-18_17:20:46:616 EEG Processing: LOOPS: 37
+2023-12-18_17:20:46:617 EEG Processing: 68.9805 ms
+2023-12-18_17:20:46:617 EEG Prediction: 1
+2023-12-18_17:20:46:833 EEG Processing: LOOPS: 38
+2023-12-18_17:20:46:834 EEG Processing: 35.8466 ms
+2023-12-18_17:20:46:834 EEG Prediction: 0
+Analyzing and transferring files to the workers ...done.
+ready
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('assert')" style="font-weight:bold">assert</a>
+Unable to find containing attached file for:
+C:\Users\Pontus\workspace_v12\ELA411\processing\eeg_real_time_processing.m
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager/getContainingAttachedFile', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m', 465)" style="font-weight:bold">parallel.internal.pool.FileManager/getContainingAttachedFile</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m',465,0)">line 465</a>)
+            assert(false, "Unable to find containing attached file for: " + file);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager/findSpecificChangedFiles', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m', 395)" style="font-weight:bold">parallel.internal.pool.FileManager/findSpecificChangedFiles</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m',395,0)">line 395</a>)
+                    containingAttachedFile = obj.getContainingAttachedFile(attachedFile);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager/maybeUpdateAttachedFiles', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m', 112)" style="font-weight:bold">parallel.internal.pool.FileManager/maybeUpdateAttachedFiles</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m',112,0)">line 112</a>)
+            changedFilesMap = obj.findSpecificChangedFiles(filesToUpdate);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.maybeUpdateAttachedFiles', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\maybeUpdateAttachedFiles.m', 22)" style="font-weight:bold">parallel.internal.pool.maybeUpdateAttachedFiles</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\maybeUpdateAttachedFiles.m',22,0)">line 22</a>)
+    aPool.hGetFileManager().maybeUpdateAttachedFiles(files, ASYNC_WAIT);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 165)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',165,0)">line 165</a>)
+    pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
+} 
+Cleaning up resources...
+2023-12-18_17:21:41:936 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

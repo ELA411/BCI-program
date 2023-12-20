@@ -1,0 +1,11 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 6 workers.
+{Unrecognized function or variable
+'EMG_prediction_queue'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 42)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',42,0)">line 42</a>)
+pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, EMG_prediction_queue, emg_classifier); % Process for EMG signal processing
+} 
+opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',42,0)
+opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',42,0)
+main

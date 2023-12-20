@@ -7,7 +7,7 @@
 % Description:
 % This script performs all signal processing for EEG signal
 % ---------------------------------------------------------------------
-function EEG_processing(EEG_main_queue, W, eeg_classifier,debug)
+function EEG_processing(EEG_main_queue, EEG_prediction_queue, W, eeg_classifier,debug)
 % Create a pollable queue for processing
 EEG_processing_queue = parallel.pool.PollableDataQueue;
 
@@ -47,10 +47,10 @@ while true
         if debug
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Processing: LOOPS: ', num2str(counter)]);
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Processing: ', num2str(toc()*1000), ' ms']);
-            send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Prediction: ', num2str(prediction)]);
-        else
-            send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Prediction: ', num2str(prediction)]);
         end
+        send(EEG_prediction_queue, prediction);
+        send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Prediction: ', num2str(prediction)]);
+        
     end
 end
 end

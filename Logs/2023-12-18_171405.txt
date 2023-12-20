@@ -1,0 +1,15 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 6 workers.
+2023-12-18_17:14:22:543 pEMG_processing started
+2023-12-18_17:14:22:639 pEMG_save started
+2023-12-18_17:14:26:182 pEMG_worker started
+2023-12-18_17:14:26:384 pEEG_save started
+{Unrecognized function or variable
+'EEG_prediction_queue'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 111)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',111,0)">line 111</a>)
+pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_prediction_queue, W, eeg_classifier); % Process for EEG signal processing
+} 
+delete(gcp('nocreate'));
+Parallel pool using the 'Processes' profile is shutting down.
+main

@@ -1,0 +1,210 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-18_17:46:40:744 pEMG_processing started
+2023-12-18_17:46:40:830 pEMG_save started
+2023-12-18_17:46:44:253 pEMG_worker started
+2023-12-18_17:46:44:436 pEEG_save started
+2023-12-18_17:46:46:310 pEEG_processing started
+2023-12-18_17:46:49:787 pEEG_worker started
+All processes started
+2023-12-18_17:46:44:260 EMG Worker checking for start
+2023-12-18_17:46:49:795 EMG Save, receieved start command
+2023-12-18_17:46:49:795 EEG Save, receieved start command
+2023-12-18_17:46:49:796 EMG Worker start command receieved
+2023-12-18_17:46:49:795 EEG Worker, receieved start command
+2023-12-18_17:46:49:828 EMG Processing, receieved start command
+2023-12-18_17:46:49:827 EEG Processing, receieved start command
+2023-12-18_17:46:50:797 EEG Prediction: 0
+2023-12-18_17:46:50:956 EEG Prediction: 0
+Analyzing and transferring files to the workers ...done.
+2023-12-18_17:46:51:337 EMG Processing Time: 458.8147 ms
+2023-12-18_17:46:51:043 EEG Prediction: 1
+Analyzing and transferring files to the workers ...done.
+2023-12-18_17:46:51:346 EMG Prediction: 2
+2023-12-18_17:46:51:102 EEG Prediction: 0
+2023-12-18_17:46:51:379 EMG Processing Time: 29.5176 ms
+2023-12-18_17:46:51:262 EEG Prediction: 0
+2023-12-18_17:46:51:392 EMG Prediction: 2
+2023-12-18_17:46:51:440 EMG Processing Time: 43.5184 ms
+ready
+2023-12-18_17:46:51:443 EMG Prediction: 2
+2023-12-18_17:46:51:472 EMG Processing Time: 11.6522 ms
+ready
+2023-12-18_17:46:51:473 EMG Prediction: 2
+2023-12-18_17:46:51:833 EMG Processing Time: 54.8583 ms
+2023-12-18_17:46:51:839 EMG Prediction: 2
+2023-12-18_17:46:51:956 EMG Processing Time: 2.7439 ms
+2023-12-18_17:46:51:957 EMG Prediction: 2
+2023-12-18_17:46:52:263 EMG Processing Time: 2.684 ms
+2023-12-18_17:46:52:264 EMG Prediction: 2
+2023-12-18_17:46:52:519 EMG Processing Time: 2.8489 ms
+2023-12-18_17:46:52:520 EMG Prediction: 2
+2023-12-18_17:46:52:768 EMG Processing Time: 6.5825 ms
+2023-12-18_17:46:52:770 EMG Prediction: 2
+2023-12-18_17:46:52:955 EMG Processing Time: 2.6344 ms
+2023-12-18_17:46:52:955 EMG Prediction: 2
+2023-12-18_17:46:53:255 EMG Processing Time: 3.096 ms
+2023-12-18_17:46:53:256 EMG Prediction: 2
+2023-12-18_17:46:53:455 EMG Processing Time: 2.7305 ms
+2023-12-18_17:46:53:456 EMG Prediction: 2
+2023-12-18_17:46:53:755 EMG Processing Time: 3.1778 ms
+2023-12-18_17:46:53:756 EMG Prediction: 2
+2023-12-18_17:46:53:953 EMG Processing Time: 2.2252 ms
+2023-12-18_17:46:53:954 EMG Prediction: 1
+2023-12-18_17:46:54:254 EMG Processing Time: 2.2998 ms
+2023-12-18_17:46:54:255 EMG Prediction: 1
+2023-12-18_17:46:55:893 EMG Processing Time: 2.9599 ms
+2023-12-18_17:46:55:894 EMG Prediction: 1
+2023-12-18_17:46:55:897 EMG Processing Time: 2.8345 ms
+2023-12-18_17:46:55:898 EMG Prediction: 1
+2023-12-18_17:46:55:901 EMG Processing Time: 2.2752 ms
+2023-12-18_17:46:55:901 EMG Prediction: 1
+2023-12-18_17:46:55:903 EMG Processing Time: 1.8843 ms
+2023-12-18_17:46:55:904 EMG Prediction: 1
+2023-12-18_17:46:55:906 EMG Processing Time: 2.0476 ms
+2023-12-18_17:46:55:907 EMG Prediction: 1
+2023-12-18_17:46:55:909 EMG Processing Time: 2.1543 ms
+2023-12-18_17:46:55:910 EMG Prediction: 1
+2023-12-18_17:46:55:954 EMG Processing Time: 2.4671 ms
+2023-12-18_17:46:55:955 EMG Prediction: 1
+2023-12-18_17:46:56:253 EMG Processing Time: 2.1777 ms
+2023-12-18_17:46:56:254 EMG Prediction: 1
+2023-12-18_17:46:56:454 EMG Processing Time: 2.411 ms
+2023-12-18_17:46:56:455 EMG Prediction: 1
+2023-12-18_17:46:56:754 EMG Processing Time: 2.2524 ms
+2023-12-18_17:46:56:755 EMG Prediction: 1
+2023-12-18_17:46:56:954 EMG Processing Time: 2.2971 ms
+2023-12-18_17:46:56:954 EMG Prediction: 1
+2023-12-18_17:46:57:256 EMG Processing Time: 2.4267 ms
+2023-12-18_17:46:57:257 EMG Prediction: 2
+2023-12-18_17:46:57:455 EMG Processing Time: 2.8845 ms
+2023-12-18_17:46:57:456 EMG Prediction: 2
+2023-12-18_17:46:57:754 EMG Processing Time: 2.364 ms
+2023-12-18_17:46:57:755 EMG Prediction: 2
+2023-12-18_17:46:57:954 EMG Processing Time: 2.3451 ms
+2023-12-18_17:46:57:955 EMG Prediction: 2
+2023-12-18_17:46:58:254 EMG Processing Time: 2.2715 ms
+2023-12-18_17:46:58:255 EMG Prediction: 2
+2023-12-18_17:46:58:453 EMG Processing Time: 2.2093 ms
+2023-12-18_17:46:58:454 EMG Prediction: 2
+2023-12-18_17:46:58:754 EMG Processing Time: 2.1936 ms
+2023-12-18_17:46:58:755 EMG Prediction: 2
+2023-12-18_17:46:58:954 EMG Processing Time: 2.2742 ms
+2023-12-18_17:46:58:954 EMG Prediction: 2
+2023-12-18_17:46:59:253 EMG Processing Time: 2.2835 ms
+2023-12-18_17:46:59:254 EMG Prediction: 2
+2023-12-18_17:46:59:454 EMG Processing Time: 2.2629 ms
+2023-12-18_17:46:59:455 EMG Prediction: 2
+2023-12-18_17:46:59:756 EMG Processing Time: 3.7995 ms
+2023-12-18_17:46:59:757 EMG Prediction: 2
+2023-12-18_17:46:59:953 EMG Processing Time: 2.9119 ms
+2023-12-18_17:46:59:955 EMG Prediction: 2
+2023-12-18_17:47:00:254 EMG Processing Time: 2.223 ms
+2023-12-18_17:47:00:255 EMG Prediction: 2
+2023-12-18_17:47:00:454 EMG Processing Time: 2.2929 ms
+2023-12-18_17:47:00:454 EMG Prediction: 2
+2023-12-18_17:47:00:754 EMG Processing Time: 2.4226 ms
+2023-12-18_17:47:00:755 EMG Prediction: 2
+2023-12-18_17:47:00:953 EMG Processing Time: 2.1898 ms
+2023-12-18_17:47:00:954 EMG Prediction: 2
+2023-12-18_17:47:01:254 EMG Processing Time: 2.136 ms
+2023-12-18_17:47:01:254 EMG Prediction: 2
+2023-12-18_17:47:01:454 EMG Processing Time: 2.2814 ms
+2023-12-18_17:47:01:455 EMG Prediction: 2
+2023-12-18_17:47:01:754 EMG Processing Time: 2.2103 ms
+2023-12-18_17:47:01:755 EMG Prediction: 2
+2023-12-18_17:47:01:953 EMG Processing Time: 2.2736 ms
+2023-12-18_17:47:01:954 EMG Prediction: 2
+2023-12-18_17:47:02:254 EMG Processing Time: 2.2675 ms
+2023-12-18_17:47:02:255 EMG Prediction: 2
+2023-12-18_17:47:02:454 EMG Processing Time: 2.259 ms
+2023-12-18_17:47:02:454 EMG Prediction: 2
+2023-12-18_17:47:02:754 EMG Processing Time: 2.4055 ms
+2023-12-18_17:47:02:754 EMG Prediction: 2
+2023-12-18_17:47:02:954 EMG Processing Time: 2.3126 ms
+2023-12-18_17:47:02:955 EMG Prediction: 2
+2023-12-18_17:47:03:253 EMG Processing Time: 2.3551 ms
+2023-12-18_17:47:03:254 EMG Prediction: 2
+2023-12-18_17:47:03:454 EMG Processing Time: 2.1761 ms
+2023-12-18_17:47:03:454 EMG Prediction: 2
+2023-12-18_17:47:03:753 EMG Processing Time: 2.2197 ms
+2023-12-18_17:47:03:754 EMG Prediction: 2
+2023-12-18_17:47:03:953 EMG Processing Time: 2.1714 ms
+2023-12-18_17:47:03:954 EMG Prediction: 2
+2023-12-18_17:47:04:254 EMG Processing Time: 2.5971 ms
+2023-12-18_17:47:04:255 EMG Prediction: 2
+2023-12-18_17:47:04:454 EMG Processing Time: 2.2735 ms
+2023-12-18_17:47:04:454 EMG Prediction: 2
+2023-12-18_17:47:04:754 EMG Processing Time: 2.1716 ms
+2023-12-18_17:47:04:754 EMG Prediction: 2
+2023-12-18_17:47:04:954 EMG Processing Time: 2.7922 ms
+2023-12-18_17:47:04:955 EMG Prediction: 2
+2023-12-18_17:47:05:253 EMG Processing Time: 2.19 ms
+2023-12-18_17:47:05:254 EMG Prediction: 2
+2023-12-18_17:47:05:453 EMG Processing Time: 2.2434 ms
+2023-12-18_17:47:05:454 EMG Prediction: 2
+2023-12-18_17:47:05:754 EMG Processing Time: 2.3348 ms
+2023-12-18_17:47:05:755 EMG Prediction: 2
+2023-12-18_17:47:05:954 EMG Processing Time: 2.3589 ms
+2023-12-18_17:47:05:955 EMG Prediction: 2
+2023-12-18_17:47:06:254 EMG Processing Time: 2.228 ms
+2023-12-18_17:47:06:255 EMG Prediction: 2
+2023-12-18_17:47:06:454 EMG Processing Time: 2.3714 ms
+2023-12-18_17:47:06:455 EMG Prediction: 2
+2023-12-18_17:47:06:753 EMG Processing Time: 2.3195 ms
+2023-12-18_17:47:06:754 EMG Prediction: 2
+2023-12-18_17:47:06:954 EMG Processing Time: 2.3729 ms
+2023-12-18_17:47:06:955 EMG Prediction: 2
+2023-12-18_17:47:07:254 EMG Processing Time: 2.3147 ms
+2023-12-18_17:47:07:255 EMG Prediction: 2
+2023-12-18_17:47:07:454 EMG Processing Time: 2.9793 ms
+2023-12-18_17:47:07:455 EMG Prediction: 2
+2023-12-18_17:47:07:754 EMG Processing Time: 2.4461 ms
+2023-12-18_17:47:07:755 EMG Prediction: 2
+2023-12-18_17:47:07:954 EMG Processing Time: 2.1701 ms
+2023-12-18_17:47:07:955 EMG Prediction: 2
+2023-12-18_17:47:08:254 EMG Processing Time: 2.2096 ms
+2023-12-18_17:47:08:255 EMG Prediction: 2
+2023-12-18_17:47:08:454 EMG Processing Time: 2.3165 ms
+2023-12-18_17:47:08:455 EMG Prediction: 2
+2023-12-18_17:47:08:754 EMG Processing Time: 2.3556 ms
+2023-12-18_17:47:08:755 EMG Prediction: 2
+2023-12-18_17:47:08:954 EMG Processing Time: 2.4328 ms
+2023-12-18_17:47:08:955 EMG Prediction: 2
+2023-12-18_17:47:09:254 EMG Processing Time: 2.3245 ms
+2023-12-18_17:47:09:255 EMG Prediction: 2
+2023-12-18_17:47:09:454 EMG Processing Time: 2.2325 ms
+2023-12-18_17:47:09:455 EMG Prediction: 2
+2023-12-18_17:47:09:754 EMG Processing Time: 2.2017 ms
+2023-12-18_17:47:09:754 EMG Prediction: 2
+2023-12-18_17:47:09:954 EMG Processing Time: 2.185 ms
+2023-12-18_17:47:09:954 EMG Prediction: 2
+2023-12-18_17:47:10:257 EMG Processing Time: 3.197 ms
+2023-12-18_17:47:10:258 EMG Prediction: 2
+2023-12-18_17:47:10:454 EMG Processing Time: 2.7053 ms
+2023-12-18_17:47:10:455 EMG Prediction: 2
+2023-12-18_17:47:10:754 EMG Processing Time: 2.3436 ms
+2023-12-18_17:47:10:754 EMG Prediction: 2
+2023-12-18_17:47:10:954 EMG Processing Time: 2.2933 ms
+2023-12-18_17:47:10:954 EMG Prediction: 2
+2023-12-18_17:47:11:254 EMG Processing Time: 2.3323 ms
+2023-12-18_17:47:11:254 EMG Prediction: 2
+2023-12-18_17:47:11:453 EMG Processing Time: 2.1502 ms
+2023-12-18_17:47:11:454 EMG Prediction: 2
+2023-12-18_17:47:11:754 EMG Processing Time: 2.3421 ms
+2023-12-18_17:47:11:755 EMG Prediction: 2
+2023-12-18_17:47:11:954 EMG Processing Time: 2.2715 ms
+2023-12-18_17:47:11:954 EMG Prediction: 2
+2023-12-18_17:47:12:254 EMG Processing Time: 2.3268 ms
+2023-12-18_17:47:12:255 EMG Prediction: 2
+2023-12-18_17:47:12:454 EMG Processing Time: 2.2512 ms
+2023-12-18_17:47:12:455 EMG Prediction: 2
+2023-12-18_17:47:12:754 EMG Processing Time: 2.1949 ms
+Cleaning up resources...
+2023-12-18_17:47:12:755 EMG Prediction: 2
+2023-12-18_17:47:12:838 EMG Processing, receieved stop command
+2023-12-18_17:47:12:839 EMG save, stop command received. Closing file
+2023-12-18_17:47:12:959 EMG Worker, received stop command
+2023-12-18_17:47:12:839 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

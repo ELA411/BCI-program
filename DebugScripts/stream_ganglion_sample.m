@@ -220,15 +220,15 @@ while true
     % Calculate SNR, SINAD, and THD
     % ---------------------------------------------------------------------
     % if toc(lastQualityCheck) >= 5
-    %     eeg_quality = extract(sFE, eegQualityBuffer);
+        % eeg_quality = extract(sFE, eegQualityBuffer);
     %     % ---------------------------------------------------------------------
-    %     channel1 = eeg_quality(:,:,1);
+        % channel1 = eeg_quality(:,:,1);
     %     channel2 = eeg_quality(:,:,2);
     %     channel3 = eeg_quality(:,:,3);
     %     channel4 = eeg_quality(:,:,4);
     %     % ---------------------------------------------------------------------
     %     fprintf('============================================================================');
-    %     fprintf('\nChannel1:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel1(:,1),channel1(:,2), channel1(:,3));
+        % fprintf('\nChannel1:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel1(:,1),channel1(:,2), channel1(:,3));
     %     fprintf('\nChannel2:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel2(:,1),channel2(:,2), channel2(:,3));
     %     fprintf('\nChannel3:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel3(:,1),channel3(:,2), channel3(:,3));
     %     fprintf('\nChannel4:\nSNR:\t %f\nSINAD:\t %f\nTHD:\t %f\n',channel4(:,1),channel4(:,2), channel4(:,3));

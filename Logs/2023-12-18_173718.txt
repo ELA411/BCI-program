@@ -1,0 +1,81 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-18_17:37:35:813 pEMG_processing started
+2023-12-18_17:37:35:898 pEMG_save started
+2023-12-18_17:37:39:358 pEMG_worker started
+2023-12-18_17:37:39:541 pEEG_save started
+2023-12-18_17:37:41:416 pEEG_processing started
+2023-12-18_17:37:44:856 pEEG_worker started
+All processes started
+2023-12-18_17:37:39:365 EMG Worker checking for start
+2023-12-18_17:37:44:864 EMG Save, receieved start command
+2023-12-18_17:37:44:864 EEG Save, receieved start command
+2023-12-18_17:37:44:864 EMG Worker start command receieved
+2023-12-18_17:37:44:865 EEG Worker, receieved start command
+2023-12-18_17:37:44:905 EMG Processing, receieved start command
+2023-12-18_17:37:44:908 EEG Processing, receieved start command
+Analyzing and transferring files to the workers ...done.
+2023-12-18_17:37:46:519 EMG Processing Time: 594.2025 ms
+2023-12-18_17:37:46:527 EMG Prediction: 2
+2023-12-18_17:37:46:573 EMG Processing Time: 41.4171 ms
+2023-12-18_17:37:46:593 EMG Prediction: 2
+2023-12-18_17:37:46:647 EMG Processing Time: 48.0019 ms
+2023-12-18_17:37:46:650 EMG Prediction: 2
+2023-12-18_17:37:46:666 EMG Processing Time: 14.5592 ms
+2023-12-18_17:37:46:669 EMG Prediction: 2
+2023-12-18_17:37:46:867 EMG Processing Time: 58.1662 ms
+2023-12-18_17:37:46:873 EMG Prediction: 2
+2023-12-18_17:37:46:986 EMG Processing Time: 3.6024 ms
+2023-12-18_17:37:46:987 EMG Prediction: 2
+2023-12-18_17:37:47:282 EMG Processing Time: 2.6866 ms
+2023-12-18_17:37:47:282 EMG Prediction: 2
+2023-12-18_17:37:48:100 EMG Processing Time: 20.8384 ms
+2023-12-18_17:37:48:101 EMG Prediction: 2
+2023-12-18_17:37:48:536 EMG Processing Time: 4.6196 ms
+2023-12-18_17:37:48:538 EMG Prediction: 2
+2023-12-18_17:37:48:541 EMG Processing Time: 3.0515 ms
+2023-12-18_17:37:48:542 EMG Prediction: 2
+2023-12-18_17:37:48:545 EMG Processing Time: 2.5217 ms
+2023-12-18_17:37:48:546 EMG Prediction: 2
+2023-12-18_17:37:48:549 EMG Processing Time: 2.8222 ms
+2023-12-18_17:37:48:549 EMG Prediction: 2
+2023-12-18_17:37:48:682 EMG Processing Time: 3.1418 ms
+2023-12-18_17:37:48:683 EMG Prediction: 2
+2023-12-18_17:37:48:881 EMG Processing Time: 2.3351 ms
+2023-12-18_17:37:48:881 EMG Prediction: 2
+2023-12-18_17:37:49:181 EMG Processing Time: 2.1941 ms
+2023-12-18_17:37:49:181 EMG Prediction: 2
+2023-12-18_17:37:49:381 EMG Processing Time: 2.2092 ms
+2023-12-18_17:37:49:381 EMG Prediction: 2
+2023-12-18_17:37:49:681 EMG Processing Time: 2.3766 ms
+2023-12-18_17:37:49:682 EMG Prediction: 2
+2023-12-18_17:37:49:880 EMG Processing Time: 2.4166 ms
+2023-12-18_17:37:49:881 EMG Prediction: 2
+2023-12-18_17:37:50:180 EMG Processing Time: 2.1525 ms
+2023-12-18_17:37:50:181 EMG Prediction: 2
+2023-12-18_17:37:50:381 EMG Processing Time: 2.6462 ms
+2023-12-18_17:37:50:382 EMG Prediction: 2
+2023-12-18_17:37:50:682 EMG Processing Time: 3.5019 ms
+2023-12-18_17:37:50:683 EMG Prediction: 2
+2023-12-18_17:37:50:881 EMG Processing Time: 2.4377 ms
+2023-12-18_17:37:50:882 EMG Prediction: 2
+2023-12-18_17:37:51:181 EMG Processing Time: 2.2927 ms
+2023-12-18_17:37:51:182 EMG Prediction: 2
+2023-12-18_17:37:51:381 EMG Processing Time: 2.9918 ms
+2023-12-18_17:37:51:382 EMG Prediction: 2
+2023-12-18_17:37:51:681 EMG Processing Time: 2.3034 ms
+2023-12-18_17:37:51:681 EMG Prediction: 2
+2023-12-18_17:37:51:880 EMG Processing Time: 2.3016 ms
+2023-12-18_17:37:51:881 EMG Prediction: 2
+2023-12-18_17:37:52:181 EMG Processing Time: 2.5651 ms
+2023-12-18_17:37:52:182 EMG Prediction: 2
+2023-12-18_17:37:52:381 EMG Processing Time: 2.2278 ms
+2023-12-18_17:37:52:381 EMG Prediction: 2
+Cleaning up resources...
+2023-12-18_17:37:52:674 EMG Processing, receieved stop command
+2023-12-18_17:37:52:675 EMG save, stop command received. Closing file
+2023-12-18_17:37:52:688 EMG Worker, received stop command
+2023-12-18_17:37:52:675 EEG Save, receieved stop command. Closing file
+2023-12-18_17:37:52:675 EEG Processing, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.
