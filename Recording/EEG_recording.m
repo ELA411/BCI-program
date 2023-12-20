@@ -1,6 +1,6 @@
 
-name = 'Viktor';
-setting = 'Hand_close_real_new_electrode_placement';
+name = 'Carl';
+setting = 'Left_side_electrode_cluster_ch1-green_ch2-yellow_ch3-orange_ch4-red';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % Init brainflow
@@ -58,16 +58,19 @@ while true
         channel4 = data(5,col);
         timestamp = data(14,col);
         
-        if toc(labelTime) >= 4
-            if reps == 10
-                disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps), ' Dataset completed']);
+        if toc(labelTime) >= 10
+            if reps == 2
+                disp(['REP: ', num2str(reps), ' Dataset completed']);
+                % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps), ' Dataset completed']);
                 break;
             end
             
             if label
-                disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' CLOSE']);
+                disp(['REP: ', num2str(reps + 1),' CLOSE']);
+                % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' CLOSE']);
             else
-                disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' REST']);
+                disp(['REP: ', num2str(reps + 1),' REST']);
+                % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' REST']);
                 reps = reps + 1;
             end
             label = ~label; % Toggle label

@@ -4,7 +4,8 @@
 % Version: 1.0.0
 % License:
 %
-% Description:
+% Description: This script handles the creation of the processes and
+% receives the predicitions from the EEG process and EMG process, and then sends commands to the ROS interface.
 % ---------------------------------------------------------------------
 
 % Create the GUI
@@ -16,6 +17,7 @@ hButton = uicontrol('Style', 'pushbutton', 'String', 'Stop', ...
 global stopRequested;
 stopRequested = false;
 clc;
+debug = false;
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
 fileName = ['Logs/',char(currentDateTime), '.txt'];
 diary(fileName);
@@ -24,11 +26,12 @@ load('..\processing\trained_classifiers\eeg_classifier.mat');
 load('..\processing\saved_variables\W_matrix.mat');
 % ---------------------------------------------------------------------
 name = 'Pontus';
-setting = 'Test_grove_connected_to_ch1_ch2_electrode_loose';
+setting = 'Test';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % If no pool exists, create a new one
-% DAQ toolbox and ganglion cannot run as a threads :)))) :DDDD
+% DAQ toolbox and ganglion cannot run as a threads, ganglion board has no
+% support to be used in LabView
 poolobj = parpool('Processes', 8);
 % ---------------------------------------------------------------------
 % EMG_processing_queue, sends data to processing process
@@ -37,11 +40,9 @@ poolobj = parpool('Processes', 8);
 % EMG_command_queue sends data from classifier to this script
 % ---------------------------------------------------------------------
 EMG_main_queue = parallel.pool.PollableDataQueue; % Initial queue
-EEG_debug_queue = parallel.pool.PollableDataQueue; % Initial queue
-
 % ---------------------------------------------------------------------
 % EMG_processing dependencies: EMG_classifier_queue, EMG_main_queue
-pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, emg_classifier); % Process for EMG signal processing
+pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, emg_classifier, debug); % Process for EMG signal processing
 while pEMG_processing.State ~= "running"
 end
 while true
@@ -57,7 +58,7 @@ end
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' pEMG_processing started']);
 % ---------------------------------------------------------------------
 % EMG_save dependencies: EMG_main_queue
-pEMG_save = parfeval(poolobj, @EMG_save, 0, EMG_main_queue, session); % Process to save data
+pEMG_save = parfeval(poolobj, @EMG_save, 0, EMG_main_queue, session, debug); % Process to save data
 while pEMG_save.State ~= "running"
 end
 while true
@@ -73,7 +74,7 @@ end
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' pEMG_save started']);
 % ---------------------------------------------------------------------
 % EMG worker dependencies: EMG_processing_queue, EMG_save_queue
-pEMG_worker = parfeval(poolobj, @EMG_worker, 0, EMG_processing_queue, EMG_save_queue, EMG_main_queue); % Process to read and send data for processing and saving
+pEMG_worker = parfeval(poolobj, @EMG_worker, 0, EMG_processing_queue, EMG_save_queue, EMG_main_queue, debug); % Process to read and send data for processing and saving
 while pEMG_worker.State ~= "running"
 end
 while true
@@ -93,7 +94,7 @@ disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEMG_worker 
 EEG_main_queue = parallel.pool.PollableDataQueue;
 % ---------------------------------------------------------------------
 % EEG_save dependencies: EEG_save_queue
-pEEG_save = parfeval(poolobj, @EEG_save, 0, EEG_main_queue, session);
+pEEG_save = parfeval(poolobj, @EEG_save, 0, EEG_main_queue, session, debug);
 while pEEG_save.State ~= "running"
 end
 while true
@@ -109,7 +110,7 @@ end
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_save started']);
 % ---------------------------------------------------------------------
 % EEG_processing dependencies: EEG_main_queue, EEG_classifier_queue
-pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_debug_queue, W, eeg_classifier); % Process for EEG signal processing
+pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, W, eeg_classifier, debug); % Process for EEG signal processing
 while pEEG_processing.State ~= "running"
 end
 while true
@@ -126,7 +127,7 @@ disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_process
 % ---------------------------------------------------------------------
 % EEG_sampling dependencies: EEG_main_queue, EEG_processing_queue,
 % EEG_save_queue
-pEEG_worker = parfeval(poolobj, @EEG_worker, 0, EEG_processing_queue, EEG_save_queue, EEG_main_queue, session); % Sampling, brainflow already saves data
+pEEG_worker = parfeval(poolobj, @EEG_worker, 0, EEG_processing_queue, EEG_save_queue, EEG_main_queue, session,debug); % Sampling, brainflow already saves data
 while pEEG_worker.State ~= "running"
 end
 while true
@@ -141,7 +142,7 @@ while true
 end
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_worker started']);
 % ---------------------------------------------------------------------
-disp("All processes started");
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), "All processes started"]);
 
 % ---------------------------------------------------------------------
 % Start all processes at the same time
@@ -152,15 +153,13 @@ send(EEG_worker_queue, 'start');
 send(EMG_worker_queue, "start");
 send(EMG_save_queue, "start");
 send(EMG_processing_queue, "start");
+
 % Main processing loop
 while ~stopRequested
 
     [EMG_debug, msg_received_emg2] = poll(EMG_main_queue, 0);
     [EEG_debug, msg_received_eeg2] = poll(EEG_main_queue, 0);
-    [EEG_debug2, flag] = poll(EEG_debug_queue, 0);
-    if flag 
-        IC = EEG_debug2;
-    end
+
     if msg_received_emg2 && isa(EMG_debug, "char")
         disp(EMG_debug);
     end

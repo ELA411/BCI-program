@@ -7,7 +7,7 @@
 % Description:
 % This script saves the data received from the ganglion
 % ---------------------------------------------------------------------
-function EEG_save(EEG_main_queue, session)
+function EEG_save(EEG_main_queue, session, debug)
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
 fileName = ['Datasets/EEG/EEG_',session,'_',char(currentDateTime),'.txt'];
 fileID = fopen(fileName, "w");
@@ -27,8 +27,12 @@ end
 labelTime = tic; % Start timer for label switching
 while true % Add a condition to break this loop if necessary
     [rawData, msg_received] = poll(EEG_save_queue, 0);
+
     % Check class of message
     if msg_received
+        if debug
+            send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')), ' EEG Save, starting save']);
+        end
         if strcmp(rawData, 'stop')
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')), ' EEG Save, receieved stop command. Closing file']);
             break;

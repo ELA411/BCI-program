@@ -8,7 +8,7 @@
 % This script receieves the data read from the NI myDAQ and writes it to
 % file
 % ---------------------------------------------------------------------
-function EMG_save(EMG_main_queue, session)
+function EMG_save(EMG_main_queue, session, debug)
 
 EMG_save_queue = parallel.pool.PollableDataQueue;
 send(EMG_main_queue, EMG_save_queue);
@@ -38,14 +38,16 @@ while true
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG save, stop command received. Closing file']);
             break;
         end
-        % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG save, writing ', num2str(size(rawData, 1)),' samples to file']);
-        % send(EMG_main_queue, ['Saving ', num2str(size(rawData, 1)), ' samples']);
+        if debug
+            send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG save, writing ', num2str(size(rawData, 1)),' samples to file']);
+            send(EMG_main_queue, ['Saving ', num2str(size(rawData, 1)), ' samples']);
+        end
         for i = 1:size(rawData, 1)
 
             if toc(labelTime) >= 1
                 label = mod(label + 1, 3); % Cycle through 0, 1, 2
                 labelTime = tic; % Reset timer
-            end
+                ends
 
             fprintf(fileID, "%f %f %f %f %f\n", rawData(i, 1), rawData(i, 2), label, pkdID, rawData(i, 3));
             pkdID = mod(pkdID + 1, 1000);

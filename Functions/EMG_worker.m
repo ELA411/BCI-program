@@ -8,7 +8,7 @@
 % This script samples the analog input of the NI myDAQ and saves the data
 % for real-time processing and offline analysis
 % ---------------------------------------------------------------------
-function EMG_worker(EMG_processing_queue, EMG_save_queue, EMG_main_queue)
+function EMG_worker(EMG_processing_queue, EMG_save_queue, EMG_main_queue, debug)
 % ---------------------------------------------------------------------
 EMG_worker_queue = parallel.pool.PollableDataQueue;
 send(EMG_main_queue, EMG_worker_queue);
@@ -32,7 +32,9 @@ end
 % Really important to start in continuous mode
 start(d,"continuous");
 while true
-    % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Starting inloop']);
+    if debug
+        send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Starting inloop']);
+    end
     [trigger, flag] = poll(EMG_worker_queue, 0);
     if flag
         if strcmp(trigger, 'stop')
@@ -40,14 +42,16 @@ while true
             break;
         end
     end
-    % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Sampling, sampling 250 ms']);
+    if debug
+        send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Sampling, sampling 250 ms']);
+    end
     % Read data
     [scanData, timeStamp] = read(d, seconds(0.25), "OutputFormat","Matrix");
     voltage_save = [scanData(:,1), scanData(:,2), timeStamp]; % Used to save the samples
     voltage = [scanData(:,1), scanData(:,2)]; % We dont need the timestamps for processing
-
     send(EMG_processing_queue, voltage);
     send(EMG_save_queue, voltage_save);
+    % flush(d);
 end
 stop(d);
 end

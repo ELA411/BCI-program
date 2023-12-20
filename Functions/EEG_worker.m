@@ -8,7 +8,7 @@
 % This script performs all signal acquisition from the ganglion board using
 % brainflow api
 % ---------------------------------------------------------------------
-function EEG_worker(EEG_processing_queue, EEG_save_queue, EEG_main_queue, session)
+function EEG_worker(EEG_processing_queue, EEG_save_queue, EEG_main_queue, session, debug)
 EEG_worker_queue = parallel.pool.PollableDataQueue;
 send(EEG_main_queue, EEG_worker_queue);
 % ---------------------------------------------------------------------
@@ -85,11 +85,13 @@ while true
         eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, packageid, timestamp];
         eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
 
-        % if toc(slidingWindow)>=0.1
-        if samples >= 50
+        if toc(slidingWindow)>=0.1
+            % if samples >= 50
             send(EEG_processing_queue, eegBufferProcessing);
             send(EEG_save_queue, eegBuffer);
-            % send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: samples 250 ms ', num2str(size(eegBufferProcessing, 1))]);
+            if debug
+                send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: Sending samples to processing: ', num2str(size(eegBufferProcessing, 1))]);
+            end
             eegBuffer = [];
             eegBufferProcessing = [];
             slidingWindow = tic;
