@@ -1,0 +1,29 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-20_20:26:21:372 pEMG_processing started
+2023-12-20_20:26:21:549 pEMG_save started
+2023-12-20_20:26:30:289 pEMG_worker started
+2023-12-20_20:26:30:623 pEEG_save started
+2023-12-20_20:26:34:133 pEEG_processing started
+2023-12-20_20:26:37:492 pEEG_worker started
+    "2023-12-20_20:26:…"    "All processes sta…"
+
+{Unable to perform assignment because the indices on
+the left side are not compatible with the size of
+the right side.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 202)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',202,0)">line 202</a>)
+            EEG_predictions(end + 1) = EEG_prediction;
+} 
+Analyzing and transferring files to the workers ...done.
+EEG_predictions(end + 1) = EEG_prediction
+{Unable to perform assignment because the indices on the left side
+are not compatible with the size of the right side.
+} 
+EEG_prediction
+
+EEG_prediction =
+
+    '2023-12-20_20:26:37:511 EEG Worker, receieved start command'
+
+main

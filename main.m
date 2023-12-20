@@ -164,7 +164,7 @@ while true
 end
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_worker started']);
 % ---------------------------------------------------------------------
-disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), "All processes started"]);
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), 'All processes started']);
 
 % ---------------------------------------------------------------------
 % Start all processes at the same time
@@ -175,52 +175,75 @@ send(EEG_worker_queue, 'start');
 send(EMG_worker_queue, "start");
 send(EMG_save_queue, "start");
 send(EMG_processing_queue, "start");
-
+% Initialize variables for collecting predictions
+EEG_predictions = [];
+EMG_predictions = [];
+prediction_interval = 0.5; % Interval in seconds for collecting predictions
+last_prediction_time = tic; % Start a timer
 % Main processing loop
 while ~stopRequested
 
     [EMG_debug, flag_EMG_debug] = poll(EMG_main_queue, 0);
     [EEG_debug, flag_EEG_debug] = poll(EEG_main_queue, 0);
-    [EMG_prediction, flag_EMG_prediction] = poll(EMG_main_queue, 0);
-    [EEG_prediction, flag_EEG_prediction] = poll(EEG_main_queue, 0);
+    [EMG_prediction, flag_EMG_prediction] = poll(EMG_prediction_queue, 0);
+    [EEG_prediction, flag_EEG_prediction] = poll(EEG_prediction_queue, 0);
 
     if flag_EMG_debug && isa(EMG_debug, "char")
-        disp(EMG_debug);
-    
+        % disp(EMG_debug);
+
     end
     if flag_EEG_debug && isa(EEG_debug, "char")
-        disp(EEG_debug);
+        % disp(EEG_debug);
     end
 
     if flag_EEG_prediction || flag_EMG_prediction
-        if flag_EEG_prediction == 0
-            disp('stop');
-            msg.linear.x = 0;
-            msg.linear.y = 0;
-            msg.linear.z = 0;
-        else
-            disp('Drive forward');
-            msg.linear.x = 0.5;
-            msg.linear.y = 0;
-            msg.linear.z = 0;
+        if flag_EEG_prediction
+
+            EEG_predictions(end + 1) = EEG_prediction;
         end
-        if flag_EMG_prediction == 0
-            disp('Stop turning');
-            msg.angular.x = 0;
-            msg.angular.y = 0;
-            msg.angular.z = 0;
-        elseif flag_EMG_prediction == 1
-            disp('Turn left');
-            msg.angular.x = -0.5; % turnleft
-            msg.angular.y = 0;
-            msg.angular.z = 0;
-        else
-            disp('Turn right')
-            msg.angular.x = 0.5; % turnroght
-            msg.angular.y = 0;
-            msg.angular.z = 0;
+        if flag_EMG_prediction
+            EMG_predictions(end + 1) = EMG_prediction;
         end
-        send(pub, msg); % Send message to turtlebot with new velocity
+        % Check if the interval has passed
+        if toc(last_prediction_time) >= prediction_interval
+            % Determine the most frequent (mode) prediction
+            mode_EEG_prediction = mode(EEG_predictions);
+            mode_EMG_prediction = mode(EMG_predictions);
+
+            % Reset predictions
+            EEG_predictions = [];
+            EMG_predictions = [];
+            last_prediction_time = tic; % Reset timer
+
+            if mode_EEG_prediction == 0
+                disp('stop');
+                msg.linear.x = 0;
+                msg.linear.y = 0;
+                msg.linear.z = 0;
+            else
+                disp('Drive forward');
+                msg.linear.x = 0.5;
+                msg.linear.y = 0;
+                msg.linear.z = 0;
+            end
+            if mode_EMG_prediction == 0
+                disp('Stop turning');
+                msg.angular.x = 0;
+                msg.angular.y = 0;
+                msg.angular.z = 0;
+            elseif mode_EMG_prediction == 1
+                disp('Turn left');
+                msg.angular.x = -0.5; % turnleft
+                msg.angular.y = 0;
+                msg.angular.z = 0;
+            else
+                disp('Turn right')
+                msg.angular.x = 0.5; % turnroght
+                msg.angular.y = 0;
+                msg.angular.z = 0;
+            end
+            send(pub, msg); % Send message to turtlebot with new velocity
+        end
     end
     pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
 end
@@ -247,7 +270,7 @@ while EEG_main_queue.QueueLength ~= 0
         disp(trigger);
     end
 end
-      
+
 pause(5);
 delete(gcp('nocreate'));
 
