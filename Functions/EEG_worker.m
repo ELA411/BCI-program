@@ -58,6 +58,7 @@ end
 % ---------------------------------------------------------------------
 % Main loop
 % ---------------------------------------------------------------------
+overlapSamples = round(0.025 * 200); % Assuming Fs is your sampling frequency
 slidingWindow = tic;
 samples = 0;
 while true
@@ -85,17 +86,20 @@ while true
         eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, packageid, timestamp];
         eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
 
-        if toc(slidingWindow)>=0.1
-            % if samples >= 50
+        if toc(slidingWindow)>=0.25
             send(EEG_processing_queue, eegBufferProcessing);
             send(EEG_save_queue, eegBuffer);
             if debug
                 send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: Sending samples to processing: ', num2str(size(eegBufferProcessing, 1))]);
             end
+             % Retain the last 25 ms of data in eegBufferProcessing for overlap
+            if size(eegBufferProcessing, 1) > overlapSamples
+                eegBufferProcessing = eegBufferProcessing(end-overlapSamples+1:end, :);
+            else
+                eegBufferProcessing = [];
+            end
             eegBuffer = [];
-            eegBufferProcessing = [];
             slidingWindow = tic;
-            samples = 0;
         end
     end
 end

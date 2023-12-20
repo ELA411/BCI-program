@@ -29,6 +29,9 @@ while true
         end
     end
 end
+overlapSamples = round(0.025 * 1000); % Replace Fs with your actual sampling rate
+prevVoltage = []; % Initialize an array to store the overlapping data
+
 % Really important to start in continuous mode
 start(d,"continuous");
 while true
@@ -45,13 +48,23 @@ while true
     if debug
         send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Sampling, sampling 250 ms']);
     end
-    % Read data
+        % Read data
     [scanData, timeStamp] = read(d, seconds(0.25), "OutputFormat","Matrix");
-    voltage_save = [scanData(:,1), scanData(:,2), timeStamp]; % Used to save the samples
-    voltage = [scanData(:,1), scanData(:,2)]; % We dont need the timestamps for processing
+
+    % Append the previous overlap to the current data
+    voltage = [prevVoltage; scanData(:,1), scanData(:,2)]; % Append overlap
+    voltage_save = [voltage, timeStamp]; % Combine with timestamps for saving
+
+    % Send data for processing and saving
     send(EMG_processing_queue, voltage);
     send(EMG_save_queue, voltage_save);
-    % flush(d);
+
+    % Store last 50 ms of data for the next overlap
+    if size(scanData, 1) > overlapSamples
+        prevVoltage = scanData(end-overlapSamples+1:end, 1:2);
+    else
+        prevVoltage = [];
+    end
 end
 stop(d);
 end

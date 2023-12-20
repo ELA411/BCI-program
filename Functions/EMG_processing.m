@@ -12,7 +12,10 @@ function EMG_processing(EMG_main_queue, EMG_prediction_queue, emg_classifier, de
 EMG_processing_queue = parallel.pool.PollableDataQueue; % Queue for processing
 send(EMG_main_queue, EMG_processing_queue);
 emg_fs = 1000;
+% ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% Carl
 [n_emg, d_emg, notchFilt_50_emg, notchFilt_100_emg, notchFilt_150_emg] = emg_real_time_processing_init(emg_fs);
+% ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 send(EMG_main_queue, 'ready');
 
 while true
@@ -35,7 +38,10 @@ while true
 
         % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing, receieved: ', num2str(size(emg_data, 1)),' samples']);
         tic; % Start timer
+        % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        % Carl
         prediction = emg_real_time_processing(emg_data, emg_classifier, n_emg, d_emg, notchFilt_50_emg, notchFilt_100_emg, notchFilt_150_emg);
+        % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         if debug
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing Time: ', num2str(toc()*1000),' ms']);
         end
