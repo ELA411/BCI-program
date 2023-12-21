@@ -24,7 +24,7 @@ while true
         end
     end
 end
-labelTime = tic; % Start timer for label switching
+% labelTime = tic; % Start timer for label switching
 while true % Add a condition to break this loop if necessary
     [rawData, msg_received] = poll(EEG_save_queue, 0);
 
@@ -45,12 +45,12 @@ while true % Add a condition to break this loop if necessary
         timestamp = rawData(:,6);
 
         for i = 1:size(rawData, 1)
-            if toc(labelTime) >= 1
-                label = ~label; % Toggle label
-                labelTime = tic; % Reset timer
-            end
+        %     if toc(labelTime) >= 1
+        %         label = ~label; % Toggle label
+        %         labelTime = tic; % Reset timer
+        %     end
 
-            fprintf(fileID, "%f %f %f %f %f %f %f\n", channel1(i), channel2(i), channel3(i), channel4(i), label, ID(i), timestamp(i));
+            fprintf(fileID, "%f %f %f %f %f %f\n", channel1(i), channel2(i), channel3(i), channel4(i), ID(i), timestamp(i));
         end
     end
 end

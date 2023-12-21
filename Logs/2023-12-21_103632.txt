@@ -1,0 +1,74 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-21_10:37:04:182 pEMG_processing started
+2023-12-21_10:37:04:352 pEMG_save started
+2023-12-21_10:37:11:958 pEMG_worker started
+2023-12-21_10:37:12:315 pEEG_save started
+2023-12-21_10:37:15:790 pEEG_processing started
+2023-12-21_10:37:19:720 pEEG_worker started
+2023-12-21_10:37:19:721All processes started
+2023-12-21_10:37:11:974 EMG Worker checking for start
+2023-12-21_10:37:19:732 EMG Save, receieved start command
+2023-12-21_10:37:19:732 EEG Worker, receieved start command
+2023-12-21_10:37:19:739 EMG Worker start command receieved
+2023-12-21_10:37:19:732 EEG Save, receieved start command
+2023-12-21_10:37:19:801 EMG Processing, receieved start command
+2023-12-21_10:37:19:797 EEG Processing, receieved start command
+Analyzing and transferring files to the workers ...done.
+2023-12-21_10:37:22:540 EMG Prediction: 2
+Drive forward
+ready
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main')" style="font-weight:bold">main</a>
+} 
+pEEG_processing
+
+pEEG_processing = 
+
+ <a href="matlab: helpPopup parallel.FevalFuture" style="font-weight:bold">FevalFuture</a> with properties: 
+
+                   ID: 71
+             Function: @EEG_processing
+       CreateDateTime: 21-Dec-2023 10:37:12
+        StartDateTime: 21-Dec-2023 10:37:12
+      RunningDuration: 0 days 0h 0m 8s
+                State: finished (unread)
+                Error: The frequency range must be within the range of F for the specified input.
+                       <a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\signal\signal\bandpower.m', 154, 0)">bandpower>psdbandpower (line 154)</a>
+                       <a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\signal\signal\bandpower.m', 110, 0)">bandpower>timedomainbandpower (line 110)</a>
+                       <a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\signal\signal\bandpower.m', 65, 0)">bandpower (line 65)</a>
+                       <a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\processing\eeg_real_time_processing.m', 62, 0)">eeg_real_time_processing (line 62)</a>
+                       <a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Functions\EEG_processing.m', 46, 0)">EEG_processing (line 46)</a>
+
+opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Functions\EEG_processing.m', 46, 0)
+even(2)
+{Incorrect number or types of inputs or outputs for function even.
+} 
+even
+{Unrecognized function or variable 'even'.
+} 
+iseven(2)
+{Unrecognized function or variable 'iseven'.
+} 
+rem(2, 0)
+
+ans =
+
+   NaN
+
+rem(57,2) == 0
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+rem(57,2) == 1
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+main

@@ -60,6 +60,9 @@ end
 % ---------------------------------------------------------------------
 overlapSamples = round(0.025 * 200); % Assuming Fs is your sampling frequency
 slidingWindow = tic;
+prevVoltage = []; % Initialize an array to store the overlapping data
+firstIteration = true;
+overSampling = true;
 samples = 0;
 while true
     % ---------------------------------------------------------------------
@@ -72,6 +75,9 @@ while true
             break;
         end
     end
+    firstIteration = true;
+    threshold = 50;
+    overSampling = false;
     dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
     if dataInBuffer > 0
         data = board_shim.get_board_data(1, preset); % Take available packages and remove them from buffer
@@ -84,22 +90,37 @@ while true
         timestamp = data(14,col);
 
         eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, packageid, timestamp];
-        eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
+       
+        if overSampling
+            eegBufferProcessing = [prevVoltage; eegBufferProcessing; channel1, channel2, channel3, channel4];
+            overSampling = false;
+        else
+            eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
+        end
 
-        if toc(slidingWindow)>=0.25
+        % if toc(slidingWindow)>=0.25
+        if samples >= threshold
             send(EEG_processing_queue, eegBufferProcessing);
             send(EEG_save_queue, eegBuffer);
+            send(EEG_main_queue, eegBufferProcessing);
             if debug
                 send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: Sending samples to processing: ', num2str(size(eegBufferProcessing, 1))]);
             end
-             % Retain the last 25 ms of data in eegBufferProcessing for overlap
+            % Retain the last 25 ms of data in eegBufferProcessing for overlap
             if size(eegBufferProcessing, 1) > overlapSamples
-                eegBufferProcessing = eegBufferProcessing(end-overlapSamples+1:end, :);
+                prevVoltage = eegBufferProcessing(end-overlapSamples+1:end, :);
+                overSampling = true;
             else
-                eegBufferProcessing = [];
+                prevVoltage = [];
             end
             eegBuffer = [];
-            slidingWindow = tic;
+            eegBufferProcessing = [];
+            % slidingWindow = tic;
+            samples = 0;
+            if firstIteration
+                threshold = 45;
+                firstIteration = false;
+            end
         end
     end
 end

@@ -1,0 +1,26 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-21_10:05:17:318 pEMG_processing started
+2023-12-21_10:05:17:588 pEMG_save started
+2023-12-21_10:05:31:031 pEMG_worker started
+2023-12-21_10:05:31:818 pEEG_save started
+2023-12-21_10:05:36:285 pEEG_processing started
+2023-12-21_10:05:40:890 pEEG_worker started
+2023-12-21_10:05:40:893All processes started
+2023-12-21_10:05:31:052 EMG Worker checking for start
+2023-12-21_10:05:40:905 EMG Worker start command receieved
+2023-12-21_10:05:40:906 EEG Worker, receieved start command
+2023-12-21_10:05:40:910 EMG Save, receieved start command
+2023-12-21_10:05:40:906 EEG Save, receieved start command
+2023-12-21_10:05:40:985 EMG Processing, receieved start command
+2023-12-21_10:05:40:982 EEG Processing, receieved start command
+Analyzing and transferring files to the workers ...done.
+2023-12-21_10:05:44:895 EMG Prediction: 2
+Drive forward
+Turn right
+ready
+Cleaning up resources...
+2023-12-21_10:06:34:611 EMG Processing, receieved stop command
+2023-12-21_10:06:34:609 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

@@ -1,0 +1,28 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-21_10:14:58:706 pEMG_processing started
+2023-12-21_10:14:58:938 pEMG_save started
+2023-12-21_10:15:09:740 pEMG_worker started
+2023-12-21_10:15:10:230 pEEG_save started
+2023-12-21_10:15:15:540 pEEG_processing started
+2023-12-21_10:15:20:132 pEEG_worker started
+2023-12-21_10:15:20:139All processes started
+2023-12-21_10:15:09:765 EMG Worker checking for start
+2023-12-21_10:15:20:153 EMG Worker start command receieved
+2023-12-21_10:15:20:153 EEG Worker, receieved start command
+2023-12-21_10:15:20:159 EMG Save, receieved start command
+2023-12-21_10:15:20:153 EEG Save, receieved start command
+2023-12-21_10:15:20:221 EMG Processing, receieved start command
+2023-12-21_10:15:20:234 EEG Processing, receieved start command
+<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',192,1)">192 </a>        eegBuffer = EEG_debug;
+Analyzing and transferring files to the workers ...done.
+if system_dependent('IsDebugMode')==1, dbcont; end
+2023-12-21_10:15:24:356 EMG Prediction: 0
+Drive forward
+Stop turning
+ready
+Cleaning up resources...
+2023-12-21_10:16:51:139 EMG Processing, receieved stop command
+2023-12-21_10:16:51:139 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

@@ -1,0 +1,47 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-21_13:16:24:641 pEMG_processing started
+2023-12-21_13:16:24:748 pEMG_save started
+2023-12-21_13:16:28:831 pEMG_worker started
+2023-12-21_13:16:29:057 pEEG_save started
+2023-12-21_13:16:31:441 pEEG_processing started
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue/pollImpl')" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue/pollImpl</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.pool.PollableDataQueue/poll', 'C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m', 79)" style="font-weight:bold">parallel.pool.PollableDataQueue/poll</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m',79,0)">line 79</a>)
+            [data, OK] = obj.pollImpl(varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 156)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',156,0)">line 156</a>)
+    [trigger, flag] = poll(EEG_main_queue, 0.1);
+} 
+pEEG_processing
+
+pEEG_processing = 
+
+ <a href="matlab: helpPopup parallel.FevalFuture" style="font-weight:bold">FevalFuture</a> with properties: 
+
+                   ID: 17
+             Function: @EEG_processing
+       CreateDateTime: 21-Dec-2023 13:16:29
+        StartDateTime: 21-Dec-2023 13:16:29
+      RunningDuration: 0 days 0h 2m 22s
+                State: running
+                Error: none
+
+pEEG_worker
+
+pEEG_worker = 
+
+ <a href="matlab: helpPopup parallel.FevalFuture" style="font-weight:bold">FevalFuture</a> with properties: 
+
+                   ID: 18
+             Function: @EEG_worker
+       CreateDateTime: 21-Dec-2023 13:16:31
+        StartDateTime: 21-Dec-2023 13:16:31
+      RunningDuration: 0 days 0h 0m 1s
+                State: finished (unread)
+                Error: Non zero ec: 17, for task: prepare_session
+                       <a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 34, 0)">BoardShim>BoardShim.check_ec (line 34)</a>
+                       <a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 376, 0)">BoardShim>BoardShim.prepare_session (line 376)</a>
+                       <a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Functions\EEG_worker.m', 33, 0)">EEG_worker (line 33)</a>
+

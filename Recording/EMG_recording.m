@@ -24,7 +24,7 @@ start(d,"continuous");
 while true
     [scanData, timeStamp] = read(d, seconds(0.001), "OutputFormat","Matrix");
     if toc(labelTime) >= 4
-        if reps == 10
+        if reps == 50
             disp(['REP: ', num2str(reps), ' Dataset completed']);
             break;
         end

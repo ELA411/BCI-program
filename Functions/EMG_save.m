@@ -29,7 +29,7 @@ while true
 end
 
 % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Starting save']);
-labelTime = tic; % Start timer for label switching
+% labelTime = tic; % Start timer for label switching
 while true
     [rawData, msg_received] = poll(EMG_save_queue, 0);
 
@@ -44,12 +44,12 @@ while true
         end
         for i = 1:size(rawData, 1)
 
-            if toc(labelTime) >= 1
-                label = mod(label + 1, 3); % Cycle through 0, 1, 2
-                labelTime = tic; % Reset timer
-                ends
+            % if toc(labelTime) >= 1
+            %     label = mod(label + 1, 3); % Cycle through 0, 1, 2
+            %     labelTime = tic; % Reset timer
+            %     ends
 
-            fprintf(fileID, "%f %f %f %f %f\n", rawData(i, 1), rawData(i, 2), label, pkdID, rawData(i, 3));
+            fprintf(fileID, "%f %f %f %f\n", rawData(i, 1), rawData(i, 2), pkdID, rawData(i, 3));
             pkdID = mod(pkdID + 1, 1000);
         end
 

@@ -1,0 +1,33 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-21_09:56:02:457 pEMG_processing started
+2023-12-21_09:56:02:809 pEMG_save started
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue/pollImpl')" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue/pollImpl</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.pool.PollableDataQueue/poll', 'C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m', 79)" style="font-weight:bold">parallel.pool.PollableDataQueue/poll</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m',79,0)">line 79</a>)
+            [data, OK] = obj.pollImpl(varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 102)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',102,0)">line 102</a>)
+    [trigger, flag] = poll(EMG_main_queue, 0.1);
+} 
+pEMG_worker.Diary
+
+ans =
+
+  0×0 empty <a href="matlab:helpPopup char" style="font-weight:bold">char</a> array
+
+pEMG_worker
+
+pEMG_worker = 
+
+ <a href="matlab: helpPopup parallel.FevalFuture" style="font-weight:bold">FevalFuture</a> with properties: 
+
+                   ID: 6
+             Function: @EMG_worker
+       CreateDateTime: 21-Dec-2023 09:56:02
+        StartDateTime: 21-Dec-2023 09:56:02
+      RunningDuration: 0 days 0h 1m 26s
+                State: running
+                Error: none
+

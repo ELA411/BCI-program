@@ -1,0 +1,149 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-21_13:20:20:263 pEMG_processing started
+2023-12-21_13:20:20:418 pEMG_save started
+2023-12-21_13:20:24:834 pEMG_worker started
+2023-12-21_13:20:25:068 pEEG_save started
+2023-12-21_13:20:27:350 pEEG_processing started
+2023-12-21_13:20:31:821 pEEG_worker started
+2023-12-21_13:20:31:822All processes started
+2023-12-21_13:20:24:843 EMG Worker checking for start
+2023-12-21_13:20:31:831 EMG Worker start command receieved
+2023-12-21_13:20:31:831 EEG Worker, receieved start command
+2023-12-21_13:20:31:833 EMG Save, receieved start command
+2023-12-21_13:20:31:831 EEG Save, receieved start command
+2023-12-21_13:20:31:890 EMG Processing, receieved start command
+2023-12-21_13:20:31:870 EEG Processing, receieved start command
+Stop turning
+2023-12-21_13:20:35:213 EMG Prediction: 0
+2023-12-21_13:20:35:285 EMG Prediction: 0
+2023-12-21_13:20:35:335 EMG Prediction: 0
+2023-12-21_13:20:35:363 EMG Prediction: 0
+2023-12-21_13:20:35:426 EMG Prediction: 0
+2023-12-21_13:20:35:434 EMG Prediction: 0
+2023-12-21_13:20:35:439 EMG Prediction: 0
+2023-12-21_13:20:35:444 EMG Prediction: 0
+2023-12-21_13:20:35:449 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:35:454 EMG Prediction: 0
+2023-12-21_13:20:35:613 EMG Prediction: 0
+2023-12-21_13:20:35:813 EMG Prediction: 0
+2023-12-21_13:20:36:011 EMG Prediction: 0
+2023-12-21_13:20:36:313 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:36:512 EMG Prediction: 0
+2023-12-21_13:20:36:713 EMG Prediction: 0
+2023-12-21_13:20:36:913 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:37:212 EMG Prediction: 0
+2023-12-21_13:20:37:412 EMG Prediction: 0
+2023-12-21_13:20:37:612 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:37:813 EMG Prediction: 0
+2023-12-21_13:20:38:113 EMG Prediction: 0
+2023-12-21_13:20:38:313 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:38:514 EMG Prediction: 0
+2023-12-21_13:20:38:713 EMG Prediction: 0
+2023-12-21_13:20:39:013 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:39:213 EMG Prediction: 0
+2023-12-21_13:20:39:415 EMG Prediction: 0
+2023-12-21_13:20:39:614 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:39:913 EMG Prediction: 0
+2023-12-21_13:20:40:113 EMG Prediction: 0
+2023-12-21_13:20:40:314 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:40:514 EMG Prediction: 0
+2023-12-21_13:20:40:814 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:41:014 EMG Prediction: 0
+2023-12-21_13:20:41:213 EMG Prediction: 0
+2023-12-21_13:20:41:413 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:41:714 EMG Prediction: 0
+2023-12-21_13:20:41:914 EMG Prediction: 0
+2023-12-21_13:20:42:115 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:42:314 EMG Prediction: 0
+2023-12-21_13:20:42:617 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:42:815 EMG Prediction: 0
+2023-12-21_13:20:43:014 EMG Prediction: 0
+2023-12-21_13:20:43:214 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:43:515 EMG Prediction: 0
+2023-12-21_13:20:43:714 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:43:914 EMG Prediction: 0
+2023-12-21_13:20:44:113 EMG Prediction: 0
+2023-12-21_13:20:44:413 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:44:612 EMG Prediction: 0
+2023-12-21_13:20:44:812 EMG Prediction: 0
+2023-12-21_13:20:45:014 EMG Prediction: 0
+Stop turning
+2023-12-21_13:20:45:315 EMG Prediction: 0
+2023-12-21_13:20:45:512 EMG Prediction: 0
+Cleaning up resources...
+2023-12-21_13:20:45:640 EMG Processing, receieved stop command
+2023-12-21_13:20:45:640 EMG save, stop command received. Closing file
+2023-12-21_13:20:45:719 EMG Worker, received stop command
+   1.0e+09 *
+
+   -0.0000    0.0000    0.0000    0.0000    1.7032
+   -0.0000   -0.0000    0.0000    0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000    0.0000    0.0000    0.0000    1.7032
+   -0.0000    0.0000    0.0000    0.0000    1.7032
+   -0.0000    0.0000    0.0000    0.0000    1.7032
+   -0.0000    0.0000    0.0000    0.0000    1.7032
+    0.0000    0.0000    0.0000    0.0000    1.7032
+    0.0000    0.0000    0.0000    0.0000    1.7032
+    0.0000    0.0000    0.0000    0.0000    1.7032
+   -0.0000    0.0000    0.0000    0.0000    1.7032
+    0.0000    0.0000    0.0000    0.0000    1.7032
+    0.0000    0.0000    0.0000    0.0000    1.7032
+    0.0000    0.0000   -0.0000    0.0000    1.7032
+    0.0000    0.0000   -0.0000    0.0000    1.7032
+    0.0000    0.0000   -0.0000    0.0000    1.7032
+    0.0000    0.0000   -0.0000    0.0000    1.7032
+    0.0000    0.0000   -0.0000    0.0000    1.7032
+   -0.0000    0.0000   -0.0000    0.0000    1.7032
+   -0.0000    0.0000   -0.0000    0.0000    1.7032
+    0.0000    0.0000   -0.0000    0.0000    1.7032
+   -0.0000   -0.0000   -0.0000    0.0000    1.7032
+   -0.0000   -0.0000    0.0000    0.0000    1.7032
+   -0.0000   -0.0000    0.0000    0.0000    1.7032
+   -0.0000   -0.0000    0.0000    0.0000    1.7032
+   -0.0000   -0.0000    0.0000   -0.0000    1.7032
+   -0.0000   -0.0000    0.0000   -0.0000    1.7032
+   -0.0000   -0.0000    0.0000   -0.0000    1.7032
+   -0.0000   -0.0000    0.0000   -0.0000    1.7032
+   -0.0000   -0.0000    0.0000   -0.0000    1.7032
+   -0.0000   -0.0000    0.0000   -0.0000    1.7032
+   -0.0000    0.0000    0.0000   -0.0000    1.7032
+    0.0000    0.0000    0.0000   -0.0000    1.7032
+   -0.0000    0.0000    0.0000   -0.0000    1.7032
+   -0.0000    0.0000   -0.0000   -0.0000    1.7032
+    0.0000    0.0000   -0.0000   -0.0000    1.7032
+    0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+    0.0000   -0.0000   -0.0000   -0.0000    1.7032
+    0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+    0.0000   -0.0000   -0.0000   -0.0000    1.7032
+    0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+   -0.0000   -0.0000   -0.0000   -0.0000    1.7032
+
+2023-12-21_13:20:45:640 EEG Save, receieved stop command. Closing file
+2023-12-21_13:20:45:641 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

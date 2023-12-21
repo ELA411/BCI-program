@@ -1,5 +1,5 @@
 
-name = 'Carl';
+name = 'Viktor';
 setting = 'Left_side_electrode_cluster_ch1-green_ch2-yellow_ch3-orange_ch4-red';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
@@ -59,7 +59,7 @@ while true
         timestamp = data(14,col);
         
         if toc(labelTime) >= 10
-            if reps == 2
+            if reps == 15
                 disp(['REP: ', num2str(reps), ' Dataset completed']);
                 % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps), ' Dataset completed']);
                 break;
