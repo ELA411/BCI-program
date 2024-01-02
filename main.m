@@ -26,7 +26,7 @@ pub = ros2publisher(node, '/cmd_vel', 'geometry_msgs/Twist');
 msg = ros2message(pub);
 
 % Debug information
-debug = true;
+debug = false;
 
 % Create a new file to store logs
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
@@ -178,7 +178,7 @@ send(EMG_processing_queue, "start");
 % Initialize variables for collecting predictions
 EEG_predictions = [];
 EMG_predictions = [];
-prediction_interval = 0.3; % Interval in seconds for collecting predictions
+prediction_interval = 0.5; % Interval in seconds for collecting predictions
 last_prediction_time = tic; % Start a timer
 last_emg_prediction = -1;
 last_eeg_prediction = -1;
@@ -203,10 +203,12 @@ while ~stopRequested
     if flag_EEG_prediction || flag_EMG_prediction
         if flag_EEG_prediction
             EEG_predictions(end + 1) = EEG_prediction;
+            % disp(['EEG Prediction: ',num2str(EEG_predictions)])
         end
 
         if flag_EMG_prediction
             EMG_predictions(end + 1) = EMG_prediction;
+            % disp(['EMG Prediction: ',num2str(EMG_predictions)])
         end
     end
     % Check if the interval has passed
@@ -217,23 +219,23 @@ while ~stopRequested
             mode_EMG_prediction = mode(EMG_predictions);
             if flag_EMG_prediction
                 if mode_EMG_prediction == 0
-                    if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
+                    % if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
                         disp('Stop turning');
-                    end
+                    % end
                     msg.angular.x = 0;
                     msg.angular.y = 0;
                     msg.angular.z = 0;
                 elseif mode_EMG_prediction == 1
-                    if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
+                    % if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
                         disp('Turn left');
-                    end
+                    % end
                     msg.angular.x = 0; % turnleft
                     msg.angular.y = 0;
                     msg.angular.z = 1;
                 elseif mode_EMG_prediction == 2
-                    if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
+                    % if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
                         disp('Turn right')
-                    end
+                    % end
                     msg.angular.x = 0; % turnright
                     msg.angular.y = 0;
                     msg.angular.z = -1;
@@ -258,8 +260,8 @@ while ~stopRequested
             %     end
             % end
             % Reset predictions
-            last_eeg_prediction = mode_EEG_prediction;
-            last_emg_prediction = mode_EMG_prediction;
+            % last_eeg_prediction = mode_EEG_prediction;
+            % last_emg_prediction = mode_EMG_prediction;
             EEG_predictions = [];
             EMG_predictions = [];
             last_prediction_time = tic; % Reset timer

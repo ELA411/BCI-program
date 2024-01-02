@@ -45,11 +45,6 @@ while true % Add a condition to break this loop if necessary
         timestamp = rawData(:,6);
 
         for i = 1:size(rawData, 1)
-        %     if toc(labelTime) >= 1
-        %         label = ~label; % Toggle label
-        %         labelTime = tic; % Reset timer
-        %     end
-
             fprintf(fileID, "%f %f %f %f %f %f\n", channel1(i), channel2(i), channel3(i), channel4(i), ID(i), timestamp(i));
         end
     end

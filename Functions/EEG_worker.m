@@ -139,7 +139,7 @@ while true
             samples = 0;
 
             if firstIteration
-                threshold = 44; % Needs to be even since the packages are duplicates and it takes unecessary amount of time to implement a check for that
+                threshold = 45; % Needs to be even since the packages are duplicates and it takes unecessary amount of time to implement a check for that
                 firstIteration = false;
             end
         end
