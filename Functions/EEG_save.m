@@ -31,7 +31,7 @@ while true % Add a condition to break this loop if necessary
     % Check class of message
     if msg_received
         if debug
-            send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')), ' EEG Save, starting save']);
+            send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG save, writing ', num2str(size(rawData, 1)),' samples to file']);
         end
         if strcmp(rawData, 'stop')
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')), ' EEG Save, receieved stop command. Closing file']);

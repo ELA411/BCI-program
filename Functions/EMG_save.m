@@ -40,7 +40,7 @@ while true
         end
         if debug
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG save, writing ', num2str(size(rawData, 1)),' samples to file']);
-            send(EMG_main_queue, ['Saving ', num2str(size(rawData, 1)), ' samples']);
+            % send(EMG_main_queue, ['Saving ', num2str(size(rawData, 1)), ' samples']);
         end
         for i = 1:size(rawData, 1)
 

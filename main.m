@@ -26,7 +26,7 @@ pub = ros2publisher(node, '/cmd_vel', 'geometry_msgs/Twist');
 msg = ros2message(pub);
 
 % Debug information
-debug = false;
+debug = true;
 
 % Create a new file to store logs
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
@@ -34,13 +34,13 @@ fileName = ['Logs/',char(currentDateTime), '.txt'];
 diary(fileName);
 
 % Load variables from trained classifiers
-load('..\processing\trained_classifiers\emg_classifier.mat');
-load('..\processing\trained_classifiers\eeg_classifier.mat');
-load('..\processing\saved_variables\W_matrix.mat');
+emg_classifier = load('..\processing\trained_classifiers\emg_classifier.mat');
+eeg_classifier = load('..\processing\trained_classifiers\eeg_classifier.mat');
+W = load('..\processing\saved_variables\W_matrix.mat');
 % ---------------------------------------------------------------------
 % Configure the name of the save file with useful information
-name = 'Pontus';
-setting = 'Test';
+name = 'Carl';
+setting = 'Run';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % If no pool exists, create a new one
@@ -58,7 +58,7 @@ EMG_prediction_queue = parallel.pool.PollableDataQueue; % Queue used to receive 
 
 % ---------------------------------------------------------------------
 % EMG_processing dependencies: EMG_classifier_queue, EMG_main_queue
-pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, EMG_prediction_queue, emg_classifier, debug); % Process for EMG signal processing
+pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, EMG_prediction_queue, emg_classifier.emg_classifier, debug); % Process for EMG signal processing
 % Make sure the process has started
 while pEMG_processing.State ~= "running"
 end
@@ -132,7 +132,7 @@ end
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_save started']);
 % ---------------------------------------------------------------------
 % EEG_processing dependencies: EEG_main_queue, EEG_classifier_queue
-pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_prediction_queue, W, eeg_classifier, debug); % Process for EEG signal processing
+pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_prediction_queue, W.W, eeg_classifier.eeg_classifier, debug); % Process for EEG signal processing
 while pEEG_processing.State ~= "running"
 end
 while true
@@ -164,7 +164,7 @@ while true
 end
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_worker started']);
 % ---------------------------------------------------------------------
-disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), 'All processes started']);
+disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' All processes started']);
 
 % ---------------------------------------------------------------------
 % Start all processes at the same time
@@ -178,8 +178,10 @@ send(EMG_processing_queue, "start");
 % Initialize variables for collecting predictions
 EEG_predictions = [];
 EMG_predictions = [];
-prediction_interval = 0.5; % Interval in seconds for collecting predictions
+prediction_interval = 0.3; % Interval in seconds for collecting predictions
 last_prediction_time = tic; % Start a timer
+last_emg_prediction = -1;
+last_eeg_prediction = -1;
 % Main processing loop
 while ~stopRequested
 
@@ -202,55 +204,69 @@ while ~stopRequested
         if flag_EEG_prediction
             EEG_predictions(end + 1) = EEG_prediction;
         end
+
         if flag_EMG_prediction
             EMG_predictions(end + 1) = EMG_prediction;
         end
-        % Check if the interval has passed
-        if toc(last_prediction_time) >= prediction_interval
+    end
+    % Check if the interval has passed
+    if toc(last_prediction_time) >= prediction_interval
+        if ~isempty(EEG_predictions) || ~isempty(EMG_predictions)
             % Determine the most frequent (mode) prediction
             mode_EEG_prediction = mode(EEG_predictions);
             mode_EMG_prediction = mode(EMG_predictions);
-
-
-            if flag_EEG_prediction
-                if mode_EEG_prediction == 0
-                    disp('stop');
-                    msg.linear.x = 0;
-                    msg.linear.y = 0;
-                    msg.linear.z = 0;
-                else
-                    disp('Drive forward');
-                    msg.linear.x = 0.1;
-                    msg.linear.y = 0;
-                    msg.linear.z = 0;
-                end
-            end
             if flag_EMG_prediction
                 if mode_EMG_prediction == 0
-                    disp('Stop turning');
+                    if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
+                        disp('Stop turning');
+                    end
                     msg.angular.x = 0;
                     msg.angular.y = 0;
                     msg.angular.z = 0;
                 elseif mode_EMG_prediction == 1
-                    disp('Turn left');
-                    msg.angular.x = 0.1; % turnleft
+                    if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
+                        disp('Turn left');
+                    end
+                    msg.angular.x = 0; % turnleft
                     msg.angular.y = 0;
-                    msg.angular.z = 0;
-                else
-                    disp('Turn right')
-                    msg.angular.x = -0.1; % turnright
+                    msg.angular.z = 1;
+                elseif mode_EMG_prediction == 2
+                    if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
+                        disp('Turn right')
+                    end
+                    msg.angular.x = 0; % turnright
                     msg.angular.y = 0;
-                    msg.angular.z = 0;
+                    msg.angular.z = -1;
                 end
             end
-
-            send(pub, msg); % Send message to turtlebot with new velocity
+            % EEG does not control the turtlebot
+            % if flag_EEG_prediction
+            %     if EEG_prediction == 0
+            %         if last_eeg_prediction ~=-1 && last_eeg_prediction ~= mode_EEG_prediction
+            %             disp('stop');
+            %         end
+            %         msg.linear.x = 0;
+            %         msg.linear.y = 0;
+            %         msg.linear.z = 0;
+            %     elseif EEG_prediction == 1
+            %         if last_eeg_prediction ~=-1 && last_eeg_prediction ~= mode_EEG_prediction
+            %             disp('Drive forward');
+            %         end
+            %         msg.linear.x = 0.1;
+            %         msg.linear.y = 0;
+            %         msg.linear.z = 0;
+            %     end
+            % end
             % Reset predictions
+            last_eeg_prediction = mode_EEG_prediction;
+            last_emg_prediction = mode_EMG_prediction;
             EEG_predictions = [];
             EMG_predictions = [];
             last_prediction_time = tic; % Reset timer
+            send(pub, msg); % Send message to turtlebot with new velocity
         end
     end
+    % end
     pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
 end
 

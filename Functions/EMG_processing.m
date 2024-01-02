@@ -31,6 +31,9 @@ end
 while true
     [emg_data, dataReceived] = poll(EMG_processing_queue, 0);
     if dataReceived
+        if debug
+            send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing, data received: ', num2str(size(emg_data, 1))]);
+        end
         if strcmp(emg_data, 'stop')
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing, receieved stop command']);
             break;
@@ -44,9 +47,10 @@ while true
         % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         if debug
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing Time: ', num2str(toc()*1000),' ms']);
+            send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Prediction: ', num2str(prediction)]);
         end
+        disp(num2str(prediction));
         send(EMG_prediction_queue, prediction);
-        send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Prediction: ', num2str(prediction)]);
     end
 end
 end

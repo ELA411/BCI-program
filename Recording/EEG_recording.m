@@ -1,6 +1,6 @@
 
-name = 'Pontus';
-setting = 'contralateral_ch1_ch2_ipsilateral_ch3_ch4';
+name = 'Carl';
+setting = 'Left_side_cluster_50_reps';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % Init brainflow
@@ -43,7 +43,7 @@ board_shim.start_stream(10000, '');
 labelTime = tic;
 label = 0;
 reps = 0;
-label_flag = true;
+% label_flag = true;
 while true
     % ---------------------------------------------------------------------
     % Collect data
@@ -51,44 +51,44 @@ while true
     dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
     if dataInBuffer > 0
         data = board_shim.get_board_data(1, preset); % Take available packages and remove them from buffer
-        
+
         ID = data(1,col);
         channel1 = data(2,col);
         channel2 = data(3,col);
         channel3 = data(4,col);
         channel4 = data(5,col);
         timestamp = data(14,col);
-        if label_flag
-            if toc(labelTime) >= 4
-                if reps == 50
-                    disp(['REP: ', num2str(reps), ' Dataset completed']);
-                    % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps), ' Dataset completed']);
-                    break;
-                end
-                
-                if label == 1
-                    disp(['REP: ', num2str(reps + 1),' CLOSE']);
-                    % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' CLOSE']);
-                end
-                label = ~label; % Toggle label
-                label_flag = false;
-                labelTime = tic; % Reset timer
-       
+        % if label_flag
+        if toc(labelTime) >= 4
+            if reps == 50
+                disp(['REP: ', num2str(reps), ' Dataset completed']);
+                % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps), ' Dataset completed']);
+                break;
             end
+
+            if label == 1
+                disp(['REP: ', num2str(reps + 1),' CLOSE']);
+                % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' CLOSE']);
+            end
+            if label == 0
+                disp(['REP: ', num2str(reps + 1),' REST']);
+                % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' REST']);
+                reps = reps + 1;
+            end
+            label = ~label; % Toggle label
+            % label_flag = false;
+            labelTime = tic; % Reset timer
+
         end
 
-        if label_flag == false
-            if toc(labelTime) >= 2
-                if label == 0
-                    disp(['REP: ', num2str(reps + 1),' REST']);
-                    % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps + 1),' REST']);
-                    reps = reps + 1;
-                end
-                label = ~label; % Toggle label
-                label_flag = true;
-                labelTime = tic;
-            end
-        end
+
+        % if label_flag == false
+        % if toc(labelTime) >= 2
+
+        % label = ~label; % Toggle label
+        % label_flag = true;
+        % labelTime = tic;
+        % end
         fprintf(fileID, "%f %f %f %f %f %f %f\n", channel1, channel2, channel3, channel4, label, ID, timestamp);
     end
 end

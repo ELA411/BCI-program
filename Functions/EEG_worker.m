@@ -1,5 +1,5 @@
 % Script Name: EEG_worker.m
-% Author: Pontus Svensson
+% Author: Pontus Svensson, Viktor Eriksson
 % Date: 2023-12-14
 % Version: 1.0.0
 % License:
@@ -59,11 +59,16 @@ end
 % Main loop
 % ---------------------------------------------------------------------
 overlapSamples = round(0.025 * 200); % Assuming Fs is your sampling frequency
-slidingWindow = tic;
+
 prevVoltage = []; % Initialize an array to store the overlapping data
 firstIteration = true;
-overSampling = true;
+overSampling = false;
 samples = 0;
+threshold = 50;
+
+totalSamples = 0;
+packetLoss = 0;
+
 while true
     % ---------------------------------------------------------------------
     % Collect data
@@ -75,13 +80,13 @@ while true
             break;
         end
     end
-    firstIteration = true;
-    threshold = 50;
-    overSampling = false;
+
     dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
+    % runtime = toc;
     if dataInBuffer > 0
-        data = board_shim.get_board_data(1, preset); % Take available packages and remove them from buffer
+        data = board_shim.get_board_data(1, preset); % Take latest available packages and remove them from buffer
         samples = samples + 1;
+        totalSamples = totalSamples + 1;
         packageid = data(1,col);
         channel1 = data(2,col);
         channel2 = data(3,col);
@@ -90,7 +95,7 @@ while true
         timestamp = data(14,col);
 
         eegBuffer = [eegBuffer; channel1, channel2, channel3, channel4, packageid, timestamp];
-       
+
         if overSampling
             eegBufferProcessing = [prevVoltage; eegBufferProcessing; channel1, channel2, channel3, channel4];
             overSampling = false;
@@ -98,15 +103,31 @@ while true
             eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
         end
 
-        % if toc(slidingWindow)>=0.25
         if samples >= threshold
             send(EEG_processing_queue, eegBufferProcessing);
             send(EEG_save_queue, eegBuffer);
-            send(EEG_main_queue, eegBufferProcessing);
-            if debug
-                send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: Sending samples to processing: ', num2str(size(eegBufferProcessing, 1))]);
+            sampleRate = 1/mean(diff(eegBuffer(:,6)));
+
+            packageIds = eegBuffer(:, 5); % Assuming 5th column contains package IDs
+            for i = 4:2:length(packageIds) % Starting from the 4th element
+                if i-2 >= 1 && i <= length(packageIds)
+                    expectedNextId = mod(packageIds(i-2) - 100 + 1, 100) + 100; % Calculate expected next ID with wrap-around
+                    if packageIds(i) ~= expectedNextId
+                        packetLoss = packetLoss + 1;
+                        send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Worker, Lost sample: ', num2str(expectedNextId)]);
+                    end
+                else
+                    send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Worker, Index out of bounds at i: ', num2str(i)]);
+                    break;
+                end
             end
-            % Retain the last 25 ms of data in eegBufferProcessing for overlap
+
+            if debug
+                % send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG_Worker: Sending samples to processing: ', num2str(size(eegBufferProcessing, 1))]);
+                % send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Worker, sampleRate: ', num2str(sampleRate), ' PacketLoss: ', num2str(packetLoss), ' PacketLoss %: ', num2str((packetLoss/totalSamples)*100)]);
+            end
+
+            % Retain the last 25 ms of data in eegBufferProcessing for 50 ms total overlap
             if size(eegBufferProcessing, 1) > overlapSamples
                 prevVoltage = eegBufferProcessing(end-overlapSamples+1:end, :);
                 overSampling = true;
@@ -115,15 +136,16 @@ while true
             end
             eegBuffer = [];
             eegBufferProcessing = [];
-            % slidingWindow = tic;
             samples = 0;
+
             if firstIteration
-                threshold = 45;
+                threshold = 44; % Needs to be even since the packages are duplicates and it takes unecessary amount of time to implement a check for that
                 firstIteration = false;
             end
         end
     end
 end
+send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Worker, sampleRate: ', num2str(sampleRate), ' PacketLoss: ', num2str(packetLoss), ' PacketLoss %: ', num2str((packetLoss/totalSamples)*100)]);
 board_shim.stop_stream();
 board_shim.release_all_sessions();
 end
