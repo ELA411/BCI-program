@@ -1,0 +1,235 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_13:06:14:280 pEMG_processing started
+2024-01-05_13:06:14:373 pEMG_save started
+2024-01-05_13:06:18:145 pEMG_worker started
+2024-01-05_13:06:18:349 pEEG_save started
+2024-01-05_13:06:20:530 pEEG_processing started
+2024-01-05_13:06:23:084 pEEG_worker started
+2024-01-05_13:06:23:085 All processes started
+2024-01-05_13:06:18:152 EMG Worker checking for start
+2024-01-05_13:06:23:091 EMG Worker start command receieved
+2024-01-05_13:06:23:092 EEG Save, receieved start command
+2024-01-05_13:06:23:092 EMG Save, receieved start command
+2024-01-05_13:06:23:092 EEG Worker, receieved start command
+2024-01-05_13:06:23:135 EMG Processing, receieved start command
+2024-01-05_13:06:23:126 EEG Processing, receieved start command
+2024-01-05_13:06:24:231 EEG Worker, Lost sample: 199
+2024-01-05_13:06:25:396 EMG Response Time: 1336.7022 ms
+Turn left
+stop
+2024-01-05_13:06:25:429 EMG Response Time: 365.2132 ms
+Turn left
+stop
+2024-01-05_13:06:25:666 EMG Response Time: 272.2548 ms
+Turn left
+stop
+2024-01-05_13:06:25:882 EMG Response Time: 254.9294 ms
+Stop turning
+stop
+2024-01-05_13:06:26:172 EMG Response Time: 310.8925 ms
+Turn left
+stop
+2024-01-05_13:06:26:378 EMG Response Time: 262.9371 ms
+Stop turning
+stop
+2024-01-05_13:06:26:656 EMG Response Time: 281.4583 ms
+Turn left
+stop
+2024-01-05_13:06:26:994 EMG Response Time: 340.8208 ms
+Stop turning
+stop
+2024-01-05_13:06:27:280 EMG Response Time: 289.0761 ms
+Stop turning
+stop
+2024-01-05_13:06:27:579 EMG Response Time: 302.1432 ms
+Turn left
+stop
+2024-01-05_13:06:27:854 EMG Response Time: 277.472 ms
+Turn left
+2024-01-05_13:06:28:182 EMG Response Time: 330.9443 ms
+Turn left
+stop
+2024-01-05_13:06:28:463 EMG Response Time: 283.5225 ms
+Stop turning
+stop
+2024-01-05_13:06:28:737 EMG Response Time: 276.8425 ms
+Stop turning
+2024-01-05_13:06:29:065 EMG Response Time: 330.5742 ms
+Stop turning
+stop
+2024-01-05_13:06:29:368 EMG Response Time: 304.5221 ms
+Stop turning
+stop
+2024-01-05_13:06:29:656 EMG Response Time: 291.2984 ms
+Stop turning
+2024-01-05_13:06:29:951 EMG Response Time: 297.9918 ms
+Stop turning
+stop
+2024-01-05_13:06:30:255 EMG Response Time: 306.1325 ms
+Stop turning
+stop
+2024-01-05_13:06:30:554 EMG Response Time: 301.8405 ms
+Turn right
+2024-01-05_13:06:30:841 EMG Response Time: 289.9896 ms
+Turn right
+stop
+2024-01-05_13:06:31:147 EMG Response Time: 308.8361 ms
+Turn right
+stop
+2024-01-05_13:06:31:440 EMG Response Time: 295.3404 ms
+Turn right
+stop
+2024-01-05_13:06:31:780 EMG Response Time: 342.4956 ms
+Turn right
+stop
+2024-01-05_13:06:32:053 EMG Response Time: 275.8612 ms
+Turn right
+stop
+2024-01-05_13:06:32:369 EMG Response Time: 318.73 ms
+Turn right
+2024-01-05_13:06:32:640 EMG Response Time: 273.2437 ms
+Turn right
+stop
+2024-01-05_13:06:32:961 EMG Response Time: 323.8297 ms
+Turn left
+stop
+2024-01-05_13:06:33:261 EMG Response Time: 302.0732 ms
+Turn right
+stop
+2024-01-05_13:06:33:561 EMG Response Time: 301.8193 ms
+Turn right
+stop
+2024-01-05_13:06:33:846 EMG Response Time: 287.8806 ms
+Turn left
+stop
+2024-01-05_13:06:34:185 EMG Response Time: 341.3212 ms
+Turn left
+2024-01-05_13:06:34:437 EMG Response Time: 254.6408 ms
+Turn left
+2024-01-05_13:06:34:758 EMG Response Time: 322.5487 ms
+Turn left
+stop
+2024-01-05_13:06:35:088 EMG Response Time: 333.2097 ms
+Turn left
+2024-01-05_13:06:35:348 EMG Response Time: 262.2757 ms
+Turn left
+stop
+2024-01-05_13:06:35:646 EMG Response Time: 300.2648 ms
+Turn left
+stop
+2024-01-05_13:06:35:944 EMG Response Time: 300.3335 ms
+Turn left
+stop
+2024-01-05_13:06:36:250 EMG Response Time: 308.5746 ms
+Turn left
+2024-01-05_13:06:36:597 EMG Response Time: 349.7494 ms
+Turn left
+stop
+2024-01-05_13:06:36:846 EMG Response Time: 252.0663 ms
+Turn left
+stop
+2024-01-05_13:06:37:137 EMG Response Time: 293.2488 ms
+Turn left
+stop
+2024-01-05_13:06:37:447 EMG Response Time: 312.4077 ms
+Turn left
+stop
+2024-01-05_13:06:37:747 EMG Response Time: 302.0459 ms
+Turn left
+stop
+2024-01-05_13:06:38:043 EMG Response Time: 298.4784 ms
+Turn left
+2024-01-05_13:06:38:337 EMG Response Time: 296.1995 ms
+Turn left
+stop
+2024-01-05_13:06:38:684 EMG Response Time: 349.015 ms
+Turn left
+2024-01-05_13:06:38:949 EMG Response Time: 267.7876 ms
+Turn left
+stop
+2024-01-05_13:06:39:243 EMG Response Time: 296.4456 ms
+Turn left
+stop
+2024-01-05_13:06:39:574 EMG Response Time: 332.835 ms
+Turn left
+2024-01-05_13:06:39:858 EMG Response Time: 285.7622 ms
+Turn left
+2024-01-05_13:06:40:183 EMG Response Time: 327.8978 ms
+Turn left
+stop
+2024-01-05_13:06:40:457 EMG Response Time: 274.81 ms
+Turn left
+stop
+2024-01-05_13:06:40:749 EMG Response Time: 295.8122 ms
+Turn left
+2024-01-05_13:06:41:049 EMG Response Time: 302.3452 ms
+Turn left
+stop
+2024-01-05_13:06:41:339 EMG Response Time: 292.1094 ms
+Turn left
+stop
+2024-01-05_13:06:41:642 EMG Response Time: 305.6743 ms
+Turn left
+stop
+2024-01-05_13:06:41:969 EMG Response Time: 329.7316 ms
+Turn left
+stop
+2024-01-05_13:06:42:256 EMG Response Time: 288.4507 ms
+Turn left
+stop
+2024-01-05_13:06:42:574 EMG Response Time: 321.1725 ms
+Turn left
+stop
+2024-01-05_13:06:42:856 EMG Response Time: 283.987 ms
+Turn left
+stop
+2024-01-05_13:06:43:155 EMG Response Time: 301.3966 ms
+Turn left
+stop
+2024-01-05_13:06:43:468 EMG Response Time: 315.147 ms
+Turn left
+2024-01-05_13:06:43:789 EMG Response Time: 323.7247 ms
+Turn left
+stop
+2024-01-05_13:06:44:055 EMG Response Time: 267.5775 ms
+Turn left
+stop
+2024-01-05_13:06:44:356 EMG Response Time: 304.3788 ms
+Turn left
+stop
+2024-01-05_13:06:44:642 EMG Response Time: 288.4335 ms
+Turn left
+stop
+2024-01-05_13:06:44:953 EMG Response Time: 313.7308 ms
+Turn left
+stop
+2024-01-05_13:06:45:253 EMG Response Time: 302.2268 ms
+Turn left
+2024-01-05_13:06:45:558 EMG Response Time: 307.9114 ms
+Turn left
+stop
+2024-01-05_13:06:45:868 EMG Response Time: 311.4158 ms
+Turn left
+stop
+2024-01-05_13:06:46:159 EMG Response Time: 293.6922 ms
+Turn left
+2024-01-05_13:06:46:474 EMG Response Time: 316.8366 ms
+Turn left
+stop
+2024-01-05_13:06:46:760 EMG Response Time: 288.4405 ms
+Turn left
+stop
+2024-01-05_13:06:47:064 EMG Response Time: 307.0598 ms
+Turn left
+Cleaning up resources...
+2024-01-05_13:06:47:189 EMG Processing, receieved stop command
+2024-01-05_13:06:47:190 EMG save, stop command received. Closing file
+2024-01-05_13:06:47:398 EMG Worker, received stop command
+2024-01-05_13:06:47:405 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-05_13:06:47:190 EEG Worker, receieved stop command
+2024-01-05_13:06:47:190 EEG Save, receieved stop command. Closing file
+2024-01-05_13:06:47:190 EEG Processing, receieved stop command
+2024-01-05_13:06:47:206 EEG Worker, sampleRate: 196.8065 PacketLoss: 1 PacketLoss %: 0.020833
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

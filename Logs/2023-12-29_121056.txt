@@ -1,0 +1,181 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-29_12:11:48:849 pEMG_processing started
+2023-12-29_12:11:49:195 pEMG_save started
+2023-12-29_12:12:01:660 pEMG_worker started
+2023-12-29_12:12:02:359 pEEG_save started
+2023-12-29_12:12:08:920 pEEG_processing started
+2023-12-29_12:12:13:847 pEEG_worker started
+2023-12-29_12:12:13:850All processes started
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Analyzing and transferring files to the workers ...done.
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Cleaning up resources...
+2023-12-29_12:12:54:994 EMG save, stop command received. Closing file
+2023-12-29_12:12:54:999 EMG Processing, receieved stop command
+2023-12-29_12:12:54:988 EEG Processing, receieved stop command
+2023-12-29_12:12:54:996 EEG Worker, receieved stop command
+2023-12-29_12:12:54:998 EEG Save, receieved stop command. Closing file
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

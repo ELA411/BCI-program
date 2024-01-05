@@ -1,0 +1,36 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_11:41:50:847 pEMG_processing started
+2024-01-05_11:41:50:968 pEMG_save started
+2024-01-05_11:42:00:508 pEMG_worker started
+2024-01-05_11:42:00:765 pEEG_save started
+2024-01-05_11:42:03:376 pEEG_processing started
+2024-01-05_11:42:07:221 pEEG_worker started
+2024-01-05_11:42:07:222 All processes started
+2024-01-05_11:42:00:518 EMG Worker checking for start
+2024-01-05_11:42:07:230 EMG Worker start command receieved
+2024-01-05_11:42:07:229 EEG Worker, receieved start command
+2024-01-05_11:42:07:231 EMG Save, receieved start command
+2024-01-05_11:42:07:229 EEG Save, receieved start command
+2024-01-05_11:42:07:276 EMG Processing, receieved start command
+2024-01-05_11:42:07:285 EEG Processing, receieved start command
+2024-01-05_11:42:08:351 EEG Worker, Lost sample: 199
+stop
+stop
+stop
+stop
+stop
+stop
+stop
+stop
+stop
+stop
+Cleaning up resources...
+2024-01-05_11:42:20:863 EMG save, stop command received. Closing file
+2024-01-05_11:42:20:864 EMG Processing, receieved stop command
+2024-01-05_11:42:20:863 EEG Worker, receieved stop command
+2024-01-05_11:42:20:864 EEG Save, receieved stop command. Closing file
+2024-01-05_11:42:20:864 EEG Processing, receieved stop command
+2024-01-05_11:42:20:876 EEG Worker, sampleRate: 194.9565 PacketLoss: 1 PacketLoss %: 0.036765
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

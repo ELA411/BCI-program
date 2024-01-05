@@ -1,0 +1,627 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-29_12:32:27:723 pEMG_processing started
+2023-12-29_12:32:28:011 pEMG_save started
+2023-12-29_12:32:37:715 pEMG_worker started
+2023-12-29_12:32:38:276 pEEG_save started
+2023-12-29_12:32:43:616 pEEG_processing started
+2023-12-29_12:32:47:387 pEEG_worker started
+2023-12-29_12:32:47:389All processes started
+2023-12-29_12:32:37:735 EMG Worker checking for start
+2023-12-29_12:32:47:405 EMG Worker start command receieved
+2023-12-29_12:32:47:403 EEG Save, receieved start command
+2023-12-29_12:32:47:413 EMG Save, receieved start command
+2023-12-29_12:32:47:403 EEG Worker, receieved start command
+2023-12-29_12:32:47:511 EMG Processing, receieved start command
+2023-12-29_12:32:47:503 EEG Processing, receieved start command
+2023-12-29_12:32:50:573 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:50:783 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:50:850 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:32:50:925 EEG Prediction: 1
+2023-12-29_12:32:51:077 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:103 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:121 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:32:51:143 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:166 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:184 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:201 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:220 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:242 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:264 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:283 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:32:51:420 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:51:648 EEG Prediction: 1
+2023-12-29_12:32:51:914 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:52:156 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:52:412 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:52:658 EEG Prediction: 1
+2023-12-29_12:32:52:877 EMG Prediction: 1
+Turn left
+Drive forward
+2023-12-29_12:32:52:919 EEG Prediction: 1
+2023-12-29_12:32:53:093 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:32:53:156 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:53:417 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:53:662 EEG Prediction: 1
+2023-12-29_12:32:53:878 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:32:53:922 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:54:165 EEG Prediction: 1
+2023-12-29_12:32:54:425 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:54:634 EMG Prediction: 0
+Stop turning
+2023-12-29_12:32:54:680 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:32:54:939 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:55:162 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:55:417 EEG Prediction: 1
+2023-12-29_12:32:55:700 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:32:55:671 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:55:935 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:56:171 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:56:432 EEG Prediction: 1
+2023-12-29_12:32:56:600 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:32:56:679 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:56:950 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:57:194 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:57:444 EEG Prediction: 1
+Stop turning
+2023-12-29_12:32:57:635 EMG Prediction: 0
+Drive forward
+2023-12-29_12:32:57:690 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:57:937 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:58:185 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:58:449 EMG Prediction: 0
+2023-12-29_12:32:58:430 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:32:58:676 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:58:942 EEG Prediction: 1
+2023-12-29_12:32:59:111 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:32:59:190 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:59:450 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:59:700 EEG Prediction: 1
+Drive forward
+2023-12-29_12:32:59:945 EEG Prediction: 1
+2023-12-29_12:33:00:038 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:00:194 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:00:445 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:00:718 EMG Prediction: 0
+2023-12-29_12:33:00:690 EEG Prediction: 1
+Stop turning
+2023-12-29_12:33:00:959 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:01:192 EEG Prediction: 1
+2023-12-29_12:33:01:431 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:01:451 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:01:704 EEG Prediction: 1
+2023-12-29_12:33:01:969 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:02:229 EMG Prediction: 0
+2023-12-29_12:33:02:194 EEG Prediction: 1
+Stop turning
+2023-12-29_12:33:02:461 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:02:708 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:02:918 EMG Prediction: 0
+Stop turning
+2023-12-29_12:33:02:958 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:03:205 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:03:458 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:03:605 EMG Prediction: 1
+Turn left
+Drive forward
+2023-12-29_12:33:03:721 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:03:968 EEG Prediction: 1
+2023-12-29_12:33:04:187 EMG Prediction: 1
+Turn left
+2023-12-29_12:33:04:207 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:04:454 EEG Prediction: 1
+2023-12-29_12:33:04:755 EMG Prediction: 1
+Turn left
+Drive forward
+2023-12-29_12:33:04:726 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:04:976 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:05:209 EEG Prediction: 1
+2023-12-29_12:33:05:492 EMG Prediction: 1
+2023-12-29_12:33:05:472 EEG Prediction: 1
+Turn left
+Drive forward
+Drive forward
+2023-12-29_12:33:05:725 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:05:969 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:06:221 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:06:475 EEG Prediction: 1
+2023-12-29_12:33:06:602 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:06:740 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:06:988 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:07:218 EEG Prediction: 1
+2023-12-29_12:33:07:312 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:07:483 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:07:734 EEG Prediction: 1
+2023-12-29_12:33:07:988 EMG Prediction: 1
+Turn left
+Drive forward
+2023-12-29_12:33:07:986 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:08:222 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:08:485 EEG Prediction: 1
+2023-12-29_12:33:08:637 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:08:739 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:08:999 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:09:237 EEG Prediction: 1
+2023-12-29_12:33:09:313 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:09:485 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:09:737 EEG Prediction: 1
+2023-12-29_12:33:09:930 EMG Prediction: 0
+Stop turning
+2023-12-29_12:33:09:999 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:10:233 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:10:493 EEG Prediction: 1
+2023-12-29_12:33:10:585 EMG Prediction: 0
+Stop turning
+2023-12-29_12:33:10:747 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:11:000 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:11:295 EMG Prediction: 0
+2023-12-29_12:33:11:249 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:11:493 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:11:756 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:12:093 EMG Prediction: 0
+2023-12-29_12:33:12:012 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:12:250 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:12:507 EEG Prediction: 1
+2023-12-29_12:33:12:738 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:12:755 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:13:024 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:13:256 EEG Prediction: 1
+2023-12-29_12:33:13:464 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:13:510 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:13:774 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:14:018 EEG Prediction: 1
+2023-12-29_12:33:14:212 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:14:267 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:14:518 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:14:809 EMG Prediction: 0
+2023-12-29_12:33:14:764 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:15:028 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:15:279 EEG Prediction: 1
+2023-12-29_12:33:15:438 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:15:518 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:15:768 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:16:031 EEG Prediction: 1
+2023-12-29_12:33:16:181 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:16:268 EEG Prediction: 1
+2023-12-29_12:33:16:546 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:16:781 EEG Prediction: 1
+2023-12-29_12:33:16:872 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:17:033 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:17:277 EEG Prediction: 1
+2023-12-29_12:33:17:529 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:17:524 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:17:775 EEG Prediction: 1
+2023-12-29_12:33:18:042 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:18:183 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:18:278 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:18:530 EEG Prediction: 1
+2023-12-29_12:33:18:796 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:18:871 EMG Prediction: 0
+Stop turning
+2023-12-29_12:33:19:040 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:19:295 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:19:565 EMG Prediction: 0
+2023-12-29_12:33:19:538 EEG Prediction: 1
+Stop turning
+Drive forward
+Drive forward
+2023-12-29_12:33:19:787 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:20:053 EEG Prediction: 1
+2023-12-29_12:33:20:235 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:20:286 EEG Prediction: 1
+2023-12-29_12:33:20:537 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:20:808 EEG Prediction: 1
+2023-12-29_12:33:20:982 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:21:061 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:21:284 EEG Prediction: 1
+2023-12-29_12:33:21:590 EMG Prediction: 0
+2023-12-29_12:33:21:546 EEG Prediction: 1
+Stop turning
+Drive forward
+Drive forward
+2023-12-29_12:33:21:804 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:22:126 EMG Prediction: 0
+2023-12-29_12:33:22:052 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:22:307 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:22:562 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:22:867 EMG Prediction: 0
+2023-12-29_12:33:22:817 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:23:069 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:23:300 EEG Prediction: 1
+2023-12-29_12:33:23:569 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:23:553 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:23:809 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:24:145 EMG Prediction: 0
+2023-12-29_12:33:24:069 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:24:306 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:24:573 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:24:837 EMG Prediction: 0
+2023-12-29_12:33:24:817 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:25:070 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:25:321 EEG Prediction: 1
+2023-12-29_12:33:25:535 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:25:570 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:25:816 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:26:080 EEG Prediction: 1
+2023-12-29_12:33:26:192 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:26:318 EEG Prediction: 1
+2023-12-29_12:33:26:582 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:26:880 EMG Prediction: 0
+2023-12-29_12:33:26:827 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:27:078 EEG Prediction: 1
+2023-12-29_12:33:27:328 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:27:472 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:27:576 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:27:823 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:28:163 EMG Prediction: 0
+2023-12-29_12:33:28:099 EEG Prediction: 1
+Stop turning
+2023-12-29_12:33:28:330 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:28:590 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:28:912 EMG Prediction: 0
+2023-12-29_12:33:28:840 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:29:106 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:29:337 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:29:657 EMG Prediction: 0
+2023-12-29_12:33:29:586 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:29:851 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:30:097 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:30:384 EMG Prediction: 0
+2023-12-29_12:33:30:361 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:30:599 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:30:845 EEG Prediction: 1
+2023-12-29_12:33:31:079 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:31:110 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:31:345 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:31:592 EEG Prediction: 1
+Stop turning
+2023-12-29_12:33:31:747 EMG Prediction: 0
+Drive forward
+2023-12-29_12:33:31:855 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:32:106 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:32:353 EEG Prediction: 1
+2023-12-29_12:33:32:445 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:32:601 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:32:858 EEG Prediction: 1
+2023-12-29_12:33:33:079 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:33:111 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:33:364 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:33:608 EEG Prediction: 1
+2023-12-29_12:33:33:774 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:33:868 EEG Prediction: 1
+2023-12-29_12:33:34:121 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:34:360 EEG Prediction: 1
+2023-12-29_12:33:34:525 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:34:619 EEG Prediction: 1
+2023-12-29_12:33:34:873 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:35:122 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:35:184 EMG Prediction: 0
+Stop turning
+2023-12-29_12:33:35:370 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:35:621 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:35:843 EMG Prediction: 0
+Stop turning
+2023-12-29_12:33:35:870 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:36:131 EEG Prediction: 1
+2023-12-29_12:33:36:368 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:36:479 EMG Prediction: 0
+Stop turning
+2023-12-29_12:33:36:616 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:36:884 EEG Prediction: 1
+2023-12-29_12:33:37:140 EMG Prediction: 0
+2023-12-29_12:33:37:118 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:37:376 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:37:629 EEG Prediction: 1
+2023-12-29_12:33:37:827 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:37:887 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:38:137 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:38:378 EEG Prediction: 1
+2023-12-29_12:33:38:671 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:38:635 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:38:897 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:39:129 EEG Prediction: 1
+2023-12-29_12:33:39:408 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:39:380 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:39:638 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:39:895 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:40:197 EMG Prediction: 0
+2023-12-29_12:33:40:128 EEG Prediction: 1
+Stop turning
+Drive forward
+2023-12-29_12:33:40:395 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:40:644 EEG Prediction: 1
+2023-12-29_12:33:40:901 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:40:909 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:41:141 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:41:392 EEG Prediction: 1
+2023-12-29_12:33:41:591 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:41:665 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:41:908 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:42:140 EEG Prediction: 1
+2023-12-29_12:33:42:320 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:42:404 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:42:652 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:42:910 EEG Prediction: 1
+2023-12-29_12:33:43:014 EMG Prediction: 0
+Stop turning
+Drive forward
+2023-12-29_12:33:43:138 EEG Prediction: 1
+2023-12-29_12:33:43:408 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:43:661 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:33:43:922 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:44:160 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:44:413 EEG Prediction: 1
+Drive forward
+2023-12-29_12:33:44:672 EEG Prediction: 1
+Drive forward
+Cleaning up resources...
+2023-12-29_12:33:44:973 EMG Prediction: 0
+2023-12-29_12:33:45:015 EMG Processing, receieved stop command
+2023-12-29_12:33:45:019 EMG save, stop command received. Closing file
+2023-12-29_12:33:44:921 EEG Prediction: 1
+2023-12-29_12:33:45:014 EEG Processing, receieved stop command
+2023-12-29_12:33:45:018 EEG Save, receieved stop command. Closing file
+2023-12-29_12:33:45:018 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

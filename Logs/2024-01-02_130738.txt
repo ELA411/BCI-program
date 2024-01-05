@@ -1,0 +1,224 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-02_13:07:57:190 pEMG_processing started
+2024-01-02_13:07:57:274 pEMG_save started
+2024-01-02_13:08:00:584 pEMG_worker started
+2024-01-02_13:08:00:772 pEEG_save started
+2024-01-02_13:08:02:736 pEEG_processing started
+2024-01-02_13:08:05:181 pEEG_worker started
+2024-01-02_13:08:05:182 All processes started
+2024-01-02_13:08:00:593 EMG Worker checking for start
+2024-01-02_13:08:05:190 EMG Save, receieved start command
+2024-01-02_13:08:05:189 EEG Worker, receieved start command
+2024-01-02_13:08:05:189 EMG Worker start command receieved
+2024-01-02_13:08:05:189 EEG Save, receieved start command
+2024-01-02_13:08:05:225 EMG Processing, receieved start command
+2024-01-02_13:08:05:225 EEG Processing, receieved start command
+2024-01-02_13:08:05:707 EEG save, writing 50 samples to file
+2024-01-02_13:08:06:262 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:06:296 EEG Processing: 13659.8188 ms
+2024-01-02_13:08:06:446 EMG Processing, data received: 250
+2024-01-02_13:08:06:588 EMG save, writing 250 samples to file
+2024-01-02_13:08:06:710 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:06:717 EMG save, writing 225 samples to file
+2024-01-02_13:08:06:735 EMG Worker, sampleRate: 1000
+Analyzing and transferring files to the workers ...done.
+2024-01-02_13:08:06:751 EMG save, writing 225 samples to file
+Turn left
+2024-01-02_13:08:06:857 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:06:861 EMG save, writing 225 samples to file
+2024-01-02_13:08:07:053 EMG Processing Time: 601.8343 ms
+2024-01-02_13:08:07:063 EMG Prediction: 1
+2024-01-02_13:08:07:083 EMG Worker, sampleRate: 1000
+Stop turning
+2024-01-02_13:08:07:088 EMG save, writing 225 samples to file
+2024-01-02_13:08:07:086 EMG Processing, data received: 250
+2024-01-02_13:08:07:136 EMG Processing Time: 43.7195 ms
+2024-01-02_13:08:07:138 EMG Prediction: 0
+2024-01-02_13:08:07:142 EMG Processing, data received: 250
+Turn left
+2024-01-02_13:08:07:178 EMG Processing Time: 35.7455 ms
+2024-01-02_13:08:07:179 EMG Prediction: 1
+2024-01-02_13:08:07:181 EMG Processing, data received: 250
+2024-01-02_13:08:07:195 EMG Processing Time: 14.1235 ms
+2024-01-02_13:08:07:197 EMG Prediction: 0
+2024-01-02_13:08:07:200 EMG Processing, data received: 250
+2024-01-02_13:08:07:249 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:07:252 EMG save, writing 225 samples to file
+2024-01-02_13:08:07:250 EMG Processing Time: 48.8707 ms
+2024-01-02_13:08:07:257 EMG Prediction: 0
+2024-01-02_13:08:07:260 EMG Processing, data received: 250
+2024-01-02_13:08:07:264 EMG Processing Time: 3.7112 ms
+2024-01-02_13:08:07:265 EMG Prediction: 1
+2024-01-02_13:08:07:450 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:07:453 EMG save, writing 225 samples to file
+2024-01-02_13:08:07:453 EMG Processing, data received: 250
+2024-01-02_13:08:07:457 EMG Processing Time: 3.9693 ms
+2024-01-02_13:08:07:458 EMG Prediction: 1
+2024-01-02_13:08:07:748 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:07:750 EMG Processing, data received: 250
+2024-01-02_13:08:07:750 EMG save, writing 225 samples to file
+2024-01-02_13:08:07:753 EMG Processing Time: 3.1435 ms
+2024-01-02_13:08:07:754 EMG Prediction: 0
+2024-01-02_13:08:07:950 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:07:952 EMG Processing, data received: 250
+2024-01-02_13:08:07:952 EMG save, writing 225 samples to file
+2024-01-02_13:08:07:956 EMG Processing Time: 3.6039 ms
+2024-01-02_13:08:07:957 EMG Prediction: 0
+2024-01-02_13:08:08:147 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:08:149 EMG save, writing 225 samples to file
+2024-01-02_13:08:08:149 EMG Processing, data received: 250
+2024-01-02_13:08:08:153 EMG Processing Time: 3.2191 ms
+2024-01-02_13:08:08:154 EMG Prediction: 1
+2024-01-02_13:08:08:348 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:08:350 EMG Processing, data received: 250
+2024-01-02_13:08:08:350 EMG save, writing 225 samples to file
+2024-01-02_13:08:08:353 EMG Processing Time: 2.3004 ms
+2024-01-02_13:08:08:354 EMG Prediction: 1
+2024-01-02_13:08:08:647 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:08:649 EMG save, writing 225 samples to file
+2024-01-02_13:08:08:649 EMG Processing, data received: 250
+2024-01-02_13:08:08:653 EMG Processing Time: 3.2839 ms
+2024-01-02_13:08:08:654 EMG Prediction: 0
+2024-01-02_13:08:09:958 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:09:962 EMG save, writing 225 samples to file
+2024-01-02_13:08:09:963 EMG Processing, data received: 250
+2024-01-02_13:08:09:963 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:09:966 EMG Processing Time: 3.422 ms
+2024-01-02_13:08:09:967 EMG save, writing 225 samples to file
+2024-01-02_13:08:09:967 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:09:968 EMG Prediction: 0
+2024-01-02_13:08:09:969 EMG Processing, data received: 250
+2024-01-02_13:08:09:971 EMG save, writing 225 samples to file
+2024-01-02_13:08:09:972 EMG Processing Time: 2.2651 ms
+2024-01-02_13:08:09:972 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:09:972 EMG Prediction: 1
+2024-01-02_13:08:09:974 EMG Processing, data received: 250
+2024-01-02_13:08:09:975 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:09:976 EMG Processing Time: 2.4731 ms
+2024-01-02_13:08:09:977 EMG Prediction: 1
+2024-01-02_13:08:09:978 EMG save, writing 225 samples to file
+2024-01-02_13:08:09:979 EMG Processing, data received: 250
+2024-01-02_13:08:09:982 EMG Processing Time: 2.5817 ms
+Cleaning up resources...
+2024-01-02_13:08:09:983 EMG Prediction: 1
+2024-01-02_13:08:09:983 EMG save, writing 225 samples to file
+2024-01-02_13:08:09:984 EMG Processing, data received: 250
+2024-01-02_13:08:09:984 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:09:987 EMG Processing Time: 2.7299 ms
+2024-01-02_13:08:09:987 EMG Prediction: 1
+2024-01-02_13:08:09:988 EMG save, writing 225 samples to file
+2024-01-02_13:08:09:988 EMG Processing, data received: 250
+2024-01-02_13:08:09:991 EMG Processing Time: 2.179 ms
+2024-01-02_13:08:09:991 EMG Prediction: 1
+2024-01-02_13:08:10:147 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:10:149 EMG Processing, data received: 250
+2024-01-02_13:08:10:149 EMG save, writing 225 samples to file
+2024-01-02_13:08:10:152 EMG Processing Time: 3.1186 ms
+2024-01-02_13:08:10:154 EMG Prediction: 1
+2024-01-02_13:08:10:447 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:10:449 EMG Processing, data received: 250
+2024-01-02_13:08:10:449 EMG save, writing 225 samples to file
+2024-01-02_13:08:10:453 EMG Processing Time: 3.5137 ms
+2024-01-02_13:08:10:454 EMG Prediction: 1
+2024-01-02_13:08:10:647 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:10:649 EMG Processing, data received: 250
+2024-01-02_13:08:10:649 EMG save, writing 225 samples to file
+2024-01-02_13:08:10:652 EMG Processing Time: 3.0231 ms
+2024-01-02_13:08:10:653 EMG Prediction: 1
+2024-01-02_13:08:10:846 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:10:848 EMG save, writing 225 samples to file
+2024-01-02_13:08:10:848 EMG Processing, data received: 250
+2024-01-02_13:08:10:851 EMG Processing Time: 2.961 ms
+2024-01-02_13:08:10:852 EMG Prediction: 1
+2024-01-02_13:08:11:047 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:11:049 EMG Processing, data received: 250
+2024-01-02_13:08:11:049 EMG save, writing 225 samples to file
+2024-01-02_13:08:11:052 EMG Processing Time: 2.9952 ms
+2024-01-02_13:08:11:053 EMG Prediction: 1
+2024-01-02_13:08:11:348 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:11:350 EMG Processing, data received: 250
+2024-01-02_13:08:11:350 EMG save, writing 225 samples to file
+2024-01-02_13:08:11:353 EMG Processing Time: 2.5969 ms
+2024-01-02_13:08:11:353 EMG Prediction: 2
+2024-01-02_13:08:11:547 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:11:549 EMG save, writing 225 samples to file
+2024-01-02_13:08:11:549 EMG Processing, data received: 250
+2024-01-02_13:08:11:552 EMG Processing Time: 2.8058 ms
+2024-01-02_13:08:11:553 EMG Prediction: 2
+2024-01-02_13:08:11:746 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:11:748 EMG save, writing 225 samples to file
+2024-01-02_13:08:11:748 EMG Processing, data received: 250
+2024-01-02_13:08:11:750 EMG Processing Time: 2.2187 ms
+2024-01-02_13:08:11:751 EMG Prediction: 2
+2024-01-02_13:08:11:946 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:11:947 EMG save, writing 225 samples to file
+2024-01-02_13:08:11:947 EMG Processing, data received: 250
+2024-01-02_13:08:11:951 EMG Processing Time: 3.5681 ms
+2024-01-02_13:08:11:952 EMG Prediction: 2
+2024-01-02_13:08:12:247 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:12:249 EMG Processing, data received: 250
+2024-01-02_13:08:12:249 EMG save, writing 225 samples to file
+2024-01-02_13:08:12:252 EMG Processing Time: 2.4274 ms
+2024-01-02_13:08:12:253 EMG Prediction: 2
+2024-01-02_13:08:12:446 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:12:448 EMG save, writing 225 samples to file
+2024-01-02_13:08:12:448 EMG Processing, data received: 250
+2024-01-02_13:08:12:451 EMG Processing Time: 3.4196 ms
+2024-01-02_13:08:12:452 EMG Prediction: 2
+2024-01-02_13:08:12:646 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:12:648 EMG Processing, data received: 250
+2024-01-02_13:08:12:648 EMG save, writing 225 samples to file
+2024-01-02_13:08:12:650 EMG Processing Time: 2.4442 ms
+2024-01-02_13:08:12:651 EMG Prediction: 2
+2024-01-02_13:08:12:848 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:12:851 EMG Processing, data received: 250
+2024-01-02_13:08:12:851 EMG save, writing 225 samples to file
+2024-01-02_13:08:12:855 EMG Processing Time: 3.937 ms
+2024-01-02_13:08:12:857 EMG Prediction: 2
+2024-01-02_13:08:13:147 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:13:149 EMG Processing, data received: 250
+2024-01-02_13:08:13:149 EMG save, writing 225 samples to file
+2024-01-02_13:08:13:152 EMG Processing Time: 2.5103 ms
+2024-01-02_13:08:13:153 EMG Prediction: 2
+2024-01-02_13:08:13:347 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:13:349 EMG Processing, data received: 250
+2024-01-02_13:08:13:349 EMG save, writing 225 samples to file
+2024-01-02_13:08:13:352 EMG Processing Time: 2.4147 ms
+2024-01-02_13:08:13:353 EMG Prediction: 2
+2024-01-02_13:08:13:548 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:13:550 EMG save, writing 225 samples to file
+2024-01-02_13:08:13:550 EMG Processing, data received: 250
+2024-01-02_13:08:13:553 EMG Processing Time: 3.2289 ms
+2024-01-02_13:08:13:554 EMG Prediction: 2
+2024-01-02_13:08:13:748 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:13:750 EMG Processing, data received: 250
+2024-01-02_13:08:13:750 EMG save, writing 225 samples to file
+2024-01-02_13:08:13:753 EMG Processing Time: 2.8226 ms
+2024-01-02_13:08:13:754 EMG Prediction: 2
+2024-01-02_13:08:14:046 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:14:048 EMG save, writing 225 samples to file
+2024-01-02_13:08:14:048 EMG Processing, data received: 250
+2024-01-02_13:08:14:051 EMG Processing Time: 3.0079 ms
+2024-01-02_13:08:14:052 EMG Prediction: 2
+2024-01-02_13:08:14:248 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:14:250 EMG Processing, data received: 250
+2024-01-02_13:08:14:250 EMG save, writing 225 samples to file
+2024-01-02_13:08:14:252 EMG Processing Time: 2.2681 ms
+2024-01-02_13:08:14:253 EMG Prediction: 2
+2024-01-02_13:08:14:448 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:14:450 EMG save, writing 225 samples to file
+2024-01-02_13:08:14:450 EMG Processing, data received: 250
+2024-01-02_13:08:14:454 EMG Processing Time: 3.3472 ms
+2024-01-02_13:08:14:455 EMG Prediction: 2
+2024-01-02_13:08:14:625 EMG save, stop command received. Closing file
+2024-01-02_13:08:14:625 EMG Processing, data received: 1
+2024-01-02_13:08:14:627 EMG Processing, receieved stop command
+2024-01-02_13:08:14:648 EMG Worker, sampleRate: 1000
+2024-01-02_13:08:14:650 EMG Worker, received stop command
+2024-01-02_13:08:14:652 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-02_13:08:14:626 EEG Processing, receieved stop command
+2024-01-02_13:08:14:628 EEG save, writing 1 samples to file
+2024-01-02_13:08:14:645 EEG Save, receieved stop command. Closing file
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

@@ -6,7 +6,6 @@
 %
 % Description:
 % This script performs all signal processing for EMG
-% Courtesy: Carl Larsson
 % ---------------------------------------------------------------------
 function EMG_processing(EMG_main_queue, EMG_prediction_queue, emg_classifier, debug)
 EMG_processing_queue = parallel.pool.PollableDataQueue; % Queue for processing
@@ -18,6 +17,7 @@ emg_fs = 1000;
 % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 send(EMG_main_queue, 'ready');
 
+% Wait for start command 
 while true
     [trigger, flag] = poll(EMG_processing_queue, 0.1);
     if flag
@@ -27,10 +27,12 @@ while true
         end
     end
 end
-% send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Starting processing']);
+
 while true
+    % Check for data windows
     [emg_data, dataReceived] = poll(EMG_processing_queue, 0);
     if dataReceived
+        
         if debug
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing, data received: ', num2str(size(emg_data, 1))]);
         end
@@ -38,8 +40,9 @@ while true
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing, receieved stop command']);
             break;
         end
-
-        % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing, receieved: ', num2str(size(emg_data, 1)),' samples']);
+        % The last row contains the sampling time
+        samplingtime = emg_data(end,1);
+        emg_data(end,:) = [];
         tic; % Start timer
         % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         % Carl
@@ -49,7 +52,7 @@ while true
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing Time: ', num2str(toc()*1000),' ms']);
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Prediction: ', num2str(prediction)]);
         end
-        disp(num2str(prediction));
+        send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Response Time: ', num2str(toc()*1000+samplingtime),' ms']);
         send(EMG_prediction_queue, prediction);
     end
 end

@@ -60,7 +60,7 @@ while true
         timestamp = data(14,col);
         % if label_flag
         if toc(labelTime) >= 4
-            if reps == 50
+            if reps == 1
                 disp(['REP: ', num2str(reps), ' Dataset completed']);
                 % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps), ' Dataset completed']);
                 break;

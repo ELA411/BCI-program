@@ -1,0 +1,83 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_12:10:19:047 pEMG_processing started
+2024-01-05_12:10:19:138 pEMG_save started
+2024-01-05_12:10:23:005 pEMG_worker started
+2024-01-05_12:10:23:191 pEEG_save started
+2024-01-05_12:10:25:175 pEEG_processing started
+2024-01-05_12:10:28:107 pEEG_worker started
+2024-01-05_12:10:28:109 All processes started
+2024-01-05_12:10:23:012 EMG Worker checking for start
+2024-01-05_12:10:28:116 EMG Worker start command receieved
+2024-01-05_12:10:28:115 EEG Worker, receieved start command
+2024-01-05_12:10:28:117 EMG Save, receieved start command
+2024-01-05_12:10:28:115 EEG Save, receieved start command
+2024-01-05_12:10:28:126 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:28:155 EEG Processing, receieved start command
+2024-01-05_12:10:28:151 EMG Processing, receieved start command
+2024-01-05_12:10:29:181 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:29:257 EEG Worker, Lost sample: 199
+2024-01-05_12:10:29:427 EMG Response Time: 1184.5314 ms
+2024-01-05_12:10:29:690 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:29:718 EMG Response Time: 530.9792 ms
+2024-01-05_12:10:30:171 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:30:205 EMG Response Time: 512.117 ms
+Stop turning
+stop
+2024-01-05_12:10:30:606 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:30:630 EMG Response Time: 461.5627 ms
+stop
+2024-01-05_12:10:31:177 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:31:215 EMG Response Time: 603.792 ms
+2024-01-05_12:10:31:602 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:31:605 EMG Response Time: 427.4596 ms
+2024-01-05_12:10:32:011 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:32:014 EMG Response Time: 410.3689 ms
+stop
+2024-01-05_12:10:32:418 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:32:420 EMG Response Time: 407.5537 ms
+2024-01-05_12:10:32:847 EMG Worker, scans available for reading: 0
+Stop turning
+stop
+2024-01-05_12:10:32:850 EMG Response Time: 430.8935 ms
+2024-01-05_12:10:33:259 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:33:261 EMG Response Time: 413.028 ms
+stop
+2024-01-05_12:10:33:667 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:33:669 EMG Response Time: 409.8046 ms
+stop
+2024-01-05_12:10:34:076 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:34:078 EMG Response Time: 409.3556 ms
+stop
+2024-01-05_12:10:34:484 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:34:486 EMG Response Time: 408.93 ms
+2024-01-05_12:10:34:892 EMG Worker, scans available for reading: 0
+Stop turning
+2024-01-05_12:10:34:895 EMG Response Time: 410.8358 ms
+2024-01-05_12:10:35:303 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:35:305 EMG Response Time: 411.0842 ms
+stop
+2024-01-05_12:10:35:712 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:35:714 EMG Response Time: 410.552 ms
+stop
+2024-01-05_12:10:36:122 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:36:124 EMG Response Time: 410.9411 ms
+stop
+2024-01-05_12:10:36:530 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:36:532 EMG Response Time: 409.233 ms
+2024-01-05_12:10:36:938 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:36:940 EMG Response Time: 408.5023 ms
+2024-01-05_12:10:37:344 EMG Worker, scans available for reading: 0
+2024-01-05_12:10:37:345 EMG Response Time: 406.6855 ms
+stop
+Cleaning up resources...
+2024-01-05_12:10:37:732 EMG Processing, receieved stop command
+2024-01-05_12:10:37:733 EMG save, stop command received. Closing file
+2024-01-05_12:10:37:750 EMG Worker, received stop command
+2024-01-05_12:10:37:751 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-05_12:10:37:733 EEG Worker, receieved stop command
+2024-01-05_12:10:37:733 EEG Save, receieved stop command. Closing file
+2024-01-05_12:10:37:733 EEG Processing, receieved stop command
+2024-01-05_12:10:37:744 EEG Worker, sampleRate: 208.7915 PacketLoss: 1 PacketLoss %: 0.052192
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

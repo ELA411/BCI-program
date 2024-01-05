@@ -1,0 +1,122 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-29_12:30:00:676 pEMG_processing started
+2023-12-29_12:30:01:105 pEMG_save started
+2023-12-29_12:30:11:690 pEMG_worker started
+2023-12-29_12:30:12:291 pEEG_save started
+2023-12-29_12:30:17:881 pEEG_processing started
+2023-12-29_12:30:21:965 pEEG_worker started
+2023-12-29_12:30:21:969All processes started
+2023-12-29_12:30:11:714 EMG Worker checking for start
+2023-12-29_12:30:21:988 EMG Worker start command receieved
+2023-12-29_12:30:21:986 EEG Save, receieved start command
+2023-12-29_12:30:21:992 EMG Save, receieved start command
+2023-12-29_12:30:21:988 EEG Worker, receieved start command
+2023-12-29_12:30:22:111 EMG Processing, receieved start command
+2023-12-29_12:30:22:080 EEG Processing, receieved start command
+Drive forward
+2023-12-29_12:30:25:213 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:469 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:547 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:625 EEG Prediction: 1
+2023-12-29_12:30:25:802 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:835 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:854 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:877 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:900 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:917 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:936 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:954 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:30:25:975 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:25:994 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:26:012 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:26:035 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:30:26:243 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:26:492 EEG Prediction: 1
+2023-12-29_12:30:26:730 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:26:993 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:27:252 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:27:499 EEG Prediction: 1
+2023-12-29_12:30:27:707 EMG Prediction: 2
+Turn right
+Drive forward
+2023-12-29_12:30:27:740 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:27:997 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:28:243 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:28:494 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:28:741 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:28:991 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:29:257 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:29:507 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:29:750 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:30:011 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:30:244 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:30:513 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:30:743 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:30:997 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:31:266 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:31:515 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:31:764 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:32:017 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:32:266 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:32:515 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:32:763 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:33:020 EEG Prediction: 1
+2023-12-29_12:30:33:286 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:30:33:523 EEG Prediction: 1
+Drive forward
+2023-12-29_12:30:33:766 EEG Prediction: 1
+2023-12-29_12:30:34:018 EEG Prediction: 1
+Drive forward
+Cleaning up resources...
+2023-12-29_12:30:34:221 EMG Processing, receieved stop command
+2023-12-29_12:30:34:224 EMG save, stop command received. Closing file
+2023-12-29_12:30:34:214 EEG Processing, receieved stop command
+2023-12-29_12:30:34:221 EEG Worker, receieved stop command
+2023-12-29_12:30:34:223 EEG Save, receieved stop command. Closing file
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

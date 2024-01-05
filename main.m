@@ -44,8 +44,7 @@ setting = 'Run';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % If no pool exists, create a new one
-% DAQ toolbox and ganglion cannot run as a threads, ganglion board has no
-% support to be used in LabView
+% DAQ toolbox and ganglion cannot run as a threads
 poolobj = parpool('Processes', 8);
 % ---------------------------------------------------------------------
 % EMG_processing_queue, sends data to processing process
@@ -55,6 +54,7 @@ poolobj = parpool('Processes', 8);
 % ---------------------------------------------------------------------
 EMG_main_queue = parallel.pool.PollableDataQueue; % Initial queue
 EMG_prediction_queue = parallel.pool.PollableDataQueue; % Queue used to receive predictions from EMG classifier
+EMG_time_queue = parallel.pool.PollableDataQueue; % Queue used to receive predictions from EMG classifier
 
 % ---------------------------------------------------------------------
 % EMG_processing dependencies: EMG_classifier_queue, EMG_main_queue
@@ -190,16 +190,15 @@ while ~stopRequested
     [EMG_prediction, flag_EMG_prediction] = poll(EMG_prediction_queue, 0);
     [EEG_prediction, flag_EEG_prediction] = poll(EEG_prediction_queue, 0);
 
-    % if flag_EEG_debug && isa(EEG_debug, "double")
-    %     eegBuffer = EEG_debug;
-    % end
     if flag_EMG_debug && isa(EMG_debug, "char")
         disp(EMG_debug);
     end
+
     if flag_EEG_debug && isa(EEG_debug, "char")
         disp(EEG_debug);
     end
 
+    % Store predictions in an array
     if flag_EEG_prediction || flag_EMG_prediction
         if flag_EEG_prediction
             EEG_predictions(end + 1) = EEG_prediction;
@@ -212,65 +211,54 @@ while ~stopRequested
         end
     end
     % Check if the interval has passed
-    if toc(last_prediction_time) >= prediction_interval
-        if ~isempty(EEG_predictions) || ~isempty(EMG_predictions)
-            % Determine the most frequent (mode) prediction
-            mode_EEG_prediction = mode(EEG_predictions);
-            mode_EMG_prediction = mode(EMG_predictions);
-            if flag_EMG_prediction
-                if mode_EMG_prediction == 0
-                    % if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
-                        disp('Stop turning');
-                    % end
-                    msg.angular.x = 0;
-                    msg.angular.y = 0;
-                    msg.angular.z = 0;
-                elseif mode_EMG_prediction == 1
-                    % if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
-                        disp('Turn left');
-                    % end
-                    msg.angular.x = 0; % turnleft
-                    msg.angular.y = 0;
-                    msg.angular.z = 1;
-                elseif mode_EMG_prediction == 2
-                    % if last_emg_prediction ~=-1 && last_emg_prediction ~= mode_EMG_prediction
-                        disp('Turn right')
-                    % end
-                    msg.angular.x = 0; % turnright
-                    msg.angular.y = 0;
-                    msg.angular.z = -1;
-                end
+    % if toc(last_prediction_time) >= prediction_interval
+    % Make sure we have some predictions
+    if ~isempty(EEG_predictions) || ~isempty(EMG_predictions)
+        % Determine the most frequent (mode) prediction
+        mode_EEG_prediction = mode(EEG_predictions);
+        mode_EMG_prediction = mode(EMG_predictions);
+        if flag_EMG_prediction
+            if mode_EMG_prediction == 0
+                disp('Stop turning');
+                msg.angular.x = 0;
+                msg.angular.y = 0;
+                msg.angular.z = 0;
+            elseif mode_EMG_prediction == 1
+                disp('Turn left');
+                msg.angular.x = 0; % turnleft
+                msg.angular.y = 0;
+                msg.angular.z = 0.5;
+            elseif mode_EMG_prediction == 2
+                disp('Turn right');
+                msg.angular.x = 0; % turnright
+                msg.angular.y = 0;
+                msg.angular.z = -0.5;
             end
-            % EEG does not control the turtlebot
-            % if flag_EEG_prediction
-            %     if EEG_prediction == 0
-            %         if last_eeg_prediction ~=-1 && last_eeg_prediction ~= mode_EEG_prediction
-            %             disp('stop');
-            %         end
-            %         msg.linear.x = 0;
-            %         msg.linear.y = 0;
-            %         msg.linear.z = 0;
-            %     elseif EEG_prediction == 1
-            %         if last_eeg_prediction ~=-1 && last_eeg_prediction ~= mode_EEG_prediction
-            %             disp('Drive forward');
-            %         end
-            %         msg.linear.x = 0.1;
-            %         msg.linear.y = 0;
-            %         msg.linear.z = 0;
-            %     end
-            % end
-            % Reset predictions
-            % last_eeg_prediction = mode_EEG_prediction;
-            % last_emg_prediction = mode_EMG_prediction;
-            EEG_predictions = [];
-            EMG_predictions = [];
-            last_prediction_time = tic; % Reset timer
-            send(pub, msg); % Send message to turtlebot with new velocity
         end
+
+        if flag_EEG_prediction == 0
+            disp('stop');
+            msg.linear.x = 0;
+            msg.linear.y = 0;
+            msg.linear.z = 0;
+        elseif EEG_prediction == 1
+            disp('Drive forward');
+            msg.linear.x = 1;
+            msg.linear.y = 0;
+            msg.linear.z = 0;
+        end
+        % end
+        % Reset predictions
+        EEG_predictions = [];
+        EMG_predictions = [];
+        % last_prediction_time = tic; % Reset timer
+        % disp('Sending to ROS');
+        % msg.angular.z
+        send(pub, msg); % Send message to turtlebot with new velocity
     end
-    % end
     pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
 end
+
 
 % Perform cleanup
 disp('Cleaning up resources...');

@@ -65,7 +65,7 @@ firstIteration = true;
 overSampling = false;
 samples = 0;
 threshold = 50;
-
+runtime = 0;
 totalSamples = 0;
 packetLoss = 0;
 
@@ -80,10 +80,12 @@ while true
             break;
         end
     end
-
+    if samples == 0
+        runtime = tic;
+    end
     dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
-    % runtime = toc;
     if dataInBuffer > 0
+        
         data = board_shim.get_board_data(1, preset); % Take latest available packages and remove them from buffer
         samples = samples + 1;
         totalSamples = totalSamples + 1;
@@ -104,6 +106,11 @@ while true
         end
 
         if samples >= threshold
+            % Assign the sampling time to the last place in the matrix for
+            % response time calculation
+            samplingtime = toc(runtime)*1000;
+            
+            eegBufferProcessing = [eegBufferProcessing; samplingtime,0,0,0];
             send(EEG_processing_queue, eegBufferProcessing);
             send(EEG_save_queue, eegBuffer);
             sampleRate = 1/mean(diff(eegBuffer(:,6)));

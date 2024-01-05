@@ -1,0 +1,2934 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-03_11:16:10:829 pEMG_processing started
+2024-01-03_11:16:11:017 pEMG_save started
+2024-01-03_11:16:18:087 pEMG_worker started
+2024-01-03_11:16:18:462 pEEG_save started
+2024-01-03_11:16:22:292 pEEG_processing started
+2024-01-03_11:16:27:305 pEEG_worker started
+2024-01-03_11:16:27:308 All processes started
+2024-01-03_11:16:18:100 EMG Worker checking for start
+2024-01-03_11:16:27:324 EMG Worker start command receieved
+2024-01-03_11:16:27:323 EEG Worker, receieved start command
+2024-01-03_11:16:27:326 EMG Save, receieved start command
+2024-01-03_11:16:27:323 EEG Save, receieved start command
+2024-01-03_11:16:27:403 EMG Processing, receieved start command
+2024-01-03_11:16:27:389 EEG Processing, receieved start command
+2024-01-03_11:16:28:450 EEG Worker, Lost sample: 199
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Turn left
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Sending to ROS
+
+ans =
+
+    0.5000
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Stop turning
+Sending to ROS
+
+ans =
+
+     0
+
+Sending to ROS
+
+ans =
+
+     0
+
+Cleaning up resources...
+2024-01-03_11:22:56:172 EMG save, stop command received. Closing file
+2024-01-03_11:22:56:171 EMG Processing, receieved stop command
+2024-01-03_11:22:56:308 EMG Worker, received stop command
+2024-01-03_11:22:56:324 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-03_11:22:56:169 EEG Worker, receieved stop command
+2024-01-03_11:22:56:171 EEG Processing, receieved stop command
+2024-01-03_11:22:56:195 EEG Worker, sampleRate: 197.0505 PacketLoss: 1 PacketLoss %: 0.0012922
+2024-01-03_11:22:56:241 EEG Save, receieved stop command. Closing file
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

@@ -1,0 +1,154 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-03_11:04:41:404 pEMG_processing started
+2024-01-03_11:04:41:622 pEMG_save started
+2024-01-03_11:04:49:040 pEMG_worker started
+2024-01-03_11:04:49:450 pEEG_save started
+2024-01-03_11:04:54:178 pEEG_processing started
+2024-01-03_11:04:58:865 pEEG_worker started
+2024-01-03_11:04:58:867 All processes started
+2024-01-03_11:04:49:056 EMG Worker checking for start
+2024-01-03_11:04:58:877 EEG Worker, receieved start command
+2024-01-03_11:04:58:877 EMG Save, receieved start command
+2024-01-03_11:04:58:878 EEG Save, receieved start command
+2024-01-03_11:04:58:877 EMG Worker start command receieved
+2024-01-03_11:04:58:951 EEG Processing, receieved start command
+2024-01-03_11:04:58:951 EMG Processing, receieved start command
+2024-01-03_11:05:00:024 EEG Worker, Lost sample: 199
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Turn right
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Turn left
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Turn left
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Cleaning up resources...
+2024-01-03_11:12:15:388 EMG save, stop command received. Closing file
+2024-01-03_11:12:15:390 EMG Processing, receieved stop command
+2024-01-03_11:12:15:418 EMG Worker, received stop command
+2024-01-03_11:12:15:437 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-03_11:12:15:387 EEG Worker, receieved stop command
+2024-01-03_11:12:15:388 EEG Save, receieved stop command. Closing file
+2024-01-03_11:12:15:392 EEG Processing, receieved stop command
+2024-01-03_11:12:15:420 EEG Worker, sampleRate: 208.7821 PacketLoss: 1 PacketLoss %: 0.0011511
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

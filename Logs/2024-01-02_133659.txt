@@ -1,0 +1,521 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-02_13:37:17:881 pEMG_processing started
+2024-01-02_13:37:17:965 pEMG_save started
+2024-01-02_13:37:21:253 pEMG_worker started
+2024-01-02_13:37:21:446 pEEG_save started
+2024-01-02_13:37:23:402 pEEG_processing started
+2024-01-02_13:37:25:684 pEEG_worker started
+2024-01-02_13:37:25:684 All processes started
+2024-01-02_13:37:21:261 EMG Worker checking for start
+2024-01-02_13:37:25:690 EMG Worker start command receieved
+2024-01-02_13:37:25:690 EEG Save, receieved start command
+2024-01-02_13:37:25:691 EMG Save, receieved start command
+2024-01-02_13:37:25:690 EEG Worker, receieved start command
+2024-01-02_13:37:25:715 EMG Processing, receieved start command
+2024-01-02_13:37:25:714 EEG Processing, receieved start command
+2024-01-02_13:37:26:135 EEG save, writing 50 samples to file
+2024-01-02_13:37:26:144 EEG_Worker: Sending samples to processing: 50 SampleRate: 206.2196
+2024-01-02_13:37:26:159 EEG Worker, sampleRate: 206.2196 PacketLoss: 0 PacketLoss %: 0
+2024-01-02_13:37:26:187 EEG save, writing 45 samples to file
+2024-01-02_13:37:26:195 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.6865
+2024-01-02_13:37:26:203 EEG Worker, sampleRate: 196.6865 PacketLoss: 0 PacketLoss %: 0
+2024-01-02_13:37:26:378 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.0353
+2024-01-02_13:37:26:383 EEG Worker, sampleRate: 195.0353 PacketLoss: 1 PacketLoss %: 0.71429
+2024-01-02_13:37:26:662 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:26:386 EEG save, writing 45 samples to file
+2024-01-02_13:37:26:566 EEG Processing: 527.3344 ms
+2024-01-02_13:37:26:771 EMG Processing, data received: 250
+2024-01-02_13:37:26:597 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5585
+2024-01-02_13:37:26:855 EMG save, writing 250 samples to file
+2024-01-02_13:37:26:598 EEG save, writing 45 samples to file
+2024-01-02_13:37:26:929 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:26:599 EEG Worker, sampleRate: 195.5585 PacketLoss: 1 PacketLoss %: 0.54054
+2024-01-02_13:37:26:936 EMG save, writing 225 samples to file
+2024-01-02_13:37:26:639 EEG Processing: 66.8555 ms
+2024-01-02_13:37:27:043 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:26:671 EEG Processing: 29.6182 ms
+2024-01-02_13:37:27:057 EMG save, writing 225 samples to file
+2024-01-02_13:37:26:697 EEG Processing: 27.8568 ms
+2024-01-02_13:37:27:139 EMG Processing Time: 363.5268 ms
+2024-01-02_13:37:26:834 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.7798
+2024-01-02_13:37:27:144 EMG Prediction: 1
+2024-01-02_13:37:26:832 EEG save, writing 45 samples to file
+Stop turning
+2024-01-02_13:37:27:157 EMG Processing, data received: 250
+2024-01-02_13:37:26:836 EEG Worker, sampleRate: 196.7798 PacketLoss: 1 PacketLoss %: 0.43478
+2024-01-02_13:37:27:190 EMG Processing Time: 28.2894 ms
+2024-01-02_13:37:26:903 EEG Processing: 72.7958 ms
+2024-01-02_13:37:27:192 EMG Prediction: 0
+2024-01-02_13:37:27:051 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.7778
+2024-01-02_13:37:27:195 EMG Processing, data received: 250
+2024-01-02_13:37:27:052 EEG save, writing 45 samples to file
+2024-01-02_13:37:27:225 EMG Processing Time: 30.0315 ms
+2024-01-02_13:37:27:052 EEG Worker, sampleRate: 208.7778 PacketLoss: 1 PacketLoss %: 0.36364
+2024-01-02_13:37:27:227 EMG Prediction: 0
+2024-01-02_13:37:27:057 EEG Processing: 6.3244 ms
+2024-01-02_13:37:27:336 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:27:269 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.7979
+2024-01-02_13:37:27:338 EMG Processing, data received: 250
+2024-01-02_13:37:27:270 EEG save, writing 45 samples to file
+2024-01-02_13:37:27:338 EMG save, writing 225 samples to file
+2024-01-02_13:37:27:270 EEG Worker, sampleRate: 196.7979 PacketLoss: 2 PacketLoss %: 0.625
+2024-01-02_13:37:27:346 EMG Processing Time: 8.6347 ms
+2024-01-02_13:37:27:274 EEG Processing: 5.0246 ms
+2024-01-02_13:37:27:348 EMG Prediction: 0
+2024-01-02_13:37:27:501 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.7703
+2024-01-02_13:37:27:553 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:27:502 EEG save, writing 45 samples to file
+2024-01-02_13:37:27:556 EMG Processing, data received: 250
+2024-01-02_13:37:27:502 EEG Worker, sampleRate: 208.7703 PacketLoss: 3 PacketLoss %: 0.82192
+2024-01-02_13:37:27:556 EMG save, writing 225 samples to file
+2024-01-02_13:37:27:508 EEG Processing: 7.1677 ms
+2024-01-02_13:37:27:598 EMG Processing Time: 40.6043 ms
+2024-01-02_13:37:27:721 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5718
+2024-01-02_13:37:27:601 EMG Prediction: 0
+2024-01-02_13:37:27:721 EEG save, writing 45 samples to file
+2024-01-02_13:37:27:731 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:27:722 EEG Worker, sampleRate: 195.5718 PacketLoss: 3 PacketLoss %: 0.73171
+2024-01-02_13:37:27:733 EMG Processing, data received: 250
+2024-01-02_13:37:27:727 EEG Processing: 6.415 ms
+2024-01-02_13:37:27:733 EMG save, writing 225 samples to file
+2024-01-02_13:37:27:982 EEG_Worker: Sending samples to processing: 50 SampleRate: 181.7714
+2024-01-02_13:37:27:735 EMG Processing Time: 2.7231 ms
+2024-01-02_13:37:27:982 EEG save, writing 45 samples to file
+2024-01-02_13:37:27:736 EMG Prediction: 1
+2024-01-02_13:37:27:983 EEG Worker, sampleRate: 181.7714 PacketLoss: 4 PacketLoss %: 0.87912
+2024-01-02_13:37:27:932 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:27:986 EEG Processing: 5.1062 ms
+2024-01-02_13:37:27:933 EMG Processing, data received: 250
+2024-01-02_13:37:28:170 EEG_Worker: Sending samples to processing: 50 SampleRate: 226.386
+2024-01-02_13:37:27:934 EMG save, writing 225 samples to file
+2024-01-02_13:37:28:170 EEG save, writing 45 samples to file
+2024-01-02_13:37:27:936 EMG Processing Time: 2.531 ms
+2024-01-02_13:37:28:171 EEG Worker, sampleRate: 226.386 PacketLoss: 4 PacketLoss %: 0.8
+2024-01-02_13:37:27:937 EMG Prediction: 0
+2024-01-02_13:37:28:175 EEG Processing: 5.1568 ms
+2024-01-02_13:37:28:232 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:28:420 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.0052
+2024-01-02_13:37:28:234 EMG Processing, data received: 250
+2024-01-02_13:37:28:420 EEG save, writing 45 samples to file
+2024-01-02_13:37:28:234 EMG save, writing 225 samples to file
+2024-01-02_13:37:28:421 EEG Worker, sampleRate: 195.0052 PacketLoss: 4 PacketLoss %: 0.73394
+2024-01-02_13:37:28:238 EMG Processing Time: 3.5622 ms
+2024-01-02_13:37:28:425 EEG Processing: 5.2256 ms
+2024-01-02_13:37:28:239 EMG Prediction: 0
+2024-01-02_13:37:28:625 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.7989
+2024-01-02_13:37:28:434 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:28:625 EEG save, writing 45 samples to file
+2024-01-02_13:37:28:436 EMG save, writing 225 samples to file
+2024-01-02_13:37:28:626 EEG Worker, sampleRate: 208.7989 PacketLoss: 4 PacketLoss %: 0.67797
+2024-01-02_13:37:28:436 EMG Processing, data received: 250
+2024-01-02_13:37:28:632 EEG Processing: 7.293 ms
+2024-01-02_13:37:28:440 EMG Processing Time: 3.8622 ms
+2024-01-02_13:37:28:859 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5809
+2024-01-02_13:37:28:441 EMG Prediction: 0
+2024-01-02_13:37:28:860 EEG save, writing 45 samples to file
+2024-01-02_13:37:28:632 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:28:860 EEG Worker, sampleRate: 195.5809 PacketLoss: 4 PacketLoss %: 0.62992
+2024-01-02_13:37:28:634 EMG Processing, data received: 250
+2024-01-02_13:37:28:864 EEG Processing: 5.1656 ms
+2024-01-02_13:37:28:634 EMG save, writing 225 samples to file
+2024-01-02_13:37:29:095 EEG_Worker: Sending samples to processing: 50 SampleRate: 194.9318
+2024-01-02_13:37:28:636 EMG Processing Time: 2.4319 ms
+2024-01-02_13:37:29:095 EEG save, writing 45 samples to file
+Turn left
+2024-01-02_13:37:28:637 EMG Prediction: 0
+2024-01-02_13:37:29:096 EEG Worker, sampleRate: 194.9318 PacketLoss: 4 PacketLoss %: 0.58824
+2024-01-02_13:37:28:831 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:29:101 EEG Processing: 7.4027 ms
+2024-01-02_13:37:28:833 EMG save, writing 225 samples to file
+2024-01-02_13:37:29:315 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.7796
+2024-01-02_13:37:28:833 EMG Processing, data received: 250
+2024-01-02_13:37:29:315 EEG save, writing 45 samples to file
+2024-01-02_13:37:28:835 EMG Processing Time: 2.3272 ms
+2024-01-02_13:37:29:316 EEG Worker, sampleRate: 196.7796 PacketLoss: 4 PacketLoss %: 0.55172
+Stop turning
+2024-01-02_13:37:28:836 EMG Prediction: 0
+2024-01-02_13:37:29:320 EEG Processing: 5.393 ms
+2024-01-02_13:37:29:130 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:29:535 EEG_Worker: Sending samples to processing: 50 SampleRate: 194.9201
+2024-01-02_13:37:29:132 EMG save, writing 225 samples to file
+2024-01-02_13:37:29:536 EEG save, writing 45 samples to file
+2024-01-02_13:37:29:132 EMG Processing, data received: 250
+2024-01-02_13:37:29:536 EEG Worker, sampleRate: 194.9201 PacketLoss: 4 PacketLoss %: 0.51948
+2024-01-02_13:37:29:135 EMG Processing Time: 3.0127 ms
+2024-01-02_13:37:29:542 EEG Processing: 6.8579 ms
+2024-01-02_13:37:29:137 EMG Prediction: 0
+2024-01-02_13:37:29:770 EEG save, writing 45 samples to file
+2024-01-02_13:37:29:331 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:29:770 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.584
+2024-01-02_13:37:29:333 EMG Processing, data received: 250
+2024-01-02_13:37:29:771 EEG Worker, sampleRate: 195.584 PacketLoss: 6 PacketLoss %: 0.7362
+2024-01-02_13:37:29:332 EMG save, writing 225 samples to file
+2024-01-02_13:37:29:774 EEG Processing: 5.1504 ms
+2024-01-02_13:37:29:335 EMG Processing Time: 2.1897 ms
+2024-01-02_13:37:29:989 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.8117
+2024-01-02_13:37:29:336 EMG Prediction: 1
+2024-01-02_13:37:29:989 EEG save, writing 45 samples to file
+2024-01-02_13:37:29:530 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:29:990 EEG Worker, sampleRate: 196.8117 PacketLoss: 6 PacketLoss %: 0.69767
+2024-01-02_13:37:29:532 EMG Processing, data received: 250
+2024-01-02_13:37:29:994 EEG Processing: 5.0472 ms
+2024-01-02_13:37:29:532 EMG save, writing 225 samples to file
+2024-01-02_13:37:30:210 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.8218
+2024-01-02_13:37:29:535 EMG Processing Time: 2.7944 ms
+2024-01-02_13:37:30:211 EEG save, writing 45 samples to file
+2024-01-02_13:37:29:536 EMG Prediction: 1
+2024-01-02_13:37:30:211 EEG Worker, sampleRate: 208.8218 PacketLoss: 6 PacketLoss %: 0.66298
+2024-01-02_13:37:29:730 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:30:215 EEG Processing: 5.2506 ms
+2024-01-02_13:37:29:732 EMG Processing, data received: 250
+2024-01-02_13:37:30:446 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.783
+2024-01-02_13:37:29:732 EMG save, writing 225 samples to file
+2024-01-02_13:37:30:447 EEG save, writing 45 samples to file
+2024-01-02_13:37:29:734 EMG Processing Time: 2.0696 ms
+2024-01-02_13:37:30:448 EEG Worker, sampleRate: 196.783 PacketLoss: 6 PacketLoss %: 0.63158
+2024-01-02_13:37:29:735 EMG Prediction: 1
+2024-01-02_13:37:30:452 EEG Processing: 6.1259 ms
+2024-01-02_13:37:30:031 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:30:682 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5349
+2024-01-02_13:37:30:033 EMG Processing, data received: 250
+2024-01-02_13:37:30:683 EEG save, writing 45 samples to file
+2024-01-02_13:37:30:033 EMG save, writing 225 samples to file
+2024-01-02_13:37:30:683 EEG Worker, sampleRate: 195.5349 PacketLoss: 6 PacketLoss %: 0.60302
+2024-01-02_13:37:30:036 EMG Processing Time: 3.0264 ms
+2024-01-02_13:37:30:687 EEG Processing: 5.1518 ms
+2024-01-02_13:37:30:037 EMG Prediction: 0
+2024-01-02_13:37:30:889 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.8884
+2024-01-02_13:37:30:231 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:30:890 EEG save, writing 45 samples to file
+2024-01-02_13:37:30:233 EMG Processing, data received: 250
+2024-01-02_13:37:30:890 EEG Worker, sampleRate: 208.8884 PacketLoss: 7 PacketLoss %: 0.67308
+2024-01-02_13:37:30:233 EMG save, writing 225 samples to file
+2024-01-02_13:37:30:897 EEG Processing: 8.1033 ms
+2024-01-02_13:37:30:235 EMG Processing Time: 2.0099 ms
+2024-01-02_13:37:31:134 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.2104
+2024-01-02_13:37:30:235 EMG Prediction: 1
+2024-01-02_13:37:31:134 EEG save, writing 45 samples to file
+2024-01-02_13:37:30:430 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:31:135 EEG Worker, sampleRate: 195.2104 PacketLoss: 7 PacketLoss %: 0.64516
+2024-01-02_13:37:30:432 EMG Processing, data received: 250
+2024-01-02_13:37:31:139 EEG Processing: 5.7 ms
+2024-01-02_13:37:30:432 EMG save, writing 225 samples to file
+2024-01-02_13:37:31:337 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.4781
+2024-01-02_13:37:30:435 EMG Processing Time: 2.1727 ms
+2024-01-02_13:37:31:338 EEG save, writing 45 samples to file
+2024-01-02_13:37:30:435 EMG Prediction: 1
+2024-01-02_13:37:31:338 EEG Worker, sampleRate: 208.4781 PacketLoss: 7 PacketLoss %: 0.61947
+2024-01-02_13:37:30:631 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:31:342 EEG Processing: 4.7613 ms
+2024-01-02_13:37:30:632 EMG save, writing 225 samples to file
+2024-01-02_13:37:31:573 EEG_Worker: Sending samples to processing: 50 SampleRate: 194.9351
+2024-01-02_13:37:30:632 EMG Processing, data received: 250
+2024-01-02_13:37:31:574 EEG save, writing 45 samples to file
+2024-01-02_13:37:30:637 EMG Processing Time: 4.8111 ms
+2024-01-02_13:37:31:574 EEG Worker, sampleRate: 194.9351 PacketLoss: 7 PacketLoss %: 0.59574
+2024-01-02_13:37:30:638 EMG Prediction: 2
+2024-01-02_13:37:31:578 EEG Processing: 5.1787 ms
+2024-01-02_13:37:30:931 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:31:809 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5459
+2024-01-02_13:37:30:933 EMG save, writing 225 samples to file
+2024-01-02_13:37:31:809 EEG save, writing 45 samples to file
+2024-01-02_13:37:30:933 EMG Processing, data received: 250
+2024-01-02_13:37:31:810 EEG Worker, sampleRate: 195.5459 PacketLoss: 7 PacketLoss %: 0.57377
+2024-01-02_13:37:30:936 EMG Processing Time: 3.0938 ms
+2024-01-02_13:37:31:814 EEG Processing: 5.1598 ms
+2024-01-02_13:37:30:937 EMG Prediction: 0
+2024-01-02_13:37:32:026 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.7824
+2024-01-02_13:37:31:130 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:32:027 EEG save, writing 45 samples to file
+2024-01-02_13:37:31:132 EMG save, writing 225 samples to file
+2024-01-02_13:37:32:027 EEG Worker, sampleRate: 196.7824 PacketLoss: 7 PacketLoss %: 0.55336
+2024-01-02_13:37:31:132 EMG Processing, data received: 250
+2024-01-02_13:37:32:032 EEG Processing: 5.7017 ms
+2024-01-02_13:37:31:135 EMG Processing Time: 2.6799 ms
+2024-01-02_13:37:32:260 EEG_Worker: Sending samples to processing: 50 SampleRate: 194.8835
+2024-01-02_13:37:31:136 EMG Prediction: 1
+2024-01-02_13:37:32:261 EEG save, writing 45 samples to file
+2024-01-02_13:37:31:331 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:32:261 EEG Worker, sampleRate: 194.8835 PacketLoss: 7 PacketLoss %: 0.53435
+2024-01-02_13:37:31:332 EMG Processing, data received: 250
+2024-01-02_13:37:32:266 EEG Processing: 6.3341 ms
+2024-01-02_13:37:31:333 EMG save, writing 225 samples to file
+2024-01-02_13:37:32:479 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.7784
+2024-01-02_13:37:31:336 EMG Processing Time: 2.9437 ms
+2024-01-02_13:37:32:479 EEG save, writing 45 samples to file
+2024-01-02_13:37:31:337 EMG Prediction: 1
+2024-01-02_13:37:32:480 EEG Worker, sampleRate: 196.7784 PacketLoss: 7 PacketLoss %: 0.51661
+2024-01-02_13:37:31:530 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:32:484 EEG Processing: 4.9489 ms
+2024-01-02_13:37:31:532 EMG save, writing 225 samples to file
+2024-01-02_13:37:32:699 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5683
+2024-01-02_13:37:31:532 EMG Processing, data received: 250
+2024-01-02_13:37:32:699 EEG save, writing 45 samples to file
+2024-01-02_13:37:31:535 EMG Processing Time: 2.9153 ms
+2024-01-02_13:37:32:700 EEG Worker, sampleRate: 195.5683 PacketLoss: 8 PacketLoss %: 0.57143
+2024-01-02_13:37:31:536 EMG Prediction: 1
+2024-01-02_13:37:32:704 EEG Processing: 4.9831 ms
+2024-01-02_13:37:31:831 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:32:934 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.8835
+2024-01-02_13:37:31:833 EMG Processing, data received: 250
+2024-01-02_13:37:32:934 EEG save, writing 45 samples to file
+2024-01-02_13:37:31:833 EMG save, writing 225 samples to file
+2024-01-02_13:37:32:935 EEG Worker, sampleRate: 208.8835 PacketLoss: 8 PacketLoss %: 0.55363
+2024-01-02_13:37:31:835 EMG Processing Time: 2.0121 ms
+2024-01-02_13:37:32:938 EEG Processing: 5.2486 ms
+2024-01-02_13:37:31:836 EMG Prediction: 1
+2024-01-02_13:37:33:166 EEG_Worker: Sending samples to processing: 50 SampleRate: 193.7286
+2024-01-02_13:37:32:032 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:33:167 EEG save, writing 45 samples to file
+2024-01-02_13:37:32:034 EMG save, writing 225 samples to file
+2024-01-02_13:37:33:167 EEG Worker, sampleRate: 193.7286 PacketLoss: 9 PacketLoss %: 0.60403
+2024-01-02_13:37:32:034 EMG Processing, data received: 250
+2024-01-02_13:37:33:171 EEG Processing: 5.0648 ms
+2024-01-02_13:37:32:038 EMG Processing Time: 3.3987 ms
+2024-01-02_13:37:33:384 EEG_Worker: Sending samples to processing: 50 SampleRate: 198.0552
+2024-01-02_13:37:32:039 EMG Prediction: 1
+2024-01-02_13:37:33:385 EEG save, writing 45 samples to file
+2024-01-02_13:37:32:231 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:33:385 EEG Worker, sampleRate: 198.0552 PacketLoss: 9 PacketLoss %: 0.58632
+2024-01-02_13:37:32:232 EMG save, writing 225 samples to file
+2024-01-02_13:37:33:391 EEG Processing: 7.5998 ms
+2024-01-02_13:37:32:232 EMG Processing, data received: 250
+2024-01-02_13:37:33:602 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.8229
+2024-01-02_13:37:32:235 EMG Processing Time: 2.1335 ms
+2024-01-02_13:37:33:602 EEG save, writing 45 samples to file
+2024-01-02_13:37:32:235 EMG Prediction: 1
+2024-01-02_13:37:33:603 EEG Worker, sampleRate: 196.8229 PacketLoss: 10 PacketLoss %: 0.63291
+2024-01-02_13:37:32:431 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:33:606 EEG Processing: 4.8542 ms
+2024-01-02_13:37:32:432 EMG Processing, data received: 250
+2024-01-02_13:37:33:851 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.4726
+2024-01-02_13:37:32:432 EMG save, writing 225 samples to file
+2024-01-02_13:37:33:852 EEG save, writing 45 samples to file
+2024-01-02_13:37:32:435 EMG Processing Time: 2.2812 ms
+2024-01-02_13:37:33:852 EEG Worker, sampleRate: 195.4726 PacketLoss: 10 PacketLoss %: 0.61538
+2024-01-02_13:37:32:436 EMG Prediction: 2
+2024-01-02_13:37:33:858 EEG Processing: 7.1741 ms
+2024-01-02_13:37:32:730 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:34:056 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.8705
+2024-01-02_13:37:32:732 EMG save, writing 225 samples to file
+2024-01-02_13:37:34:056 EEG save, writing 45 samples to file
+2024-01-02_13:37:32:732 EMG Processing, data received: 250
+2024-01-02_13:37:34:057 EEG Worker, sampleRate: 208.8705 PacketLoss: 10 PacketLoss %: 0.5988
+2024-01-02_13:37:32:735 EMG Processing Time: 2.7831 ms
+2024-01-02_13:37:34:061 EEG Processing: 4.8214 ms
+2024-01-02_13:37:32:736 EMG Prediction: 2
+2024-01-02_13:37:34:303 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.006
+2024-01-02_13:37:32:930 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:34:304 EEG save, writing 45 samples to file
+2024-01-02_13:37:32:932 EMG save, writing 225 samples to file
+2024-01-02_13:37:34:304 EEG Worker, sampleRate: 195.006 PacketLoss: 10 PacketLoss %: 0.58309
+2024-01-02_13:37:32:932 EMG Processing, data received: 250
+2024-01-02_13:37:34:310 EEG Processing: 6.8918 ms
+2024-01-02_13:37:32:935 EMG Processing Time: 2.7605 ms
+2024-01-02_13:37:34:507 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.8145
+2024-01-02_13:37:32:936 EMG Prediction: 2
+2024-01-02_13:37:34:507 EEG save, writing 45 samples to file
+2024-01-02_13:37:33:131 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:34:508 EEG Worker, sampleRate: 208.8145 PacketLoss: 10 PacketLoss %: 0.56818
+2024-01-02_13:37:33:133 EMG Processing, data received: 250
+2024-01-02_13:37:34:512 EEG Processing: 5.0805 ms
+2024-01-02_13:37:33:133 EMG save, writing 225 samples to file
+2024-01-02_13:37:34:740 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.508
+2024-01-02_13:37:33:136 EMG Processing Time: 2.6411 ms
+2024-01-02_13:37:34:741 EEG save, writing 45 samples to file
+2024-01-02_13:37:33:137 EMG Prediction: 2
+2024-01-02_13:37:34:741 EEG Worker, sampleRate: 195.508 PacketLoss: 11 PacketLoss %: 0.60942
+2024-01-02_13:37:33:333 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:34:747 EEG Processing: 7.508 ms
+2024-01-02_13:37:33:335 EMG save, writing 225 samples to file
+2024-01-02_13:37:34:975 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.0052
+2024-01-02_13:37:33:335 EMG Processing, data received: 250
+2024-01-02_13:37:34:976 EEG save, writing 45 samples to file
+2024-01-02_13:37:33:338 EMG Processing Time: 3.5224 ms
+2024-01-02_13:37:34:976 EEG Worker, sampleRate: 195.0052 PacketLoss: 11 PacketLoss %: 0.59459
+2024-01-02_13:37:33:340 EMG Prediction: 2
+2024-01-02_13:37:34:980 EEG Processing: 5.0885 ms
+2024-01-02_13:37:33:631 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:35:195 EEG save, writing 45 samples to file
+2024-01-02_13:37:33:633 EMG save, writing 225 samples to file
+2024-01-02_13:37:35:194 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.7528
+2024-01-02_13:37:33:633 EMG Processing, data received: 250
+2024-01-02_13:37:35:196 EEG Worker, sampleRate: 196.7528 PacketLoss: 11 PacketLoss %: 0.58047
+2024-01-02_13:37:33:636 EMG Processing Time: 2.8202 ms
+2024-01-02_13:37:35:200 EEG Processing: 5.571 ms
+2024-01-02_13:37:33:637 EMG Prediction: 2
+2024-01-02_13:37:35:427 EEG_Worker: Sending samples to processing: 50 SampleRate: 194.9189
+2024-01-02_13:37:33:831 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:35:428 EEG save, writing 45 samples to file
+2024-01-02_13:37:33:834 EMG save, writing 225 samples to file
+2024-01-02_13:37:35:428 EEG Worker, sampleRate: 194.9189 PacketLoss: 11 PacketLoss %: 0.56701
+2024-01-02_13:37:33:834 EMG Processing, data received: 250
+2024-01-02_13:37:35:432 EEG Processing: 5.5474 ms
+2024-01-02_13:37:33:837 EMG Processing Time: 3.5865 ms
+2024-01-02_13:37:35:647 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.7675
+2024-01-02_13:37:33:839 EMG Prediction: 2
+2024-01-02_13:37:35:648 EEG save, writing 45 samples to file
+2024-01-02_13:37:34:031 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:35:649 EEG Worker, sampleRate: 196.7675 PacketLoss: 11 PacketLoss %: 0.55416
+2024-01-02_13:37:34:033 EMG save, writing 225 samples to file
+2024-01-02_13:37:35:652 EEG Processing: 5.3718 ms
+2024-01-02_13:37:34:033 EMG Processing, data received: 250
+2024-01-02_13:37:35:869 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5629
+2024-01-02_13:37:34:036 EMG Processing Time: 3.0404 ms
+2024-01-02_13:37:35:870 EEG save, writing 45 samples to file
+2024-01-02_13:37:34:038 EMG Prediction: 2
+2024-01-02_13:37:35:870 EEG Worker, sampleRate: 195.5629 PacketLoss: 12 PacketLoss %: 0.59113
+2024-01-02_13:37:34:230 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:35:874 EEG Processing: 5.7782 ms
+2024-01-02_13:37:34:232 EMG Processing, data received: 250
+2024-01-02_13:37:36:102 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.8468
+2024-01-02_13:37:34:232 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:103 EEG save, writing 45 samples to file
+2024-01-02_13:37:34:235 EMG Processing Time: 2.4674 ms
+2024-01-02_13:37:36:103 EEG Worker, sampleRate: 208.8468 PacketLoss: 12 PacketLoss %: 0.57831
+2024-01-02_13:37:34:235 EMG Prediction: 2
+2024-01-02_13:37:36:107 EEG Processing: 4.5686 ms
+2024-01-02_13:37:34:531 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:36:320 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.7937
+2024-01-02_13:37:34:532 EMG Processing, data received: 250
+2024-01-02_13:37:36:320 EEG save, writing 45 samples to file
+2024-01-02_13:37:34:532 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:321 EEG Worker, sampleRate: 196.7937 PacketLoss: 12 PacketLoss %: 0.56604
+2024-01-02_13:37:34:534 EMG Processing Time: 2.1117 ms
+2024-01-02_13:37:36:325 EEG Processing: 5.2632 ms
+2024-01-02_13:37:34:535 EMG Prediction: 2
+2024-01-02_13:37:36:554 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.8121
+2024-01-02_13:37:34:731 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:36:554 EEG save, writing 45 samples to file
+2024-01-02_13:37:34:733 EMG Processing, data received: 250
+2024-01-02_13:37:36:555 EEG Worker, sampleRate: 208.8121 PacketLoss: 12 PacketLoss %: 0.55427
+2024-01-02_13:37:34:733 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:558 EEG Processing: 4.3707 ms
+2024-01-02_13:37:34:736 EMG Processing Time: 2.5936 ms
+2024-01-02_13:37:36:771 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5007
+2024-01-02_13:37:34:737 EMG Prediction: 2
+2024-01-02_13:37:36:771 EEG save, writing 45 samples to file
+2024-01-02_13:37:34:931 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:36:772 EEG Worker, sampleRate: 195.5007 PacketLoss: 12 PacketLoss %: 0.54299
+2024-01-02_13:37:34:932 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:778 EEG Processing: 7.8541 ms
+2024-01-02_13:37:34:932 EMG Processing, data received: 250
+2024-01-02_13:37:37:004 EEG_Worker: Sending samples to processing: 50 SampleRate: 194.9049
+Cleaning up resources...
+2024-01-02_13:37:34:936 EMG Processing Time: 2.9677 ms
+2024-01-02_13:37:34:937 EMG Prediction: 2
+2024-01-02_13:37:35:131 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:35:132 EMG Processing, data received: 250
+2024-01-02_13:37:35:133 EMG save, writing 225 samples to file
+2024-01-02_13:37:35:136 EMG Processing Time: 3.2048 ms
+2024-01-02_13:37:35:137 EMG Prediction: 2
+2024-01-02_13:37:35:431 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:35:432 EMG save, writing 225 samples to file
+2024-01-02_13:37:35:432 EMG Processing, data received: 250
+2024-01-02_13:37:35:435 EMG Processing Time: 2.3847 ms
+2024-01-02_13:37:35:436 EMG Prediction: 2
+2024-01-02_13:37:35:631 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:35:633 EMG Processing, data received: 250
+2024-01-02_13:37:35:633 EMG save, writing 225 samples to file
+2024-01-02_13:37:35:636 EMG Processing Time: 2.7611 ms
+2024-01-02_13:37:35:637 EMG Prediction: 2
+2024-01-02_13:37:35:831 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:35:832 EMG save, writing 225 samples to file
+2024-01-02_13:37:35:832 EMG Processing, data received: 250
+2024-01-02_13:37:35:835 EMG Processing Time: 2.4066 ms
+2024-01-02_13:37:35:836 EMG Prediction: 2
+2024-01-02_13:37:36:030 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:36:032 EMG Processing, data received: 250
+2024-01-02_13:37:36:032 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:034 EMG Processing Time: 2.2702 ms
+2024-01-02_13:37:36:035 EMG Prediction: 2
+2024-01-02_13:37:36:331 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:36:332 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:332 EMG Processing, data received: 250
+2024-01-02_13:37:36:335 EMG Processing Time: 2.4325 ms
+2024-01-02_13:37:36:336 EMG Prediction: 2
+2024-01-02_13:37:36:531 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:36:532 EMG Processing, data received: 250
+2024-01-02_13:37:36:532 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:534 EMG Processing Time: 2.0902 ms
+2024-01-02_13:37:36:535 EMG Prediction: 2
+2024-01-02_13:37:36:731 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:36:732 EMG Processing, data received: 250
+2024-01-02_13:37:36:733 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:735 EMG Processing Time: 2.2991 ms
+2024-01-02_13:37:36:736 EMG Prediction: 2
+2024-01-02_13:37:36:930 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:36:932 EMG save, writing 225 samples to file
+2024-01-02_13:37:36:932 EMG Processing, data received: 250
+2024-01-02_13:37:36:935 EMG Processing Time: 2.4949 ms
+2024-01-02_13:37:36:936 EMG Prediction: 2
+2024-01-02_13:37:37:232 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:37:234 EMG save, writing 225 samples to file
+2024-01-02_13:37:37:234 EMG Processing, data received: 250
+2024-01-02_13:37:37:238 EMG Processing Time: 3.5216 ms
+2024-01-02_13:37:37:239 EMG Prediction: 2
+2024-01-02_13:37:37:431 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:37:433 EMG Processing, data received: 250
+2024-01-02_13:37:37:433 EMG save, writing 225 samples to file
+2024-01-02_13:37:37:435 EMG Processing Time: 2.5672 ms
+2024-01-02_13:37:37:436 EMG Prediction: 2
+2024-01-02_13:37:37:632 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:37:634 EMG save, writing 225 samples to file
+2024-01-02_13:37:37:634 EMG Processing, data received: 250
+2024-01-02_13:37:37:636 EMG Processing Time: 2.4858 ms
+2024-01-02_13:37:37:637 EMG Prediction: 2
+2024-01-02_13:37:37:831 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:37:833 EMG save, writing 225 samples to file
+2024-01-02_13:37:37:833 EMG Processing, data received: 250
+2024-01-02_13:37:37:835 EMG Processing Time: 2.143 ms
+2024-01-02_13:37:37:836 EMG Prediction: 2
+2024-01-02_13:37:38:132 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:38:133 EMG save, writing 225 samples to file
+2024-01-02_13:37:38:133 EMG Processing, data received: 250
+2024-01-02_13:37:38:136 EMG Processing Time: 2.5458 ms
+2024-01-02_13:37:38:137 EMG Prediction: 2
+2024-01-02_13:37:38:330 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:38:332 EMG save, writing 225 samples to file
+2024-01-02_13:37:38:332 EMG Processing, data received: 250
+2024-01-02_13:37:38:335 EMG Processing Time: 2.8324 ms
+2024-01-02_13:37:38:336 EMG Prediction: 2
+2024-01-02_13:37:38:417 EMG save, stop command received. Closing file
+2024-01-02_13:37:38:417 EMG Processing, data received: 1
+2024-01-02_13:37:38:419 EMG Processing, receieved stop command
+2024-01-02_13:37:38:531 EMG Worker, sampleRate: 1000
+2024-01-02_13:37:38:534 EMG Worker, received stop command
+2024-01-02_13:37:38:536 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-02_13:37:37:004 EEG save, writing 45 samples to file
+2024-01-02_13:37:37:005 EEG Worker, sampleRate: 194.9049 PacketLoss: 12 PacketLoss %: 0.53215
+2024-01-02_13:37:37:011 EEG Processing: 7.5592 ms
+2024-01-02_13:37:37:222 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.8622
+2024-01-02_13:37:37:222 EEG save, writing 45 samples to file
+2024-01-02_13:37:37:223 EEG Worker, sampleRate: 208.8622 PacketLoss: 12 PacketLoss %: 0.52174
+2024-01-02_13:37:37:229 EEG Processing: 7.3384 ms
+2024-01-02_13:37:37:457 EEG_Worker: Sending samples to processing: 50 SampleRate: 194.9856
+2024-01-02_13:37:37:458 EEG save, writing 45 samples to file
+2024-01-02_13:37:37:458 EEG Worker, sampleRate: 194.9856 PacketLoss: 12 PacketLoss %: 0.51173
+2024-01-02_13:37:37:462 EEG Processing: 5.1693 ms
+2024-01-02_13:37:37:677 EEG_Worker: Sending samples to processing: 50 SampleRate: 208.7516
+2024-01-02_13:37:37:678 EEG save, writing 45 samples to file
+2024-01-02_13:37:37:678 EEG Worker, sampleRate: 208.7516 PacketLoss: 12 PacketLoss %: 0.50209
+2024-01-02_13:37:37:682 EEG Processing: 4.9744 ms
+2024-01-02_13:37:37:910 EEG_Worker: Sending samples to processing: 50 SampleRate: 195.5285
+2024-01-02_13:37:37:911 EEG save, writing 45 samples to file
+2024-01-02_13:37:37:912 EEG Worker, sampleRate: 195.5285 PacketLoss: 12 PacketLoss %: 0.49281
+2024-01-02_13:37:37:918 EEG Processing: 7.6361 ms
+2024-01-02_13:37:38:129 EEG_Worker: Sending samples to processing: 50 SampleRate: 194.9679
+2024-01-02_13:37:38:130 EEG save, writing 45 samples to file
+2024-01-02_13:37:38:130 EEG Worker, sampleRate: 194.9679 PacketLoss: 12 PacketLoss %: 0.48387
+2024-01-02_13:37:38:135 EEG Processing: 5.8713 ms
+2024-01-02_13:37:38:365 EEG_Worker: Sending samples to processing: 50 SampleRate: 196.78
+2024-01-02_13:37:38:365 EEG save, writing 45 samples to file
+2024-01-02_13:37:38:366 EEG Worker, sampleRate: 196.78 PacketLoss: 12 PacketLoss %: 0.47525
+2024-01-02_13:37:38:370 EEG Processing: 5.7536 ms
+2024-01-02_13:37:38:417 EEG Processing, receieved stop command
+2024-01-02_13:37:38:417 EEG Worker, receieved stop command
+2024-01-02_13:37:38:417 EEG save, writing 1 samples to file
+2024-01-02_13:37:38:420 EEG Save, receieved stop command. Closing file
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

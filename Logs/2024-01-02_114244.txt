@@ -1,0 +1,33 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-02_11:43:08:370 pEMG_processing started
+2024-01-02_11:43:08:516 pEMG_save started
+2024-01-02_11:43:13:232 pEMG_worker started
+2024-01-02_11:43:13:557 pEEG_save started
+2024-01-02_11:43:16:405 pEEG_processing started
+2024-01-02_11:43:19:207 pEEG_worker started
+2024-01-02_11:43:19:208 All processes started
+2024-01-02_11:43:13:240 EMG Worker checking for start
+2024-01-02_11:43:19:215 EMG Worker start command receieved
+2024-01-02_11:43:19:214 EEG Worker, receieved start command
+2024-01-02_11:43:19:218 EMG Save, receieved start command
+2024-01-02_11:43:19:215 EEG Save, receieved start command
+2024-01-02_11:43:19:259 EMG Processing, receieved start command
+2024-01-02_11:43:19:262 EEG Processing, receieved start command
+<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',215,1)">215 </a>        mode_EEG_prediction = mode(EEG_predictions);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+delete(gcp('nocreate'));
+Parallel pool using the 'Processes' profile is shutting down.
+main

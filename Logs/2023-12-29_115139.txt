@@ -1,0 +1,12 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-29_11:52:30:031 pEMG_processing started
+2023-12-29_11:52:30:354 pEMG_save started
+2023-12-29_11:52:42:443 pEMG_worker started
+2023-12-29_11:52:43:192 pEEG_save started
+{Unrecognized function or variable 'W'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 135)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',135,0)">line 135</a>)
+pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_prediction_queue, W, eeg_classifier, debug); % Process for EEG signal processing
+} 
+main

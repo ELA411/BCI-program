@@ -1,0 +1,45 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-02_11:15:45:103 pEMG_processing started
+2024-01-02_11:15:45:202 pEMG_save started
+2024-01-02_11:15:49:319 pEMG_worker started
+2024-01-02_11:15:49:524 pEEG_save started
+2024-01-02_11:15:51:668 pEEG_processing started
+2024-01-02_11:15:54:261 pEEG_worker started
+2024-01-02_11:15:54:262 All processes started
+2024-01-02_11:15:54:271 EEG Save, receieved start command
+2024-01-02_11:15:54:271 EEG Worker, receieved start command
+2024-01-02_11:15:54:306 EEG Processing, receieved start command
+2024-01-02_11:15:54:747 EEG save, writing 50 samples to file
+2024-01-02_11:15:55:925 EEG Processing: LOOPS: 1
+Drive forward
+2024-01-02_11:15:55:936 EEG Processing: 1306.8555 ms
+2024-01-02_11:15:55:943 EEG Prediction: 1
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Turn left
+Turn left
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Cleaning up resources...
+2024-01-02_11:16:56:643 EMG Processing, data received: 225
+2024-01-02_11:16:56:646 EMG Processing Time: 3.5425 ms
+2024-01-02_11:16:56:648 EMG Prediction: 1
+2024-01-02_11:16:56:780 EMG save, stop command received. Closing file
+2024-01-02_11:16:56:780 EMG Processing, data received: 1
+2024-01-02_11:16:56:784 EMG Processing, receieved stop command
+2024-01-02_11:16:56:894 EMG Worker, received stop command
+2024-01-02_11:16:56:781 EEG save, writing 1 samples to file
+2024-01-02_11:16:56:793 EEG Processing, receieved stop command
+2024-01-02_11:16:56:802 EEG Save, receieved stop command. Closing file
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

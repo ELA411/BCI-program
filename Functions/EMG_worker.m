@@ -40,9 +40,7 @@ tolerance = 0.0015; % Define a tolerance for time difference (1.5 ms)
 % Really important to start in continuous mode
 start(d,"continuous");
 while true
-    if debug
-        % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Starting inloop']);
-    end
+
     [trigger, flag] = poll(EMG_worker_queue, 0);
     if flag
         if strcmp(trigger, 'stop')
@@ -50,37 +48,61 @@ while true
             break;
         end
     end
-    if debug
-        % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Sampling, sampling 250 ms']);
-    end
+
     % Read data
+    if debug
+        send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Worker, scans available for reading: ', num2str(d.NumScansAvailable)]);
+    end
     if firstIteration
-         % while(size(scanData,1))~= 250
-            [data, time] = read(d, seconds(0.25), "OutputFormat","Matrix");
-            % scanData = [scanData; data];
-            % timeStamp = [timeStamp; time];
+        starttime = tic;
+        while(size(scanData,1)) ~= 250
+            % calling read with a time interval start a new acquisition only
+            % saving new samples from the time of calling the function
+            [data, time] = read(d, seconds(0.001), "OutputFormat","Matrix");
+            scanData = [scanData; data];
+            timeStamp = [timeStamp; time];
             firstIteration = false;
-            scanData = data;
-            timeStamp = time;
+            % scanData = data;
+            % timeStamp = time;
             samples = samples + size(scanData,1);
-        % end
-    else
-        % while(size(scanData,1)) ~= 225
-            [data, time] = read(d, seconds(0.225), "OutputFormat","Matrix");
-            % scanData = [scanData; data];
-            % timeStamp = [timeStamp; time];
-            scanData = data;
-            timeStamp = time;
+        end
+        if debug
+            send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Worker, scans read: ', num2str(d.NumScansAcquired)]);
+        end
+        else
+        starttime = tic;
+        while(size(scanData,1)) ~= 225
+            [data, time] = read(d, seconds(0.001), "OutputFormat","Matrix");
+            scanData = [scanData; data];
+            timeStamp = [timeStamp; time];
+            % scanData = data;
+            % timeStamp = time;
             samples = samples + size(scanData,1);
-        % end
+        end
+        if debug
+            send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Worker, scans read: ', num2str(d.NumScansAcquired)]);
+        end
     end
     % Append the previous overlap to the current data
     voltage = [prevVoltage; scanData(:,1), scanData(:,2)]; % Append overlap
     voltage_save = [scanData(:,1), scanData(:,2), timeStamp]; % Combine with timestamps for saving, we dont include overlap since it will include duplicates
+    
+    % The DAQ continuosly saves samples, and matlab is not fast enough to
+    % reliably collect all of them, leaving behind 0 - 75 samples,
+    % therefore we read the last samples remaining samples to only take the
+    % latest samples for each window. 
+    [save_rest , times]= read(d, d.NumScansAvailable, "OutputFormat","Matrix");
+    voltage_save = [voltage_save; save_rest(:,1), save_rest(:,2), times];
+    
+    % Calculate the samplerate
     sampleRate = 1/mean(diff(timeStamp));
-
+    
+    % Calculate packetloss by comparing consecutive samples timedifference,
+    % if the timedifference is greater than 1.5 ms it is assumed to be a
+    % lost sample. We add some redundacy to take matlab processing times
+    % into account
     for i = 2:size(voltage_save,1)
-        if (voltage_save(i,3) - voltage_save(i-1,3)) > tolerance % If the time difference 
+        if (voltage_save(i,3) - voltage_save(i-1,3)) > tolerance % If the time difference
             packetLoss = packetLoss + 1;
         end
     end
@@ -88,10 +110,16 @@ while true
     if debug
         send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Worker, sampleRate: ', num2str(sampleRate)]);
     end
-    % disp(num2str(size(voltage, 1)));
-    % Send data for processing and saving
+
+    % Save the time it took to collect the samples in the last row of the
+    % array
+    voltage = [voltage; toc(starttime)*1000, 0];
     send(EMG_processing_queue, voltage);
     send(EMG_save_queue, voltage_save);
+
+    if debug
+        send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Worker, sampling time: ', num2str(toc)]);
+    end
 
     % Store last 25 ms of data for the next overlap
     if size(scanData, 1) > overlapSamples
@@ -99,8 +127,9 @@ while true
     else
         prevVoltage = [];
     end
-    scanData = [];
+
     timeStamp = [];
+    scanData = [];
 
 end
 send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Worker, sampleRate: ', num2str(sampleRate), ' PacketLoss: ', num2str(packetLoss), ' PacketLoss %: ', num2str((packetLoss/samples)*100)]);

@@ -1,0 +1,80 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-03_09:39:23:755 pEMG_processing started
+2024-01-03_09:39:23:917 pEMG_save started
+2024-01-03_09:39:31:401 pEMG_worker started
+2024-01-03_09:39:31:843 pEEG_save started
+2024-01-03_09:39:35:444 pEEG_processing started
+2024-01-03_09:39:39:506 pEEG_worker started
+2024-01-03_09:39:39:507 All processes started
+2024-01-03_09:39:31:420 EMG Worker checking for start
+2024-01-03_09:39:39:520 EMG Save, receieved start command
+2024-01-03_09:39:39:520 EEG Save, receieved start command
+2024-01-03_09:39:39:520 EMG Worker start command receieved
+2024-01-03_09:39:39:524 EEG Worker, receieved start command
+2024-01-03_09:39:39:603 EMG Processing, receieved start command
+2024-01-03_09:39:39:594 EEG Processing, receieved start command
+2024-01-03_09:39:40:661 EEG Worker, Lost sample: 199
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Turn left
+Stop turning
+Stop turning
+Stop turning
+Cleaning up resources...
+2024-01-03_09:40:39:944 EMG save, stop command received. Closing file
+2024-01-03_09:40:39:947 EMG Processing, receieved stop command
+2024-01-03_09:40:40:039 EMG Worker, received stop command
+2024-01-03_09:40:40:054 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-03_09:40:39:944 EEG Save, receieved stop command. Closing file
+2024-01-03_09:40:39:944 EEG Worker, receieved stop command
+2024-01-03_09:40:39:945 EEG Processing, receieved stop command
+2024-01-03_09:40:39:970 EEG Worker, sampleRate: 195.6585 PacketLoss: 1 PacketLoss %: 0.0083139
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

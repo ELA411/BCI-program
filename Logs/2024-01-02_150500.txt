@@ -1,0 +1,28 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-02_15:05:39:319 pEMG_processing started
+2024-01-02_15:05:40:066 pEMG_save started
+2024-01-02_15:05:52:476 pEMG_worker started
+2024-01-02_15:05:52:813 pEEG_save started
+2024-01-02_15:06:02:829 pEEG_processing started
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue/pollImpl')" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue/pollImpl</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.pool.PollableDataQueue/poll', 'C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m', 79)" style="font-weight:bold">parallel.pool.PollableDataQueue/poll</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m',79,0)">line 79</a>)
+            [data, OK] = obj.pollImpl(varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 156)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',156,0)">line 156</a>)
+    [trigger, flag] = poll(EEG_main_queue, 0.1);
+} 
+delete(gcp('nocreate'));
+Parallel pool using the 'Processes' profile is shutting down.
+clear
+¨clc
+ ¨clc
+ ↑
+{Error: Invalid text character. Check for unsupported symbol, invisible character, or pasting of non-ASCII characters.
+} 
+clcl
+{Unrecognized function or variable 'clcl'.
+} 
+clc

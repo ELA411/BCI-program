@@ -1,0 +1,10 @@
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parpool')" style="font-weight:bold">parpool</a>
+Unable to create parallel pool because creating concurrent parallel pools in the same MATLAB session is not supported. To delete the
+existing pool, use <a href="matlab:delete(gcp('nocreate'))">delete(gcp('nocreate'))</a>.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 49)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',49,0)">line 49</a>)
+poolobj = parpool('Processes', 8);
+} 
+delete(gcp('nocreate'));
+Parallel pool using the 'Processes' profile is shutting down.
+main

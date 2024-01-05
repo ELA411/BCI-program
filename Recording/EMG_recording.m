@@ -1,6 +1,6 @@
 clear, clc;
 name = 'Carl';
-setting = '2_channels';
+setting = '2_channels_new_placement';
 session = [name,'-', setting];
 % Initialize DAQ
 d = daq("ni");
@@ -28,7 +28,6 @@ while true
             disp(['REP: ', num2str(reps), ' Dataset completed']);
             break;
         end
-
         if label == 0
             disp(['REP: ', num2str(reps + 1),' REST']);
             printLabel = 0;

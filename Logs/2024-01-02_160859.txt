@@ -1,0 +1,17 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Parallel pool using the 'Processes' profile is shutting down.
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parpool')" style="font-weight:bold">parpool</a>
+Parallel pool failed to start with the following error. For more detailed information, validate the profile 'Processes' in the
+Cluster Profile Manager.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 49)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',49,0)">line 49</a>)
+poolobj = parpool('Processes', 8);
+
+Caused by:
+    Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.AbstractInteractiveClient>iThrowWithCause')" style="font-weight:bold">parallel.internal.pool.AbstractInteractiveClient>iThrowWithCause</a>
+    Failed to initialize the interactive session.
+        Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.AbstractInteractiveClient>iThrowIfBadParallelJobStatus')" style="font-weight:bold">parallel.internal.pool.AbstractInteractiveClient>iThrowIfBadParallelJobStatus</a>
+        The interactive communicating job failed with no message.
+} 
+main

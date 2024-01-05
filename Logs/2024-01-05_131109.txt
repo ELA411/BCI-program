@@ -1,0 +1,151 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_13:11:27:082 pEMG_processing started
+2024-01-05_13:11:27:169 pEMG_save started
+2024-01-05_13:11:30:811 pEMG_worker started
+2024-01-05_13:11:31:017 pEEG_save started
+2024-01-05_13:11:33:075 pEEG_processing started
+2024-01-05_13:11:35:605 pEEG_worker started
+2024-01-05_13:11:35:606 All processes started
+2024-01-05_13:11:30:819 EMG Worker checking for start
+2024-01-05_13:11:35:612 EMG Worker start command receieved
+2024-01-05_13:11:35:612 EEG Save, receieved start command
+2024-01-05_13:11:35:612 EMG Save, receieved start command
+2024-01-05_13:11:35:613 EEG Worker, receieved start command
+2024-01-05_13:11:35:642 EMG Processing, receieved start command
+2024-01-05_13:11:35:640 EEG Processing, receieved start command
+2024-01-05_13:11:37:349 EMG Response Time: 1043.9838 ms
+Turn left
+stop
+2024-01-05_13:11:37:381 EMG Response Time: 290.9062 ms
+Turn right
+stop
+2024-01-05_13:11:37:554 EMG Response Time: 248.1622 ms
+Turn left
+stop
+2024-01-05_13:11:37:746 EMG Response Time: 229.0242 ms
+Turn right
+stop
+2024-01-05_13:11:38:082 EMG Response Time: 352.3828 ms
+Stop turning
+stop
+2024-01-05_13:11:38:330 EMG Response Time: 293.1878 ms
+Stop turning
+stop
+2024-01-05_13:11:38:628 EMG Response Time: 300.7781 ms
+Turn left
+stop
+2024-01-05_13:11:38:931 EMG Response Time: 305.6229 ms
+Stop turning
+stop
+2024-01-05_13:11:39:219 EMG Response Time: 289.9053 ms
+Turn left
+stop
+2024-01-05_13:11:39:518 EMG Response Time: 302.4671 ms
+Turn left
+stop
+2024-01-05_13:11:39:820 EMG Response Time: 303.7086 ms
+Turn left
+stop
+2024-01-05_13:11:40:126 EMG Response Time: 309.1514 ms
+Stop turning
+stop
+2024-01-05_13:11:40:422 EMG Response Time: 297.6985 ms
+Stop turning
+stop
+2024-01-05_13:11:40:725 EMG Response Time: 304.9771 ms
+Stop turning
+stop
+2024-01-05_13:11:41:025 EMG Response Time: 302.167 ms
+Turn right
+stop
+2024-01-05_13:11:41:318 EMG Response Time: 294.9876 ms
+Stop turning
+stop
+2024-01-05_13:11:41:617 EMG Response Time: 301.1945 ms
+Stop turning
+stop
+2024-01-05_13:11:41:922 EMG Response Time: 306.4887 ms
+Turn left
+stop
+2024-01-05_13:11:42:218 EMG Response Time: 298.5035 ms
+Turn right
+stop
+2024-01-05_13:11:42:523 EMG Response Time: 306.3553 ms
+Turn right
+stop
+2024-01-05_13:11:42:818 EMG Response Time: 297.4372 ms
+Turn right
+stop
+2024-01-05_13:11:43:118 EMG Response Time: 302.5356 ms
+Turn right
+stop
+2024-01-05_13:11:43:420 EMG Response Time: 303.2966 ms
+Turn right
+stop
+2024-01-05_13:11:43:718 EMG Response Time: 300.1464 ms
+Turn right
+stop
+2024-01-05_13:11:44:020 EMG Response Time: 304.3325 ms
+Turn right
+stop
+2024-01-05_13:11:44:319 EMG Response Time: 300.9414 ms
+Turn right
+stop
+2024-01-05_13:11:44:617 EMG Response Time: 300.0669 ms
+Turn left
+stop
+2024-01-05_13:11:44:919 EMG Response Time: 303.3946 ms
+Turn right
+stop
+2024-01-05_13:11:45:218 EMG Response Time: 301.7881 ms
+Turn right
+stop
+2024-01-05_13:11:45:524 EMG Response Time: 307.2226 ms
+Turn left
+stop
+2024-01-05_13:11:45:822 EMG Response Time: 300.8617 ms
+Turn left
+stop
+2024-01-05_13:11:46:121 EMG Response Time: 300.8814 ms
+Turn left
+stop
+2024-01-05_13:11:46:417 EMG Response Time: 298.2327 ms
+Turn left
+stop
+2024-01-05_13:11:46:717 EMG Response Time: 301.7293 ms
+Turn left
+stop
+2024-01-05_13:11:47:018 EMG Response Time: 302.7194 ms
+Turn left
+stop
+2024-01-05_13:11:47:321 EMG Response Time: 305.5832 ms
+Turn left
+stop
+2024-01-05_13:11:47:620 EMG Response Time: 301.3329 ms
+Turn left
+stop
+2024-01-05_13:11:47:921 EMG Response Time: 303.6376 ms
+Turn left
+stop
+2024-01-05_13:11:48:218 EMG Response Time: 298.9355 ms
+Turn left
+stop
+2024-01-05_13:11:48:521 EMG Response Time: 304.3704 ms
+Turn left
+stop
+2024-01-05_13:11:48:819 EMG Response Time: 299.906 ms
+Turn left
+stop
+2024-01-05_13:11:49:120 EMG Response Time: 303.7003 ms
+Turn left
+stop
+Cleaning up resources...
+2024-01-05_13:11:49:411 EMG Processing, receieved stop command
+2024-01-05_13:11:49:411 EMG save, stop command received. Closing file
+2024-01-05_13:11:49:435 EMG Worker, received stop command
+2024-01-05_13:11:49:440 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-05_13:11:49:411 EEG Save, receieved stop command. Closing file
+2024-01-05_13:11:49:412 EEG Processing, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

@@ -1,0 +1,169 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-29_12:41:16:156 pEMG_processing started
+2023-12-29_12:41:16:437 pEMG_save started
+2023-12-29_12:41:26:657 pEMG_worker started
+2023-12-29_12:41:27:193 pEEG_save started
+2023-12-29_12:41:32:797 pEEG_processing started
+2023-12-29_12:41:36:817 pEEG_worker started
+2023-12-29_12:41:36:820All processes started
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Stop turning
+Turn right
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Turn left
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Stop turning
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Stop turning
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Cleaning up resources...
+2023-12-29_12:43:03:775 EMG Processing, receieved stop command
+2023-12-29_12:43:03:778 EMG save, stop command received. Closing file
+2023-12-29_12:43:04:387 EMG Worker, received stop command
+   1.0e+04 *
+
+   -0.0021    0.0014   -1.5686   -0.0007
+   -0.0006   -0.0018   -1.5686    0.0010
+   -0.0000   -0.0031   -1.5686    0.0015
+   -0.0023    0.0000   -1.5686   -0.0002
+   -0.0028    0.0016   -1.5686   -0.0017
+    0.0001   -0.0018   -1.5686    0.0008
+   -0.0000   -0.0021   -1.5686    0.0016
+   -0.0025    0.0002   -1.5686   -0.0012
+   -0.0048    0.0007   -1.5686   -0.0012
+   -0.0013   -0.0028   -1.5686   -0.0018
+    0.0018   -0.0018   -1.5686    0.0013
+    0.0000    0.0008   -1.5686   -0.0006
+   -0.0018    0.0041   -1.5686    0.0023
+    0.0009    0.0004   -1.5686    0.0031
+    0.0020   -0.0014   -1.5686    0.0028
+   -0.0013    0.0026   -1.5686    0.0014
+   -0.0007    0.0025   -1.5686   -0.0005
+    0.0007   -0.0006   -1.5686    0.0015
+    0.0036   -0.0011   -1.5686    0.0044
+   -0.0005    0.0030   -1.5686    0.0020
+   -0.0027    0.0018   -1.5686   -0.0015
+    0.0016    0.0003   -1.5686    0.0013
+    0.0032   -0.0004   -1.5686    0.0037
+    0.0010    0.0026   -1.5686    0.0016
+   -0.0013    0.0035   -1.5686    0.0014
+    0.0008   -0.0003   -1.5686    0.0013
+    0.0027   -0.0006   -1.5686    0.0036
+    0.0007    0.0026   -1.5686    0.0005
+   -0.0017    0.0037   -1.5686    0.0008
+    0.0016    0.0010   -1.5686    0.0027
+    0.0014   -0.0013   -1.5686    0.0026
+    0.0014    0.0029   -1.5686    0.0010
+   -0.0019    0.0043   -1.5686    0.0017
+    0.0044   -0.0015   -1.5686   -0.0005
+    0.0068    0.0043   -1.5686    0.0082
+   -0.0000    0.0046   -1.5686    0.0034
+   -0.0023    0.0039   -1.5674    0.0012
+    0.0028         0   -1.5645    0.0015
+    0.0031   -0.0008   -1.5686    0.0030
+    0.0009    0.0011   -1.5686   -0.0005
+   -0.0021    0.0027   -1.5686    0.0006
+   -0.0007   -0.0020   -1.5686   -0.0007
+    0.0028   -0.0014   -1.5686    0.0022
+    0.0000    0.0010   -1.5686    0.0001
+   -0.0013    0.0034   -1.5686    0.0003
+    0.0011    0.0004   -1.5686    0.0032
+    0.0018   -0.0012   -1.5686    0.0039
+   -0.0003    0.0008   -1.5686    0.0011
+   -0.0018    0.0036   -1.5686    0.0003
+    0.0012   -0.0016   -1.5686   -0.0009
+
+2023-12-29_12:43:03:736 EEG Prediction: 1
+2023-12-29_12:43:03:773 EEG Processing, receieved stop command
+2023-12-29_12:43:03:779 EEG Save, receieved stop command. Closing file
+2023-12-29_12:43:03:778 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

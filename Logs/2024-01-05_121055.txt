@@ -1,0 +1,223 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_12:11:16:123 pEMG_processing started
+2024-01-05_12:11:16:208 pEMG_save started
+2024-01-05_12:11:19:786 pEMG_worker started
+2024-01-05_12:11:19:984 pEEG_save started
+2024-01-05_12:11:22:021 pEEG_processing started
+2024-01-05_12:11:24:351 pEEG_worker started
+2024-01-05_12:11:24:352 All processes started
+2024-01-05_12:11:19:793 EMG Worker checking for start
+2024-01-05_12:11:24:359 EMG Worker start command receieved
+2024-01-05_12:11:24:359 EEG Save, receieved start command
+2024-01-05_12:11:24:359 EMG Save, receieved start command
+2024-01-05_12:11:24:360 EEG Worker, receieved start command
+2024-01-05_12:11:24:384 EMG Processing, receieved start command
+2024-01-05_12:11:24:390 EEG Processing, receieved start command
+2024-01-05_12:11:25:114 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:25:486 EEG Worker, Lost sample: 199
+2024-01-05_12:11:25:829 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:25:912 EMG Worker, scans available for reading: 225
+stop
+2024-01-05_12:11:25:935 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:26:101 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:26:171 EMG Response Time: 839.3532 ms
+2024-01-05_12:11:26:222 EMG Response Time: 122.1553 ms
+2024-01-05_12:11:26:278 EMG Response Time: 71.202 ms
+2024-01-05_12:11:26:308 EMG Response Time: 194.6141 ms
+Stop turning
+2024-01-05_12:11:26:342 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:26:399 EMG Response Time: 294.4807 ms
+2024-01-05_12:11:26:492 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:26:494 EMG Response Time: 151.4322 ms
+2024-01-05_12:11:26:695 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:26:697 EMG Response Time: 204.2832 ms
+stop
+2024-01-05_12:11:26:992 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:26:995 EMG Response Time: 298.3733 ms
+2024-01-05_12:11:27:197 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:27:200 EMG Response Time: 206.8447 ms
+2024-01-05_12:11:27:393 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:27:396 EMG Response Time: 198.3901 ms
+2024-01-05_12:11:27:594 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:27:596 EMG Response Time: 201.862 ms
+2024-01-05_12:11:27:892 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:27:894 EMG Response Time: 299.7663 ms
+2024-01-05_12:11:28:093 EMG Worker, scans available for reading: 50
+Turn left
+stop
+2024-01-05_12:11:28:095 EMG Response Time: 202.3782 ms
+2024-01-05_12:11:28:293 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:28:295 EMG Response Time: 200.9151 ms
+2024-01-05_12:11:28:492 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:28:494 EMG Response Time: 200.1896 ms
+stop
+2024-01-05_12:11:28:793 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:28:796 EMG Response Time: 302.4239 ms
+2024-01-05_12:11:28:992 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:28:995 EMG Response Time: 201.1672 ms
+2024-01-05_12:11:29:192 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:29:194 EMG Response Time: 200.0591 ms
+2024-01-05_12:11:29:393 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:29:394 EMG Response Time: 201.4631 ms
+2024-01-05_12:11:29:691 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:29:694 EMG Response Time: 299.7874 ms
+2024-01-05_12:11:29:891 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:29:894 EMG Response Time: 201.0904 ms
+2024-01-05_12:11:30:092 EMG Worker, scans available for reading: 25
+Turn right
+stop
+2024-01-05_12:11:30:095 EMG Response Time: 202.1572 ms
+2024-01-05_12:11:30:292 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:30:295 EMG Response Time: 201.2369 ms
+2024-01-05_12:11:30:592 EMG Worker, scans available for reading: 75
+Turn right
+stop
+2024-01-05_12:11:30:594 EMG Response Time: 300.801 ms
+2024-01-05_12:11:30:792 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:30:795 EMG Response Time: 201.8092 ms
+2024-01-05_12:11:30:991 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:30:993 EMG Response Time: 199.6588 ms
+stop
+2024-01-05_12:11:31:193 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:31:195 EMG Response Time: 202.4139 ms
+2024-01-05_12:11:31:493 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:31:495 EMG Response Time: 301.823 ms
+2024-01-05_12:11:31:691 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:31:694 EMG Response Time: 199.8283 ms
+2024-01-05_12:11:31:891 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:31:894 EMG Response Time: 201.2286 ms
+2024-01-05_12:11:32:091 EMG Worker, scans available for reading: 0
+Turn right
+stop
+2024-01-05_12:11:32:093 EMG Response Time: 200.9443 ms
+2024-01-05_12:11:32:393 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:32:396 EMG Response Time: 303.9889 ms
+2024-01-05_12:11:32:593 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:32:595 EMG Response Time: 201.0647 ms
+stop
+2024-01-05_12:11:32:792 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:32:795 EMG Response Time: 201.0571 ms
+2024-01-05_12:11:32:992 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:32:995 EMG Response Time: 202.1183 ms
+stop
+2024-01-05_12:11:33:293 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:33:296 EMG Response Time: 302.4939 ms
+2024-01-05_12:11:33:492 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:33:494 EMG Response Time: 199.9069 ms
+2024-01-05_12:11:33:706 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:33:711 EMG Response Time: 218.4077 ms
+stop
+2024-01-05_12:11:33:892 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:33:895 EMG Response Time: 187.5227 ms
+2024-01-05_12:11:34:193 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:34:196 EMG Response Time: 302.4323 ms
+2024-01-05_12:11:34:393 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:34:396 EMG Response Time: 201.7776 ms
+2024-01-05_12:11:34:593 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:34:595 EMG Response Time: 201.4118 ms
+2024-01-05_12:11:34:793 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:34:796 EMG Response Time: 201.442 ms
+stop
+2024-01-05_12:11:35:093 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:35:096 EMG Response Time: 301.9886 ms
+2024-01-05_12:11:35:293 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:35:295 EMG Response Time: 201.1039 ms
+stop
+2024-01-05_12:11:35:491 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:35:494 EMG Response Time: 200.1766 ms
+2024-01-05_12:11:35:693 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:35:695 EMG Response Time: 203.4027 ms
+2024-01-05_12:11:35:991 EMG Worker, scans available for reading: 75
+Turn left
+stop
+2024-01-05_12:11:35:993 EMG Response Time: 299.2833 ms
+2024-01-05_12:11:36:192 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:36:194 EMG Response Time: 201.7447 ms
+2024-01-05_12:11:36:392 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:36:395 EMG Response Time: 201.9205 ms
+stop
+2024-01-05_12:11:36:593 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:36:595 EMG Response Time: 201.994 ms
+2024-01-05_12:11:36:893 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:36:895 EMG Response Time: 301.6419 ms
+2024-01-05_12:11:37:093 EMG Worker, scans available for reading: 50
+Turn left
+stop
+2024-01-05_12:11:37:095 EMG Response Time: 200.9033 ms
+2024-01-05_12:11:37:293 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:37:295 EMG Response Time: 200.9684 ms
+2024-01-05_12:11:37:493 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:37:496 EMG Response Time: 201.9245 ms
+stop
+2024-01-05_12:11:37:792 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:37:794 EMG Response Time: 300.3417 ms
+2024-01-05_12:11:37:991 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:37:994 EMG Response Time: 201.678 ms
+2024-01-05_12:11:38:193 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:38:195 EMG Response Time: 202.357 ms
+2024-01-05_12:11:38:392 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:38:394 EMG Response Time: 200.3426 ms
+stop
+2024-01-05_12:11:38:693 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:38:695 EMG Response Time: 302.2835 ms
+2024-01-05_12:11:38:893 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:38:895 EMG Response Time: 201.4636 ms
+2024-01-05_12:11:39:092 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:39:095 EMG Response Time: 200.5056 ms
+stop
+2024-01-05_12:11:39:293 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:39:295 EMG Response Time: 201.7542 ms
+2024-01-05_12:11:39:592 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:39:594 EMG Response Time: 300.6441 ms
+2024-01-05_12:11:39:792 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:39:795 EMG Response Time: 201.8359 ms
+2024-01-05_12:11:39:993 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:39:995 EMG Response Time: 202.4299 ms
+2024-01-05_12:11:40:193 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:40:195 EMG Response Time: 201.6807 ms
+stop
+2024-01-05_12:11:40:492 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:40:494 EMG Response Time: 300.7929 ms
+2024-01-05_12:11:40:692 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:40:694 EMG Response Time: 200.9304 ms
+stop
+2024-01-05_12:11:40:892 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:40:895 EMG Response Time: 202.2861 ms
+2024-01-05_12:11:41:092 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:41:094 EMG Response Time: 200.7723 ms
+2024-01-05_12:11:41:392 EMG Worker, scans available for reading: 75
+Turn left
+stop
+2024-01-05_12:11:41:395 EMG Response Time: 301.8494 ms
+2024-01-05_12:11:41:592 EMG Worker, scans available for reading: 50
+2024-01-05_12:11:41:594 EMG Response Time: 200.3574 ms
+2024-01-05_12:11:41:791 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:41:794 EMG Response Time: 201.1456 ms
+stop
+2024-01-05_12:11:41:993 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:41:995 EMG Response Time: 203.0403 ms
+2024-01-05_12:11:42:293 EMG Worker, scans available for reading: 75
+2024-01-05_12:11:42:295 EMG Response Time: 301.4371 ms
+2024-01-05_12:11:42:493 EMG Worker, scans available for reading: 50
+Turn left
+stop
+2024-01-05_12:11:42:495 EMG Response Time: 201.906 ms
+2024-01-05_12:11:42:692 EMG Worker, scans available for reading: 25
+2024-01-05_12:11:42:695 EMG Response Time: 201.4148 ms
+2024-01-05_12:11:42:892 EMG Worker, scans available for reading: 0
+2024-01-05_12:11:42:894 EMG Response Time: 200.3361 ms
+stop
+2024-01-05_12:11:43:193 EMG Worker, scans available for reading: 75
+Cleaning up resources...
+2024-01-05_12:11:43:195 EMG Response Time: 302.7179 ms
+2024-01-05_12:11:43:271 EMG Processing, receieved stop command
+2024-01-05_12:11:43:273 EMG save, stop command received. Closing file
+2024-01-05_12:11:43:394 EMG Worker, received stop command
+2024-01-05_12:11:43:395 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-05_12:11:43:272 EEG Worker, receieved stop command
+2024-01-05_12:11:43:272 EEG Save, receieved stop command. Closing file
+2024-01-05_12:11:43:272 EEG Processing, receieved stop command
+2024-01-05_12:11:43:286 EEG Worker, sampleRate: 196.8088 PacketLoss: 1 PacketLoss %: 0.026525
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

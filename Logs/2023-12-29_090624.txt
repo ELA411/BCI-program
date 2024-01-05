@@ -1,0 +1,1053 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Parallel pool using the 'Processes' profile is shutting down.
+
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.cluster.wait')" style="font-weight:bold">parallel.internal.cluster.wait</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.Job/doWait', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\@Job\Job.m', 666)" style="font-weight:bold">parallel.Job/doWait</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\@Job\Job.m',666,0)">line 666</a>)
+            ok = parallel.internal.cluster.wait( job, varargin{:} );
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.Job/wait', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\@Job\Job.m', 1296)" style="font-weight:bold">parallel.Job/wait</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\@Job\Job.m',1296,0)">line 1296</a>)
+                ok = job.doWait( state, timeout );
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.CppBackedSession/waitForConnections', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\CppBackedSession.m', 194)" style="font-weight:bold">parallel.internal.pool.CppBackedSession/waitForConnections</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\CppBackedSession.m',194,0)">line 194</a>)
+                wait(job, 'running', 0.1);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.AbstractInteractiveClient/start', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\AbstractInteractiveClient.m', 133)" style="font-weight:bold">parallel.internal.pool.AbstractInteractiveClient/start</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\AbstractInteractiveClient.m',133,0)">line 133</a>)
+                    session.waitForConnections(spmdInitialized, obj.buildCheckFcn(), obj.ParallelJob);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.AbstractClusterPool>iStartClient', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m', 831)" style="font-weight:bold">parallel.internal.pool.AbstractClusterPool>iStartClient</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m',831,0)">line 831</a>)
+spmdInitialized = client.start(sessionBuildFcn, sessionInfo, numWorkers, cluster, ...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.AbstractClusterPool.hBuildPool', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m', 626)" style="font-weight:bold">parallel.internal.pool.AbstractClusterPool.hBuildPool</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m',626,0)">line 626</a>)
+                iStartClient(client, sessionInfo, forceSpmdEnabled, cluster, supportRestart, argsList);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.doParpool', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\doParpool.m', 22)" style="font-weight:bold">parallel.internal.pool.doParpool</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\doParpool.m',22,0)">line 22</a>)
+    pool = parallel.internal.pool.AbstractClusterPool.hBuildPool(constructorArgs{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parpool', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\parpool.m', 118)" style="font-weight:bold">parpool</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\parpool.m',118,0)">line 118</a>)
+    pool = parallel.internal.pool.doParpool(sessionInfo, varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 49)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',49,0)">line 49</a>)
+poolobj = parpool('Processes', 8);
+} 
+EMG_recording
+33%
+REP: 1 REST
+REP: 1 EXTENSION
+REP: 1 REST
+REP: 1 FLEXION
+REP: 2 REST
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('daq.DataAvailablePacket/removeScans')" style="font-weight:bold">daq.DataAvailablePacket/removeScans</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('daq.DataAvailablePacket/split', 'C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\DataAvailablePacket.m', 73)" style="font-weight:bold">daq.DataAvailablePacket/split</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\DataAvailablePacket.m',73,0)">line 73</a>)
+            obj.removeScans(count);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('daq.Buffer/read', 'C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\Buffer.m', 175)" style="font-weight:bold">daq.Buffer/read</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\Buffer.m',175,0)">line 175</a>)
+            data = obj.Packet.split(count);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('daq.ScanReader/read', 'C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\ScanReader.m', 101)" style="font-weight:bold">daq.ScanReader/read</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\ScanReader.m',101,0)">line 101</a>)
+                        daq.ScanReader.formatPacketAsMatrix(obj.Buffer.read(numScans));
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('daq.interfaces.DataAcquisition/doReadFromInputBuffer', 'C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\+interfaces\DataAcquisition.m', 2069)" style="font-weight:bold">daq.interfaces.DataAcquisition/doReadFromInputBuffer</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\+interfaces\DataAcquisition.m',2069,0)">line 2069</a>)
+            [data,timestamps,startTime] = obj.Reader.read(scansToAcquire,'Matrix');
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('daq.interfaces.internal.DaqStateRunning/read', 'C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\+interfaces\+internal\DaqStateRunning.m', 54)" style="font-weight:bold">daq.interfaces.internal.DaqStateRunning/read</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\+interfaces\+internal\DaqStateRunning.m',54,0)">line 54</a>)
+                [data, timestamps, startTime] = obj.Daq.doReadFromInputBuffer(numscans);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('daq.interfaces.internal.DaqStateProxy/read', 'C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\+interfaces\+internal\DaqStateProxy.m', 55)" style="font-weight:bold">daq.interfaces.internal.DaqStateProxy/read</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\+interfaces\+internal\DaqStateProxy.m',55,0)">line 55</a>)
+            [data, timestamps, startTime] = obj.State.read(numscans);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('daq.interfaces.DataAcquisition/read', 'C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\+interfaces\DataAcquisition.m', 671)" style="font-weight:bold">daq.interfaces.DataAcquisition/read</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\daq\cli\+daq\+interfaces\DataAcquisition.m',671,0)">line 671</a>)
+                [data, timestamps, startTime] = obj.InternalState().read(numscans);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EMG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EMG_recording.m', 26)" style="font-weight:bold">EMG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EMG_recording.m',26,0)">line 26</a>)
+    [scanData, timeStamp] = read(d, seconds(0.001), "OutputFormat","Matrix");
+} 
+clc
+EMG_recording
+33%
+REP: 1 REST
+REP: 1 EXTENSION
+REP: 1 REST
+REP: 1 FLEXION
+REP: 2 REST
+REP: 2 EXTENSION
+REP: 2 REST
+REP: 2 FLEXION
+REP: 3 REST
+REP: 3 EXTENSION
+REP: 3 REST
+REP: 3 FLEXION
+REP: 4 REST
+REP: 4 EXTENSION
+REP: 4 REST
+REP: 4 FLEXION
+REP: 5 REST
+REP: 5 EXTENSION
+REP: 5 REST
+REP: 5 FLEXION
+REP: 6 REST
+REP: 6 EXTENSION
+REP: 6 REST
+REP: 6 FLEXION
+REP: 7 REST
+REP: 7 EXTENSION
+REP: 7 REST
+REP: 7 FLEXION
+REP: 8 REST
+REP: 8 EXTENSION
+REP: 8 REST
+REP: 8 FLEXION
+REP: 9 REST
+REP: 9 EXTENSION
+REP: 9 REST
+REP: 9 FLEXION
+REP: 10 REST
+REP: 10 EXTENSION
+REP: 10 REST
+REP: 10 FLEXION
+66%
+REP: 11 REST
+66%
+REP: 11 EXTENSION
+66%
+REP: 11 REST
+66%
+REP: 11 FLEXION
+REP: 12 REST
+REP: 12 EXTENSION
+REP: 12 REST
+REP: 12 FLEXION
+REP: 13 REST
+REP: 13 EXTENSION
+REP: 13 REST
+REP: 13 FLEXION
+REP: 14 REST
+REP: 14 EXTENSION
+REP: 14 REST
+REP: 14 FLEXION
+REP: 15 REST
+REP: 15 EXTENSION
+REP: 15 REST
+REP: 15 FLEXION
+REP: 16 REST
+REP: 16 EXTENSION
+REP: 16 REST
+REP: 16 FLEXION
+REP: 17 REST
+REP: 17 EXTENSION
+REP: 17 REST
+REP: 17 FLEXION
+REP: 18 REST
+REP: 18 EXTENSION
+REP: 18 REST
+REP: 18 FLEXION
+REP: 19 REST
+REP: 19 EXTENSION
+REP: 19 REST
+REP: 19 FLEXION
+REP: 20 REST
+REP: 20 EXTENSION
+REP: 20 REST
+REP: 20 FLEXION
+100%
+REP: 21 REST
+100%
+REP: 21 EXTENSION
+100%
+REP: 21 REST
+100%
+REP: 21 FLEXION
+REP: 22 REST
+REP: 22 EXTENSION
+REP: 22 REST
+REP: 22 FLEXION
+REP: 23 REST
+REP: 23 EXTENSION
+REP: 23 REST
+REP: 23 FLEXION
+REP: 24 REST
+REP: 24 EXTENSION
+REP: 24 REST
+REP: 24 FLEXION
+REP: 25 REST
+REP: 25 EXTENSION
+REP: 25 REST
+REP: 25 FLEXION
+REP: 26 REST
+REP: 26 EXTENSION
+REP: 26 REST
+REP: 26 FLEXION
+REP: 27 REST
+REP: 27 EXTENSION
+REP: 27 REST
+REP: 27 FLEXION
+REP: 28 REST
+REP: 28 EXTENSION
+REP: 28 REST
+REP: 28 FLEXION
+REP: 29 REST
+REP: 29 EXTENSION
+REP: 29 REST
+REP: 29 FLEXION
+REP: 30 REST
+REP: 30 EXTENSION
+REP: 30 REST
+REP: 30 FLEXION
+REP: 30 Dataset completed
+EEG_recording
+[Warning: Message from C preprocessor:
+C:\Users\Pontus\workspace_v12\ELA411\brainflow\inc\board_controller.h:1:9: warning: #pragma once in main file
+ #pragma once
+         ^~~~
+] 
+[> In loadlibrary
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim.load_lib', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 14)" style="font-weight:bold">BoardShim.load_lib</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',14,0)">line 14</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/prepare_session', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 374)" style="font-weight:bold">BoardShim/prepare_session</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',374,0)">line 374</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 24)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',24,0)">line 24</a>)] 
+[Warning: Warnings messages were produced while parsing.  Check the functions you intend to use for correctness.
+Warning text can be viewed using:
+ [notfound,warnings]=loadlibrary(...)] 
+[> In loadlibrary
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim.load_lib', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 14)" style="font-weight:bold">BoardShim.load_lib</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',14,0)">line 14</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/prepare_session', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 374)" style="font-weight:bold">BoardShim/prepare_session</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',374,0)">line 374</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 24)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',24,0)">line 24</a>)] 
+{Operation terminated by user during loadlibrary
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim.load_lib', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 14)" style="font-weight:bold">BoardShim.load_lib</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',14,0)">line 14</a>)
+                    loadlibrary('BoardController.dll', 'board_controller.h', 'addheader', 'board_info_getter');
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/prepare_session', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 374)" style="font-weight:bold">BoardShim/prepare_session</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',374,0)">line 374</a>)
+            lib_name = BoardShim.load_lib();
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 24)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',24,0)">line 24</a>)
+board_shim.prepare_session();
+} 
+board_shim.release_all_sessions
+EEG_recording
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/get_board_data')" style="font-weight:bold">BoardShim/get_board_data</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 53)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',53,0)">line 53</a>)
+        data = board_shim.get_board_data(1, preset); % Take available packages and remove them from buffer
+} 
+EEG_recording
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim.check_ec')" style="font-weight:bold">BoardShim.check_ec</a>
+Non zero ec: 16, for task: prepare_session
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/prepare_session', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 376)" style="font-weight:bold">BoardShim/prepare_session</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',376,0)">line 376</a>)
+            BoardShim.check_ec(exit_code, task_name);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 24)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',24,0)">line 24</a>)
+board_shim.prepare_session();
+} 
+board_shim.release_all_sessions
+EEG_recording
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim.check_ec')" style="font-weight:bold">BoardShim.check_ec</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/get_board_data_count', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 447)" style="font-weight:bold">BoardShim/get_board_data_count</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',447,0)">line 447</a>)
+            BoardShim.check_ec(exit_code, task_name);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 51)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',51,0)">line 51</a>)
+    dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
+} 
+board_shim.release_all_sessions
+EEG_recording
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim.check_ec')" style="font-weight:bold">BoardShim.check_ec</a>
+Non zero ec: 17, for task: prepare_session
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/prepare_session', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 376)" style="font-weight:bold">BoardShim/prepare_session</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',376,0)">line 376</a>)
+            BoardShim.check_ec(exit_code, task_name);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 24)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',24,0)">line 24</a>)
+board_shim.prepare_session();
+} 
+board_shim.release_all_sessions
+EEG_recording
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('libpointer')" style="font-weight:bold">libpointer</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/get_board_data_count', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 444)" style="font-weight:bold">BoardShim/get_board_data_count</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',444,0)">line 444</a>)
+            data_count = libpointer('int32Ptr', 0);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 51)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',51,0)">line 51</a>)
+    dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
+} 
+board_shim.release_all_sessions
+EEG_recording
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim.check_ec')" style="font-weight:bold">BoardShim.check_ec</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/get_board_data_count', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 447)" style="font-weight:bold">BoardShim/get_board_data_count</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',447,0)">line 447</a>)
+            BoardShim.check_ec(exit_code, task_name);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 51)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',51,0)">line 51</a>)
+    dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
+} 
+board_shim.release_all_sessions
+EEG_recording
+REP: 1 REST
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('libpointer')" style="font-weight:bold">libpointer</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BoardShim/get_board_data_count', 'C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m', 444)" style="font-weight:bold">BoardShim/get_board_data_count</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\brainflow\BoardShim.m',444,0)">line 444</a>)
+            data_count = libpointer('int32Ptr', 0);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EEG_recording', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m', 50)" style="font-weight:bold">EEG_recording</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\Recording\EEG_recording.m',50,0)">line 50</a>)
+    dataInBuffer = board_shim.get_board_data_count(preset); % Check how many samples are in the buffer
+} 
+board_shim.release_all_sessions
+EEG_recording
+REP: 1 REST
+REP: 2 CLOSE
+REP: 2 REST
+REP: 3 CLOSE
+REP: 3 REST
+REP: 4 CLOSE
+REP: 4 REST
+REP: 5 CLOSE
+REP: 5 REST
+REP: 6 CLOSE
+REP: 6 REST
+REP: 7 CLOSE
+REP: 7 REST
+REP: 8 CLOSE
+REP: 8 REST
+REP: 9 CLOSE
+REP: 9 REST
+REP: 10 CLOSE
+REP: 10 REST
+REP: 11 CLOSE
+REP: 11 REST
+REP: 12 CLOSE
+REP: 12 REST
+REP: 13 CLOSE
+REP: 13 REST
+REP: 14 CLOSE
+REP: 14 REST
+REP: 15 CLOSE
+REP: 15 REST
+REP: 16 CLOSE
+REP: 16 REST
+REP: 17 CLOSE
+REP: 17 REST
+REP: 18 CLOSE
+REP: 18 REST
+REP: 19 CLOSE
+REP: 19 REST
+REP: 20 CLOSE
+REP: 20 REST
+REP: 21 CLOSE
+REP: 21 REST
+REP: 22 CLOSE
+REP: 22 REST
+REP: 23 CLOSE
+REP: 23 REST
+REP: 24 CLOSE
+REP: 24 REST
+REP: 25 CLOSE
+REP: 25 REST
+REP: 26 CLOSE
+REP: 26 REST
+REP: 27 CLOSE
+REP: 27 REST
+REP: 28 CLOSE
+REP: 28 REST
+REP: 29 CLOSE
+REP: 29 REST
+REP: 30 CLOSE
+REP: 30 REST
+REP: 31 CLOSE
+REP: 31 REST
+REP: 32 CLOSE
+REP: 32 REST
+REP: 33 CLOSE
+REP: 33 REST
+REP: 34 CLOSE
+REP: 34 REST
+REP: 35 CLOSE
+REP: 35 REST
+REP: 36 CLOSE
+REP: 36 REST
+REP: 37 CLOSE
+REP: 37 REST
+REP: 38 CLOSE
+REP: 38 REST
+REP: 39 CLOSE
+REP: 39 REST
+REP: 40 CLOSE
+REP: 40 REST
+REP: 41 CLOSE
+REP: 41 REST
+REP: 42 CLOSE
+REP: 42 REST
+REP: 43 CLOSE
+REP: 43 REST
+REP: 44 CLOSE
+REP: 44 REST
+REP: 45 CLOSE
+REP: 45 REST
+REP: 46 CLOSE
+REP: 46 REST
+REP: 47 CLOSE
+REP: 47 REST
+REP: 48 CLOSE
+REP: 48 REST
+REP: 49 CLOSE
+REP: 49 REST
+REP: 50 CLOSE
+REP: 50 REST
+REP: 50 Dataset completed
+training_classifiers
+=======================================================================================
+EEG Data lost: 2
+EMG Data lost: 0
+=======================================================================================
+EEG data quality
+Channel 1:
+SNR:	 2.375917
+SINAD:	 -Inf
+THD:	 2.375917
+
+Channel 2:
+SNR:	 -0.950444
+SINAD:	 -Inf
+THD:	 -0.950444
+
+Channel 3:
+SNR:	 -0.960293
+SINAD:	 -Inf
+THD:	 -0.960293
+
+Channel 4:
+SNR:	 -2.182003
+SINAD:	 -Inf
+THD:	 -2.182003
+EMG data quality
+Channel 1:
+SNR:	 -10.586066
+SINAD:	 -13.128074
+THD:	 -10.602927
+
+Channel 2:
+SNR:	 -12.566088
+SINAD:	 -5.204569
+THD:	 -12.629680
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('save')" style="font-weight:bold">save</a>
+Cannot create 'W_matrix.mat' because 'saved_variables' does not
+exist.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('training_classifiers', 'C:\Users\Pontus\workspace_v12\ELA411\processing\training_classifiers.m', 176)" style="font-weight:bold">training_classifiers</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\processing\training_classifiers.m',176,0)">line 176</a>)
+save("saved_variables\W_matrix.mat","W");
+} 
+training_classifiers
+=======================================================================================
+EEG Data lost: 2
+EMG Data lost: 0
+=======================================================================================
+EEG data quality
+Channel 1:
+SNR:	 2.375917
+SINAD:	 -Inf
+THD:	 2.375917
+
+Channel 2:
+SNR:	 -0.950444
+SINAD:	 -Inf
+THD:	 -0.950444
+
+Channel 3:
+SNR:	 -0.960293
+SINAD:	 -Inf
+THD:	 -0.960293
+
+Channel 4:
+SNR:	 -2.182003
+SINAD:	 -Inf
+THD:	 -2.182003
+EMG data quality
+Channel 1:
+SNR:	 -10.586066
+SINAD:	 -13.128074
+THD:	 -10.602927
+
+Channel 2:
+SNR:	 -12.566088
+SINAD:	 -5.204569
+THD:	 -12.629680
+=======================================================================================
+SVM 1st fold accuracy : 46.39%
+SVM 2nd fold accuracy : 45.31%
+SVM 3rd fold accuracy : 51.56%
+SVM 4th fold accuracy : 49.53%
+SVM 5th fold accuracy : 52.35%
+SVM average accuracy : 49.03% (+-3.10%)
+SVM permutation test 1 p-value :0.23
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM permutation test 2 p-value :0.69
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM binomial test p-value :0.18
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+=======================================================================================
+LDA 1st fold accuracy : 38.17%
+LDA 2nd fold accuracy : 36.78%
+LDA 3rd fold accuracy : 39.67%
+LDA 4th fold accuracy : 37.19%
+LDA 5th fold accuracy : 38.17%
+LDA average accuracy : 38.00% (+-1.12%)
+LDA permutation test p-value 1 :0.04
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier performance is better than random chance.
+LDA permutation test p-value 2 :0.0099
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier has found a true connection in the data.
+=======================================================================================
+training_classifiers
+=======================================================================================
+EEG Data lost: 2
+EMG Data lost: 0
+=======================================================================================
+EEG data quality
+Channel 1:
+SNR:	 2.375917
+SINAD:	 -Inf
+THD:	 2.375917
+
+Channel 2:
+SNR:	 -0.950444
+SINAD:	 -Inf
+THD:	 -0.950444
+
+Channel 3:
+SNR:	 -0.960293
+SINAD:	 -Inf
+THD:	 -0.960293
+
+Channel 4:
+SNR:	 -2.182003
+SINAD:	 -Inf
+THD:	 -2.182003
+EMG data quality
+Channel 1:
+SNR:	 -10.586066
+SINAD:	 -13.128074
+THD:	 -10.602927
+
+Channel 2:
+SNR:	 -12.566088
+SINAD:	 -5.204569
+THD:	 -12.629680
+=======================================================================================
+SVM 1st fold accuracy : 50.47%
+SVM 2nd fold accuracy : 51.88%
+SVM 3rd fold accuracy : 51.88%
+SVM 4th fold accuracy : 50.78%
+SVM 5th fold accuracy : 50.47%
+SVM average accuracy : 51.09% (+-0.72%)
+SVM permutation test 1 p-value :0.059
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM permutation test 2 p-value :0.32
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM binomial test p-value :0.067
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+=======================================================================================
+LDA 1st fold accuracy : 36.93%
+LDA 2nd fold accuracy : 30.17%
+LDA 3rd fold accuracy : 42.15%
+LDA 4th fold accuracy : 40.08%
+LDA 5th fold accuracy : 33.20%
+LDA average accuracy : 36.50% (+-4.90%)
+LDA permutation test p-value 1 :0.05
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier performance is better than random chance.
+LDA permutation test p-value 2 :0.02
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier has found a true connection in the data.
+=======================================================================================
+training_classifiers
+=======================================================================================
+EEG Data lost: 2
+EMG Data lost: 0
+=======================================================================================
+EEG data quality
+Channel 1:
+SNR:	 2.375917
+SINAD:	 -Inf
+THD:	 2.375917
+
+Channel 2:
+SNR:	 -0.950444
+SINAD:	 -Inf
+THD:	 -0.950444
+
+Channel 3:
+SNR:	 -0.960293
+SINAD:	 -Inf
+THD:	 -0.960293
+
+Channel 4:
+SNR:	 -2.182003
+SINAD:	 -Inf
+THD:	 -2.182003
+EMG data quality
+Channel 1:
+SNR:	 8.422906
+SINAD:	 -0.944425
+THD:	 1.023947
+
+Channel 2:
+SNR:	 1.222639
+SINAD:	 0.721846
+THD:	 -1.256316
+=======================================================================================
+SVM 1st fold accuracy : 53.92%
+SVM 2nd fold accuracy : 52.50%
+SVM 3rd fold accuracy : 53.13%
+SVM 4th fold accuracy : 48.90%
+SVM 5th fold accuracy : 53.92%
+SVM average accuracy : 52.47% (+-2.08%)
+SVM permutation test 1 p-value :0.92
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM permutation test 2 p-value :0.079
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM binomial test p-value :0.93
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+=======================================================================================
+LDA 1st fold accuracy : 57.14%
+LDA 2nd fold accuracy : 87.50%
+LDA 3rd fold accuracy : 37.50%
+LDA 4th fold accuracy : 75.00%
+LDA 5th fold accuracy : 62.50%
+LDA average accuracy : 63.93% (+-18.87%)
+LDA permutation test p-value 1 :0.51
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+LDA permutation test p-value 2 :0.0099
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier has found a true connection in the data.
+=======================================================================================
+training_classifiers
+=======================================================================================
+EEG Data lost: 2
+EMG Data lost: 0
+=======================================================================================
+EEG data quality
+Channel 1:
+SNR:	 2.375917
+SINAD:	 -Inf
+THD:	 2.375917
+
+Channel 2:
+SNR:	 -0.950444
+SINAD:	 -Inf
+THD:	 -0.950444
+
+Channel 3:
+SNR:	 -0.960293
+SINAD:	 -Inf
+THD:	 -0.960293
+
+Channel 4:
+SNR:	 -2.182003
+SINAD:	 -Inf
+THD:	 -2.182003
+EMG data quality
+Channel 1:
+SNR:	 -10.586066
+SINAD:	 -13.128074
+THD:	 -10.602927
+
+Channel 2:
+SNR:	 -12.566088
+SINAD:	 -5.204569
+THD:	 -12.629680
+=======================================================================================
+SVM 1st fold accuracy : 54.23%
+SVM 2nd fold accuracy : 52.19%
+SVM 3rd fold accuracy : 48.75%
+SVM 4th fold accuracy : 53.92%
+SVM 5th fold accuracy : 50.47%
+SVM average accuracy : 51.91% (+-2.32%)
+SVM permutation test 1 p-value :0.67
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM permutation test 2 p-value :0.16
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM binomial test p-value :0.54
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+=======================================================================================
+LDA 1st fold accuracy : 37.34%
+LDA 2nd fold accuracy : 38.02%
+LDA 3rd fold accuracy : 34.71%
+LDA 4th fold accuracy : 33.06%
+LDA 5th fold accuracy : 37.76%
+LDA average accuracy : 36.18% (+-2.19%)
+LDA permutation test p-value 1 :0.47
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+LDA permutation test p-value 2 :0.069
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+training_classifiers
+=======================================================================================
+EEG Data lost: 2
+EMG Data lost: 0
+=======================================================================================
+EEG data quality
+Channel 1:
+SNR:	 2.375917
+SINAD:	 -Inf
+THD:	 2.375917
+
+Channel 2:
+SNR:	 -0.950444
+SINAD:	 -Inf
+THD:	 -0.950444
+
+Channel 3:
+SNR:	 -0.960293
+SINAD:	 -Inf
+THD:	 -0.960293
+
+Channel 4:
+SNR:	 -2.182003
+SINAD:	 -Inf
+THD:	 -2.182003
+EMG data quality
+Channel 1:
+SNR:	 -10.586066
+SINAD:	 -13.128074
+THD:	 -10.602927
+
+Channel 2:
+SNR:	 -12.566088
+SINAD:	 -5.204569
+THD:	 -12.629680
+=======================================================================================
+SVM 1st fold accuracy : 53.92%
+SVM 2nd fold accuracy : 47.81%
+SVM 3rd fold accuracy : 50.63%
+SVM 4th fold accuracy : 50.78%
+SVM 5th fold accuracy : 52.04%
+SVM average accuracy : 51.04% (+-2.23%)
+SVM permutation test 1 p-value :0.069
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM permutation test 2 p-value :0.3
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM binomial test p-value :0.08
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+=======================================================================================
+LDA 1st fold accuracy : 46.02%
+LDA 2nd fold accuracy : 43.50%
+LDA 3rd fold accuracy : 45.20%
+LDA 4th fold accuracy : 43.50%
+LDA 5th fold accuracy : 39.20%
+LDA average accuracy : 43.49% (+-2.63%)
+LDA permutation test p-value 1 :0.95
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+LDA permutation test p-value 2 :0.34
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+EMG_recording
+REP: 1 REST
+REP: 1 EXTENSION
+REP: 1 REST
+REP: 1 FLEXION
+REP: 2 REST
+REP: 2 EXTENSION
+REP: 2 REST
+REP: 2 FLEXION
+REP: 3 REST
+REP: 3 EXTENSION
+REP: 3 REST
+REP: 3 FLEXION
+REP: 4 REST
+REP: 4 EXTENSION
+REP: 4 REST
+REP: 4 FLEXION
+REP: 5 REST
+REP: 5 EXTENSION
+REP: 5 REST
+REP: 5 FLEXION
+REP: 6 REST
+REP: 6 EXTENSION
+REP: 6 REST
+REP: 6 FLEXION
+REP: 7 REST
+REP: 7 EXTENSION
+REP: 7 REST
+REP: 7 FLEXION
+REP: 8 REST
+REP: 8 EXTENSION
+REP: 8 REST
+REP: 8 FLEXION
+REP: 9 REST
+REP: 9 EXTENSION
+REP: 9 REST
+REP: 9 FLEXION
+REP: 10 REST
+REP: 10 EXTENSION
+REP: 10 REST
+REP: 10 FLEXION
+REP: 10 Dataset completed
+training_classifiers
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+Unable to find file or directory
+'..\ganglion_stream\Datasets\EEG\EEG_Viktor-Left_side_electrode_cluster_ch1-green_ch2-yellow_ch3-orange_ch4-red_2023-12-29_094535.txt'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('training_classifiers', 'C:\Users\Pontus\workspace_v12\ELA411\processing\training_classifiers.m', 24)" style="font-weight:bold">training_classifiers</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\processing\training_classifiers.m',24,0)">line 24</a>)
+raw_eeg_data = load("..\ganglion_stream\Datasets\EEG\EEG_Viktor-Left_side_electrode_cluster_ch1-green_ch2-yellow_ch3-orange_ch4-red_2023-12-29_094535.txt"); % EEG data set (expected column format: channels, labels, package ID, timestamp. each row is expected to be subsequent observations)
+} 
+training_classifiers
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+Unable to find file or directory
+'..\ganglion_stream\Datasets\EEG\EEG_Viktor-Left_side_electrode_cluster_ch1-green_ch2-yellow_ch3-orange_ch4-red_2023-12-29_094535.txt'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('training_classifiers', 'C:\Users\Pontus\workspace_v12\ELA411\processing\training_classifiers.m', 24)" style="font-weight:bold">training_classifiers</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\processing\training_classifiers.m',24,0)">line 24</a>)
+raw_eeg_data = load("..\ganglion_stream\Datasets\EEG\EEG_Viktor-Left_side_electrode_cluster_ch1-green_ch2-yellow_ch3-orange_ch4-red_2023-12-29_094535.txt"); % EEG data set (expected column format: channels, labels, package ID, timestamp. each row is expected to be subsequent observations)
+} 
+training_classifiers
+=======================================================================================
+EEG Data lost: 2
+EMG Data lost: 0
+=======================================================================================
+EEG data quality
+Channel 1:
+SNR:	 6.183042
+SINAD:	 -Inf
+THD:	 6.183042
+
+Channel 2:
+SNR:	 6.257407
+SINAD:	 -Inf
+THD:	 6.257407
+
+Channel 3:
+SNR:	 6.132069
+SINAD:	 -Inf
+THD:	 6.132069
+
+Channel 4:
+SNR:	 6.313451
+SINAD:	 -Inf
+THD:	 6.313451
+EMG data quality
+Channel 1:
+SNR:	 -14.142465
+SINAD:	 -8.632525
+THD:	 -14.161860
+
+Channel 2:
+SNR:	 -10.401656
+SINAD:	 -3.799890
+THD:	 -10.514228
+=======================================================================================
+SVM 1st fold accuracy : 62.50%
+SVM 2nd fold accuracy : 43.75%
+SVM 3rd fold accuracy : 62.50%
+SVM 4th fold accuracy : 87.50%
+SVM 5th fold accuracy : 62.50%
+SVM average accuracy : 63.75% (+-15.56%)
+SVM permutation test 1 p-value :0.48
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM permutation test 2 p-value :0.03
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier has found a true connection in the data.
+SVM binomial test p-value :0.59
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+=======================================================================================
+LDA 1st fold accuracy : 66.13%
+LDA 2nd fold accuracy : 60.43%
+LDA 3rd fold accuracy : 58.82%
+LDA 4th fold accuracy : 68.45%
+LDA 5th fold accuracy : 72.73%
+LDA average accuracy : 65.31% (+-5.73%)
+LDA permutation test p-value 1 :0.0099
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier performance is better than random chance.
+LDA permutation test p-value 2 :0.0099
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier has found a true connection in the data.
+=======================================================================================
+EMG_recording
+REP: 1 REST
+REP: 1 EXTENSION
+REP: 1 REST
+REP: 1 FLEXION
+REP: 2 REST
+REP: 2 EXTENSION
+REP: 2 REST
+REP: 2 FLEXION
+REP: 3 REST
+REP: 3 EXTENSION
+REP: 3 REST
+REP: 3 FLEXION
+REP: 4 REST
+REP: 4 EXTENSION
+REP: 4 REST
+REP: 4 FLEXION
+REP: 5 REST
+REP: 5 EXTENSION
+REP: 5 REST
+REP: 5 FLEXION
+REP: 6 REST
+REP: 6 EXTENSION
+REP: 6 REST
+REP: 6 FLEXION
+REP: 7 REST
+REP: 7 EXTENSION
+REP: 7 REST
+REP: 7 FLEXION
+REP: 8 REST
+REP: 8 EXTENSION
+REP: 8 REST
+REP: 8 FLEXION
+REP: 9 REST
+REP: 9 EXTENSION
+REP: 9 REST
+REP: 9 FLEXION
+REP: 10 REST
+REP: 10 EXTENSION
+REP: 10 REST
+REP: 10 FLEXION
+REP: 11 REST
+REP: 11 EXTENSION
+REP: 11 REST
+REP: 11 FLEXION
+REP: 12 REST
+REP: 12 EXTENSION
+REP: 12 REST
+REP: 12 FLEXION
+REP: 13 REST
+REP: 13 EXTENSION
+REP: 13 REST
+REP: 13 FLEXION
+REP: 14 REST
+REP: 14 EXTENSION
+REP: 14 REST
+REP: 14 FLEXION
+REP: 15 REST
+REP: 15 EXTENSION
+REP: 15 REST
+REP: 15 FLEXION
+REP: 16 REST
+REP: 16 EXTENSION
+REP: 16 REST
+REP: 16 FLEXION
+REP: 17 REST
+REP: 17 EXTENSION
+REP: 17 REST
+REP: 17 FLEXION
+REP: 18 REST
+REP: 18 EXTENSION
+REP: 18 REST
+REP: 18 FLEXION
+REP: 19 REST
+REP: 19 EXTENSION
+REP: 19 REST
+REP: 19 FLEXION
+REP: 20 REST
+REP: 20 EXTENSION
+REP: 20 REST
+REP: 20 FLEXION
+REP: 21 REST
+REP: 21 EXTENSION
+REP: 21 REST
+REP: 21 FLEXION
+REP: 22 REST
+REP: 22 EXTENSION
+REP: 22 REST
+REP: 22 FLEXION
+REP: 23 REST
+REP: 23 EXTENSION
+REP: 23 REST
+REP: 23 FLEXION
+REP: 24 REST
+REP: 24 EXTENSION
+REP: 24 REST
+REP: 24 FLEXION
+REP: 25 REST
+REP: 25 EXTENSION
+REP: 25 REST
+REP: 25 FLEXION
+REP: 26 REST
+REP: 26 EXTENSION
+REP: 26 REST
+REP: 26 FLEXION
+REP: 27 REST
+REP: 27 EXTENSION
+REP: 27 REST
+REP: 27 FLEXION
+REP: 28 REST
+REP: 28 EXTENSION
+REP: 28 REST
+REP: 28 FLEXION
+REP: 29 REST
+REP: 29 EXTENSION
+REP: 29 REST
+REP: 29 FLEXION
+REP: 30 REST
+REP: 30 EXTENSION
+REP: 30 REST
+REP: 30 FLEXION
+REP: 30 Dataset completed
+training_classifiers
+=======================================================================================
+EEG Data lost: 2
+EMG Data lost: 0
+=======================================================================================
+EEG data quality
+Channel 1:
+SNR:	 6.183042
+SINAD:	 -Inf
+THD:	 6.183042
+
+Channel 2:
+SNR:	 6.257407
+SINAD:	 -Inf
+THD:	 6.257407
+
+Channel 3:
+SNR:	 6.132069
+SINAD:	 -Inf
+THD:	 6.132069
+
+Channel 4:
+SNR:	 6.313451
+SINAD:	 -Inf
+THD:	 6.313451
+EMG data quality
+Channel 1:
+SNR:	 -10.410977
+SINAD:	 -11.802461
+THD:	 -10.435461
+
+Channel 2:
+SNR:	 -16.334965
+SINAD:	 -2.937743
+THD:	 -16.376854
+=======================================================================================
+SVM 1st fold accuracy : 62.50%
+SVM 2nd fold accuracy : 75.00%
+SVM 3rd fold accuracy : 56.25%
+SVM 4th fold accuracy : 31.25%
+SVM 5th fold accuracy : 75.00%
+SVM average accuracy : 60.00% (+-18.01%)
+SVM permutation test 1 p-value :0.4
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM permutation test 2 p-value :0.079
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+SVM binomial test p-value :0.41
+Classifier performance is not statistically significant. Null hypothesis is not rejected.
+=======================================================================================
+=======================================================================================
+LDA 1st fold accuracy : 70.19%
+LDA 2nd fold accuracy : 68.96%
+LDA 3rd fold accuracy : 71.25%
+LDA 4th fold accuracy : 71.08%
+LDA 5th fold accuracy : 75.31%
+LDA average accuracy : 71.36% (+-2.39%)
+LDA permutation test p-value 1 :0.0099
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier performance is better than random chance.
+LDA permutation test p-value 2 :0.0099
+Classifier performance is statistically significant. Null hypothesis is rejected, the classifier has found a true connection in the data.
+=======================================================================================

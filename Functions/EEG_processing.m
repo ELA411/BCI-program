@@ -43,6 +43,8 @@ while true
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')), ' EEG Processing, receieved stop command']);
             break;
         end
+        samplingtime = eeg_data(end,1);
+        eeg_data(end,:) = [];
         tic;
         % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         % Carl
@@ -51,8 +53,9 @@ while true
         % counter = counter + 1;
         if debug
             % send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Processing: LOOPS: ', num2str(counter)]);
-            send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Processing: ', num2str(toc()*1000), ' ms']);
+            send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Response time: ', num2str(toc()*1000+samplingtime), ' ms']);
         end
+        send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Response time: ', num2str(toc()*1000+samplingtime), ' ms']);
         send(EEG_prediction_queue, prediction);
         % send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Prediction: ', num2str(prediction)]);
     end

@@ -1,0 +1,136 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2023-12-29_12:26:27:047 pEMG_processing started
+2023-12-29_12:26:27:329 pEMG_save started
+2023-12-29_12:26:37:275 pEMG_worker started
+2023-12-29_12:26:37:892 pEEG_save started
+2023-12-29_12:26:44:698 pEEG_processing started
+2023-12-29_12:26:48:971 pEEG_worker started
+2023-12-29_12:26:48:977All processes started
+2023-12-29_12:26:37:297 EMG Worker checking for start
+2023-12-29_12:26:48:995 EMG Save, receieved start command
+2023-12-29_12:26:48:993 EEG Worker, receieved start command
+2023-12-29_12:26:48:994 EMG Worker start command receieved
+2023-12-29_12:26:48:996 EEG Save, receieved start command
+2023-12-29_12:26:49:104 EMG Processing, receieved start command
+2023-12-29_12:26:49:098 EEG Processing, receieved start command
+Drive forward
+2023-12-29_12:26:51:973 EEG Prediction: 1
+2023-12-29_12:26:52:210 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:297 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:377 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:542 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:569 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:584 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:607 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:635 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:663 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:686 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:707 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:26:52:735 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:758 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:52:781 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:26:52:988 EEG Prediction: 1
+2023-12-29_12:26:53:245 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:53:502 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:53:734 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:53:992 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:54:250 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:54:492 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:54:742 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:54:989 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:55:254 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:55:512 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:55:744 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:56:012 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:56:263 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:56:518 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:56:758 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:57:013 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:57:255 EEG Prediction: 1
+2023-12-29_12:26:57:527 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:26:57:770 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:58:017 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:58:268 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:58:519 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:58:757 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:59:023 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:59:270 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:59:520 EEG Prediction: 1
+Drive forward
+2023-12-29_12:26:59:771 EEG Prediction: 1
+2023-12-29_12:27:00:041 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:00:299 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:00:528 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:27:00:784 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:01:036 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:01:296 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:01:535 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:01:784 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:02:035 EEG Prediction: 1
+2023-12-29_12:27:02:287 EEG Prediction: 1
+Drive forward
+Drive forward
+2023-12-29_12:27:02:551 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:02:785 EEG Prediction: 1
+Drive forward
+2023-12-29_12:27:03:028 EEG Prediction: 1
+Cleaning up resources...
+2023-12-29_12:27:03:202 EMG save, stop command received. Closing file
+2023-12-29_12:27:03:208 EMG Processing, receieved stop command
+2023-12-29_12:27:03:200 EEG Processing, receieved stop command
+2023-12-29_12:27:03:207 EEG Save, receieved stop command. Closing file
+2023-12-29_12:27:03:208 EEG Worker, receieved stop command
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

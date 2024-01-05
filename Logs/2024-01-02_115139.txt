@@ -1,0 +1,27 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-02_11:52:05:206 pEMG_processing started
+2024-01-02_11:52:05:310 pEMG_save started
+2024-01-02_11:52:09:225 pEMG_worker started
+2024-01-02_11:52:09:440 pEEG_save started
+2024-01-02_11:52:11:608 pEEG_processing started
+2024-01-02_11:52:14:141 pEEG_worker started
+2024-01-02_11:52:14:142 All processes started
+2024-01-02_11:52:09:234 EMG Worker checking for start
+2024-01-02_11:52:14:155 EMG Worker start command receieved
+2024-01-02_11:52:14:152 EEG Save, receieved start command
+2024-01-02_11:52:14:156 EMG Save, receieved start command
+2024-01-02_11:52:14:155 EEG Worker, receieved start command
+2024-01-02_11:52:14:205 EMG Processing, receieved start command
+2024-01-02_11:52:14:209 EEG Processing, receieved start command
+2024-01-02_11:52:14:612 EEG save, writing 50 samples to file
+2024-01-02_11:52:14:627 EEG_Worker: Sending samples to processing: 50 SampleRate: 207.5734
+2024-01-02_11:52:14:679 EEG save, writing 50 samples to file
+2024-01-02_11:52:14:680 EEG_Worker: Sending samples to processing: 50 SampleRate: 204.1403
+2024-01-02_11:52:14:883 EEG save, writing 50 samples to file
+2024-01-02_11:52:14:885 EEG_Worker: Sending samples to processing: 50 SampleRate: 204.1565
+<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',216,1)">216 </a>            mode_EEG_prediction = mode(EEG_predictions);
+if system_dependent('IsDebugMode')==1, dbquit; end
+delete(gcp('nocreate'));
+Parallel pool using the 'Processes' profile is shutting down.
+main

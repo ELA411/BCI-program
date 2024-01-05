@@ -1,0 +1,29 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-02_16:03:46:870 pEMG_processing started
+2024-01-02_16:03:46:968 pEMG_save started
+2024-01-02_16:03:51:211 pEMG_worker started
+2024-01-02_16:03:51:420 pEEG_save started
+2024-01-02_16:03:53:542 pEEG_processing started
+2024-01-02_16:03:56:694 pEEG_worker started
+2024-01-02_16:03:56:695 All processes started
+2024-01-02_16:03:51:218 EMG Worker checking for start
+2024-01-02_16:03:56:702 EEG Save, receieved start command
+2024-01-02_16:03:56:703 EMG Save, receieved start command
+2024-01-02_16:03:56:703 EEG Worker, receieved start command
+2024-01-02_16:03:56:703 EMG Worker start command receieved
+2024-01-02_16:03:56:761 EMG Processing, receieved start command
+2024-01-02_16:03:56:763 EEG Processing, receieved start command
+2024-01-02_16:03:57:822 EEG Worker, Lost sample: 199
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue/pollImpl')" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue/pollImpl</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.pool.PollableDataQueue/poll', 'C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m', 79)" style="font-weight:bold">parallel.pool.PollableDataQueue/poll</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\matlab\parallel\+parallel\+pool\PollableDataQueue.m',79,0)">line 79</a>)
+            [data, OK] = obj.pollImpl(varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 190)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',190,0)">line 190</a>)
+    [EMG_prediction, flag_EMG_prediction] = poll(EMG_prediction_queue, 0);
+} 
+delete(gcp('nocreate'));
+Parallel pool using the 'Processes' profile is shutting down.
+main

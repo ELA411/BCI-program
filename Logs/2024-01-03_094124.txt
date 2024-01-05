@@ -1,0 +1,1414 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-03_09:41:57:815 pEMG_processing started
+2024-01-03_09:41:58:018 pEMG_save started
+2024-01-03_09:42:05:045 pEMG_worker started
+2024-01-03_09:42:05:434 pEEG_save started
+2024-01-03_09:42:08:981 pEEG_processing started
+2024-01-03_09:42:13:219 pEEG_worker started
+2024-01-03_09:42:13:221 All processes started
+2024-01-03_09:42:05:061 EMG Worker checking for start
+2024-01-03_09:42:13:233 EMG Worker start command receieved
+2024-01-03_09:42:13:233 EEG Save, receieved start command
+2024-01-03_09:42:13:235 EMG Save, receieved start command
+2024-01-03_09:42:13:233 EEG Worker, receieved start command
+2024-01-03_09:42:13:318 EMG Processing, receieved start command
+2024-01-03_09:42:13:316 EEG Processing, receieved start command
+2024-01-03_09:42:14:366 EEG Worker, Lost sample: 199
+EEG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1  1
+EEG Prediction: 1  1  1
+EEG Prediction: 1
+EEG Prediction: 1  1
+EEG Prediction: 1  1  1
+EEG Prediction: 1  1  1  1
+EMG Prediction: 2
+EEG Prediction: 1  1  1  1  1
+EMG Prediction: 2  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+EEG Prediction: 1  1  1
+EMG Prediction: 1  1  1
+EEG Prediction: 1  1  1  1
+EMG Prediction: 1  1  1  2
+EEG Prediction: 1  1  1  1  1
+EMG Prediction: 1  1  1  2  2
+Turn left
+EEG Prediction: 1
+EMG Prediction: 2
+EEG Prediction: 1  1
+EMG Prediction: 2  0
+EEG Prediction: 1  1  1
+EMG Prediction: 2  0  0
+EEG Prediction: 1  1  1  1
+EMG Prediction: 2  0  0  0
+EMG Prediction: 2  0  0  0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  0
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+Turn left
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+Turn left
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  1
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  0
+Stop turning
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  0
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  0
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+Turn left
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+Turn left
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+Stop turning
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  1
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0  1
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+EMG Prediction: 1
+EEG Prediction: 1
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1  1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0  0
+Stop turning
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+Turn left
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 0
+EEG Prediction: 1
+EMG Prediction: 1
+EEG Prediction: 1  1
+EMG Prediction: 1  1
+Turn left
+Cleaning up resources...
+2024-01-03_09:44:33:723 EMG save, stop command received. Closing file
+2024-01-03_09:44:33:742 EMG Processing, receieved stop command
+2024-01-03_09:44:33:861 EMG Worker, received stop command
+2024-01-03_09:44:33:870 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-03_09:44:33:725 EEG Worker, receieved stop command
+2024-01-03_09:44:33:727 EEG Save, receieved stop command. Closing file
+2024-01-03_09:44:33:727 EEG Processing, receieved stop command
+2024-01-03_09:44:33:749 EEG Worker, sampleRate: 196.7362 PacketLoss: 1 PacketLoss %: 0.0035763
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.
