@@ -20,6 +20,7 @@ overlap = 0.05;
 % Carl
 [n_eeg, d_eeg, notchFilt_50_eeg, notchFilt_100_eeg] = eeg_real_time_processing_init(eeg_fs);
 % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+responseTimeBuffer = [];
 
 counter = 0;
 send(EEG_main_queue, 'ready');
@@ -55,9 +56,14 @@ while true
             % send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Processing: LOOPS: ', num2str(counter)]);
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Response time: ', num2str(toc()*1000+samplingtime), ' ms']);
         end
-        send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Response time: ', num2str(toc()*1000+samplingtime), ' ms']);
+        responsetime = toc()*1000 + samplingtime;
+        responseTimeBuffer = [responseTimeBuffer; responsetime];
         send(EEG_prediction_queue, prediction);
         % send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Prediction: ', num2str(prediction)]);
     end
 end
+averageResponseTime = mean(responseTimeBuffer);
+stdResponseTime = std(responseTimeBuffer);
+send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG average Response Time: ', num2str(averageResponseTime),' ms']);
+send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG standar deviation Response time: ', num2str(stdResponseTime),' ms']);
 end

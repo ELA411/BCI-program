@@ -1,0 +1,111 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_14:43:03:065 pEMG_processing started
+2024-01-05_14:43:03:213 pEMG_save started
+2024-01-05_14:43:23:640 pEMG_worker started
+2024-01-05_14:43:23:930 pEEG_save started
+2024-01-05_14:43:26:772 pEEG_processing started
+2024-01-05_14:43:30:618 pEEG_worker started
+2024-01-05_14:43:30:619 All processes started
+2024-01-05_14:43:23:655 EMG Worker checking for start
+2024-01-05_14:43:30:627 EMG Save, receieved start command
+2024-01-05_14:43:30:626 EEG Save, receieved start command
+2024-01-05_14:43:30:629 EMG Worker start command receieved
+2024-01-05_14:43:30:628 EEG Worker, receieved start command
+2024-01-05_14:43:30:668 EMG Processing, receieved start command
+2024-01-05_14:43:30:673 EEG Processing, receieved start command
+2024-01-05_14:43:31:773 EEG Worker, Lost sample: 199
+Analyzing and transferring files to the workers ...done.
+Analyzing and transferring files to the workers ...
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager>iWaitForTransfersToComplete')" style="font-weight:bold">parallel.internal.pool.FileManager>iWaitForTransfersToComplete</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager/addAttachedFiles', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m', 244)" style="font-weight:bold">parallel.internal.pool.FileManager/addAttachedFiles</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m',244,0)">line 244</a>)
+            [transferErrors, erroredFiles] = iWaitForTransfersToComplete(observers, requestingWorkerId);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager/addOrUpdateAutoAttachedFiles', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m', 148)" style="font-weight:bold">parallel.internal.pool.FileManager/addOrUpdateAutoAttachedFiles</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m',148,0)">line 148</a>)
+                obj.addAttachedFiles(filesToAdd, areAutoAttachedFiles, requestingWorkerId);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.attachDependentFilesToPool', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\attachDependentFilesToPool.m', 46)" style="font-weight:bold">parallel.internal.pool.attachDependentFilesToPool</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\attachDependentFilesToPool.m',46,0)">line 46</a>)
+        aPool.hGetFileManager.addOrUpdateAutoAttachedFiles(filesToAttach, requestingWorkerId);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.queue.addSources', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+queue\addSources.m', 97)" style="font-weight:bold">parallel.internal.queue.addSources</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+queue\addSources.m',97,0)">line 97</a>)
+    parallel.internal.pool.attachDependentFilesToPool(pool, allFcns, requestingWorkerId);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 259)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',259,0)">line 259</a>)
+    pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
+} 
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager>iWaitForTransfersToComplete')" style="font-weight:bold">parallel.internal.pool.FileManager>iWaitForTransfersToComplete</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager/addAttachedFiles', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m', 244)" style="font-weight:bold">parallel.internal.pool.FileManager/addAttachedFiles</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m',244,0)">line 244</a>)
+            [transferErrors, erroredFiles] = iWaitForTransfersToComplete(observers, requestingWorkerId);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.FileManager/addOrUpdateAutoAttachedFiles', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m', 148)" style="font-weight:bold">parallel.internal.pool.FileManager/addOrUpdateAutoAttachedFiles</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\FileManager.m',148,0)">line 148</a>)
+                obj.addAttachedFiles(filesToAdd, areAutoAttachedFiles, requestingWorkerId);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.attachDependentFilesToPool', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\attachDependentFilesToPool.m', 46)" style="font-weight:bold">parallel.internal.pool.attachDependentFilesToPool</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\attachDependentFilesToPool.m',46,0)">line 46</a>)
+        aPool.hGetFileManager.addOrUpdateAutoAttachedFiles(filesToAttach, requestingWorkerId);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.queue.addSources', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+queue\addSources.m', 97)" style="font-weight:bold">parallel.internal.queue.addSources</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+queue\addSources.m',97,0)">line 97</a>)
+    parallel.internal.pool.attachDependentFilesToPool(pool, allFcns, requestingWorkerId);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 259)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',259,0)">line 259</a>)
+    pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
+} 
+pEMG_processing
+
+pEMG_processing = 
+
+ <a href="matlab: helpPopup parallel.FevalFuture" style="font-weight:bold">FevalFuture</a> with properties: 
+
+                   ID: 13
+             Function: @EMG_processing
+       CreateDateTime: 05-Jan-2024 14:42:46
+        StartDateTime: 05-Jan-2024 14:42:46
+      RunningDuration: 0 days 0h 2m 0s
+                State: running
+                Error: none
+
+pEEG_processing
+
+pEEG_processing = 
+
+ <a href="matlab: helpPopup parallel.FevalFuture" style="font-weight:bold">FevalFuture</a> with properties: 
+
+                   ID: 17
+             Function: @EEG_processing
+       CreateDateTime: 05-Jan-2024 14:43:23
+        StartDateTime: 05-Jan-2024 14:43:23
+      RunningDuration: 0 days 0h 1m 30s
+                State: running
+                Error: none
+
+pEMG_worker
+
+pEMG_worker = 
+
+ <a href="matlab: helpPopup parallel.FevalFuture" style="font-weight:bold">FevalFuture</a> with properties: 
+
+                   ID: 15
+             Function: @EMG_worker
+       CreateDateTime: 05-Jan-2024 14:43:03
+        StartDateTime: 05-Jan-2024 14:43:03
+      RunningDuration: 0 days 0h 1m 55s
+                State: running
+                Error: none
+
+pEEG_worker
+
+pEEG_worker = 
+
+ <a href="matlab: helpPopup parallel.FevalFuture" style="font-weight:bold">FevalFuture</a> with properties: 
+
+                   ID: 18
+             Function: @EEG_worker
+       CreateDateTime: 05-Jan-2024 14:43:26
+        StartDateTime: 05-Jan-2024 14:43:26
+      RunningDuration: 0 days 0h 1m 37s
+                State: running
+                Error: none
+

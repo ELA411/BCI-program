@@ -1,0 +1,85 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_14:51:54:741 pEMG_processing started
+2024-01-05_14:51:55:578 pEMG_save started
+2024-01-05_14:52:08:065 pEMG_worker started
+2024-01-05_14:52:08:403 pEEG_save started
+2024-01-05_14:52:12:998 pEEG_processing started
+2024-01-05_14:52:19:225 pEEG_worker started
+2024-01-05_14:52:19:226 All processes started
+2024-01-05_14:52:08:079 EMG Worker checking for start
+2024-01-05_14:52:19:243 EMG Save, receieved start command
+2024-01-05_14:52:19:240 EEG Worker, receieved start command
+2024-01-05_14:52:19:276 EMG Worker start command receieved
+2024-01-05_14:52:19:290 EEG Save, receieved start command
+2024-01-05_14:52:19:339 EMG Processing, receieved start command
+2024-01-05_14:52:19:424 EEG Processing, receieved start command
+2024-01-05_14:52:20:389 EEG Worker, Lost sample: 199
+Turn left
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+Turn right
+Turn right
+Turn right
+stop
+Turn right
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn left
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Cleaning up resources...
+2024-01-05_14:52:33:217 EMG save, stop command received. Closing file
+2024-01-05_14:52:33:218 EMG Processing, receieved stop command
+2024-01-05_14:52:33:232 EMG average Response Time: 369.0628 ms
+2024-01-05_14:52:33:240 EMG standar deviation Response time: 246.9011 ms
+2024-01-05_14:52:33:261 EMG Worker, received stop command
+2024-01-05_14:52:33:268 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-05_14:52:33:216 EEG Worker, receieved stop command
+2024-01-05_14:52:33:217 EEG Save, receieved stop command. Closing file
+2024-01-05_14:52:33:218 EEG Processing, receieved stop command
+2024-01-05_14:52:33:232 EEG average Response Time: 240.5077 ms
+2024-01-05_14:52:33:232 EEG Worker, sampleRate: 208.83 PacketLoss: 1 PacketLoss %: 0.035907
+2024-01-05_14:52:33:242 EEG standar deviation Response time: 228.6074 ms
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

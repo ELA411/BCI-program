@@ -60,7 +60,7 @@ while true
         timestamp = data(14,col);
         % if label_flag
         if toc(labelTime) >= 4
-            if reps == 1
+            if reps == 50
                 disp(['REP: ', num2str(reps), ' Dataset completed']);
                 % disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss')),' REP: ', num2str(reps), ' Dataset completed']);
                 break;
@@ -81,14 +81,6 @@ while true
 
         end
 
-
-        % if label_flag == false
-        % if toc(labelTime) >= 2
-
-        % label = ~label; % Toggle label
-        % label_flag = true;
-        % labelTime = tic;
-        % end
         fprintf(fileID, "%f %f %f %f %f %f %f\n", channel1, channel2, channel3, channel4, label, ID, timestamp);
     end
 end

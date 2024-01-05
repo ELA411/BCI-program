@@ -39,7 +39,7 @@ eeg_classifier = load('..\processing\trained_classifiers\eeg_classifier.mat');
 W = load('..\processing\saved_variables\W_matrix.mat');
 % ---------------------------------------------------------------------
 % Configure the name of the save file with useful information
-name = 'Carl';
+name = 'Viktor';
 setting = 'Run';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------

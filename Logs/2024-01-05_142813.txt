@@ -1,0 +1,1663 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_14:29:33:008 pEMG_processing started
+2024-01-05_14:29:34:000 pEMG_save started
+2024-01-05_14:29:46:072 pEMG_worker started
+2024-01-05_14:29:46:325 pEEG_save started
+2024-01-05_14:29:48:807 pEEG_processing started
+2024-01-05_14:29:54:236 pEEG_worker started
+2024-01-05_14:29:54:238 All processes started
+2024-01-05_14:29:46:080 EMG Worker checking for start
+2024-01-05_14:29:54:267 EMG Save, receieved start command
+2024-01-05_14:29:54:258 EEG Worker, receieved start command
+2024-01-05_14:29:54:274 EMG Worker start command receieved
+2024-01-05_14:29:54:265 EEG Save, receieved start command
+2024-01-05_14:29:54:343 EMG Processing, receieved start command
+2024-01-05_14:29:54:382 EEG Processing, receieved start command
+2024-01-05_14:29:55:399 EEG Worker, Lost sample: 199
+2024-01-05_14:29:58:212 EMG Response Time: 1993.9005 ms
+Turn left
+stop
+2024-01-05_14:29:58:271 EMG Response Time: 555.3651 ms
+Turn left
+stop
+2024-01-05_14:29:58:578 EMG Response Time: 483.1508 ms
+Stop turning
+stop
+2024-01-05_14:29:58:830 EEG Response time: 4297.795 ms
+2024-01-05_14:29:58:921 EMG Response Time: 415.1414 ms
+2024-01-05_14:29:58:963 EEG Response time: 144.2696 ms
+Stop turning
+2024-01-05_14:29:59:010 EEG Response time: 68.7262 ms
+2024-01-05_14:29:59:055 EEG Response time: 175.7323 ms
+2024-01-05_14:29:59:158 EEG Response time: 331.3764 ms
+2024-01-05_14:29:59:180 EEG Response time: 215.6054 ms
+2024-01-05_14:29:59:187 EEG Response time: 217.5907 ms
+2024-01-05_14:29:59:335 EMG Response Time: 443.7525 ms
+2024-01-05_14:29:59:195 EEG Response time: 222.4943 ms
+Turn right
+2024-01-05_14:29:59:208 EEG Response time: 255.9189 ms
+2024-01-05_14:29:59:216 EEG Response time: 225.4677 ms
+2024-01-05_14:29:59:223 EEG Response time: 231.0928 ms
+2024-01-05_14:29:59:652 EMG Response Time: 378.5752 ms
+2024-01-05_14:29:59:233 EEG Response time: 231.258 ms
+Turn right
+2024-01-05_14:29:59:972 EMG Response Time: 324.0511 ms
+2024-01-05_14:29:59:240 EEG Response time: 237.9062 ms
+Turn right
+2024-01-05_14:30:00:364 EMG Response Time: 395.037 ms
+2024-01-05_14:29:59:248 EEG Response time: 218.2135 ms
+Stop turning
+2024-01-05_14:29:59:257 EEG Response time: 230.7813 ms
+2024-01-05_14:29:59:266 EEG Response time: 216.5094 ms
+2024-01-05_14:29:59:275 EEG Response time: 235.8423 ms
+2024-01-05_14:29:59:285 EEG Response time: 232.0603 ms
+2024-01-05_14:29:59:295 EEG Response time: 221.32 ms
+2024-01-05_14:29:59:305 EEG Response time: 231.9918 ms
+2024-01-05_14:30:00:761 EMG Response Time: 402.9111 ms
+2024-01-05_14:29:59:315 EEG Response time: 222.8388 ms
+Turn right
+2024-01-05_14:29:59:324 EEG Response time: 229.2454 ms
+2024-01-05_14:29:59:459 EEG Response time: 226.6796 ms
+2024-01-05_14:30:00:259 EEG Response time: 802.8339 ms
+2024-01-05_14:30:00:292 EEG Response time: 46.3071 ms
+2024-01-05_14:30:01:064 EMG Response Time: 308.3617 ms
+2024-01-05_14:30:00:329 EEG Response time: 49.9684 ms
+Turn right
+2024-01-05_14:30:00:372 EEG Response time: 52.5116 ms
+2024-01-05_14:30:00:592 EEG Response time: 211.0522 ms
+2024-01-05_14:30:00:820 EEG Response time: 237.2854 ms
+2024-01-05_14:30:01:304 EMG Response Time: 243.7673 ms
+2024-01-05_14:30:01:039 EEG Response time: 206.7933 ms
+Turn right
+2024-01-05_14:30:01:275 EEG Response time: 243.1975 ms
+2024-01-05_14:30:01:510 EEG Response time: 241.2689 ms
+2024-01-05_14:30:01:574 EMG Response Time: 271.727 ms
+Turn right
+stop
+2024-01-05_14:30:01:733 EEG Response time: 227.6117 ms
+2024-01-05_14:30:01:886 EMG Response Time: 314.8762 ms
+Turn right
+stop
+2024-01-05_14:30:01:951 EEG Response time: 223.7489 ms
+2024-01-05_14:30:02:181 EMG Response Time: 296.8711 ms
+2024-01-05_14:30:02:176 EEG Response time: 229.6219 ms
+Turn right
+2024-01-05_14:30:02:414 EEG Response time: 244.4701 ms
+2024-01-05_14:30:02:484 EMG Response Time: 306.2614 ms
+Turn right
+stop
+2024-01-05_14:30:02:625 EEG Response time: 218.3597 ms
+2024-01-05_14:30:02:746 EMG Response Time: 264.7835 ms
+Turn right
+stop
+2024-01-05_14:30:02:857 EEG Response time: 238.5022 ms
+2024-01-05_14:30:03:087 EMG Response Time: 343.1288 ms
+2024-01-05_14:30:03:087 EEG Response time: 236.565 ms
+Turn right
+2024-01-05_14:30:03:299 EEG Response time: 216.9421 ms
+2024-01-05_14:30:03:355 EMG Response Time: 270.0914 ms
+Turn right
+stop
+2024-01-05_14:30:03:528 EEG Response time: 233.8879 ms
+2024-01-05_14:30:03:652 EMG Response Time: 299.6334 ms
+Turn right
+stop
+2024-01-05_14:30:03:969 EMG Response Time: 319.9178 ms
+2024-01-05_14:30:04:164 EEG Response time: 621.8911 ms
+Turn right
+2024-01-05_14:30:04:188 EEG Response time: 30.3589 ms
+2024-01-05_14:30:04:286 EMG Response Time: 320.3535 ms
+2024-01-05_14:30:04:212 EEG Response time: 28.1262 ms
+Stop turning
+2024-01-05_14:30:04:424 EEG Response time: 219.7107 ms
+2024-01-05_14:30:04:568 EMG Response Time: 284.736 ms
+Turn right
+stop
+2024-01-05_14:30:04:674 EEG Response time: 229.496 ms
+2024-01-05_14:30:04:884 EMG Response Time: 319.8912 ms
+2024-01-05_14:30:04:884 EEG Response time: 217.752 ms
+Turn right
+2024-01-05_14:30:05:124 EEG Response time: 227.4961 ms
+2024-01-05_14:30:05:180 EMG Response Time: 298.3492 ms
+Stop turning
+stop
+2024-01-05_14:30:05:346 EEG Response time: 227.6672 ms
+2024-01-05_14:30:05:478 EMG Response Time: 301.0793 ms
+Turn right
+stop
+2024-01-05_14:30:05:566 EEG Response time: 227.0481 ms
+2024-01-05_14:30:05:803 EMG Response Time: 327.7129 ms
+2024-01-05_14:30:05:804 EEG Response time: 243.6601 ms
+Turn right
+2024-01-05_14:30:06:024 EEG Response time: 226.2031 ms
+2024-01-05_14:30:06:083 EMG Response Time: 282.9349 ms
+Turn right
+stop
+2024-01-05_14:30:06:240 EEG Response time: 222.6416 ms
+2024-01-05_14:30:06:411 EMG Response Time: 329.9405 ms
+Turn right
+stop
+2024-01-05_14:30:06:478 EEG Response time: 244.2482 ms
+2024-01-05_14:30:06:659 EMG Response Time: 250.2927 ms
+Turn right
+stop
+2024-01-05_14:30:06:688 EEG Response time: 217.2848 ms
+2024-01-05_14:30:06:921 EEG Response time: 209.0119 ms
+2024-01-05_14:30:06:959 EMG Response Time: 302.1441 ms
+Turn right
+stop
+2024-01-05_14:30:07:139 EEG Response time: 224.8826 ms
+2024-01-05_14:30:07:236 EMG Response Time: 279.9769 ms
+Turn right
+stop
+2024-01-05_14:30:07:392 EEG Response time: 237.8399 ms
+2024-01-05_14:30:07:549 EMG Response Time: 316.2173 ms
+Stop turning
+stop
+2024-01-05_14:30:07:602 EEG Response time: 216.3989 ms
+2024-01-05_14:30:07:833 EEG Response time: 236.6082 ms
+2024-01-05_14:30:07:884 EMG Response Time: 337.6029 ms
+Turn right
+stop
+2024-01-05_14:30:08:168 EMG Response Time: 286.6406 ms
+2024-01-05_14:30:08:204 EEG Response time: 377.1628 ms
+Turn right
+2024-01-05_14:30:08:277 EEG Response time: 79.4599 ms
+2024-01-05_14:30:08:465 EMG Response Time: 299.7201 ms
+Turn right
+stop
+2024-01-05_14:30:08:515 EEG Response time: 245.0626 ms
+2024-01-05_14:30:08:734 EEG Response time: 223.1623 ms
+2024-01-05_14:30:08:804 EMG Response Time: 342.2533 ms
+Turn right
+stop
+2024-01-05_14:30:08:957 EEG Response time: 228.2527 ms
+2024-01-05_14:30:09:066 EMG Response Time: 265.2582 ms
+Turn right
+stop
+2024-01-05_14:30:09:176 EEG Response time: 225.033 ms
+2024-01-05_14:30:09:354 EMG Response Time: 289.7794 ms
+2024-01-05_14:30:09:402 EEG Response time: 230.2589 ms
+Stop turning
+2024-01-05_14:30:09:637 EEG Response time: 224.7453 ms
+2024-01-05_14:30:09:654 EMG Response Time: 302.2855 ms
+Turn right
+stop
+2024-01-05_14:30:09:861 EEG Response time: 231.016 ms
+2024-01-05_14:30:09:981 EMG Response Time: 330.5187 ms
+Turn right
+stop
+2024-01-05_14:30:10:078 EEG Response time: 208.2407 ms
+2024-01-05_14:30:10:285 EMG Response Time: 307.2585 ms
+Stop turning
+stop
+2024-01-05_14:30:10:315 EEG Response time: 242.8595 ms
+2024-01-05_14:30:10:543 EEG Response time: 219.9138 ms
+2024-01-05_14:30:10:585 EMG Response Time: 303.0178 ms
+Turn right
+stop
+2024-01-05_14:30:10:761 EEG Response time: 224.757 ms
+2024-01-05_14:30:10:855 EMG Response Time: 273.1189 ms
+Turn right
+stop
+2024-01-05_14:30:11:001 EEG Response time: 226.0323 ms
+2024-01-05_14:30:11:156 EMG Response Time: 304.0152 ms
+Turn right
+stop
+2024-01-05_14:30:11:213 EEG Response time: 216.8046 ms
+2024-01-05_14:30:11:456 EMG Response Time: 303.0622 ms
+2024-01-05_14:30:11:444 EEG Response time: 217.4116 ms
+Turn right
+2024-01-05_14:30:11:682 EEG Response time: 241.839 ms
+2024-01-05_14:30:11:738 EMG Response Time: 283.868 ms
+2024-01-05_14:30:12:189 EEG Response time: 510.7075 ms
+Turn right
+2024-01-05_14:30:12:046 EMG Response Time: 311.0917 ms
+2024-01-05_14:30:12:217 EEG Response time: 35.5343 ms
+Turn right
+2024-01-05_14:30:12:344 EEG Response time: 134.3336 ms
+2024-01-05_14:30:12:409 EMG Response Time: 366.1037 ms
+Turn right
+stop
+2024-01-05_14:30:12:566 EEG Response time: 228.5743 ms
+2024-01-05_14:30:12:679 EMG Response Time: 272.844 ms
+Turn right
+stop
+2024-01-05_14:30:12:807 EEG Response time: 216.517 ms
+2024-01-05_14:30:12:987 EMG Response Time: 310.761 ms
+Turn right
+stop
+2024-01-05_14:30:13:024 EEG Response time: 223.6509 ms
+2024-01-05_14:30:13:262 EMG Response Time: 278.886 ms
+2024-01-05_14:30:13:250 EEG Response time: 212.0949 ms
+Turn right
+2024-01-05_14:30:13:563 EMG Response Time: 303.7852 ms
+Turn left
+stop
+2024-01-05_14:30:13:876 EMG Response Time: 315.2164 ms
+Turn right
+stop
+2024-01-05_14:30:14:166 EMG Response Time: 293.9464 ms
+2024-01-05_14:30:14:171 EEG Response time: 923.3892 ms
+Turn right
+2024-01-05_14:30:14:198 EEG Response time: 39.0943 ms
+2024-01-05_14:30:14:225 EEG Response time: 34.4147 ms
+2024-01-05_14:30:14:248 EEG Response time: 29.7136 ms
+2024-01-05_14:30:14:384 EEG Response time: 142.818 ms
+2024-01-05_14:30:14:500 EMG Response Time: 336.401 ms
+Turn right
+stop
+2024-01-05_14:30:14:615 EEG Response time: 236.5201 ms
+2024-01-05_14:30:14:801 EMG Response Time: 303.3055 ms
+Turn left
+stop
+2024-01-05_14:30:14:836 EEG Response time: 228.4826 ms
+2024-01-05_14:30:15:081 EMG Response Time: 283.9601 ms
+2024-01-05_14:30:15:058 EEG Response time: 228.9212 ms
+Turn left
+2024-01-05_14:30:15:282 EEG Response time: 230.6373 ms
+2024-01-05_14:30:15:362 EMG Response Time: 282.993 ms
+Turn left
+stop
+2024-01-05_14:30:15:513 EEG Response time: 236.7527 ms
+2024-01-05_14:30:15:678 EMG Response Time: 318.5379 ms
+Turn left
+stop
+2024-01-05_14:30:15:740 EEG Response time: 234.3254 ms
+2024-01-05_14:30:15:948 EMG Response Time: 272.7439 ms
+2024-01-05_14:30:15:968 EEG Response time: 213.4282 ms
+Turn left
+2024-01-05_14:30:16:267 EMG Response Time: 322.0732 ms
+2024-01-05_14:30:16:305 EEG Response time: 343.2156 ms
+Turn left
+2024-01-05_14:30:16:431 EEG Response time: 131.5549 ms
+2024-01-05_14:30:16:627 EMG Response Time: 363.1713 ms
+Turn left
+stop
+2024-01-05_14:30:16:644 EEG Response time: 219.3544 ms
+2024-01-05_14:30:16:896 EMG Response Time: 271.4719 ms
+2024-01-05_14:30:16:884 EEG Response time: 228.6096 ms
+Turn left
+2024-01-05_14:30:17:084 EEG Response time: 206.5721 ms
+2024-01-05_14:30:17:175 EMG Response Time: 282.8954 ms
+Turn left
+stop
+2024-01-05_14:30:17:325 EEG Response time: 226.8804 ms
+2024-01-05_14:30:17:469 EMG Response Time: 296.3018 ms
+2024-01-05_14:30:18:197 EEG Response time: 876.2419 ms
+Turn left
+2024-01-05_14:30:17:769 EMG Response Time: 303.0066 ms
+2024-01-05_14:30:18:222 EEG Response time: 31.8225 ms
+Turn left
+2024-01-05_14:30:18:039 EMG Response Time: 273.8331 ms
+2024-01-05_14:30:18:248 EEG Response time: 32.0187 ms
+Turn left
+2024-01-05_14:30:18:364 EMG Response Time: 327.6179 ms
+2024-01-05_14:30:18:270 EEG Response time: 29.0207 ms
+Turn left
+2024-01-05_14:30:18:451 EEG Response time: 187.4111 ms
+2024-01-05_14:30:18:663 EMG Response Time: 302.2508 ms
+2024-01-05_14:30:18:676 EEG Response time: 210.1301 ms
+Turn left
+2024-01-05_14:30:18:899 EEG Response time: 229.1866 ms
+2024-01-05_14:30:18:975 EMG Response Time: 314.6107 ms
+Turn left
+stop
+2024-01-05_14:30:19:128 EEG Response time: 200.4418 ms
+2024-01-05_14:30:19:248 EMG Response Time: 276.2459 ms
+Turn left
+stop
+2024-01-05_14:30:19:351 EEG Response time: 229.1761 ms
+2024-01-05_14:30:19:567 EMG Response Time: 321.4707 ms
+2024-01-05_14:30:19:587 EEG Response time: 225.8644 ms
+Turn left
+2024-01-05_14:30:19:804 EEG Response time: 223.8257 ms
+2024-01-05_14:30:19:913 EMG Response Time: 348.4187 ms
+Turn left
+stop
+2024-01-05_14:30:20:172 EMG Response Time: 261.4987 ms
+2024-01-05_14:30:20:173 EEG Response time: 358.8883 ms
+Turn left
+2024-01-05_14:30:20:265 EEG Response time: 100.6384 ms
+2024-01-05_14:30:20:467 EMG Response Time: 299.0284 ms
+2024-01-05_14:30:20:502 EEG Response time: 241.9696 ms
+Turn left
+2024-01-05_14:30:20:726 EEG Response time: 227.685 ms
+2024-01-05_14:30:20:750 EMG Response Time: 285.8231 ms
+Turn left
+stop
+2024-01-05_14:30:20:946 EEG Response time: 226.4629 ms
+2024-01-05_14:30:21:069 EMG Response Time: 321.4541 ms
+Turn left
+stop
+2024-01-05_14:30:21:167 EEG Response time: 226.834 ms
+2024-01-05_14:30:21:363 EMG Response Time: 296.5248 ms
+Turn left
+stop
+2024-01-05_14:30:21:670 EMG Response Time: 309.5694 ms
+Turn left
+stop
+2024-01-05_14:30:21:991 EMG Response Time: 324.5632 ms
+Turn left
+stop
+2024-01-05_14:30:22:143 EEG Response time: 980.254 ms
+2024-01-05_14:30:22:167 EEG Response time: 30.6943 ms
+2024-01-05_14:30:22:284 EMG Response Time: 295.5105 ms
+2024-01-05_14:30:22:193 EEG Response time: 32.7733 ms
+Turn left
+2024-01-05_14:30:22:219 EEG Response time: 32.4918 ms
+2024-01-05_14:30:22:294 EEG Response time: 81.8562 ms
+2024-01-05_14:30:22:567 EMG Response Time: 286.7455 ms
+2024-01-05_14:30:22:524 EEG Response time: 237.5499 ms
+Turn left
+2024-01-05_14:30:22:764 EEG Response time: 227.9982 ms
+2024-01-05_14:30:22:900 EMG Response Time: 335.1577 ms
+Turn left
+stop
+2024-01-05_14:30:22:976 EEG Response time: 218.3549 ms
+2024-01-05_14:30:23:157 EMG Response Time: 260.6546 ms
+Turn left
+stop
+2024-01-05_14:30:23:205 EEG Response time: 235.9839 ms
+2024-01-05_14:30:23:435 EEG Response time: 235.8074 ms
+2024-01-05_14:30:23:496 EMG Response Time: 341.2087 ms
+Turn left
+stop
+2024-01-05_14:30:23:665 EEG Response time: 236.5692 ms
+2024-01-05_14:30:23:755 EMG Response Time: 261.9748 ms
+Turn left
+stop
+2024-01-05_14:30:23:878 EEG Response time: 217.8156 ms
+2024-01-05_14:30:24:087 EMG Response Time: 334.0334 ms
+Turn left
+stop
+2024-01-05_14:30:24:172 EEG Response time: 298.1326 ms
+2024-01-05_14:30:24:338 EEG Response time: 171.3038 ms
+2024-01-05_14:30:24:382 EMG Response Time: 298.2945 ms
+Turn left
+stop
+2024-01-05_14:30:24:558 EEG Response time: 225.3002 ms
+2024-01-05_14:30:24:688 EMG Response Time: 308.8913 ms
+Turn left
+stop
+2024-01-05_14:30:24:784 EEG Response time: 230.5765 ms
+2024-01-05_14:30:24:979 EMG Response Time: 292.4294 ms
+2024-01-05_14:30:25:004 EEG Response time: 207.4001 ms
+Turn left
+2024-01-05_14:30:25:284 EMG Response Time: 307.4906 ms
+2024-01-05_14:30:25:245 EEG Response time: 245.4684 ms
+Turn left
+2024-01-05_14:30:25:474 EEG Response time: 234.9628 ms
+2024-01-05_14:30:25:566 EMG Response Time: 284.7043 ms
+2024-01-05_14:30:26:198 EEG Response time: 729.3149 ms
+Turn left
+2024-01-05_14:30:25:867 EMG Response Time: 303.4537 ms
+2024-01-05_14:30:26:224 EEG Response time: 32.4315 ms
+Turn left
+2024-01-05_14:30:26:154 EMG Response Time: 289.0603 ms
+2024-01-05_14:30:26:250 EEG Response time: 32.4842 ms
+Turn left
+2024-01-05_14:30:26:382 EEG Response time: 137.8676 ms
+2024-01-05_14:30:26:483 EMG Response Time: 332.6702 ms
+Turn left
+stop
+2024-01-05_14:30:26:601 EEG Response time: 225.9041 ms
+2024-01-05_14:30:26:784 EMG Response Time: 303.3633 ms
+2024-01-05_14:30:26:823 EEG Response time: 226.0829 ms
+Turn left
+2024-01-05_14:30:27:084 EMG Response Time: 303.8993 ms
+2024-01-05_14:30:27:045 EEG Response time: 228.7391 ms
+Turn left
+2024-01-05_14:30:27:273 EEG Response time: 234.9641 ms
+2024-01-05_14:30:27:356 EMG Response Time: 274.4033 ms
+Stop turning
+stop
+2024-01-05_14:30:27:510 EEG Response time: 243.6585 ms
+2024-01-05_14:30:27:638 EMG Response Time: 284.4083 ms
+Turn left
+stop
+2024-01-05_14:30:27:724 EEG Response time: 219.0002 ms
+2024-01-05_14:30:27:945 EEG Response time: 227.9152 ms
+2024-01-05_14:30:27:982 EMG Response Time: 346.8754 ms
+Turn left
+stop
+2024-01-05_14:30:28:175 EEG Response time: 219.6272 ms
+2024-01-05_14:30:28:259 EMG Response Time: 280.5426 ms
+Turn left
+stop
+2024-01-05_14:30:28:393 EEG Response time: 224.6682 ms
+2024-01-05_14:30:28:594 EMG Response Time: 337.1232 ms
+Turn left
+stop
+2024-01-05_14:30:28:640 EEG Response time: 233.8554 ms
+2024-01-05_14:30:28:843 EEG Response time: 210.7245 ms
+2024-01-05_14:30:28:869 EMG Response Time: 278.8817 ms
+Turn left
+stop
+2024-01-05_14:30:29:093 EEG Response time: 236.5019 ms
+2024-01-05_14:30:29:157 EMG Response Time: 290.8421 ms
+Turn left
+stop
+2024-01-05_14:30:29:295 EEG Response time: 208.333 ms
+2024-01-05_14:30:29:469 EMG Response Time: 314.6393 ms
+Turn left
+stop
+2024-01-05_14:30:29:535 EEG Response time: 228.6718 ms
+2024-01-05_14:30:29:735 EMG Response Time: 268.5556 ms
+2024-01-05_14:30:29:771 EEG Response time: 243.084 ms
+Turn left
+2024-01-05_14:30:29:985 EEG Response time: 218.0981 ms
+2024-01-05_14:30:30:076 EMG Response Time: 343.893 ms
+Turn left
+stop
+2024-01-05_14:30:30:233 EEG Response time: 253.8519 ms
+2024-01-05_14:30:30:380 EMG Response Time: 306.8386 ms
+Turn left
+stop
+2024-01-05_14:30:30:444 EEG Response time: 218.0348 ms
+2024-01-05_14:30:30:651 EMG Response Time: 273.515 ms
+2024-01-05_14:30:30:656 EEG Response time: 217.5544 ms
+Turn left
+2024-01-05_14:30:30:896 EEG Response time: 228.9372 ms
+2024-01-05_14:30:30:991 EMG Response Time: 343.2077 ms
+Turn left
+stop
+2024-01-05_14:30:31:114 EEG Response time: 223.8384 ms
+2024-01-05_14:30:31:241 EMG Response Time: 252.7449 ms
+Turn left
+stop
+2024-01-05_14:30:31:345 EEG Response time: 216.9428 ms
+2024-01-05_14:30:31:563 EMG Response Time: 324.4502 ms
+2024-01-05_14:30:31:574 EEG Response time: 232.7386 ms
+Stop turning
+2024-01-05_14:30:31:856 EMG Response Time: 295.5956 ms
+2024-01-05_14:30:31:815 EEG Response time: 245.4449 ms
+Turn left
+2024-01-05_14:30:32:016 EEG Response time: 207.9492 ms
+2024-01-05_14:30:32:146 EMG Response Time: 293.0771 ms
+Turn left
+stop
+2024-01-05_14:30:32:257 EEG Response time: 239.0644 ms
+2024-01-05_14:30:32:475 EMG Response Time: 332.0284 ms
+2024-01-05_14:30:32:477 EEG Response time: 226.5788 ms
+Turn left
+2024-01-05_14:30:32:708 EEG Response time: 236.8927 ms
+2024-01-05_14:30:32:778 EMG Response Time: 305.914 ms
+Turn left
+stop
+2024-01-05_14:30:32:928 EEG Response time: 227.3229 ms
+2024-01-05_14:30:33:079 EMG Response Time: 304.367 ms
+Turn left
+stop
+2024-01-05_14:30:33:151 EEG Response time: 228.8431 ms
+2024-01-05_14:30:33:335 EMG Response Time: 258.8016 ms
+2024-01-05_14:30:33:373 EEG Response time: 228.8667 ms
+Turn left
+2024-01-05_14:30:33:599 EEG Response time: 231.2309 ms
+2024-01-05_14:30:33:668 EMG Response Time: 335.5716 ms
+Turn left
+stop
+2024-01-05_14:30:33:967 EMG Response Time: 302.823 ms
+2024-01-05_14:30:34:196 EEG Response time: 591.7205 ms
+Turn left
+2024-01-05_14:30:34:220 EEG Response time: 41.8281 ms
+2024-01-05_14:30:34:271 EMG Response Time: 307.0101 ms
+2024-01-05_14:30:34:289 EEG Response time: 81.7239 ms
+Turn left
+2024-01-05_14:30:34:513 EEG Response time: 230.5046 ms
+2024-01-05_14:30:34:585 EMG Response Time: 317.0437 ms
+Turn left
+stop
+2024-01-05_14:30:34:736 EEG Response time: 229.8986 ms
+2024-01-05_14:30:34:868 EMG Response Time: 285.8329 ms
+Turn left
+stop
+2024-01-05_14:30:34:975 EEG Response time: 228.441 ms
+2024-01-05_14:30:35:164 EMG Response Time: 297.8899 ms
+2024-01-05_14:30:35:177 EEG Response time: 208.405 ms
+Turn left
+2024-01-05_14:30:35:416 EEG Response time: 222.6159 ms
+2024-01-05_14:30:35:473 EMG Response Time: 312.4158 ms
+Turn left
+stop
+2024-01-05_14:30:35:646 EEG Response time: 235.5277 ms
+2024-01-05_14:30:35:775 EMG Response Time: 305.5927 ms
+Turn left
+stop
+2024-01-05_14:30:35:875 EEG Response time: 236.2702 ms
+2024-01-05_14:30:36:043 EMG Response Time: 271.1988 ms
+Turn left
+stop
+2024-01-05_14:30:36:098 EEG Response time: 227.3507 ms
+2024-01-05_14:30:36:317 EEG Response time: 226.5905 ms
+2024-01-05_14:30:36:384 EMG Response Time: 343.787 ms
+Turn left
+stop
+2024-01-05_14:30:36:538 EEG Response time: 227.4598 ms
+2024-01-05_14:30:36:695 EMG Response Time: 313.7675 ms
+Turn left
+stop
+2024-01-05_14:30:36:778 EEG Response time: 228.5154 ms
+2024-01-05_14:30:36:991 EMG Response Time: 299.7068 ms
+2024-01-05_14:30:36:997 EEG Response time: 224.467 ms
+Turn left
+2024-01-05_14:30:37:217 EEG Response time: 207.0908 ms
+2024-01-05_14:30:37:265 EMG Response Time: 276.5803 ms
+Turn left
+stop
+2024-01-05_14:30:37:469 EEG Response time: 256.7607 ms
+2024-01-05_14:30:37:600 EMG Response Time: 338.3861 ms
+Turn left
+stop
+2024-01-05_14:30:37:687 EEG Response time: 223.8216 ms
+2024-01-05_14:30:37:847 EMG Response Time: 249.306 ms
+2024-01-05_14:30:38:171 EEG Response time: 490.3197 ms
+Turn left
+2024-01-05_14:30:38:187 EMG Response Time: 342.7462 ms
+2024-01-05_14:30:38:196 EEG Response time: 31.2732 ms
+Turn left
+2024-01-05_14:30:38:358 EEG Response time: 168.8783 ms
+2024-01-05_14:30:38:483 EMG Response Time: 298.7231 ms
+Turn left
+stop
+2024-01-05_14:30:38:581 EEG Response time: 229.1099 ms
+2024-01-05_14:30:38:790 EMG Response Time: 310.287 ms
+Turn left
+stop
+2024-01-05_14:30:38:818 EEG Response time: 244.0028 ms
+2024-01-05_14:30:39:038 EEG Response time: 225.9463 ms
+2024-01-05_14:30:39:079 EMG Response Time: 292.248 ms
+Turn left
+stop
+2024-01-05_14:30:39:267 EEG Response time: 235.5752 ms
+2024-01-05_14:30:39:397 EMG Response Time: 320.2184 ms
+Stop turning
+stop
+2024-01-05_14:30:39:488 EEG Response time: 225.243 ms
+2024-01-05_14:30:39:670 EMG Response Time: 276.3326 ms
+Turn left
+stop
+2024-01-05_14:30:39:700 EEG Response time: 216.4763 ms
+2024-01-05_14:30:39:941 EEG Response time: 228.1354 ms
+2024-01-05_14:30:39:965 EMG Response Time: 298.0029 ms
+Turn left
+stop
+2024-01-05_14:30:40:153 EEG Response time: 218.2999 ms
+2024-01-05_14:30:40:296 EMG Response Time: 332.3074 ms
+Turn left
+stop
+2024-01-05_14:30:40:389 EEG Response time: 225.7129 ms
+2024-01-05_14:30:40:585 EMG Response Time: 292.0163 ms
+Turn left
+stop
+2024-01-05_14:30:40:614 EEG Response time: 228.6323 ms
+2024-01-05_14:30:40:844 EMG Response Time: 262.1063 ms
+2024-01-05_14:30:40:851 EEG Response time: 227.4311 ms
+Turn left
+2024-01-05_14:30:41:055 EEG Response time: 210.0511 ms
+2024-01-05_14:30:41:167 EMG Response Time: 326.424 ms
+Stop turning
+stop
+2024-01-05_14:30:41:485 EMG Response Time: 320.6594 ms
+Stop turning
+stop
+2024-01-05_14:30:41:763 EMG Response Time: 280.3771 ms
+Stop turning
+stop
+2024-01-05_14:30:42:067 EMG Response Time: 306.1315 ms
+Stop turning
+stop
+2024-01-05_14:30:42:158 EEG Response time: 1092.8454 ms
+2024-01-05_14:30:42:182 EEG Response time: 30.3559 ms
+2024-01-05_14:30:42:205 EEG Response time: 29.4302 ms
+2024-01-05_14:30:42:229 EEG Response time: 31.1439 ms
+2024-01-05_14:30:42:387 EMG Response Time: 323.1725 ms
+2024-01-05_14:30:42:253 EEG Response time: 30.1697 ms
+Stop turning
+2024-01-05_14:30:42:433 EEG Response time: 186.4848 ms
+2024-01-05_14:30:42:654 EEG Response time: 227.1451 ms
+2024-01-05_14:30:42:692 EMG Response Time: 307.4232 ms
+Stop turning
+stop
+2024-01-05_14:30:42:876 EEG Response time: 227.931 ms
+2024-01-05_14:30:42:968 EMG Response Time: 279.333 ms
+Stop turning
+stop
+2024-01-05_14:30:43:095 EEG Response time: 209.1023 ms
+2024-01-05_14:30:43:261 EMG Response Time: 295.9116 ms
+Stop turning
+stop
+2024-01-05_14:30:43:554 EMG Response Time: 294.9523 ms
+Stop turning
+stop
+2024-01-05_14:30:43:888 EMG Response Time: 336.443 ms
+Stop turning
+stop
+2024-01-05_14:30:44:143 EEG Response time: 1052.6849 ms
+2024-01-05_14:30:44:172 EMG Response Time: 287.4875 ms
+2024-01-05_14:30:44:168 EEG Response time: 31.5935 ms
+Stop turning
+2024-01-05_14:30:44:188 EEG Response time: 25.5095 ms
+2024-01-05_14:30:44:210 EEG Response time: 26.5831 ms
+2024-01-05_14:30:44:235 EEG Response time: 30.1981 ms
+2024-01-05_14:30:44:484 EMG Response Time: 314.7271 ms
+2024-01-05_14:30:44:460 EEG Response time: 218.5235 ms
+Stop turning
+2024-01-05_14:30:44:688 EEG Response time: 233.0005 ms
+2024-01-05_14:30:44:798 EMG Response Time: 316.0859 ms
+Stop turning
+stop
+2024-01-05_14:30:44:911 EEG Response time: 217.5074 ms
+2024-01-05_14:30:45:081 EMG Response Time: 285.2146 ms
+Stop turning
+stop
+2024-01-05_14:30:45:144 EEG Response time: 237.966 ms
+2024-01-05_14:30:45:356 EMG Response Time: 277.7524 ms
+2024-01-05_14:30:45:374 EEG Response time: 236.0534 ms
+Stop turning
+2024-01-05_14:30:45:591 EEG Response time: 223.8126 ms
+2024-01-05_14:30:45:657 EMG Response Time: 304.2166 ms
+Stop turning
+stop
+2024-01-05_14:30:45:815 EEG Response time: 208.6048 ms
+2024-01-05_14:30:45:942 EMG Response Time: 287.8632 ms
+Turn left
+stop
+2024-01-05_14:30:46:046 EEG Response time: 237.4612 ms
+2024-01-05_14:30:46:260 EMG Response Time: 321.2398 ms
+2024-01-05_14:30:46:276 EEG Response time: 218.1057 ms
+Turn left
+2024-01-05_14:30:46:497 EEG Response time: 226.6578 ms
+2024-01-05_14:30:46:606 EMG Response Time: 348.8055 ms
+Turn left
+stop
+2024-01-05_14:30:46:738 EEG Response time: 245.7963 ms
+2024-01-05_14:30:46:884 EMG Response Time: 280.8048 ms
+Stop turning
+stop
+2024-01-05_14:30:46:951 EEG Response time: 219.3892 ms
+2024-01-05_14:30:47:178 EMG Response Time: 296.4273 ms
+2024-01-05_14:30:47:189 EEG Response time: 244.4403 ms
+Stop turning
+2024-01-05_14:30:47:474 EMG Response Time: 298.4493 ms
+Stop turning
+stop
+2024-01-05_14:30:47:746 EMG Response Time: 274.4174 ms
+2024-01-05_14:30:48:163 EEG Response time: 978.3139 ms
+Stop turning
+2024-01-05_14:30:48:043 EMG Response Time: 299.1867 ms
+2024-01-05_14:30:48:191 EEG Response time: 36.6506 ms
+Stop turning
+2024-01-05_14:30:48:217 EEG Response time: 32.8364 ms
+2024-01-05_14:30:48:241 EEG Response time: 29.7582 ms
+2024-01-05_14:30:48:416 EMG Response Time: 375.9673 ms
+2024-01-05_14:30:48:313 EEG Response time: 77.7819 ms
+Stop turning
+2024-01-05_14:30:48:527 EEG Response time: 218.5099 ms
+2024-01-05_14:30:48:663 EMG Response Time: 250.5792 ms
+Stop turning
+stop
+2024-01-05_14:30:48:749 EEG Response time: 227.9671 ms
+2024-01-05_14:30:48:973 EMG Response Time: 312.7814 ms
+Stop turning
+stop
+2024-01-05_14:30:48:990 EEG Response time: 229.8043 ms
+2024-01-05_14:30:49:199 EEG Response time: 216.124 ms
+2024-01-05_14:30:49:280 EMG Response Time: 309.9376 ms
+Stop turning
+stop
+2024-01-05_14:30:49:431 EEG Response time: 219.3159 ms
+2024-01-05_14:30:49:577 EMG Response Time: 299.463 ms
+Stop turning
+stop
+2024-01-05_14:30:49:669 EEG Response time: 244.3051 ms
+2024-01-05_14:30:49:874 EMG Response Time: 299.4978 ms
+2024-01-05_14:30:49:899 EEG Response time: 234.548 ms
+Stop turning
+2024-01-05_14:30:50:194 EMG Response Time: 322.6642 ms
+2024-01-05_14:30:50:224 EEG Response time: 329.7922 ms
+Stop turning
+2024-01-05_14:30:50:350 EEG Response time: 133.3914 ms
+2024-01-05_14:30:50:491 EMG Response Time: 300.4735 ms
+Stop turning
+stop
+2024-01-05_14:30:50:574 EEG Response time: 228.3318 ms
+2024-01-05_14:30:50:767 EMG Response Time: 278.6697 ms
+2024-01-05_14:30:50:784 EEG Response time: 216.5946 ms
+Stop turning
+2024-01-05_14:30:51:020 EEG Response time: 240.0126 ms
+2024-01-05_14:30:51:074 EMG Response Time: 310.0983 ms
+Stop turning
+stop
+2024-01-05_14:30:51:248 EEG Response time: 237.1166 ms
+2024-01-05_14:30:51:372 EMG Response Time: 300.2482 ms
+Stop turning
+stop
+2024-01-05_14:30:51:656 EMG Response Time: 287.2942 ms
+Stop turning
+stop
+2024-01-05_14:30:51:943 EMG Response Time: 289.7995 ms
+Turn left
+stop
+2024-01-05_14:30:52:181 EEG Response time: 936.6859 ms
+2024-01-05_14:30:52:208 EEG Response time: 34.1147 ms
+2024-01-05_14:30:52:296 EMG Response Time: 355.4465 ms
+2024-01-05_14:30:52:234 EEG Response time: 31.4579 ms
+Stop turning
+2024-01-05_14:30:52:256 EEG Response time: 30.0697 ms
+2024-01-05_14:30:52:372 EEG Response time: 121.3064 ms
+2024-01-05_14:30:52:596 EMG Response Time: 302.5452 ms
+2024-01-05_14:30:52:591 EEG Response time: 225.2275 ms
+Stop turning
+2024-01-05_14:30:52:814 EEG Response time: 227.5016 ms
+2024-01-05_14:30:52:890 EMG Response Time: 297.654 ms
+Stop turning
+stop
+2024-01-05_14:30:53:043 EEG Response time: 218.8642 ms
+2024-01-05_14:30:53:180 EMG Response Time: 292.0154 ms
+Stop turning
+stop
+2024-01-05_14:30:53:261 EEG Response time: 223.4541 ms
+2024-01-05_14:30:53:460 EMG Response Time: 283.2116 ms
+Stop turning
+stop
+2024-01-05_14:30:53:495 EEG Response time: 218.9569 ms
+2024-01-05_14:30:53:722 EEG Response time: 233.3095 ms
+2024-01-05_14:30:53:781 EMG Response Time: 323.6764 ms
+Stop turning
+stop
+2024-01-05_14:30:53:964 EEG Response time: 237.68 ms
+2024-01-05_14:30:54:072 EMG Response Time: 294.3801 ms
+Stop turning
+stop
+2024-01-05_14:30:54:181 EEG Response time: 222.0068 ms
+2024-01-05_14:30:54:380 EMG Response Time: 310.4644 ms
+2024-01-05_14:30:54:416 EEG Response time: 242.8089 ms
+Stop turning
+2024-01-05_14:30:54:625 EEG Response time: 215.7272 ms
+2024-01-05_14:30:54:675 EMG Response Time: 298.0527 ms
+Stop turning
+stop
+2024-01-05_14:30:54:857 EEG Response time: 235.6328 ms
+2024-01-05_14:30:54:998 EMG Response Time: 326.4441 ms
+Stop turning
+stop
+2024-01-05_14:30:55:090 EEG Response time: 238.1193 ms
+2024-01-05_14:30:55:274 EMG Response Time: 278.5003 ms
+2024-01-05_14:30:55:301 EEG Response time: 216.8482 ms
+Stop turning
+2024-01-05_14:30:55:555 EMG Response Time: 282.6931 ms
+Stop turning
+stop
+2024-01-05_14:30:55:856 EMG Response Time: 304.0438 ms
+2024-01-05_14:30:56:272 EEG Response time: 977.3981 ms
+Stop turning
+2024-01-05_14:30:56:150 EMG Response Time: 296.5141 ms
+2024-01-05_14:30:56:291 EEG Response time: 24.9063 ms
+Stop turning
+2024-01-05_14:30:56:312 EEG Response time: 24.9927 ms
+2024-01-05_14:30:56:335 EEG Response time: 29.2323 ms
+2024-01-05_14:30:56:490 EMG Response Time: 342.3139 ms
+2024-01-05_14:30:56:443 EEG Response time: 111.9582 ms
+Stop turning
+2024-01-05_14:30:56:683 EEG Response time: 235.6329 ms
+2024-01-05_14:30:56:759 EMG Response Time: 272.2904 ms
+Stop turning
+stop
+2024-01-05_14:30:56:897 EEG Response time: 218.2103 ms
+2024-01-05_14:30:57:099 EMG Response Time: 342.8943 ms
+2024-01-05_14:30:57:115 EEG Response time: 222.0111 ms
+Stop turning
+2024-01-05_14:30:57:336 EEG Response time: 224.7088 ms
+2024-01-05_14:30:57:372 EMG Response Time: 275.7937 ms
+Stop turning
+stop
+2024-01-05_14:30:57:575 EEG Response time: 224.1911 ms
+2024-01-05_14:30:57:673 EMG Response Time: 304.0087 ms
+Stop turning
+stop
+2024-01-05_14:30:57:795 EEG Response time: 224.7614 ms
+2024-01-05_14:30:57:987 EMG Response Time: 317.5072 ms
+2024-01-05_14:30:58:018 EEG Response time: 226.9718 ms
+Stop turning
+2024-01-05_14:30:58:284 EMG Response Time: 299.3401 ms
+2024-01-05_14:30:58:250 EEG Response time: 238.2294 ms
+Stop turning
+2024-01-05_14:30:58:472 EEG Response time: 229.2188 ms
+2024-01-05_14:30:58:605 EMG Response Time: 323.9013 ms
+Stop turning
+stop
+2024-01-05_14:30:58:691 EEG Response time: 224.5204 ms
+2024-01-05_14:30:58:863 EMG Response Time: 260.932 ms
+Stop turning
+stop
+2024-01-05_14:30:58:926 EEG Response time: 220.6117 ms
+2024-01-05_14:30:59:146 EEG Response time: 226.1113 ms
+2024-01-05_14:30:59:159 EMG Response Time: 298.7171 ms
+Stop turning
+stop
+2024-01-05_14:30:59:386 EEG Response time: 227.7862 ms
+2024-01-05_14:30:59:499 EMG Response Time: 343.2093 ms
+Stop turning
+stop
+2024-01-05_14:30:59:742 EMG Response Time: 245.687 ms
+2024-01-05_14:31:00:175 EEG Response time: 794.2573 ms
+Stop turning
+2024-01-05_14:31:00:062 EMG Response Time: 322.5783 ms
+2024-01-05_14:31:00:197 EEG Response time: 29.364 ms
+Stop turning
+2024-01-05_14:31:00:215 EEG Response time: 23.4785 ms
+2024-01-05_14:31:00:371 EMG Response Time: 310.1518 ms
+2024-01-05_14:31:00:286 EEG Response time: 77.7237 ms
+Stop turning
+2024-01-05_14:31:00:510 EEG Response time: 228.6286 ms
+2024-01-05_14:31:00:692 EMG Response Time: 324.2785 ms
+Stop turning
+stop
+2024-01-05_14:31:00:737 EEG Response time: 233.6274 ms
+2024-01-05_14:31:00:953 EMG Response Time: 264.0318 ms
+2024-01-05_14:31:00:961 EEG Response time: 228.5406 ms
+Stop turning
+2024-01-05_14:31:01:190 EEG Response time: 236.1181 ms
+2024-01-05_14:31:01:263 EMG Response Time: 312.8218 ms
+Stop turning
+stop
+2024-01-05_14:31:01:412 EEG Response time: 227.6408 ms
+2024-01-05_14:31:01:588 EMG Response Time: 326.8645 ms
+Stop turning
+stop
+2024-01-05_14:31:01:642 EEG Response time: 235.879 ms
+2024-01-05_14:31:01:843 EMG Response Time: 258.44 ms
+2024-01-05_14:31:01:881 EEG Response time: 245.2449 ms
+Stop turning
+2024-01-05_14:31:02:093 EEG Response time: 218.2475 ms
+2024-01-05_14:31:02:161 EMG Response Time: 320.7046 ms
+Stop turning
+stop
+2024-01-05_14:31:02:311 EEG Response time: 223.5505 ms
+2024-01-05_14:31:02:493 EMG Response Time: 334.6985 ms
+2024-01-05_14:31:02:533 EEG Response time: 208.2031 ms
+Stop turning
+2024-01-05_14:31:02:781 EMG Response Time: 290.3582 ms
+2024-01-05_14:31:02:772 EEG Response time: 243.7375 ms
+Stop turning
+2024-01-05_14:31:03:004 EEG Response time: 236.2974 ms
+2024-01-05_14:31:03:087 EMG Response Time: 308.4054 ms
+Stop turning
+stop
+2024-01-05_14:31:03:215 EEG Response time: 217.5472 ms
+2024-01-05_14:31:03:370 EMG Response Time: 286.0471 ms
+Stop turning
+stop
+2024-01-05_14:31:03:453 EEG Response time: 225.216 ms
+2024-01-05_14:31:03:686 EMG Response Time: 318.7931 ms
+Stop turning
+stop
+2024-01-05_14:31:03:971 EMG Response Time: 288.372 ms
+2024-01-05_14:31:04:170 EEG Response time: 718.1755 ms
+Stop turning
+2024-01-05_14:31:04:192 EEG Response time: 31.5962 ms
+2024-01-05_14:31:04:279 EMG Response Time: 310.7084 ms
+2024-01-05_14:31:04:215 EEG Response time: 29.0745 ms
+Stop turning
+2024-01-05_14:31:04:353 EEG Response time: 143.8966 ms
+2024-01-05_14:31:04:573 EMG Response Time: 296.5826 ms
+2024-01-05_14:31:04:574 EEG Response time: 226.964 ms
+Stop turning
+2024-01-05_14:31:04:814 EEG Response time: 217.7869 ms
+2024-01-05_14:31:04:912 EMG Response Time: 341.9161 ms
+Stop turning
+stop
+2024-01-05_14:31:05:035 EEG Response time: 225.2382 ms
+2024-01-05_14:31:05:189 EMG Response Time: 279.5377 ms
+Stop turning
+stop
+2024-01-05_14:31:05:257 EEG Response time: 208.7642 ms
+2024-01-05_14:31:05:475 EMG Response Time: 289.4615 ms
+2024-01-05_14:31:05:478 EEG Response time: 228.3763 ms
+Stop turning
+2024-01-05_14:31:05:725 EEG Response time: 235.9751 ms
+2024-01-05_14:31:05:759 EMG Response Time: 287.0002 ms
+Stop turning
+stop
+2024-01-05_14:31:05:929 EEG Response time: 208.7198 ms
+2024-01-05_14:31:06:060 EMG Response Time: 304.0137 ms
+Stop turning
+stop
+2024-01-05_14:31:06:169 EEG Response time: 228.1011 ms
+2024-01-05_14:31:06:373 EMG Response Time: 314.9637 ms
+2024-01-05_14:31:06:379 EEG Response time: 216.1075 ms
+Stop turning
+2024-01-05_14:31:06:614 EEG Response time: 221.3763 ms
+2024-01-05_14:31:06:685 EMG Response Time: 314.5516 ms
+Stop turning
+stop
+2024-01-05_14:31:06:852 EEG Response time: 244.5216 ms
+2024-01-05_14:31:06:984 EMG Response Time: 302.6149 ms
+Stop turning
+stop
+2024-01-05_14:31:07:065 EEG Response time: 219.2522 ms
+2024-01-05_14:31:07:294 EEG Response time: 234.9059 ms
+2024-01-05_14:31:07:300 EMG Response Time: 318.4736 ms
+Stop turning
+stop
+2024-01-05_14:31:07:553 EMG Response Time: 256.626 ms
+2024-01-05_14:31:07:522 EEG Response time: 233.3223 ms
+Stop turning
+2024-01-05_14:31:07:741 EEG Response time: 225.4611 ms
+2024-01-05_14:31:07:888 EMG Response Time: 337.1421 ms
+2024-01-05_14:31:07:981 EEG Response time: 224.9901 ms
+Stop turning
+2024-01-05_14:31:08:150 EMG Response Time: 265.5081 ms
+2024-01-05_14:31:08:212 EEG Response time: 234.324 ms
+Stop turning
+2024-01-05_14:31:08:426 EEG Response time: 220.8367 ms
+2024-01-05_14:31:08:499 EMG Response Time: 351.2438 ms
+Stop turning
+stop
+2024-01-05_14:31:08:646 EEG Response time: 226.8925 ms
+2024-01-05_14:31:08:774 EMG Response Time: 277.2937 ms
+Stop turning
+stop
+2024-01-05_14:31:08:885 EEG Response time: 227.2621 ms
+2024-01-05_14:31:09:089 EMG Response Time: 318.248 ms
+Stop turning
+stop
+2024-01-05_14:31:09:107 EEG Response time: 228.387 ms
+2024-01-05_14:31:09:342 EEG Response time: 241.152 ms
+2024-01-05_14:31:09:364 EMG Response Time: 277.689 ms
+Stop turning
+stop
+2024-01-05_14:31:09:551 EEG Response time: 214.9957 ms
+2024-01-05_14:31:09:666 EMG Response Time: 304.5859 ms
+Stop turning
+stop
+2024-01-05_14:31:09:780 EEG Response time: 233.7179 ms
+2024-01-05_14:31:09:979 EMG Response Time: 315.8185 ms
+2024-01-05_14:31:10:004 EEG Response time: 227.1169 ms
+Stop turning
+2024-01-05_14:31:10:271 EMG Response Time: 295.1475 ms
+2024-01-05_14:31:10:240 EEG Response time: 241.9258 ms
+Stop turning
+2024-01-05_14:31:10:452 EEG Response time: 218.0467 ms
+2024-01-05_14:31:10:548 EMG Response Time: 280.0652 ms
+Stop turning
+stop
+2024-01-05_14:31:10:694 EEG Response time: 228.2079 ms
+2024-01-05_14:31:10:869 EMG Response Time: 324.1629 ms
+2024-01-05_14:31:10:907 EEG Response time: 217.3394 ms
+Stop turning
+2024-01-05_14:31:11:173 EMG Response Time: 306.4908 ms
+2024-01-05_14:31:11:139 EEG Response time: 219.595 ms
+Stop turning
+2024-01-05_14:31:11:365 EEG Response time: 233.077 ms
+2024-01-05_14:31:11:453 EMG Response Time: 283.1286 ms
+Stop turning
+stop
+2024-01-05_14:31:11:584 EEG Response time: 216.0766 ms
+2024-01-05_14:31:11:763 EMG Response Time: 313.2376 ms
+Stop turning
+stop
+2024-01-05_14:31:12:071 EMG Response Time: 310.6135 ms
+2024-01-05_14:31:12:170 EEG Response time: 588.6085 ms
+Stop turning
+2024-01-05_14:31:12:193 EEG Response time: 29.5453 ms
+2024-01-05_14:31:12:270 EEG Response time: 81.8603 ms
+2024-01-05_14:31:12:383 EMG Response Time: 315.2522 ms
+Stop turning
+stop
+2024-01-05_14:31:12:500 EEG Response time: 236.2459 ms
+2024-01-05_14:31:12:682 EMG Response Time: 300.9648 ms
+Stop turning
+stop
+2024-01-05_14:31:12:722 EEG Response time: 228.2889 ms
+2024-01-05_14:31:12:975 EMG Response Time: 296.5598 ms
+2024-01-05_14:31:12:950 EEG Response time: 234.0019 ms
+Stop turning
+2024-01-05_14:31:13:171 EEG Response time: 228.0579 ms
+2024-01-05_14:31:13:246 EMG Response Time: 273.368 ms
+Stop turning
+stop
+2024-01-05_14:31:13:410 EEG Response time: 244.6457 ms
+2024-01-05_14:31:13:596 EMG Response Time: 352.8395 ms
+2024-01-05_14:31:13:629 EEG Response time: 224.7059 ms
+Stop turning
+2024-01-05_14:31:13:851 EMG Response Time: 258.0639 ms
+2024-01-05_14:31:13:851 EEG Response time: 217.9905 ms
+Stop turning
+2024-01-05_14:31:14:092 EEG Response time: 247.1463 ms
+2024-01-05_14:31:14:179 EMG Response Time: 330.3814 ms
+Stop turning
+stop
+2024-01-05_14:31:14:311 EEG Response time: 225.7944 ms
+2024-01-05_14:31:14:490 EMG Response Time: 314.4122 ms
+Stop turning
+stop
+2024-01-05_14:31:14:523 EEG Response time: 218.0941 ms
+2024-01-05_14:31:14:744 EMG Response Time: 257.0777 ms
+2024-01-05_14:31:14:759 EEG Response time: 225.5815 ms
+Stop turning
+2024-01-05_14:31:14:983 EEG Response time: 227.9007 ms
+2024-01-05_14:31:15:096 EMG Response Time: 354.6213 ms
+Stop turning
+stop
+2024-01-05_14:31:15:212 EEG Response time: 233.0709 ms
+2024-01-05_14:31:15:371 EMG Response Time: 278.2967 ms
+Stop turning
+stop
+2024-01-05_14:31:15:436 EEG Response time: 227.8318 ms
+2024-01-05_14:31:15:657 EMG Response Time: 288.1357 ms
+2024-01-05_14:31:15:662 EEG Response time: 232.4496 ms
+Stop turning
+2024-01-05_14:31:15:895 EEG Response time: 236.6176 ms
+2024-01-05_14:31:15:978 EMG Response Time: 324.8597 ms
+2024-01-05_14:31:16:176 EEG Response time: 286.8479 ms
+Stop turning
+2024-01-05_14:31:16:296 EMG Response Time: 321.1176 ms
+Stop turning
+stop
+2024-01-05_14:31:16:348 EEG Response time: 176.7311 ms
+2024-01-05_14:31:16:565 EEG Response time: 223.5786 ms
+2024-01-05_14:31:16:602 EMG Response Time: 309.0293 ms
+Stop turning
+stop
+2024-01-05_14:31:16:799 EEG Response time: 237.9348 ms
+2024-01-05_14:31:16:868 EMG Response Time: 268.2902 ms
+Stop turning
+stop
+2024-01-05_14:31:17:039 EEG Response time: 246.461 ms
+2024-01-05_14:31:17:179 EMG Response Time: 314.5337 ms
+Stop turning
+stop
+2024-01-05_14:31:17:252 EEG Response time: 217.9993 ms
+2024-01-05_14:31:17:467 EMG Response Time: 290.6559 ms
+2024-01-05_14:31:17:473 EEG Response time: 227.4052 ms
+Stop turning
+2024-01-05_14:31:17:776 EMG Response Time: 312.3468 ms
+2024-01-05_14:31:17:692 EEG Response time: 225.854 ms
+Stop turning
+2024-01-05_14:31:18:065 EMG Response Time: 292.3874 ms
+2024-01-05_14:31:17:932 EEG Response time: 226.7163 ms
+Stop turning
+2024-01-05_14:31:18:142 EEG Response time: 216.1554 ms
+2024-01-05_14:31:18:378 EMG Response Time: 315.8292 ms
+2024-01-05_14:31:18:384 EEG Response time: 228.0456 ms
+Stop turning
+2024-01-05_14:31:18:588 EEG Response time: 209.7055 ms
+2024-01-05_14:31:18:686 EMG Response Time: 310.4582 ms
+Stop turning
+stop
+2024-01-05_14:31:18:836 EEG Response time: 238.7435 ms
+2024-01-05_14:31:18:968 EMG Response Time: 285.1266 ms
+Stop turning
+stop
+2024-01-05_14:31:19:057 EEG Response time: 227.1258 ms
+2024-01-05_14:31:19:244 EMG Response Time: 278.4994 ms
+Stop turning
+stop
+2024-01-05_14:31:19:288 EEG Response time: 237.0655 ms
+2024-01-05_14:31:19:504 EEG Response time: 221.7837 ms
+2024-01-05_14:31:19:569 EMG Response Time: 327.4039 ms
+Stop turning
+stop
+2024-01-05_14:31:19:728 EEG Response time: 228.4775 ms
+2024-01-05_14:31:19:876 EMG Response Time: 309.4375 ms
+Stop turning
+stop
+2024-01-05_14:31:19:957 EEG Response time: 235.5717 ms
+2024-01-05_14:31:20:168 EMG Response Time: 294.8554 ms
+2024-01-05_14:31:20:194 EEG Response time: 224.1304 ms
+Stop turning
+2024-01-05_14:31:20:409 EEG Response time: 220.9956 ms
+2024-01-05_14:31:20:487 EMG Response Time: 322.315 ms
+Stop turning
+stop
+2024-01-05_14:31:20:638 EEG Response time: 216.5945 ms
+2024-01-05_14:31:20:764 EMG Response Time: 279.9948 ms
+Stop turning
+stop
+2024-01-05_14:31:20:860 EEG Response time: 226.0741 ms
+2024-01-05_14:31:21:056 EMG Response Time: 294.8399 ms
+2024-01-05_14:31:21:091 EEG Response time: 227.4856 ms
+Stop turning
+2024-01-05_14:31:21:303 EEG Response time: 217.8548 ms
+2024-01-05_14:31:21:351 EMG Response Time: 297.6556 ms
+2024-01-05_14:31:22:174 EEG Response time: 854.7913 ms
+Stop turning
+2024-01-05_14:31:21:653 EMG Response Time: 303.7399 ms
+2024-01-05_14:31:22:193 EEG Response time: 25.1664 ms
+Stop turning
+2024-01-05_14:31:21:951 EMG Response Time: 301.2613 ms
+2024-01-05_14:31:22:221 EEG Response time: 31.6084 ms
+Stop turning
+2024-01-05_14:31:22:292 EMG Response Time: 343.4228 ms
+2024-01-05_14:31:22:246 EEG Response time: 31.6051 ms
+Stop turning
+2024-01-05_14:31:22:446 EEG Response time: 207.0287 ms
+2024-01-05_14:31:22:557 EMG Response Time: 268.124 ms
+Stop turning
+stop
+2024-01-05_14:31:22:666 EEG Response time: 225.5726 ms
+2024-01-05_14:31:22:892 EMG Response Time: 337.013 ms
+2024-01-05_14:31:22:888 EEG Response time: 208.4741 ms
+Stop turning
+2024-01-05_14:31:23:117 EEG Response time: 233.687 ms
+2024-01-05_14:31:23:196 EMG Response Time: 307.9392 ms
+Stop turning
+stop
+2024-01-05_14:31:23:339 EEG Response time: 207.0663 ms
+2024-01-05_14:31:23:460 EMG Response Time: 266.1529 ms
+Stop turning
+stop
+2024-01-05_14:31:23:575 EEG Response time: 241.729 ms
+2024-01-05_14:31:23:749 EMG Response Time: 290.7495 ms
+Stop turning
+stop
+2024-01-05_14:31:23:812 EEG Response time: 222.4359 ms
+2024-01-05_14:31:24:033 EEG Response time: 227.522 ms
+2024-01-05_14:31:24:081 EMG Response Time: 335.702 ms
+Stop turning
+stop
+2024-01-05_14:31:24:260 EEG Response time: 233.7875 ms
+2024-01-05_14:31:24:388 EMG Response Time: 308.0273 ms
+Stop turning
+stop
+2024-01-05_14:31:24:468 EEG Response time: 212.6228 ms
+2024-01-05_14:31:24:696 EMG Response Time: 311.8806 ms
+Stop turning
+stop
+2024-01-05_14:31:24:708 EEG Response time: 228.9143 ms
+2024-01-05_14:31:24:976 EMG Response Time: 281.5164 ms
+2024-01-05_14:31:24:928 EEG Response time: 227.0429 ms
+Stop turning
+2024-01-05_14:31:25:158 EEG Response time: 217.6657 ms
+2024-01-05_14:31:25:266 EMG Response Time: 293.3873 ms
+Stop turning
+stop
+2024-01-05_14:31:25:380 EEG Response time: 228.4446 ms
+2024-01-05_14:31:25:564 EMG Response Time: 300.2284 ms
+2024-01-05_14:31:26:176 EEG Response time: 801.4631 ms
+Stop turning
+2024-01-05_14:31:25:887 EMG Response Time: 325.9035 ms
+2024-01-05_14:31:26:200 EEG Response time: 30.0168 ms
+Stop turning
+2024-01-05_14:31:26:194 EMG Response Time: 310.2977 ms
+2024-01-05_14:31:26:220 EEG Response time: 26.3248 ms
+Stop turning
+2024-01-05_14:31:26:309 EEG Response time: 94.495 ms
+2024-01-05_14:31:26:493 EMG Response Time: 301.689 ms
+2024-01-05_14:31:26:511 EEG Response time: 208.7071 ms
+Stop turning
+2024-01-05_14:31:26:731 EEG Response time: 225.9152 ms
+2024-01-05_14:31:26:780 EMG Response Time: 290.8791 ms
+Stop turning
+stop
+2024-01-05_14:31:26:980 EEG Response time: 237.2271 ms
+2024-01-05_14:31:27:082 EMG Response Time: 304.1434 ms
+Stop turning
+stop
+2024-01-05_14:31:27:203 EEG Response time: 227.3262 ms
+2024-01-05_14:31:27:366 EMG Response Time: 287.1648 ms
+Stop turning
+stop
+2024-01-05_14:31:27:426 EEG Response time: 228.0919 ms
+2024-01-05_14:31:27:662 EMG Response Time: 297.8086 ms
+2024-01-05_14:31:27:646 EEG Response time: 225.3655 ms
+Stop turning
+2024-01-05_14:31:27:866 EEG Response time: 224.3141 ms
+2024-01-05_14:31:27:969 EMG Response Time: 309.7251 ms
+Stop turning
+stop
+2024-01-05_14:31:28:107 EEG Response time: 245.5472 ms
+2024-01-05_14:31:28:267 EMG Response Time: 301.4075 ms
+Stop turning
+stop
+2024-01-05_14:31:28:319 EEG Response time: 218.4023 ms
+2024-01-05_14:31:28:557 EEG Response time: 243.1832 ms
+2024-01-05_14:31:28:603 EMG Response Time: 338.6706 ms
+Stop turning
+stop
+2024-01-05_14:31:28:779 EEG Response time: 226.9093 ms
+2024-01-05_14:31:28:875 EMG Response Time: 274.5643 ms
+Stop turning
+stop
+2024-01-05_14:31:29:000 EEG Response time: 226.5518 ms
+2024-01-05_14:31:29:178 EMG Response Time: 305.916 ms
+Stop turning
+stop
+2024-01-05_14:31:29:222 EEG Response time: 210.2351 ms
+2024-01-05_14:31:29:454 EMG Response Time: 278.6128 ms
+2024-01-05_14:31:29:461 EEG Response time: 244.6537 ms
+Turn left
+2024-01-05_14:31:29:781 EMG Response Time: 330.2165 ms
+Turn left
+stop
+2024-01-05_14:31:30:053 EMG Response Time: 274.3781 ms
+2024-01-05_14:31:30:162 EEG Response time: 705.9783 ms
+Turn left
+2024-01-05_14:31:30:187 EEG Response time: 34.1162 ms
+2024-01-05_14:31:30:211 EEG Response time: 29.42 ms
+2024-01-05_14:31:30:407 EMG Response Time: 357.2793 ms
+2024-01-05_14:31:30:364 EEG Response time: 157.5849 ms
+Stop turning
+2024-01-05_14:31:30:601 EEG Response time: 244.0705 ms
+2024-01-05_14:31:30:690 EMG Response Time: 286.2382 ms
+Stop turning
+stop
+2024-01-05_14:31:30:813 EEG Response time: 217.0886 ms
+2024-01-05_14:31:30:982 EMG Response Time: 295.5244 ms
+Stop turning
+stop
+2024-01-05_14:31:31:037 EEG Response time: 230.2281 ms
+2024-01-05_14:31:31:270 EMG Response Time: 290.708 ms
+2024-01-05_14:31:31:274 EEG Response time: 243.7351 ms
+Stop turning
+2024-01-05_14:31:31:490 EEG Response time: 222.3712 ms
+2024-01-05_14:31:31:567 EMG Response Time: 300.351 ms
+Stop turning
+stop
+2024-01-05_14:31:31:719 EEG Response time: 234.969 ms
+2024-01-05_14:31:31:860 EMG Response Time: 295.3978 ms
+Stop turning
+stop
+2024-01-05_14:31:31:951 EEG Response time: 218.9189 ms
+2024-01-05_14:31:32:158 EMG Response Time: 301.5436 ms
+Turn left
+stop
+2024-01-05_14:31:32:164 EEG Response time: 218.9112 ms
+2024-01-05_14:31:32:393 EEG Response time: 199.0342 ms
+2024-01-05_14:31:32:475 EMG Response Time: 319.2572 ms
+Stop turning
+stop
+2024-01-05_14:31:32:616 EEG Response time: 228.9102 ms
+2024-01-05_14:31:32:763 EMG Response Time: 290.9766 ms
+Turn left
+stop
+2024-01-05_14:31:32:847 EEG Response time: 227.8854 ms
+2024-01-05_14:31:33:092 EMG Response Time: 332.4326 ms
+2024-01-05_14:31:33:068 EEG Response time: 225.4881 ms
+Stop turning
+2024-01-05_14:31:33:350 EMG Response Time: 260.9852 ms
+2024-01-05_14:31:33:308 EEG Response time: 226.3972 ms
+Stop turning
+2024-01-05_14:31:33:519 EEG Response time: 216.9263 ms
+2024-01-05_14:31:33:663 EMG Response Time: 316.1105 ms
+Stop turning
+stop
+2024-01-05_14:31:33:948 EMG Response Time: 287.0927 ms
+Stop turning
+stop
+2024-01-05_14:31:34:158 EEG Response time: 638.0474 ms
+2024-01-05_14:31:34:179 EEG Response time: 26.1512 ms
+2024-01-05_14:31:34:261 EMG Response Time: 315.7183 ms
+2024-01-05_14:31:34:211 EEG Response time: 37.2541 ms
+Stop turning
+2024-01-05_14:31:34:432 EEG Response time: 226.521 ms
+2024-01-05_14:31:34:563 EMG Response Time: 304.3844 ms
+Stop turning
+stop
+2024-01-05_14:31:34:664 EEG Response time: 237.774 ms
+2024-01-05_14:31:34:893 EMG Response Time: 333.3782 ms
+2024-01-05_14:31:34:885 EEG Response time: 227.8129 ms
+Stop turning
+2024-01-05_14:31:35:117 EEG Response time: 219.8396 ms
+2024-01-05_14:31:35:185 EMG Response Time: 295.3035 ms
+Stop turning
+stop
+2024-01-05_14:31:35:340 EEG Response time: 228.9377 ms
+2024-01-05_14:31:35:470 EMG Response Time: 288.2147 ms
+Stop turning
+stop
+2024-01-05_14:31:35:560 EEG Response time: 225.8958 ms
+2024-01-05_14:31:35:764 EMG Response Time: 296.4216 ms
+Turn left
+stop
+2024-01-05_14:31:35:791 EEG Response time: 237.2665 ms
+2024-01-05_14:31:36:030 EEG Response time: 244.8868 ms
+2024-01-05_14:31:36:060 EMG Response Time: 298.4253 ms
+Turn left
+stop
+2024-01-05_14:31:36:231 EEG Response time: 207.4775 ms
+2024-01-05_14:31:36:392 EMG Response Time: 335.4117 ms
+Turn left
+stop
+2024-01-05_14:31:36:482 EEG Response time: 238.2367 ms
+2024-01-05_14:31:36:676 EEG Response time: 200.9042 ms
+2024-01-05_14:31:36:716 EMG Response Time: 326.2301 ms
+Turn left
+stop
+2024-01-05_14:31:36:924 EEG Response time: 238.2379 ms
+2024-01-05_14:31:36:994 EMG Response Time: 281.4233 ms
+Turn left
+stop
+2024-01-05_14:31:37:144 EEG Response time: 225.2305 ms
+2024-01-05_14:31:37:277 EMG Response Time: 286.3282 ms
+Stop turning
+stop
+2024-01-05_14:31:37:366 EEG Response time: 226.491 ms
+2024-01-05_14:31:37:586 EMG Response Time: 311.0438 ms
+2024-01-05_14:31:37:598 EEG Response time: 235.7524 ms
+Turn left
+2024-01-05_14:31:37:880 EMG Response Time: 296.8818 ms
+Stop turning
+stop
+2024-01-05_14:31:38:141 EMG Response Time: 262.821 ms
+2024-01-05_14:31:38:173 EEG Response time: 579.5374 ms
+Turn left
+2024-01-05_14:31:38:194 EEG Response time: 26.4363 ms
+2024-01-05_14:31:38:273 EEG Response time: 85.2639 ms
+2024-01-05_14:31:38:480 EMG Response Time: 341.1109 ms
+2024-01-05_14:31:38:493 EEG Response time: 226.4994 ms
+Turn left
+2024-01-05_14:31:38:715 EEG Response time: 209.5495 ms
+2024-01-05_14:31:38:799 EMG Response Time: 321.8555 ms
+Turn left
+stop
+2024-01-05_14:31:38:945 EEG Response time: 235.8947 ms
+2024-01-05_14:31:39:078 EMG Response Time: 282.7395 ms
+Turn left
+stop
+2024-01-05_14:31:39:196 EEG Response time: 238.2418 ms
+2024-01-05_14:31:39:371 EMG Response Time: 295.3245 ms
+Stop turning
+stop
+2024-01-05_14:31:39:399 EEG Response time: 208.0676 ms
+2024-01-05_14:31:39:646 EEG Response time: 235.9273 ms
+2024-01-05_14:31:39:667 EMG Response Time: 299.3634 ms
+Stop turning
+stop
+2024-01-05_14:31:39:865 EEG Response time: 224.7597 ms
+2024-01-05_14:31:39:987 EMG Response Time: 321.8247 ms
+Stop turning
+stop
+2024-01-05_14:31:40:086 EEG Response time: 225.7826 ms
+2024-01-05_14:31:40:280 EMG Response Time: 295.6243 ms
+2024-01-05_14:31:40:308 EEG Response time: 227.669 ms
+Stop turning
+2024-01-05_14:31:40:540 EEG Response time: 237.5147 ms
+2024-01-05_14:31:40:584 EMG Response Time: 306.9804 ms
+Stop turning
+stop
+2024-01-05_14:31:40:753 EEG Response time: 219.5087 ms
+2024-01-05_14:31:40:880 EMG Response Time: 299.2563 ms
+Stop turning
+stop
+2024-01-05_14:31:40:984 EEG Response time: 219.7023 ms
+2024-01-05_14:31:41:163 EMG Response Time: 286.1947 ms
+Stop turning
+stop
+2024-01-05_14:31:41:203 EEG Response time: 225.8696 ms
+2024-01-05_14:31:41:434 EEG Response time: 218.4624 ms
+2024-01-05_14:31:41:463 EMG Response Time: 303.0501 ms
+Stop turning
+stop
+2024-01-05_14:31:41:654 EEG Response time: 225.6687 ms
+2024-01-05_14:31:41:799 EMG Response Time: 338.1421 ms
+Stop turning
+stop
+2024-01-05_14:31:42:045 EMG Response Time: 248.9555 ms
+Stop turning
+stop
+2024-01-05_14:31:42:286 EEG Response time: 621.5218 ms
+2024-01-05_14:31:42:371 EMG Response Time: 329.3864 ms
+2024-01-05_14:31:42:311 EEG Response time: 31.8128 ms
+Stop turning
+2024-01-05_14:31:42:346 EEG Response time: 39.1296 ms
+2024-01-05_14:31:42:555 EEG Response time: 215.1592 ms
+2024-01-05_14:31:42:662 EMG Response Time: 294.1782 ms
+Stop turning
+stop
+2024-01-05_14:31:42:795 EEG Response time: 228.6467 ms
+2024-01-05_14:31:43:010 EMG Response Time: 349.5572 ms
+2024-01-05_14:31:43:033 EEG Response time: 243.0817 ms
+Stop turning
+2024-01-05_14:31:43:245 EMG Response Time: 238.6697 ms
+Turn left
+stop
+2024-01-05_14:31:43:257 EEG Response time: 227.7207 ms
+2024-01-05_14:31:43:470 EEG Response time: 217.9426 ms
+2024-01-05_14:31:43:577 EMG Response Time: 333.8577 ms
+Turn left
+stop
+2024-01-05_14:31:43:706 EEG Response time: 242.1195 ms
+2024-01-05_14:31:43:869 EMG Response Time: 294.5613 ms
+Stop turning
+stop
+2024-01-05_14:31:43:920 EEG Response time: 219.9755 ms
+2024-01-05_14:31:44:167 EMG Response Time: 301.0985 ms
+2024-01-05_14:31:44:158 EEG Response time: 228.2424 ms
+Stop turning
+2024-01-05_14:31:44:378 EEG Response time: 225.6662 ms
+2024-01-05_14:31:44:461 EMG Response Time: 296.7297 ms
+Stop turning
+stop
+2024-01-05_14:31:44:609 EEG Response time: 218.4663 ms
+2024-01-05_14:31:44:779 EMG Response Time: 321.2123 ms
+Stop turning
+stop
+2024-01-05_14:31:44:821 EEG Response time: 217.8028 ms
+2024-01-05_14:31:45:061 EEG Response time: 218.3197 ms
+2024-01-05_14:31:45:086 EMG Response Time: 309.1721 ms
+Stop turning
+stop
+2024-01-05_14:31:45:279 EEG Response time: 224.0637 ms
+2024-01-05_14:31:45:375 EMG Response Time: 291.304 ms
+Stop turning
+stop
+2024-01-05_14:31:45:516 EEG Response time: 221.8465 ms
+2024-01-05_14:31:45:683 EMG Response Time: 311.2725 ms
+Stop turning
+stop
+2024-01-05_14:31:45:730 EEG Response time: 219.0289 ms
+2024-01-05_14:31:45:947 EMG Response Time: 265.7709 ms
+Stop turning
+stop
+2024-01-05_14:31:46:172 EEG Response time: 430.2589 ms
+2024-01-05_14:31:46:201 EEG Response time: 35.39 ms
+2024-01-05_14:31:46:279 EMG Response Time: 334.4182 ms
+Stop turning
+stop
+2024-01-05_14:31:46:411 EEG Response time: 217.1594 ms
+2024-01-05_14:31:46:596 EMG Response Time: 320.854 ms
+Turn left
+stop
+2024-01-05_14:31:46:642 EEG Response time: 236.7675 ms
+2024-01-05_14:31:46:855 EMG Response Time: 261.8679 ms
+2024-01-05_14:31:46:862 EEG Response time: 226.628 ms
+Turn left
+2024-01-05_14:31:47:083 EEG Response time: 226.9203 ms
+2024-01-05_14:31:47:177 EMG Response Time: 325.3925 ms
+Turn left
+stop
+2024-01-05_14:31:47:488 EMG Response Time: 313.5757 ms
+Turn left
+stop
+2024-01-05_14:31:47:752 EMG Response Time: 267.303 ms
+2024-01-05_14:31:48:172 EEG Response time: 1077.0333 ms
+Stop turning
+2024-01-05_14:31:48:085 EMG Response Time: 334.6388 ms
+2024-01-05_14:31:48:198 EEG Response time: 32.201 ms
+Turn left
+2024-01-05_14:31:48:226 EEG Response time: 35.4265 ms
+2024-01-05_14:31:48:253 EEG Response time: 32.6968 ms
+2024-01-05_14:31:48:406 EMG Response Time: 324.2645 ms
+2024-01-05_14:31:48:281 EEG Response time: 33.4529 ms
+Stop turning
+2024-01-05_14:31:48:435 EEG Response time: 162.9223 ms
+2024-01-05_14:31:48:647 EMG Response Time: 242.5949 ms
+Turn left
+stop
+2024-01-05_14:31:48:677 EEG Response time: 229.3203 ms
+2024-01-05_14:31:48:907 EEG Response time: 235.9834 ms
+2024-01-05_14:31:48:956 EMG Response Time: 311.6837 ms
+Turn left
+stop
+2024-01-05_14:31:49:129 EEG Response time: 227.3829 ms
+2024-01-05_14:31:49:286 EMG Response Time: 332.4691 ms
+Turn left
+stop
+2024-01-05_14:31:49:349 EEG Response time: 226.6032 ms
+2024-01-05_14:31:49:542 EMG Response Time: 258.0432 ms
+Stop turning
+stop
+2024-01-05_14:31:49:575 EEG Response time: 214.5433 ms
+2024-01-05_14:31:49:806 EEG Response time: 235.9322 ms
+2024-01-05_14:31:49:883 EMG Response Time: 343.9889 ms
+Stop turning
+stop
+2024-01-05_14:31:50:025 EEG Response time: 205.629 ms
+2024-01-05_14:31:50:177 EMG Response Time: 297.8397 ms
+Stop turning
+stop
+2024-01-05_14:31:50:258 EEG Response time: 237.3333 ms
+2024-01-05_14:31:50:478 EEG Response time: 207.9181 ms
+2024-01-05_14:31:50:481 EMG Response Time: 306.5349 ms
+Turn left
+stop
+2024-01-05_14:31:50:701 EEG Response time: 228.8621 ms
+2024-01-05_14:31:50:766 EMG Response Time: 288.6298 ms
+Stop turning
+stop
+2024-01-05_14:31:50:949 EEG Response time: 227.1567 ms
+2024-01-05_14:31:51:087 EMG Response Time: 323.552 ms
+Turn left
+stop
+2024-01-05_14:31:51:161 EEG Response time: 218.3574 ms
+2024-01-05_14:31:51:377 EMG Response Time: 292.4619 ms
+2024-01-05_14:31:51:390 EEG Response time: 217.1511 ms
+Stop turning
+2024-01-05_14:31:51:666 EMG Response Time: 292.0541 ms
+2024-01-05_14:31:51:631 EEG Response time: 244.4327 ms
+Stop turning
+2024-01-05_14:31:51:849 EEG Response time: 224.2105 ms
+2024-01-05_14:31:51:959 EMG Response Time: 295.1769 ms
+Turn left
+stop
+2024-01-05_14:31:52:072 EEG Response time: 227.8556 ms
+2024-01-05_14:31:52:266 EMG Response Time: 309.597 ms
+Turn left
+stop
+2024-01-05_14:31:52:295 EEG Response time: 229.8335 ms
+2024-01-05_14:31:52:523 EEG Response time: 234.2514 ms
+2024-01-05_14:31:52:549 EMG Response Time: 285.6963 ms
+Turn left
+stop
+2024-01-05_14:31:52:754 EEG Response time: 236.731 ms
+2024-01-05_14:31:52:864 EMG Response Time: 318.4784 ms
+Turn left
+stop
+2024-01-05_14:31:52:973 EEG Response time: 225.4526 ms
+2024-01-05_14:31:53:180 EMG Response Time: 318.8848 ms
+Turn left
+stop
+2024-01-05_14:31:53:205 EEG Response time: 216.9419 ms
+2024-01-05_14:31:53:426 EEG Response time: 224.514 ms
+2024-01-05_14:31:53:484 EMG Response Time: 307.5188 ms
+Turn left
+stop
+2024-01-05_14:31:53:654 EEG Response time: 217.3 ms
+2024-01-05_14:31:53:752 EMG Response Time: 270.7364 ms
+Stop turning
+stop
+2024-01-05_14:31:53:874 EEG Response time: 226.1118 ms
+2024-01-05_14:31:54:072 EMG Response Time: 322.4035 ms
+Turn left
+stop
+2024-01-05_14:31:54:170 EEG Response time: 279.9108 ms
+2024-01-05_14:31:54:315 EEG Response time: 155.2445 ms
+2024-01-05_14:31:54:376 EMG Response Time: 307.3309 ms
+Turn left
+stop
+2024-01-05_14:31:54:553 EEG Response time: 226.0407 ms
+2024-01-05_14:31:54:663 EMG Response Time: 289.2605 ms
+Stop turning
+stop
+2024-01-05_14:31:54:766 EEG Response time: 217.0849 ms
+2024-01-05_14:31:54:978 EMG Response Time: 317.806 ms
+Turn left
+stop
+2024-01-05_14:31:55:007 EEG Response time: 229.3206 ms
+2024-01-05_14:31:55:237 EEG Response time: 233.3749 ms
+2024-01-05_14:31:55:253 EMG Response Time: 278.4983 ms
+Stop turning
+stop
+2024-01-05_14:31:55:566 EMG Response Time: 315.7073 ms
+Turn left
+stop
+2024-01-05_14:31:55:849 EMG Response Time: 286.2355 ms
+2024-01-05_14:31:56:162 EEG Response time: 928.7915 ms
+Turn left
+2024-01-05_14:31:56:165 EMG Response Time: 318.8078 ms
+2024-01-05_14:31:56:187 EEG Response time: 32.0889 ms
+Turn left
+2024-01-05_14:31:56:209 EEG Response time: 28.1328 ms
+2024-01-05_14:31:56:231 EEG Response time: 29.1583 ms
+2024-01-05_14:31:56:362 EEG Response time: 135.3518 ms
+2024-01-05_14:31:56:495 EMG Response Time: 333.1972 ms
+Stop turning
+stop
+2024-01-05_14:31:56:583 EEG Response time: 227.4478 ms
+2024-01-05_14:31:56:782 EMG Response Time: 290.1002 ms
+Stop turning
+stop
+2024-01-05_14:31:56:814 EEG Response time: 219.6267 ms
+2024-01-05_14:31:57:080 EMG Response Time: 300.8045 ms
+2024-01-05_14:31:57:034 EEG Response time: 226.882 ms
+Stop turning
+2024-01-05_14:31:57:273 EEG Response time: 238.5078 ms
+2024-01-05_14:31:57:346 EMG Response Time: 268.7934 ms
+Turn left
+stop
+2024-01-05_14:31:57:495 EEG Response time: 227.9393 ms
+2024-01-05_14:31:57:651 EMG Response Time: 306.9049 ms
+Turn left
+stop
+2024-01-05_14:31:57:969 EMG Response Time: 321.4107 ms
+Turn left
+stop
+2024-01-05_14:31:58:189 EEG Response time: 699.6872 ms
+2024-01-05_14:31:58:215 EEG Response time: 32.4966 ms
+2024-01-05_14:31:58:303 EMG Response Time: 337.0776 ms
+2024-01-05_14:31:58:240 EEG Response time: 31.8122 ms
+Turn left
+2024-01-05_14:31:58:411 EEG Response time: 177.3817 ms
+2024-01-05_14:31:58:582 EMG Response Time: 282.3083 ms
+Turn left
+stop
+2024-01-05_14:31:58:631 EEG Response time: 224.408 ms
+2024-01-05_14:31:58:844 EEG Response time: 217.0825 ms
+2024-01-05_14:31:58:903 EMG Response Time: 323.5908 ms
+Stop turning
+stop
+2024-01-05_14:31:59:086 EEG Response time: 229.914 ms
+2024-01-05_14:31:59:166 EMG Response Time: 265.9182 ms
+Stop turning
+stop
+2024-01-05_14:31:59:298 EEG Response time: 215.8532 ms
+2024-01-05_14:31:59:451 EMG Response Time: 288.7106 ms
+Stop turning
+stop
+2024-01-05_14:31:59:530 EEG Response time: 227.3601 ms
+2024-01-05_14:31:59:742 EMG Response Time: 293.8778 ms
+2024-01-05_14:32:00:177 EEG Response time: 652.951 ms
+Turn left
+2024-01-05_14:32:00:076 EMG Response Time: 336.6334 ms
+2024-01-05_14:32:00:198 EEG Response time: 26.3653 ms
+Turn left
+2024-01-05_14:32:00:222 EEG Response time: 29.566 ms
+2024-01-05_14:32:00:401 EMG Response Time: 327.6423 ms
+Turn left
+stop
+Cleaning up resources...
+2024-01-05_14:32:00:477 EMG Processing, receieved stop command
+2024-01-05_14:32:00:478 EMG save, stop command received. Closing file
+2024-01-05_14:32:00:697 EMG Worker, received stop command
+2024-01-05_14:32:00:704 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-05_14:32:00:435 EEG Response time: 218.2578 ms
+2024-01-05_14:32:00:476 EEG Processing, receieved stop command
+2024-01-05_14:32:00:477 EEG Worker, receieved stop command
+2024-01-05_14:32:00:478 EEG Save, receieved stop command. Closing file
+2024-01-05_14:32:00:496 EEG Worker, sampleRate: 194.9804 PacketLoss: 1 PacketLoss %: 0.0039803
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

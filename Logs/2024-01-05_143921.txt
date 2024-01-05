@@ -1,0 +1,35 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Parallel pool using the 'Processes' profile is shutting down.
+
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.cluster.wait')" style="font-weight:bold">parallel.internal.cluster.wait</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.Job/doWait', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\@Job\Job.m', 666)" style="font-weight:bold">parallel.Job/doWait</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\@Job\Job.m',666,0)">line 666</a>)
+            ok = parallel.internal.cluster.wait( job, varargin{:} );
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.Job/wait', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\@Job\Job.m', 1296)" style="font-weight:bold">parallel.Job/wait</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\@Job\Job.m',1296,0)">line 1296</a>)
+                ok = job.doWait( state, timeout );
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.CppBackedSession/waitForConnections', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\CppBackedSession.m', 194)" style="font-weight:bold">parallel.internal.pool.CppBackedSession/waitForConnections</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\CppBackedSession.m',194,0)">line 194</a>)
+                wait(job, 'running', 0.1);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.AbstractInteractiveClient/start', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\AbstractInteractiveClient.m', 133)" style="font-weight:bold">parallel.internal.pool.AbstractInteractiveClient/start</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\AbstractInteractiveClient.m',133,0)">line 133</a>)
+                    session.waitForConnections(spmdInitialized, obj.buildCheckFcn(), obj.ParallelJob);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.AbstractClusterPool>iStartClient', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m', 831)" style="font-weight:bold">parallel.internal.pool.AbstractClusterPool>iStartClient</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m',831,0)">line 831</a>)
+spmdInitialized = client.start(sessionBuildFcn, sessionInfo, numWorkers, cluster, ...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.AbstractClusterPool.hBuildPool', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m', 626)" style="font-weight:bold">parallel.internal.pool.AbstractClusterPool.hBuildPool</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m',626,0)">line 626</a>)
+                iStartClient(client, sessionInfo, forceSpmdEnabled, cluster, supportRestart, argsList);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel.internal.pool.doParpool', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\doParpool.m', 22)" style="font-weight:bold">parallel.internal.pool.doParpool</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\+parallel\+internal\+pool\doParpool.m',22,0)">line 22</a>)
+    pool = parallel.internal.pool.AbstractClusterPool.hBuildPool(constructorArgs{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parpool', 'C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\parpool.m', 118)" style="font-weight:bold">parpool</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023b\toolbox\parallel\cluster\parpool.m',118,0)">line 118</a>)
+    pool = parallel.internal.pool.doParpool(sessionInfo, varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m', 48)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Pontus\workspace_v12\ELA411\ganglion_stream\main.m',48,0)">line 48</a>)
+poolobj = parpool('Processes', 8);
+} 
+delete(gcp('nocreate'));
+main

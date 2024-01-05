@@ -1,6 +1,6 @@
 clear, clc;
-name = 'Carl';
-setting = '2_channels_new_placement';
+name = 'Viktor';
+setting = 'Ch_1_longitude_Ch_2_transverse';
 session = [name,'-', setting];
 % Initialize DAQ
 d = daq("ni");
@@ -52,3 +52,8 @@ while true
 end
 fclose(fileID);
 stop(d);
+
+
+
+
+

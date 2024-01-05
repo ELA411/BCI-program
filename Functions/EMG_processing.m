@@ -16,7 +16,7 @@ emg_fs = 1000;
 [n_emg, d_emg, notchFilt_50_emg, notchFilt_100_emg, notchFilt_150_emg] = emg_real_time_processing_init(emg_fs);
 % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 send(EMG_main_queue, 'ready');
-
+responseTimeBuffer = [];
 % Wait for start command 
 while true
     [trigger, flag] = poll(EMG_processing_queue, 0.1);
@@ -52,8 +52,15 @@ while true
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing Time: ', num2str(toc()*1000),' ms']);
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Prediction: ', num2str(prediction)]);
         end
-        send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Response Time: ', num2str(toc()*1000+samplingtime),' ms']);
+        responsetime = toc()*1000 + samplingtime;
+        responseTimeBuffer = [responseTimeBuffer; responsetime];
+        % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Response Time: ', num2str(toc()*1000+samplingtime),' ms']);
         send(EMG_prediction_queue, prediction);
     end
 end
+averageResponseTime = mean(responseTimeBuffer);
+stdResponseTime = std(responseTimeBuffer);
+send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG average Response Time: ', num2str(averageResponseTime),' ms']);
+send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG standar deviation Response time: ', num2str(stdResponseTime),' ms']);
+
 end
