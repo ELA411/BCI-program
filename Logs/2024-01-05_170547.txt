@@ -1,0 +1,283 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_17:06:29:544 pEMG_processing started
+2024-01-05_17:06:29:749 pEMG_save started
+2024-01-05_17:06:36:351 pEMG_worker started
+2024-01-05_17:06:36:792 pEEG_save started
+2024-01-05_17:06:40:318 pEEG_processing started
+2024-01-05_17:06:44:049 pEEG_worker started
+2024-01-05_17:06:44:051 All processes started
+2024-01-05_17:06:36:366 EMG Worker checking for start
+2024-01-05_17:06:44:066 EMG Worker start command receieved
+2024-01-05_17:06:44:063 EEG Save, receieved start command
+2024-01-05_17:06:44:068 EMG Save, receieved start command
+2024-01-05_17:06:44:067 EEG Worker, receieved start command
+2024-01-05_17:06:44:152 EMG Processing, receieved start command
+2024-01-05_17:06:44:144 EEG Processing, receieved start command
+2024-01-05_17:06:45:205 EEG Worker, Lost sample: 199
+Turn left
+Turn right
+stop
+Stop turning
+stop
+Stop turning
+Stop turning
+Turn right
+Stop turning
+Stop turning
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+Turn right
+stop
+Stop turning
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Turn right
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+Stop turning
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Stop turning
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Stop turning
+Stop turning
+Stop turning
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+Turn right
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+stop
+Stop turning
+Stop turning
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Stop turning
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Stop turning
+stop
+Stop turning
+stop
+Turn right
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Stop turning
+stop
+Stop turning
+stop
+Turn right
+stop
+Turn right
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Turn right
+stop
+Stop turning
+Stop turning
+Turn right
+stop
+Stop turning
+Cleaning up resources...
+    "Runtime: "    "62959.7164"
+
+2024-01-05_17:07:47:037 EMG save, stop command received. Closing file
+2024-01-05_17:07:47:041 EMG Processing, receieved stop command
+2024-01-05_17:07:47:061 EMG average Response Time: 432.0836 ms
+2024-01-05_17:07:47:070 EMG standar deviation Response time: 197.3655 ms
+2024-01-05_17:07:47:096 EMG Worker, received stop command
+2024-01-05_17:07:47:106 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-05_17:07:47:037 EEG Worker, receieved stop command
+2024-01-05_17:07:47:038 EEG Save, receieved stop command. Closing file
+2024-01-05_17:07:47:038 EEG Processing, receieved stop command
+2024-01-05_17:07:47:060 EEG Worker, sampleRate: 194.9831 PacketLoss: 1 PacketLoss %: 0.007977
+2024-01-05_17:07:47:063 EEG average Response Time: 235.0329 ms
+2024-01-05_17:07:47:076 EEG standar deviation Response time: 101.1376 ms
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

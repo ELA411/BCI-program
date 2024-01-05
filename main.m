@@ -39,8 +39,8 @@ eeg_classifier = load('..\processing\trained_classifiers\eeg_classifier.mat');
 W = load('..\processing\saved_variables\W_matrix.mat');
 % ---------------------------------------------------------------------
 % Configure the name of the save file with useful information
-name = 'Viktor';
-setting = 'Run';
+name = 'Pontus';
+setting = 'Online-Run';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % If no pool exists, create a new one
@@ -182,6 +182,7 @@ prediction_interval = 0.5; % Interval in seconds for collecting predictions
 last_prediction_time = tic; % Start a timer
 last_emg_prediction = -1;
 last_eeg_prediction = -1;
+runtime = tic;
 % Main processing loop
 while ~stopRequested
 
@@ -262,6 +263,7 @@ end
 
 % Perform cleanup
 disp('Cleaning up resources...');
+disp(['Runtime: ', num2str(toc(runtime)*1000)]);
 send(EEG_save_queue, 'stop');
 send(EEG_processing_queue, 'stop');
 send(EEG_worker_queue, 'stop');

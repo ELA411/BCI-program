@@ -1,0 +1,561 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+2024-01-05_17:53:25:949 pEMG_processing started
+2024-01-05_17:53:26:492 pEMG_save started
+2024-01-05_17:53:51:892 pEMG_worker started
+2024-01-05_17:53:52:706 pEEG_save started
+2024-01-05_17:54:00:679 pEEG_processing started
+2024-01-05_17:54:06:045 pEEG_worker started
+2024-01-05_17:54:06:051 All processes started
+2024-01-05_17:53:51:911 EMG Worker checking for start
+2024-01-05_17:54:06:084 EEG Worker, receieved start command
+2024-01-05_17:54:06:088 EMG Worker start command receieved
+2024-01-05_17:54:06:081 EEG Save, receieved start command
+2024-01-05_17:54:06:095 EMG Save, receieved start command
+2024-01-05_17:54:06:216 EEG Processing, receieved start command
+2024-01-05_17:54:06:236 EMG Processing, receieved start command
+2024-01-05_17:54:07:378 EEG Worker, Lost sample: 199
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn right
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn right
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Turn left
+Drive forward
+Drive forward
+Drive forward
+Turn right
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Turn left
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+stop
+Drive forward
+Drive forward
+Drive forward
+Stop turning
+Drive forward
+Drive forward
+Cleaning up resources...
+Runtime: 81486.4844
+2024-01-05_17:55:27:640 EMG save, stop command received. Closing file
+2024-01-05_17:55:27:647 EMG Processing, receieved stop command
+2024-01-05_17:55:27:691 EMG average Response Time: 818.0296 ms
+2024-01-05_17:55:27:700 EMG Worker, received stop command
+2024-01-05_17:55:27:708 EMG standar deviation Response time: 423.7263 ms
+2024-01-05_17:55:27:718 EMG Worker, sampleRate: 1000 PacketLoss: 0 PacketLoss %: 0
+2024-01-05_17:55:27:639 EEG Worker, receieved stop command
+2024-01-05_17:55:27:640 EEG Save, receieved stop command. Closing file
+2024-01-05_17:55:27:641 EEG Processing, receieved stop command
+2024-01-05_17:55:27:682 EEG Worker, sampleRate: 195.5985 PacketLoss: 1 PacketLoss %: 0.0061569
+2024-01-05_17:55:27:692 EEG average Response Time: 243.6664 ms
+2024-01-05_17:55:27:716 EEG standar deviation Response time: 149.6778 ms
+Parallel pool using the 'Processes' profile is shutting down.
+Cleanup done.

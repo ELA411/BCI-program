@@ -1,5 +1,5 @@
 clear, clc;
-name = 'Viktor';
+name = 'Pontus';
 setting = 'Ch_1_longitude_Ch_2_transverse';
 session = [name,'-', setting];
 % Initialize DAQ

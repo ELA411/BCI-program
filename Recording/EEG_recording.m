@@ -1,5 +1,5 @@
 
-name = 'Carl';
+name = 'Pontus';
 setting = 'Left_side_cluster_50_reps';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
