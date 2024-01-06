@@ -52,7 +52,7 @@ board_shim.start_stream(10000, '');
 % ---------------------------------------------------------------------
 % Main loop
 % ---------------------------------------------------------------------
-overlapSamples = round(0.025 * 200)-1; % Assuming Fs is your sampling frequency
+overlapSamples = round(0.025 * 200); 
 prevVoltage = []; % Initialize an array to store the overlapping data
 firstIteration = true;
 overSampling = false;
@@ -87,9 +87,7 @@ while true
         end
 
         if samples >= threshold
-
             sampleRate = 1/mean(diff(eegBuffer(:,6)));
-
             packageIds = eegBuffer(:, 5); % Assuming 5th column contains package IDs
             for i = 4:2:length(packageIds) % Starting from the 4th element and checking every second element
                 expectedNextId = mod(packageIds(i-2) - 100 + 1, 100) + 100; % Calculate the expected next ID with wrap-around

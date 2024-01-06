@@ -10,7 +10,7 @@
 function EMG_processing(EMG_main_queue, EMG_prediction_queue, emg_classifier, debug)
 EMG_processing_queue = parallel.pool.PollableDataQueue; % Queue for processing
 send(EMG_main_queue, EMG_processing_queue);
-emg_fs = 1000;
+emg_fs = 1000; % Sample rate
 % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % Carl
 [n_emg, d_emg, notchFilt_50_emg, notchFilt_100_emg, notchFilt_150_emg] = emg_real_time_processing_init(emg_fs);
@@ -32,7 +32,6 @@ while true
     % Check for data windows
     [emg_data, dataReceived] = poll(EMG_processing_queue, 0);
     if dataReceived
-        
         if debug
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing, data received: ', num2str(size(emg_data, 1))]);
         end
@@ -41,8 +40,8 @@ while true
             break;
         end
         % The last row contains the sampling time
-        samplingtime = emg_data(end,1);
-        emg_data(end,:) = [];
+        samplingtime = emg_data(end,1); % save sampling time
+        emg_data(end,:) = []; % Remove last row
         tic; % Start timer
         % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         % Carl
@@ -52,15 +51,14 @@ while true
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Processing Time: ', num2str(toc()*1000),' ms']);
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Prediction: ', num2str(prediction)]);
         end
-        responsetime = toc()*1000 + samplingtime;
-        responseTimeBuffer = [responseTimeBuffer; responsetime];
-        % send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Response Time: ', num2str(toc()*1000+samplingtime),' ms']);
-        send(EMG_prediction_queue, prediction);
+        responsetime = toc()*1000 + samplingtime; % Calculate processing time + sampling time
+        responseTimeBuffer = [responseTimeBuffer; responsetime]; % Store the response times in an array
+        send(EMG_prediction_queue, prediction); % Send the prediction to the main queue
     end
 end
-averageResponseTime = mean(responseTimeBuffer);
-stdResponseTime = std(responseTimeBuffer);
+averageResponseTime = mean(responseTimeBuffer); % Calculate response time
+stdResponseTime = std(responseTimeBuffer); % standard deviation of response time
+% Send to main for printing
 send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG average Response Time: ', num2str(averageResponseTime),' ms']);
 send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG standar deviation Response time: ', num2str(stdResponseTime),' ms']);
-
 end

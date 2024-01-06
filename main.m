@@ -38,13 +38,14 @@ emg_classifier = load('..\processing\trained_classifiers\emg_classifier.mat');
 eeg_classifier = load('..\processing\trained_classifiers\eeg_classifier.mat');
 W = load('..\processing\saved_variables\W_matrix.mat');
 % ---------------------------------------------------------------------
-% Configure the name of the save file with useful information
+% Configure the name of the save file, store with useful information
 name = 'Pontus';
 setting = 'Online-Run';
 session = [name,'-', setting];
 % ---------------------------------------------------------------------
 % If no pool exists, create a new one
-% DAQ toolbox and ganglion cannot run as a threads
+% DAQ toolbox and ganglion cannot run as a threads so we have to use
+% Matlab processes
 poolobj = parpool('Processes', 8);
 % ---------------------------------------------------------------------
 % EMG_processing_queue, sends data to processing process

@@ -24,11 +24,9 @@ while true
         end
     end
 end
-% labelTime = tic; % Start timer for label switching
 while true % Add a condition to break this loop if necessary
     [rawData, msg_received] = poll(EEG_save_queue, 0);
 
-    % Check class of message
     if msg_received
         if debug
             send(EEG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EEG save, writing ', num2str(size(rawData, 1)),' samples to file']);
@@ -49,6 +47,6 @@ while true % Add a condition to break this loop if necessary
         end
     end
 end
-fclose(fileID); % Uncomment if there's a condition to exit the loop
+fclose(fileID);
 end
 

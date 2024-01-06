@@ -22,7 +22,6 @@ overlap = 0.05;
 % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 responseTimeBuffer = [];
 
-counter = 0;
 send(EEG_main_queue, 'ready');
 while true
     [trigger, flag] = poll(EEG_processing_queue, 0.1);
@@ -37,9 +36,6 @@ end
 while true
     [eeg_data, dataReceived] = poll(EEG_processing_queue, 0);
     if dataReceived
-        if debug
-            % send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Processing: LOOPS: ', num2str(counter)]);
-        end
         if strcmp(eeg_data, 'stop')
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')), ' EEG Processing, receieved stop command']);
             break;
@@ -51,15 +47,12 @@ while true
         % Carl
         prediction = eeg_real_time_processing(eeg_data, eeg_fs, window_size, overlap, W, eeg_classifier, n_eeg, d_eeg, notchFilt_50_eeg, notchFilt_100_eeg);
         % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        % counter = counter + 1;
         if debug
-            % send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Processing: LOOPS: ', num2str(counter)]);
             send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Response time: ', num2str(toc()*1000+samplingtime), ' ms']);
         end
         responsetime = toc()*1000 + samplingtime;
         responseTimeBuffer = [responseTimeBuffer; responsetime];
         send(EEG_prediction_queue, prediction);
-        % send(EEG_main_queue, [char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss:SSS')),' EEG Prediction: ', num2str(prediction)]);
     end
 end
 averageResponseTime = mean(responseTimeBuffer);
