@@ -61,7 +61,7 @@ prevVoltage = []; % Initialize an array to store the overlapping data
 firstIteration = true;
 overSampling = false;
 samples = 0;
-threshold = 50;
+threshold = 50; % 0.25*200 = 50, 250 ms window with 200Hz sampling rate
 runtime = 0;
 totalSamples = 0;
 packetLoss = 0;
@@ -107,6 +107,7 @@ while true
             eegBufferProcessing = [eegBufferProcessing; channel1, channel2, channel3, channel4];
         end
 
+        % 50 samples corresponds to a window of 250 ms
         if samples >= threshold % If we have collected enough samples
             % Assign the sampling time to the last place in the matrix for
             % response time calculation
