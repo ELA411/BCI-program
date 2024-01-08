@@ -50,12 +50,11 @@ poolobj = parpool('Processes', 8);
 % ---------------------------------------------------------------------
 % EMG_processing_queue, sends data to processing process
 % EMG_save_queue sends data to writing process
-% EMG_queue sends data to the main process (this script)
-% EMG_command_queue sends data from classifier to this script
+% EMG_main_queue retreieves data sent to the main process (this script)
+% EMG_prediction_queue sends data from classifier to this script
 % ---------------------------------------------------------------------
 EMG_main_queue = parallel.pool.PollableDataQueue; % Initial queue
 EMG_prediction_queue = parallel.pool.PollableDataQueue; % Queue used to receive predictions from EMG classifier
-EMG_time_queue = parallel.pool.PollableDataQueue; % Queue used to receive predictions from EMG classifier
 
 % ---------------------------------------------------------------------
 % EMG_processing dependencies: EMG_classifier_queue, EMG_main_queue
@@ -179,19 +178,18 @@ send(EMG_processing_queue, "start");
 % Initialize variables for collecting predictions
 EEG_predictions = [];
 EMG_predictions = [];
-prediction_interval = 0.5; % Interval in seconds for collecting predictions
+prediction_interval = 0; % Interval in seconds for collecting predictions, 0 sends prediction to turtlebot immedietly
 last_prediction_time = tic; % Start a timer
-last_emg_prediction = -1;
-last_eeg_prediction = -1;
 runtime = tic;
 % Main processing loop
 while ~stopRequested
-
+    % Check for messages in the different queue
     [EMG_debug, flag_EMG_debug] = poll(EMG_main_queue, 0);
     [EEG_debug, flag_EEG_debug] = poll(EEG_main_queue, 0);
     [EMG_prediction, flag_EMG_prediction] = poll(EMG_prediction_queue, 0);
     [EEG_prediction, flag_EEG_prediction] = poll(EEG_prediction_queue, 0);
 
+    % Display messages sent in the main_queues, mainly for debugging
     if flag_EMG_debug && isa(EMG_debug, "char")
         disp(EMG_debug);
     end
@@ -200,16 +198,14 @@ while ~stopRequested
         disp(EEG_debug);
     end
 
-    % Store predictions in an array
+    % Store predictions in an array if a prediction was receieved
     if flag_EEG_prediction || flag_EMG_prediction
         if flag_EEG_prediction
             EEG_predictions(end + 1) = EEG_prediction;
-            % disp(['EEG Prediction: ',num2str(EEG_predictions)])
         end
 
         if flag_EMG_prediction
             EMG_predictions(end + 1) = EMG_prediction;
-            % disp(['EMG Prediction: ',num2str(EMG_predictions)])
         end
     end
     % Check if the interval has passed
@@ -219,7 +215,7 @@ while ~stopRequested
         % Determine the most frequent (mode) prediction
         mode_EEG_prediction = mode(EEG_predictions);
         mode_EMG_prediction = mode(EMG_predictions);
-        if flag_EMG_prediction
+        if flag_EMG_prediction % We got and EMG prediction
             if mode_EMG_prediction == 0
                 disp('Stop turning');
                 msg.angular.x = 0;
@@ -238,30 +234,29 @@ while ~stopRequested
             end
         end
 
-        if flag_EEG_prediction == 0
-            disp('stop');
-            msg.linear.x = 0;
-            msg.linear.y = 0;
-            msg.linear.z = 0;
-        elseif EEG_prediction == 1
-            disp('Drive forward');
-            msg.linear.x = 1;
-            msg.linear.y = 0;
-            msg.linear.z = 0;
+        if flag_EEG_prediction == 0 % We got an EEG prediction
+            if mode_EEG_prediction == 0
+                  disp('stop');
+                  msg.linear.x = 0;
+                  msg.linear.y = 0;
+                  msg.linear.z = 0;
+              elseif mode_EEG_prediction == 1
+                  disp('Drive forward');
+                  msg.linear.x = 1;
+                  msg.linear.y = 0;
+                  msg.linear.z = 0;
+            end
         end
-        % end
         % Reset predictions
         EEG_predictions = [];
         EMG_predictions = [];
-        % last_prediction_time = tic; % Reset timer
-        % disp('Sending to ROS');
-        % msg.angular.z
         send(pub, msg); % Send message to turtlebot with new velocity
     end
     pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
 end
 
 
+% Code below is needed to close the save files correctly
 % Perform cleanup
 disp('Cleaning up resources...');
 disp(['Runtime: ', num2str(toc(runtime)*1000)]);
@@ -273,7 +268,7 @@ send(EMG_save_queue, 'stop');
 send(EMG_processing_queue, 'stop');
 send(EMG_worker_queue, 'stop');
 pause(1);
-while EMG_main_queue.QueueLength ~= 0
+while EMG_main_queue.QueueLength ~= 0 % Retrieve any last messages in the queues
     [trigger, flag] = poll(EMG_main_queue, 0);
     if flag
         disp(trigger);
@@ -286,14 +281,13 @@ while EEG_main_queue.QueueLength ~= 0
     end
 end
 
-pause(5);
-delete(gcp('nocreate'));
+pause(5); 
+delete(gcp('nocreate')); % Delete all the processes
 
 disp('Cleanup done.');
 diary off;
 % Close the figure
 delete(hFig);
-
 
 function stopButtonCallback(hObject, eventdata)
 global stopRequested;

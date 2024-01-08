@@ -8,14 +8,14 @@ hold on;
 % Initialize a buffer for incoming data
 buffer = "";
 
-% Define the sampling rate (samples per second) - replace with your actual rate
-samplingRate = 200; % Example value
+% Define the sampling rate (samples per second) 
+samplingRate = 200; 
 
 % Calculate buffer size for a 5-second window
 bufferSize = 5 * samplingRate;
 
 % Initialize a buffer for EEG data
-% Assuming 4 channels; adjust if different
+% 4 channels
 eegBuffer = cell(1, 4); 
 
 try
