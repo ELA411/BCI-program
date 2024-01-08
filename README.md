@@ -1,4 +1,22 @@
 # ganglion_stream
+## Project structure
+├── Datasets
+├── DebugScripts
+├── Functions
+├── Logs
+├── main.m
+├── README.md
+└── Recording
+### main.m
+Main script to run the program.
+### Datasets
+Contains the datasets for EEG and EMG.
+### Functions
+Scripts used to run the BCI concurrently.
+### Logs
+Contains log files from running the program.
+### Recording
+Scripts used to record datasets for EEG and EMG.
 
 ## Brainflow installation ubuntu
 Clone the brainflow repository
