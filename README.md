@@ -1,14 +1,14 @@
 # ganglion_stream
 ## Project structure
+```
 ├── Datasets
-
 ├── DebugScripts
-
 ├── Functions
 ├── Logs
 ├── main.m
 ├── README.md
 └── Recording
+```
 ### main.m
 Main script to run the program.
 ### Datasets
