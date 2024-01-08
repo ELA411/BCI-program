@@ -1,7 +1,9 @@
 # ganglion_stream
 ## Project structure
 ├── Datasets
+
 ├── DebugScripts
+
 ├── Functions
 ├── Logs
 ├── main.m
