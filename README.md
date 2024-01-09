@@ -1,6 +1,6 @@
 # BCI-program
 ## Dependencies
-- Brainflow API
+- Brainflow API: https://brainflow.readthedocs.io/en/stable/index.html
   
 **Matlab Addons**
 - Data Acquisition Toolbox
