@@ -3,11 +3,16 @@
 - Brainflow API: https://brainflow.readthedocs.io/en/stable/index.html
   
 **Matlab Addons**
-- Data Acquisition Toolbox
-- Data Acquisition Support Package for National Instruments NI-DAQmx Devices
-- Parallel Computing Toolbox
-- ROS Toolbox
-- Common Spatial Patterns
+- Data Acquisition Toolbox: https://se.mathworks.com/products/data-acquisition.html
+- Data Acquisition Support Package for National Instruments NI-DAQmx Devices: https://www.mathworks.com/matlabcentral/fileexchange/45086-data-acquisition-toolbox-support-package-for-national-instruments-ni-daqmx-devices
+- Parallel Computing Toolbox: https://se.mathworks.com/products/parallel-computing.html
+- ROS Toolbox: https://se.mathworks.com/products/ros.html
+- Common Spatial Patterns (CSP): https://se.mathworks.com/matlabcentral/fileexchange/72204-common-spatial-patterns-csp
+- FastICA: https://research.ics.aalto.fi/ica/fastica/
+- Signal Processing Toolbox: https://se.mathworks.com/products/signal.html
+- Wavelet Toolbox: https://se.mathworks.com/products/wavelet.html?s_tid=FX_PR_info
+- wICA(data,varargin): https://se.mathworks.com/matlabcentral/fileexchange/55413-wica-data-varargin
+- EMG Feature Extraction Toolbox: https://se.mathworks.com/matlabcentral/fileexchange/71514-emg-feature-extraction-toolbox
   
 
 ## Project structure
