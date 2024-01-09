@@ -1,4 +1,14 @@
-# ganglion_stream
+# BCI-program
+## Dependencies
+- Brainflow API
+Matlab Addons
+- Data Acquisition Toolbox
+- Data Acquisition Support Package for National Instruments NI-DAQmx Devices
+- Parallel Computing Toolbox
+- ROS Toolbox
+- Common Spatial Patterns
+  
+
 ## Project structure
 ```
 ├── Datasets
@@ -19,27 +29,6 @@ Scripts used to run the BCI concurrently.
 Contains log files from running the program.
 ### Recording
 Scripts used to record datasets for EEG and EMG.
-
-## Brainflow installation ubuntu
-Clone the brainflow repository
-```
-git clone git@github.com:brainflow-dev/brainflow.git
-```
-cd into the repository
-```
-cd brainflow
-```
-create a build directory
-```
-mkdir build && cd build
-```
-build the directory
-```
-cmake ../
-```
-```
-make -si
-```
 
 Start matlab and include in matlab path
 ```
