@@ -2,7 +2,27 @@
 % Author: Pontus Svensson, Viktor Eriksson
 % Date: 2023-12-14
 % Version: 1.0.0
-% License:
+%
+% MIT License
+% Copyright (c) 2024 Pontus Svensson
+% 
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% 
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
 %
 % Description:
 % This script samples the analog input of the NI myDAQ and saves the data
@@ -56,16 +76,16 @@ while true
     % contain overlap from previous samples
     if firstIteration
         starttime = tic;
-        while(size(scanData,1)) ~= 250
+        while(size(scanData,1)) <= 250
             % Read 1 sample every 1 ms, number of samples could also be
             % specified here, but to stay consistent when collecting a
             % dataset for training 1 ms is used.
-            [data, time] = read(d, seconds(0.001), "OutputFormat","Matrix");
+            [data, time] = read(d, seconds(0.25), "OutputFormat","Matrix");
             scanData = [scanData; data];
             timeStamp = [timeStamp; time];
-            firstIteration = false;
             samples = samples + size(scanData,1);
         end
+        firstIteration = false;
         if debug
             send(EMG_main_queue, [char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' EMG Worker, scans read: ', num2str(d.NumScansAcquired)]);
         end
@@ -73,8 +93,8 @@ while true
         % For any other windows we should only collect 225 since we are
         % saving the last 25 samples from previous window, 25 + 225 = 250
         starttime = tic; % Time to collect the samples
-        while(size(scanData,1)) ~= 225
-            [data, time] = read(d, seconds(0.001), "OutputFormat","Matrix");
+        while(size(scanData,1)) <= 225
+            [data, time] = read(d, seconds(0.225), "OutputFormat","Matrix");
             scanData = [scanData; data];
             timeStamp = [timeStamp; time];
             samples = samples + size(scanData,1);
@@ -93,9 +113,13 @@ while true
     % latest samples for each window. Depending on what processes are running on the laptop the time
     % for sampling and processing differs a lot. In some circumstance the
     % sampling and processing runs without problem, this is a limitation
-    % I contribute to matlabs inability to run parallel processes.
-    [save_rest , times]= read(d, d.NumScansAvailable, "OutputFormat","Matrix");
-    voltage_save = [voltage_save; save_rest(:,1), save_rest(:,2), times];
+    % I contribute to matlabs inability to run parallel processes. This is
+    % a makeshift implementation of flushing the buffer since flush(d) is
+    % not able to execute in a process.
+    if d.NumScansAvailable > 0
+        [save_rest , times]= read(d, d.NumScansAvailable, "OutputFormat","Matrix");
+        voltage_save = [voltage_save; save_rest(:,1), save_rest(:,2), times];
+    end
     
     % Calculate the samplerate
     sampleRate = 1/mean(diff(timeStamp));

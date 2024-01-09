@@ -6,22 +6,37 @@ start(d, "Continuous");
 voltage = [];
 starttime = tic();
 runtime = tic();
-overlapSamples = round(0.025 * 1000); % Replace Fs with your actual sampling rate
+voltage_save = [];
+scanData = [];
+timeStamp = [];
+overlapSamples = round(0.025 * 1000); 
 prevVoltage = []; % Initialize an array to store the overlapping data
 firstIteration = true;
-% Really important to start in continuous mode
-while true
+while toc(runtime) <= 10
     % Read data
     if firstIteration
-        [scanData, timeStamp] = read(d, seconds(0.25), "OutputFormat","Matrix");
+        while(size(scanData,1)) <= 250
+            % Read 1 sample every 1 ms, number of samples could also be
+            % specified here, but to stay consistent when collecting a
+            % dataset for training 1 ms is used.
+            [data, time] = read(d, seconds(0.25), "OutputFormat","Matrix");
+            scanData = [scanData; data];
+            timeStamp = [timeStamp; time];
+        end
         firstIteration = false;
     else
-        [scanData, timeStamp] = read(d, seconds(0.225), "OutputFormat","Matrix");
+        % For any other windows we should only collect 225 since we are
+        % saving the last 25 samples from previous window, 25 + 225 = 250
+        while(size(scanData,1)) <= 225
+            [data, time] = read(d, seconds(0.225), "OutputFormat","Matrix");
+            scanData = [scanData; data];
+            timeStamp = [timeStamp; time];
+        end
     end
 
     % Append the previous overlap to the current data
-    voltage = [prevVoltage; scanData(:,1), scanData(:,2), timeStamp]; % Append overlap
-    voltage_save = [scanData(:,1), scanData(:,2), timeStamp]; % Combine with timestamps for saving
+    voltage = [voltage; prevVoltage; scanData(:,1), scanData(:,2), timeStamp]; % Append overlap
+    voltage_save = [voltage_save; scanData(:,1), scanData(:,2), timeStamp]; % Combine with timestamps for saving
 
     % Store last 25 ms of data for the next overlap
     if size(scanData, 1) > overlapSamples
@@ -29,7 +44,9 @@ while true
     else
         prevVoltage = [];
     end
+    scanData = [];
+    timeStamp = [];
 end
 endtime = toc(starttime);
-fprintf("Sample rate: %d\n", int64(1/(endtime/size(voltage,1))));
+fprintf("Sample rate: %f\n", (1/(endtime/size(voltage,1))));
 stop(d);
