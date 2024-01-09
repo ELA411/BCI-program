@@ -21,15 +21,15 @@
 └── Recording
 ```
 ### main.m
-Main script to run the program.
+- Main script to run the program.
 ### Datasets
-Contains the datasets for EEG and EMG.
+- Contains the datasets for EEG and EMG.
 ### Functions
-Scripts used to run the BCI concurrently.
+- Scripts used to run the BCI concurrently.
 ### Logs
-Contains log files from running the program.
+- Contains log files from running the program.
 ### Recording
-Scripts used to record datasets for EEG and EMG.
+- Scripts used to record datasets for EEG and EMG.
 
 # Hardware setup
 **myDAQ and Grove EMG sensors**
@@ -42,3 +42,13 @@ Scripts used to record datasets for EEG and EMG.
 - Flip the dipswitches to downwards position on the ganglion board to combine the references
 - Connect electrodes to ports 1, 2, 3, 4, D_G, and ref
 - Test the connection first using the OpenBCI_GUI, if the connection is working close the session
+# Running the program
+After completing the hardware setup, a wsl session running turtlebot3_gazebo and ROS2 should be started if that is wanted. Otherwise the program should run by itself.
+## Console output
+- Directions sent to the turtlebot
+- Missed package IDs
+- Average sampling + processing time
+```
+debug = true;
+```
+Will output more information to the console.
