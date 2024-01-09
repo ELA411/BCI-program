@@ -1,6 +1,7 @@
 # BCI-program
 ## Dependencies
 - Brainflow API
+  
 Matlab Addons
 - Data Acquisition Toolbox
 - Data Acquisition Support Package for National Instruments NI-DAQmx Devices
