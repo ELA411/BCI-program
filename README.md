@@ -1,6 +1,5 @@
 # BCI-program
 ## Dependencies
-- Brainflow API: https://brainflow.readthedocs.io/en/stable/index.html
   
 **Matlab Addons**
 - Data Acquisition Toolbox: https://se.mathworks.com/products/data-acquisition.html
@@ -10,6 +9,7 @@
 - Common Spatial Patterns (CSP): https://se.mathworks.com/matlabcentral/fileexchange/72204-common-spatial-patterns-csp
 - FastICA: https://research.ics.aalto.fi/ica/fastica/
 - Signal Processing Toolbox: https://se.mathworks.com/products/signal.html
+- Brainflow API: https://brainflow.readthedocs.io/en/stable/index.html
 - Wavelet Toolbox: https://se.mathworks.com/products/wavelet.html?s_tid=FX_PR_info
 - wICA(data,varargin): https://se.mathworks.com/matlabcentral/fileexchange/55413-wica-data-varargin
 - EMG Feature Extraction Toolbox: https://se.mathworks.com/matlabcentral/fileexchange/71514-emg-feature-extraction-toolbox
