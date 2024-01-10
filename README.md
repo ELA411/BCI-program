@@ -59,4 +59,6 @@ debug = true;
 Will output more information to the console.
 # Flowchart
 ![image](https://github.com/ELA411/BCI-program/assets/59138680/b55fd771-0721-420a-b343-67008124585f)
+# Recommendation for future implementations
+- Setup the ganglion board as an internet streamer instead of file. Doing this enables 3 new data transmission such as UDP, LSL, and serial port. This allows for realtime plotting using another program, and the data can be sent to LabView or other real-time optimized interfaces.
 
