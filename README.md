@@ -30,6 +30,7 @@
 ### Datasets
 - Contains the datasets for EEG and EMG.
 - Datasets named Left_Side_cluster is the offline sampled data used for training the classifiers
+- Datsets name Ch_1_longitude_Ch_2_transverse is the offline sampled data used for training the classifiers
 ### Functions
 - Scripts used to run the BCI concurrently.
 ### Logs
