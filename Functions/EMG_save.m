@@ -2,6 +2,11 @@
 % Author: Pontus Svensson
 % Date: 2023-12-14
 % Version: 1.0.0
+% ---------------------------------------------------------------------
+% Description:
+% This script receieves the data read from the NI myDAQ and writes it to
+% file.
+% ---------------------------------------------------------------------
 % MIT License
 % Copyright (c) 2024 Pontus Svensson
 % 
@@ -23,9 +28,7 @@
 % OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 % SOFTWARE.
 %
-% Description:
-% This script receieves the data read from the NI myDAQ and writes it to
-% file
+
 % ---------------------------------------------------------------------
 function EMG_save(EMG_main_queue, session, debug)
 % Queue for checking after data

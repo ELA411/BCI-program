@@ -1,7 +1,12 @@
 % Script Name: EEG_worker.m
 % Author: Pontus Svensson, Viktor Eriksson
-% Date: 2023-12-14
+% Date: 2024-01-10
 % Version: 1.0.0
+% ---------------------------------------------------------------------
+% Description:
+% This script performs all signal acquisition from the ganglion board using
+% the Brainflow API.
+% ---------------------------------------------------------------------
 % MIT License
 % Copyright (c) 2024 Pontus Svensson
 % 
@@ -23,9 +28,7 @@
 % OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 % SOFTWARE.
 %
-% Description:
-% This script performs all signal acquisition from the ganglion board using
-% brainflow api
+
 % ---------------------------------------------------------------------
 function EEG_worker(EEG_processing_queue, EEG_save_queue, EEG_main_queue, session, debug)
 EEG_worker_queue = parallel.pool.PollableDataQueue;
@@ -37,7 +40,7 @@ params = BrainFlowInputParams();
 preset = int32(BrainFlowPresets.DEFAULT_PRESET);
 
 % ---------------------------------------------------------------------
-% Specify the serialport and mac address for brainflow
+% Specify the serialport for the BLED112 Dongle
 % ---------------------------------------------------------------------
 params.serial_port = 'COM9';
 
@@ -57,13 +60,11 @@ board_shim.prepare_session();
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss'); % Format as 'YYYYMMDD_HHMMSS'
 fileName = ['file://Datasets/Brainflow/Brainflow_',session,'_EEG_',char(currentDateTime),'.txt:w'];
 board_shim.add_streamer(fileName, preset);
-eegBuffer = []; % Buffer to store temporary values for data quality calculation
-eegBufferProcessing = [];
-col = 1;
+board_shim.start_stream(10000, ''); % Brainflow ringbuffer, can store 10,000 samples
 
-board_shim.start_stream(10000, '');
-
+% ---------------------------------------------------------------------
 % Wait for start command
+% ---------------------------------------------------------------------
 send(EEG_main_queue, 'ready');
 while true
     [trigger, flag] = poll(EEG_worker_queue);
@@ -74,17 +75,21 @@ while true
         end
     end
 end
+% ---------------------------------------------------------------------
 % Variables
-overlapSamples = round(0.025 * 200); 
+% ---------------------------------------------------------------------
+overlapSamples = round(0.025 * 200); % Samples to overlap with previous window
 prevVoltage = []; % Initialize an array to store the overlapping data
-firstIteration = true;
-overSampling = false;
-samples = 0;
+firstIteration = true; % For the first window, we need to sample 250 ms
+overSampling = false; % Used to check if we have values from previous window to append
+samples = 0; % Track the samples for one window
 threshold = 50; % 0.25*200 = 50, 250 ms window with 200Hz sampling rate
-runtime = 0;
-totalSamples = 0;
-packetLoss = 0;
-
+runtime = 0; % Track the runtime of the proecss
+totalSamples = 0; % Track the total number of samples collected
+packetLoss = 0; % Track the number of packages lost
+eegBuffer = []; % Buffer to store temporary values for data quality calculation
+eegBufferProcessing = []; % Buffer to send for processing
+col = 1; % Used to define column in data received
 % ---------------------------------------------------------------------
 % Main loop
 % ---------------------------------------------------------------------
@@ -129,7 +134,9 @@ while true
         % 50 samples corresponds to a window of 250 ms
         if samples >= threshold % If we have collected enough samples
             % Assign the sampling time to the last place in the matrix for
-            % response time calculation
+            % response time calculation. The message queue copies the data,
+            % and therefore the toc clock cannot be sent to the other
+            % process, meaning some time delay is not taken into account
             samplingtime = toc(runtime)*1000;
             eegBufferProcessing = [eegBufferProcessing; samplingtime,0,0,0];
             
@@ -172,7 +179,7 @@ while true
 
             if firstIteration
                 % Needed samples to save the last 25 ms of a window
-                threshold = 45;
+                threshold = 45; % Threshold is set to 45 since we are saving 5 samples (25 ms) from the previous window
                 firstIteration = false;
             end
         end

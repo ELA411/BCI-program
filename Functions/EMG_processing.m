@@ -1,7 +1,11 @@
 % Script Name: EMG_processing.m
 % Author: Pontus Svensson
-% Date: 2023-12-14
+% Date: 2024-01-10
 % Version: 1.0.0
+% ---------------------------------------------------------------------
+% Description:
+% This script performs all signal processing for EMG.
+% ---------------------------------------------------------------------
 % MIT License
 % Copyright (c) 2024 Pontus Svensson
 % 
@@ -23,8 +27,7 @@
 % OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 % SOFTWARE.
 %
-% Description:
-% This script performs all signal processing for EMG
+
 % ---------------------------------------------------------------------
 function EMG_processing(EMG_main_queue, EMG_prediction_queue, emg_classifier, debug)
 EMG_processing_queue = parallel.pool.PollableDataQueue; % Queue for processing
@@ -61,7 +64,7 @@ while true
         % The last row contains the sampling time
         samplingtime = emg_data(end,1); % save sampling time
         emg_data(end,:) = []; % Remove last row
-        tic; % Start timer
+        tic; % Start timer to measure processing time
         % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         % Carl
         prediction = emg_real_time_processing(emg_data, emg_classifier, n_emg, d_emg, notchFilt_50_emg, notchFilt_100_emg, notchFilt_150_emg);

@@ -2,7 +2,11 @@
 % Author: Pontus Svensson, Viktor Eriksson
 % Date: 2023-12-14
 % Version: 1.0.0
-%
+% ---------------------------------------------------------------------
+% Description:
+% This script samples the analog input of the NI myDAQ and saves the data
+% for real-time processing and offline analysis.
+% ---------------------------------------------------------------------
 % MIT License
 % Copyright (c) 2024 Pontus Svensson
 % 
@@ -24,9 +28,7 @@
 % OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 % SOFTWARE.
 %
-% Description:
-% This script samples the analog input of the NI myDAQ and saves the data
-% for real-time processing and offline analysis
+
 % ---------------------------------------------------------------------
 function EMG_worker(EMG_processing_queue, EMG_save_queue, EMG_main_queue, debug)
 % ---------------------------------------------------------------------
@@ -57,7 +59,7 @@ samples = 0;
 tolerance = 0.0015; % tolerance between consecutive samples
 
 % If the sampling is not set to conitnuous mode, it always has to restart
-% taking an undefined amount of time increasing the response time
+% taking an undefined amount of time increasing the response time.
 start(d,"continuous");
 while true
     % poll the worker queue for data
@@ -80,7 +82,7 @@ while true
             % Read 1 sample every 1 ms, number of samples could also be
             % specified here, but to stay consistent when collecting a
             % dataset for training 1 ms is used.
-            [data, time] = read(d, seconds(0.25), "OutputFormat","Matrix");
+            [data, time] = read(d, seconds(0.001), "OutputFormat","Matrix");
             scanData = [scanData; data];
             timeStamp = [timeStamp; time];
             samples = samples + size(scanData,1);
@@ -94,7 +96,7 @@ while true
         % saving the last 25 samples from previous window, 25 + 225 = 250
         starttime = tic; % Time to collect the samples
         while(size(scanData,1)) <= 225
-            [data, time] = read(d, seconds(0.225), "OutputFormat","Matrix");
+            [data, time] = read(d, seconds(0.001), "OutputFormat","Matrix");
             scanData = [scanData; data];
             timeStamp = [timeStamp; time];
             samples = samples + size(scanData,1);
@@ -109,13 +111,9 @@ while true
     
     % The DAQ continuosly saves samples, and matlab is not fast enough to
     % reliably collect all of them, leaving behind 0 - 75 samples,
-    % therefore we read the last samples remaining samples to only take the
+    % therefore we read the last samples remaining in the buffer, to only use the
     % latest samples for each window. Depending on what processes are running on the laptop the time
-    % for sampling and processing differs a lot. In some circumstance the
-    % sampling and processing runs without problem, this is a limitation
-    % I contribute to matlabs inability to run parallel processes. This is
-    % a makeshift implementation of flushing the buffer since flush(d) is
-    % not able to execute in a process.
+    % for sampling and processing differs a lot.
     if d.NumScansAvailable > 0
         [save_rest , times]= read(d, d.NumScansAvailable, "OutputFormat","Matrix");
         voltage_save = [voltage_save; save_rest(:,1), save_rest(:,2), times];

@@ -3,6 +3,10 @@
 % Date: 2023-12-14
 % Version: 1.0.0
 % 
+% ---------------------------------------------------------------------
+% Description: This script plots the raw data and features from the two EMG
+% sensors and channels respectively.
+% ---------------------------------------------------------------------
 % MIT License
 % Copyright (c) 2024 Pontus Svensson
 % 
@@ -23,9 +27,10 @@
 % LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 % OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 % SOFTWARE.
+% ---------------------------------------------------------------------
 offline = load("Datasets/EMG/EMG_Pontus-Ch_1_longitude_Ch_2_transverse_2024-01-05_180125.txt");
 online = load("Datasets/EMG/EMG_Pontus-Online-Run_2024-01-05_182541.txt");
-raw_emg_data = {offline, online};
+raw_emg_data = {offline, online}; % Store data in cell
 
 emg_fs = 1000; % Replace with your actual sampling frequency
 

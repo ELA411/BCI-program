@@ -1,21 +1,31 @@
 % Script Name: main.m
 % Author: Pontus Svensson
-% Date: 2023-12-14
+% Date: 2024-01-10
 % Version: 1.0.0
-% 
+% ---------------------------------------------------------------------
+% Description: This script handles the creation of the processes and
+% receives the predicitions from the EEG process and EMG process, and then sends commands to the ROS interface.
+% Make sure to start gazebo and turtlebot3 first.
+% The datasets will be save automatically to Dataset folder, specify
+% session parameters to change the name of the datasets
+% debug = true; will provide information from the processes
+% Ending the program is done by pressing the stop button in the gui that
+% pops up. The stop command will make sure all the files are closed and
+% saved properly
+% ---------------------------------------------------------------------
 % MIT License
 % Copyright (c) 2024 Pontus Svensson
-% 
+%
 % Permission is hereby granted, free of charge, to any person obtaining a copy
 % of this software and associated documentation files (the "Software"), to deal
 % in the Software without restriction, including without limitation the rights
 % to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 % copies of the Software, and to permit persons to whom the Software is
 % furnished to do so, subject to the following conditions:
-% 
+%
 % The above copyright notice and this permission notice shall be included in all
 % copies or substantial portions of the Software.
-% 
+%
 % THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 % IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 % FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,41 +34,46 @@
 % OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 % SOFTWARE.
 %
-% Description: This script handles the creation of the processes and
-% receives the predicitions from the EEG process and EMG process, and then sends commands to the ROS interface.
-% Make sure to start gazebo and turtlebot3 first
+
 % ---------------------------------------------------------------------
 clc, clear;
-
+% ---------------------------------------------------------------------
 % Create the GUI
+% ---------------------------------------------------------------------
 hFig = figure('Name', 'Control Panel', 'NumberTitle', 'off', 'CloseRequestFcn', @closeGUI);
 hButton = uicontrol('Style', 'pushbutton', 'String', 'Stop', ...
     'Position', [20 20 100 40], 'Callback', @stopButtonCallback);
-
+% ---------------------------------------------------------------------
 % Global variable to control the loop
+% ---------------------------------------------------------------------
 global stopRequested;
 stopRequested = false;
-
+% ---------------------------------------------------------------------
 % Configure ROS2
+% ---------------------------------------------------------------------
 setenv('ROS_DOMAIN_ID', '30')
 node = ros2node("/matlab_nodec");
 pub = ros2publisher(node, '/cmd_vel', 'geometry_msgs/Twist');
 msg = ros2message(pub);
-
+% ---------------------------------------------------------------------
 % Debug information
+% ---------------------------------------------------------------------
 debug = false;
-
+% ---------------------------------------------------------------------
 % Create a new file to store logs
+% ---------------------------------------------------------------------
 currentDateTime = datetime('now','Format', 'yyyy-MM-dd_HHmmss');
 fileName = ['Logs/',char(currentDateTime), '.txt'];
 diary(fileName);
-
+% ---------------------------------------------------------------------
 % Load variables from trained classifiers
+% ---------------------------------------------------------------------
 emg_classifier = load('..\processing\trained_classifiers\emg_classifier.mat');
 eeg_classifier = load('..\processing\trained_classifiers\eeg_classifier.mat');
 W = load('..\processing\saved_variables\W_matrix.mat');
 % ---------------------------------------------------------------------
 % Configure the name of the save file, store with useful information
+% ---------------------------------------------------------------------
 name = 'Pontus';
 setting = 'Online-Run';
 session = [name,'-', setting];
@@ -66,6 +81,7 @@ session = [name,'-', setting];
 % If no pool exists, create a new one
 % DAQ toolbox and ganglion cannot run as a threads so we have to use
 % Matlab processes
+% ---------------------------------------------------------------------
 poolobj = parpool('Processes', 8);
 % ---------------------------------------------------------------------
 % EMG_processing_queue, sends data to processing process
@@ -75,16 +91,19 @@ poolobj = parpool('Processes', 8);
 % ---------------------------------------------------------------------
 EMG_main_queue = parallel.pool.PollableDataQueue; % Initial queue
 EMG_prediction_queue = parallel.pool.PollableDataQueue; % Queue used to receive predictions from EMG classifier
-
 % ---------------------------------------------------------------------
 % EMG_processing dependencies: EMG_classifier_queue, EMG_main_queue
+% ---------------------------------------------------------------------
 pEMG_processing = parfeval(poolobj, @EMG_processing, 0, EMG_main_queue, EMG_prediction_queue, emg_classifier.emg_classifier, debug); % Process for EMG signal processing
+
 % Make sure the process has started
 while pEMG_processing.State ~= "running"
 end
+% ---------------------------------------------------------------------
 % Do not continue until the pollable queue created by the processing
 % process has been returned, since it is needed as argument for the coming
 % processes
+% ---------------------------------------------------------------------
 while true
     [trigger, flag] = poll(EMG_main_queue, 0.1);
     if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
@@ -95,13 +114,16 @@ while true
         end
     end
 end
-% Information
+
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' pEMG_processing started']);
 % ---------------------------------------------------------------------
 % EMG_save dependencies: EMG_main_queue
+% ---------------------------------------------------------------------
 pEMG_save = parfeval(poolobj, @EMG_save, 0, EMG_main_queue, session, debug); % Process to save data
+
 while pEMG_save.State ~= "running"
 end
+
 while true
     [trigger, flag] = poll(EMG_main_queue, 0.1);
     if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
@@ -112,12 +134,16 @@ while true
         end
     end
 end
+
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')),' pEMG_save started']);
 % ---------------------------------------------------------------------
 % EMG worker dependencies: EMG_processing_queue, EMG_save_queue
+% ---------------------------------------------------------------------
 pEMG_worker = parfeval(poolobj, @EMG_worker, 0, EMG_processing_queue, EMG_save_queue, EMG_main_queue, debug); % Process to read and send data for processing and saving
+
 while pEMG_worker.State ~= "running"
 end
+
 while true
     [trigger, flag] = poll(EMG_main_queue, 0.1);
     if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
@@ -128,17 +154,22 @@ while true
         end
     end
 end
+
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEMG_worker started']);
 % ---------------------------------------------------------------------
 % EEG_queue --> EEG_processing_queue --> EEG_command_queue
 % EEG
+% ---------------------------------------------------------------------
 EEG_main_queue = parallel.pool.PollableDataQueue;
 EEG_prediction_queue = parallel.pool.PollableDataQueue; % Queue used to receive predictions from EEG classifier
 % ---------------------------------------------------------------------
 % EEG_save dependencies: EEG_save_queue
+% ---------------------------------------------------------------------
 pEEG_save = parfeval(poolobj, @EEG_save, 0, EEG_main_queue, session, debug);
+
 while pEEG_save.State ~= "running"
 end
+
 while true
     [trigger, flag] = poll(EEG_main_queue, 0.1);
     if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
@@ -149,12 +180,16 @@ while true
         end
     end
 end
+
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_save started']);
 % ---------------------------------------------------------------------
 % EEG_processing dependencies: EEG_main_queue, EEG_classifier_queue
+% ---------------------------------------------------------------------
 pEEG_processing = parfeval(poolobj, @EEG_processing, 0, EEG_main_queue, EEG_prediction_queue, W.W, eeg_classifier.eeg_classifier, debug); % Process for EEG signal processing
+
 while pEEG_processing.State ~= "running"
 end
+
 while true
     [trigger, flag] = poll(EEG_main_queue, 0.1);
     if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
@@ -165,13 +200,16 @@ while true
         end
     end
 end
+
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_processing started']);
 % ---------------------------------------------------------------------
 % EEG_sampling dependencies: EEG_main_queue, EEG_processing_queue,
 % EEG_save_queue
+% ---------------------------------------------------------------------
 pEEG_worker = parfeval(poolobj, @EEG_worker, 0, EEG_processing_queue, EEG_save_queue, EEG_main_queue, session,debug); % Sampling, brainflow already saves data
 while pEEG_worker.State ~= "running"
 end
+
 while true
     [trigger, flag] = poll(EEG_main_queue, 0.1);
     if flag && isa(trigger, 'parallel.pool.PollableDataQueue')
@@ -182,12 +220,14 @@ while true
         end
     end
 end
+
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' pEEG_worker started']);
 % ---------------------------------------------------------------------
 disp([char(datetime('now', 'Format', 'yyyy-MM-dd_HH:mm:ss:SSS')), ' All processes started']);
 
 % ---------------------------------------------------------------------
 % Start all processes at the same time
+% ---------------------------------------------------------------------
 send(EEG_save_queue, 'start');
 send(EEG_processing_queue, 'start');
 send(EEG_worker_queue, 'start');
@@ -195,21 +235,26 @@ send(EEG_worker_queue, 'start');
 send(EMG_worker_queue, "start");
 send(EMG_save_queue, "start");
 send(EMG_processing_queue, "start");
+% ---------------------------------------------------------------------
 % Initialize variables for collecting predictions
+% ---------------------------------------------------------------------
 EEG_predictions = [];
 EMG_predictions = [];
 prediction_interval = 0; % Interval in seconds for collecting predictions, 0 sends prediction to turtlebot immedietly
 % last_prediction_time = tic; % Start a timer
 runtime = tic;
+% ---------------------------------------------------------------------
 % Main processing loop
+% ---------------------------------------------------------------------
 while ~stopRequested
     % Check for messages in the different queue
     [EMG_debug, flag_EMG_debug] = poll(EMG_main_queue, 0);
     [EEG_debug, flag_EEG_debug] = poll(EEG_main_queue, 0);
     [EMG_prediction, flag_EMG_prediction] = poll(EMG_prediction_queue, 0);
     [EEG_prediction, flag_EEG_prediction] = poll(EEG_prediction_queue, 0);
-
+    % ---------------------------------------------------------------------
     % Display messages sent in the main_queues, mainly for debugging
+    % ---------------------------------------------------------------------
     if flag_EMG_debug && isa(EMG_debug, "char")
         disp(EMG_debug);
     end
@@ -217,8 +262,9 @@ while ~stopRequested
     if flag_EEG_debug && isa(EEG_debug, "char")
         disp(EEG_debug);
     end
-
+    % ---------------------------------------------------------------------
     % Store predictions in an array if a prediction was receieved
+    % ---------------------------------------------------------------------
     if flag_EEG_prediction || flag_EMG_prediction
         if flag_EEG_prediction
             EEG_predictions(end + 1) = EEG_prediction;
@@ -228,11 +274,15 @@ while ~stopRequested
             EMG_predictions(end + 1) = EMG_prediction;
         end
     end
+    % ---------------------------------------------------------------------
     % Check if the interval has passed
     % if toc(last_prediction_time) >= prediction_interval
+    % ---------------------------------------------------------------------
     % Make sure we have some predictions
     if ~isempty(EEG_predictions) || ~isempty(EMG_predictions)
-        % Determine the most frequent (mode) prediction
+        % Determine the most frequent (mode) prediction,
+        % This is necessary if we have a prediction interval > the response
+        % time
         mode_EEG_prediction = mode(EEG_predictions);
         mode_EMG_prediction = mode(EMG_predictions);
         if flag_EMG_prediction % We got and EMG prediction
@@ -254,17 +304,17 @@ while ~stopRequested
             end
         end
 
-        if flag_EEG_prediction == 0 % We got an EEG prediction
+        if flag_EEG_prediction % We got an EEG prediction
             if mode_EEG_prediction == 0
-                  disp('stop');
-                  msg.linear.x = 0;
-                  msg.linear.y = 0;
-                  msg.linear.z = 0;
-              elseif mode_EEG_prediction == 1
-                  disp('Drive forward');
-                  msg.linear.x = 1;
-                  msg.linear.y = 0;
-                  msg.linear.z = 0;
+                disp('stop');
+                msg.linear.x = 0;
+                msg.linear.y = 0;
+                msg.linear.z = 0;
+            elseif mode_EEG_prediction == 1
+                disp('Drive forward');
+                msg.linear.x = 1;
+                msg.linear.y = 0;
+                msg.linear.z = 0;
             end
         end
         % Reset predictions
@@ -275,9 +325,10 @@ while ~stopRequested
     pause(0.05); % Pause to reduce CPU usage and make the GUI responsive
 end
 
-
+% ---------------------------------------------------------------------
 % Code below is needed to close the save files correctly
 % Perform cleanup
+% ---------------------------------------------------------------------
 disp('Cleaning up resources...');
 disp(['Runtime: ', num2str(toc(runtime)*1000)]);
 send(EEG_save_queue, 'stop');
@@ -288,32 +339,34 @@ send(EMG_save_queue, 'stop');
 send(EMG_processing_queue, 'stop');
 send(EMG_worker_queue, 'stop');
 pause(1);
+% ---------------------------------------------------------------------
 while EMG_main_queue.QueueLength ~= 0 % Retrieve any last messages in the queues
     [trigger, flag] = poll(EMG_main_queue, 0);
     if flag
         disp(trigger);
     end
 end
+% ---------------------------------------------------------------------
 while EEG_main_queue.QueueLength ~= 0
     [trigger, flag] = poll(EEG_main_queue, 0);
     if flag
         disp(trigger);
     end
 end
-
-pause(5); 
+% ---------------------------------------------------------------------
+pause(5);
 delete(gcp('nocreate')); % Delete all the processes
 
 disp('Cleanup done.');
 diary off;
 % Close the figure
 delete(hFig);
-
+% ---------------------------------------------------------------------
 function stopButtonCallback(hObject, eventdata)
 global stopRequested;
 stopRequested = true;
 end
-
+% ---------------------------------------------------------------------
 function closeGUI(hObject, eventdata)
 global stopRequested;
 if ~stopRequested
