@@ -57,3 +57,6 @@ After completing the hardware setup, a wsl session running turtlebot3_gazebo and
 debug = true;
 ```
 Will output more information to the console.
+# Flowchart
+![image](https://github.com/ELA411/BCI-program/assets/59138680/b55fd771-0721-420a-b343-67008124585f)
+
